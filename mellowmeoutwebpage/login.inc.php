@@ -33,6 +33,19 @@ if(empty($uid) || empty($pwd)) {
 				exit();
 			 //if correct log in
 			 } elseif($hashedPwdCheck == true) {
+				 //if admin return true
+				 if($row['user_admin'] == '0') 
+				 {
+			     $_SESSION['u_ad'] = $row['user_admin'];
+			     $_SESSION['u_id'] = $row['user_id'];
+				 $_SESSION['u_first'] = $row['user_first'];
+				 $_SESSION['u_last'] = $row['user_last'];
+				 $_SESSION['u_email'] = $row['user_email'];
+				 $_SESSION['u_uid'] = $row['user_username'];
+				 header("Location: header.php?login=admin");
+				exit();
+				 }
+				 else {
 				 //log in user
 				 $_SESSION['u_id'] = $row['user_id'];
 				 $_SESSION['u_first'] = $row['user_first'];
@@ -41,6 +54,7 @@ if(empty($uid) || empty($pwd)) {
 				 $_SESSION['u_uid'] = $row['user_username'];
 				 header("Location: header.php?login=success");
 				exit();
+				 }
 			 }
 				
 		 }

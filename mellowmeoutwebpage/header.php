@@ -44,10 +44,17 @@ session_start();
         </ul>
         <!--IF SESSION IS ON show LOGOUT BUTTON else SHOW LOGIN-->
 		<?php 
-		 if (isset($_SESSION['u_id'])) {
+		//if admin
+		 if (isset($_SESSION['u_ad'])) {
+			 echo '<form class="form-inline mt-2 mt-md-0" action="logout.inc.php" method="POST">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Admin Logout</button>
+		 </form>';}
+		 //if standard user
+		 elseif (isset($_SESSION['u_id'])) {
 			 echo '<form class="form-inline mt-2 mt-md-0" action="logout.inc.php" method="POST">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Logout</button>
         </form>';
+		//otherwise
 		 } else { echo'<form class="form-inline mt-2 mt-md-0" action="login.inc.php" method="POST">
           <input class="form-control mr-sm-2"  type="text" placeholder="Username" name="uid" aria-label="Username">
 		  <input class="form-control mr-sm-2" type="password" name="pwd" placeholder="Password"  aria-label="Password">

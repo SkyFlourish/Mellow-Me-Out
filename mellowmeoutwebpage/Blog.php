@@ -1,32 +1,42 @@
 <?php include_once('header.php');
 ?>
-
-    <body>
-      Logged in as ADMIN will show add delete items. 
-      Will add to DB so will need a BlogPost (heading, body+image/video) etc.
-	  <?php 
+	<!--using bootstraps css for the funky boxes-->
+    <main role="main" class="container">
+	
+	<?php 
 	  //if admin logged in
 		 if (isset($_SESSION['u_ad'])) {
 			 
 			 //show whatever admin function inside the echo..
 			 echo '
-		<!--WILL NEED TO Add to DATABASE-->
-		 <form class="form-inline mt-2 mt-md-0" action="#" method="POST">
-         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Add</button>
+		<!--WILL NEED TO Add to DATABASE, DROPDOWN ADD-->
+		 <p>The below will add to database, Then refresh page to show what you have just added :) </p>
+		 <form class="form-inline mt-2 mt-md-0" action="add.inc.php" method="POST">
+		 <input class="form-control mr-sm-2"  type="text" name="header" placeholder="header">
+		  <input class="form-control mr-sm-2" type="text" name="body" placeholder="body of product">
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submitblog">Add</button>
 		 </form>
 		 
 		<!--WILL NEED TO select all post headings display as then click and display add to database screen with previous info-->
 		 <form class="form-inline mt-2 mt-md-0" action="#" method="POST">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Edit</button>
+		 STILL NEED TO ADD FUNCTION TO THIS
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submitblog">Edit</button>
 		 </form>
 		 
 		 <!--WILL NEED TO select all post headings display as then click and REMOVE ROW-->
-		 <form class="form-inline mt-2 mt-md-0" action="#" method="POST">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Delete</button>
+		 <form class="form-inline mt-2 mt-md-0" action="delete.inc.php" method="POST">';
+		 //breaking echo so can use include below..
+		 include_once("dbfunctions.php");
+		 //say this is the blog not products
+		 datas("SELECT user_body, user_header FROM datasblog");
+		 echo '<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submitblog">Delete</button>
 		 </form>'
 		 ;
-		 
 		 }
-		 
-		 ?>
-    </body>
+		 //show all data from database for blog
+		 showdatabase("SELECT user_body, user_header FROM datasblog");
+	
+	
+?>
+      
+    </main>

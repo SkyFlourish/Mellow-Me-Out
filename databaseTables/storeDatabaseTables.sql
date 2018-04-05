@@ -68,3 +68,14 @@ CREATE TABLE ItemsInOrder
 )
 
 /* Customer will make an order and  */
+
+/* Assumed workflow for ordering is as follows */
+/*  1. Customer registers details 
+    2. Customer puts orders in a cart for later ordering
+    3. Customer orders items
+    4. Order is generated and details are stored in 'Orders' table
+    5. Items selected are looked up, their ID's retrieved and an order
+        number assigned to it (the one in the same session), and then
+        entered into the database.
+        This is repeated until there are no items left in the cart.
+*/

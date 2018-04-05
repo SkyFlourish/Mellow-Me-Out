@@ -14,7 +14,7 @@ if(isset($_POST['submit'])) {
 	//if anything is empty show error
 	if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) 
 	{
-		header("Location: signup.php?signup=empty");
+		header("Location: signup.php");
 		exit();
 	} 
 	else {
@@ -24,7 +24,7 @@ if(isset($_POST['submit'])) {
 		$resultCheck = mysqli_num_rows($result);
 		//if user already exist show error in top bar WILL NEED TO MAKE BETTER
 		if ($resultCheck > 0) {
-			header("Location: signup.php?signup=usertaken");
+			header("Location: signup.php");
 			exit();
 		} else {
 			//hash password
@@ -33,7 +33,7 @@ if(isset($_POST['submit'])) {
 			$sql = "INSERT INTO users (user_first, user_last, user_email, user_username, user_password) VALUES ('$first', '$last', '$email', '$uid', '$hashedPwd');";
 			mysqli_query($conn, $sql);
 			//show success in top bar
-			header("Location: signup.php?signup=success");
+			header("Location: signup.php");
 			exit();
 		}
 	}

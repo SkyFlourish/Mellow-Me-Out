@@ -32,4 +32,23 @@ if (mysqli_num_rows($result) > 0) {
     }
 }
 	}	
+	
+	function showedit($sqli) {
+	//need to add to this..
+	//include database
+	include 'code.php';
+	$sql = $sqli;
+	$result = mysqli_query($conn, $sql);
+	
+	if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+	echo "<select name = 'editethis'>";
+    while($row = mysqli_fetch_assoc($result)) {
+		echo "<option >". $row["user_header"]. "</option>";
+    }	
+	echo "</select>";
+	
+}
+}
+	
 ?>

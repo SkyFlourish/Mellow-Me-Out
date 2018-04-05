@@ -10,8 +10,14 @@
 		 }
 		 //if just standard log in 
 		 elseif (isset($_SESSION['u_id'])) {
-			 echo 'STANDARD USER LOGGED IN FEATURES HERE
-					Place booking button (form data and times)'
+			 echo 'PLACE BOOKING:
+			 TIME SELECT
+			 EMAIL ACCOUNT
+			 BOOKING FOR
+			 
+			 (EMAILS HER THE TIME SO SHE CAN UPDATE THIS)
+			 '
+			 
 		 ;
 		 
 		 }

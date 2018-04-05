@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
 	//IF Username OR Password EMTPY EXIT
 	
 if(empty($uid) || empty($pwd)) {
-	header("Location: header.php?login=empty");
+	header("Location: header.php");
 		exit();
 	} else {
 		//select from users the username typed in LOOK AT VARIABLE ABOVE IF DO NOT UNDERSTAND
@@ -19,7 +19,7 @@ if(empty($uid) || empty($pwd)) {
 		//if no of the user results exit
 		if (mysqli_num_rows($result) < 0) 
 		{
-		header("Location: header.php?login=sqlerror");
+		header("Location: header.php");
 		exit();
 		}
 
@@ -29,7 +29,7 @@ if(empty($uid) || empty($pwd)) {
 			 $hashedPwdCheck = password_verify($pwd, $row['user_password']);
 			 //if not correct exit
 			 if ($hashedPwdCheck == false) {
-				header("Location: header.php?login=hasherror");
+				header("Location: header.php");
 				exit();
 			 //if correct log in
 			 } elseif($hashedPwdCheck == true) {
@@ -52,7 +52,7 @@ if(empty($uid) || empty($pwd)) {
 				 $_SESSION['u_last'] = $row['user_last'];
 				 $_SESSION['u_email'] = $row['user_email'];
 				 $_SESSION['u_uid'] = $row['user_username'];
-				 header("Location: header.php?login=success");
+				 header("Location: header.php");
 				exit();
 				 }
 			 }
@@ -62,7 +62,7 @@ if(empty($uid) || empty($pwd)) {
 	}
 	//if all else fails error
 } else {
-	header("Location: header.php?login=error");
+	header("Location: header.php");
 		exit();
 		
 }

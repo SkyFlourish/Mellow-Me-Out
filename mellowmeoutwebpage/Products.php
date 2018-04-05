@@ -19,11 +19,13 @@
 		 
 		 <!--WILL NEED TO select all post headings display as then click and REMOVE ROW-->
 		 <form class="form-inline mt-2 mt-md-0" action="delete.inc.php" method="POST">';
-		 //breaking echo so can use include below..
 		 
+		 //so you can use functions from dbfuncitons.php
 		 include_once("dbfunctions.php");
+		 
+		 //show data in dropdown
 		 datas("SELECT user_body, user_header FROM datas");
-		 //say this is the products not blog
+		 
 		 echo '<button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="submit">Delete</button>
 		 </form>'
 		 ;

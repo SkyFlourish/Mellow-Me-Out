@@ -1,5 +1,5 @@
 <?php
-
+//adding to database 
 if(isset($_POST['submit'])) {
 	//connect to database 
 	include_once 'code.php';

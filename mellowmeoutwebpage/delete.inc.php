@@ -28,5 +28,18 @@ elseif (isset($_POST['submitblog'])) {
 	//show sucess in header
 	header("Location: Blog.php");
 			exit();
+
+			
+}
+elseif (isset($_POST['deletebooking'])) {
+	include 'code.php';
+	$deletethis = mysqli_real_escape_string($conn, $_POST['deletebooked']);
+	//assign query to variable
+	$sql = "DELETE FROM booking WHERE user_booking = '$deletethis'";
+	//run query
+	mysqli_query($conn, $sql);
+	//show sucess in header
+	header("Location: MakeBooking.php");
+			exit();
 			
 }

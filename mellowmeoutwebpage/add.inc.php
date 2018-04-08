@@ -29,3 +29,15 @@ elseif (isset($_POST['submitblog'])) {
 			exit();
 			
 }
+elseif (isset($_POST['addbooking'])) {
+	include 'code.php';
+	$addthis = mysqli_real_escape_string($conn, $_POST['add']);
+	//assign query to variable
+	$sql = "INSERT INTO booking (user_booking) VALUES ('$addthis');";
+	//run query
+	mysqli_query($conn, $sql);
+	//show sucess in header
+	header("Location: MakeBooking.php");
+			exit();
+			
+}

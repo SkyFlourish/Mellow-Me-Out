@@ -5,6 +5,7 @@
 	
 	<?php 
 	  //if admin logged in
+	  include_once("dbfunctions.php");
 		 if (isset($_SESSION['u_ad'])) {
 			 
 			 //show whatever admin function inside the echo..

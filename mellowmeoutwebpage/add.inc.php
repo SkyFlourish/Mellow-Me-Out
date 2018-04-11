@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
 	$sql = "INSERT INTO datas (user_header, user_body) VALUES ('$header', '$body');";
 	mysqli_query($conn, $sql);
 	//show success in header
-	header("Location: products.php?signup=success");
+	header("Location: Products.php");
 			exit();
 			
 }
@@ -25,7 +25,19 @@ elseif (isset($_POST['submitblog'])) {
 	$sql = "INSERT INTO datasblog (user_header, user_body) VALUES ('$header', '$body');";
 	mysqli_query($conn, $sql);
 	//show success in header
-	header("Location: Blog.php?signup=success");
+	header("Location: Blog.php");
+			exit();
+			
+}
+elseif (isset($_POST['addbooking'])) {
+	include 'code.php';
+	$addthis = mysqli_real_escape_string($conn, $_POST['add']);
+	//assign query to variable
+	$sql = "INSERT INTO booking (user_booking) VALUES ('$addthis');";
+	//run query
+	mysqli_query($conn, $sql);
+	//show sucess in header
+	header("Location: MakeBooking.php");
 			exit();
 			
 }

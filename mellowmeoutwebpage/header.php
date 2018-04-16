@@ -41,8 +41,13 @@ session_start();
 		  <li class="nav-item">
             <a class="nav-link" href="About.php">About Us</a>
           </li>
-        </ul>
+        <!-- </ul> -->
         <!--IF SESSION IS ON show LOGOUT BUTTON else SHOW LOGIN-->
+      <!-- Temporary Signup link -->
+      <li class="nav-item">
+            <a class="nav-link" href="signup.php">Sign Up</a>
+          </li>
+      <ul>
 		<?php 
 		//if admin
 		 if (isset($_SESSION['u_ad'])) {

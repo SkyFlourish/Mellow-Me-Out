@@ -5,6 +5,8 @@
                 references in the Orders table and shifting it into the new table
                 for a one to many relationship.
                 Also did some formatting work to make it easier to read.
+    15/04/2018 - Changed Customer table name to Users to align with other code,
+                 alongside the first column name.
 */
 
 CREATE TABLE Items (
@@ -33,9 +35,11 @@ CREATE TABLE Staff
     PRIMARY KEY (StaffID)
 );
 
-CREATE TABLE Customer
+/* Table name change */
+CREATE TABLE Users
 (
-    CustomerID          INT             NOT NULL    AUTO_INCREMENT,
+    /* First field name changed */
+    UserID              INT             NOT NULL    AUTO_INCREMENT,
     FirstName           VARCHAR(50)     NOT NULL,
     LastName            VARCHAR(50)     NOT NULL,
     EmailAddress        VARCHAR(100)    NOT NULL,

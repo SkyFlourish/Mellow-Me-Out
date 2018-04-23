@@ -12,6 +12,9 @@
                 better reflect the clients needs.
                 Put in a number assignment. 
                 Hopefully add booking functionality.
+    23/04/2018 - Changes orders table to booking table, added a service length
+                and a booking time.
+                Changes references of order to booking.
 */
 
 CREATE TABLE Services (
@@ -80,26 +83,28 @@ CREATE TABLE Users
 );
 
 /* Need a one to many relation table in addition */
-CREATE TABLE Orders
+CREATE TABLE Booking
 (
-    OrderID                     INT             NOT NULL    AUTO_INCREMENT,
+    BookingID                   INT             NOT NULL    AUTO_INCREMENT,
     UserID                      INT             NOT NULL,
     /* ItemID  INT NOT NULL, */
     /* will need to be able to implement multiple item ID's, or else
         people will only be able to order one thing at a time */
-    OrderDate                   VARCHAR(50)     NOT NULL,
+    BookingDate                 VARCHAR(50)     NOT NULL,
+    BookingTime                 VARCHAR(50)     NOT NULL,
+    BookingServiceLength        INT             NULL,
     TotalOrderTab               DECIMAL(15,2)   NOT NULL,
-    PRIMARY KEY (OrderID),
+    PRIMARY KEY (BookingID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
     /* FOREIGN KEY (ItemID) REFERENCES Items(ItemID) */
 );
     
-CREATE TABLE ServicesInOrder
+CREATE TABLE ServicesInBooking
 (
-    OrderID                     INT             NOT NULL,
+    BookingID                   INT             NOT NULL,
     ServiceID                   INT             NOT NULL,
     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID),
-    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+    FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
 );
 
 /* Customer will make an order and  */
@@ -124,3 +129,6 @@ CREATE TABLE Items (
     PRIMARY KEY (ItemID)
 );
 */
+
+/* For most of all of our queries, we will be using inner joins as they
+will only return rows that match in both tables and leave the rest behind */

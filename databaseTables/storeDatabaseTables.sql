@@ -15,6 +15,7 @@
     23/04/2018 - Changes orders table to booking table, added a service length
                 and a booking time.
                 Changes references of order to booking.
+    24/04/2018 - Added a table for closed days and holidays.
 */
 
 CREATE TABLE Services (
@@ -83,14 +84,14 @@ CREATE TABLE Users
 );
 
 /* Need a one to many relation table in addition */
-CREATE TABLE Booking
+CREATE TABLE Bookings
 (
     BookingID                   INT             NOT NULL    AUTO_INCREMENT,
     UserID                      INT             NOT NULL,
     /* ItemID  INT NOT NULL, */
     /* will need to be able to implement multiple item ID's, or else
         people will only be able to order one thing at a time */
-    BookingDate                 VARCHAR(50)     NOT NULL,
+    BookingDate                 DATE            NOT NULL,
     BookingTime                 VARCHAR(50)     NOT NULL,
     BookingServiceLength        INT             NULL,
     TotalOrderTab               DECIMAL(15,2)   NOT NULL,
@@ -101,11 +102,29 @@ CREATE TABLE Booking
     
 CREATE TABLE ServicesInBooking
 (
-    BookingID                   INT             NOT NULL,
     ServiceID                   INT             NOT NULL,
+    BookingID                   INT             NOT NULL,
     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID),
     FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
 );
+
+CREATE TABLE ServicesBooked
+(
+    BookedServiceID             INT             NOT NULL    AUTO_INCREMENT,
+    BookedServiceDate           DATE            NOT NULL,
+    BookedServiceLength         INT             NULL,
+    PRIMARY KEY (BookedServiceID)
+);
+
+CREATE TABLE NonBussinessDays
+(
+    NonBussinessDayID           INT             NOT NULL    AUTO_INCREMENT,
+    NonBussinessDayDate         DATE            NOT NULL,
+    PRIMARY KEY (NonBussinessDayID)
+);
+/* It's not ideal, but it may be the case where the admin or business owner will need
+    to input the dates themselves due to the nature of public holidays being optional for
+    busineeses and the like */
 
 /* Customer will make an order and  */
 

@@ -1,6 +1,9 @@
 body
 {
-    background-color: white;
+    background: url(img/web_Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
     
 }
 .wrapper /* Making website centered */

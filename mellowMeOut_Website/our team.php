@@ -8,7 +8,7 @@
     
     <meta name="description" content="Relaxing Spas. Book now today!">
     
-    <link rel="stylesheet" type="text/css" href="our team.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="our%20team.css"> <!-- Link to external CSS file -->
     <script type="text/javascript" src="slideshow.js"></script>
 </head>
     
@@ -23,65 +23,36 @@
     
     <!-- SLIDESHOW -->
         <div class="slideShow">
-        <div class ="leftArrow" onclick="LeftArrow()">
-        </div>
             <div class="slideShowContent">
-                <h2>EXAMPLE TITLE GOES HERE</h2>
-               
+                <h2>"Customer Service is our number one goal".</h2> 
             </div>
-         <div 
-              class ="rightArrow" onclick="RightArrow()">
-        </div>
-        <div class="slideShowDotCon">
-            <div class="slideShowDot1"></div>
-            <div class="slideShowDot2"></div>
-            <div class="slideShowDot3"></div>
-            <div class="slideShowDot4"></div>
-        </div>
     </div>
     <!-- MAIN CONTENT -->
     <div class= "content"> 
-        <h2>SERVICES</h2>
-        <div class = "con_Image1"> <!-- First image container -->
-            
-            <div class="con_Image">  
-                <img src="img/eyelash.jpg" alt="Test" title="Test" width=240px height = 180px>
+        <h2>OUR TEAM</h2>
+        <p>We are dedicated to bring happiness to all of our customers.</p>
+        <div class="teamContainer">
+            <div class="profileContainer">
+            <div class="teamContainerProfile">
+            <img src="img/profile_Stock.jpg" width: height=>
             </div>
-          
-            <div class="con_Body">
-                <h3>Eyelash Extensions</h3>
+            <div class="teamContainerProfileInfo">
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
+                    <b>Store Manager</b><br>
+                    Jane Doe
+                       </p>
+                
             </div>
-        
+            </div>
+            
+            <div class="teamContent">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in accumsan nunc. Cras erat nisl, maximus eu ligula a, aliquam ultrices libero. Etiam eget ante ex. Fusce aliquam varius mi vitae tincidunt. Duis non dolor nec erat congue tempor. Nullam felis leo, blandit vel justo vitae, feugiat tincidunt orci. Duis vestibulum feugiat placerat. Maecenas quis purus eget libero suscipit pretium. Maecenas a nunc sit amet ligula rhoncus porttitor. Maecenas volutpat hendrerit diam, ornare dapibus urna convallis ac. Integer nec ipsum condimentum, eleifend lorem a, efficitur sem. Pellentesque sagittis pretium mi, eu facilisis tortor pulvinar et. Maecenas vitae leo quis eros aliquam euismod ut et dolor. </p>
+            </div>
+     
         </div>
-        <div class = "con_Image2"> <!-- Second image container -->
-            <div class="con_Image">
-            <img src="img/massage.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-            
-            <div class="con_Body">
-                <h3>Pampering Massages</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
         </div>
         
-        <div class = "con_Image3"><!-- Third image container -->
-        <div class="con_Image">
-            <img src="img/spa.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-            
-            <div class="con_Body">
-                <h3>Relaxing Spas</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        </div>
-    </div>
+      
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
        <?php include('footer.php')?>  

@@ -3,19 +3,19 @@ body
     background: url(img/web_Background.png);
     background-size: cover;
     background-repeat: no-repeat;
-
-
+   
+    
 }
 .wrapper /* Making website centered */
 {
-
+    
     margin: 0 auto;
     max-width:1020px;
-    float: none
+    float: none 
 }
 
 /* HEADER STYLING */
-header
+header 
 {
     float: left;
     clear:both;
@@ -25,7 +25,7 @@ header
     font-family: sans-serif;
     position: relative;
     overflow:hidden;
-
+    
 }
 .logo
 {
@@ -36,12 +36,12 @@ header
     position:relative;
     margin-top: 15px;
     margin-left: 30px;
-
+    
 }
 
 .headerDetails      /*For phone number and address */
 {
-
+    
     min-height:80px;
     min-width:180px;
     float:right;
@@ -101,7 +101,7 @@ nav ul li:hover
     position:relative;
     float:left;
     clear: both;
-
+   
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(img/slideShow_Spa.jpg); /*linear grad darkens the image */
 
     background-repeat: no-repeat;
@@ -169,11 +169,11 @@ nav ul li:hover
     width:100%;
     font-family: sans-serif;
     overflow:hidden;
-
+    
 }
 .slideShowDotCon
 {
-    display: block;
+    display: block;    
     position: absolute;
     top: 93%;
     left: 50%;
@@ -183,13 +183,13 @@ nav ul li:hover
     max-width: 140px;
     max-height: 24px;
     text-align: center;
-
-
+    
+    
 }
 
 .slideShowDot1
 {
-
+    
     display: inline-block;
     margin:5px;
     background-color: white;
@@ -203,7 +203,7 @@ nav ul li:hover
 }
 .slideShowDot2
 {
-
+    
     display: inline-block;
     margin:5px;
     background-color: white;
@@ -217,7 +217,7 @@ nav ul li:hover
 }
 .slideShowDot3
 {
-
+    
     display: inline-block;
     margin:5px;
     background-color: white;
@@ -231,7 +231,7 @@ nav ul li:hover
 }
 .slideShowDot4
 {
-
+    
     display: inline-block;
     margin:5px;
     background-color: white;
@@ -244,7 +244,7 @@ nav ul li:hover
     cursor: pointer;
 }
 
-.slideShowContent h2
+.slideShowContent h2 
 {
 position:absolute;
 top: 30%;
@@ -264,35 +264,8 @@ transform: translate(-50%, -50%);
     color:#666666;
     background-color: white;
     min-height: 420px;
-    width: 100%;
-
-}
-.textbody
-{
-    float:left;
-    clear: both;
-    color:#666666;
-    margin-left:5%;
-    margin-right:5%;
-    border-left:10%;
-    margin-bottom:2%;
-}
-.messagebox
-{
-  width: 300px;
-  height: 150px;
-  text-align: left;
-}
-
-.formbody
-{
-  float:left;
-  clear: both;
-  color:#666666;
-  margin-left:15%;
-  margin-right:15%;
-  border-left:10%;
-  margin-bottom:2%;
+    width: 100%; 
+    
 }
 .con_Image1
 {
@@ -307,7 +280,7 @@ transform: translate(-50%, -50%);
     float:left;
     min-width: 240px;
     min-height: 260px;
-    margin-left: 2.94%;
+    margin-left: 2.94%; 
     margin-right: 2.94%;
 }
 .con_Image3
@@ -320,7 +293,7 @@ transform: translate(-50%, -50%);
 }
 .con_Image
 {
-
+    
     display:block;
     min-width: 240px;
     min-height: 180px;
@@ -347,7 +320,6 @@ transform: translate(-50%, -50%);
     text-align: center;
 }
 
-
 /* END OF CONTENT AND IMAGES*/
 /* FOOTER CONTENT*/
 footer
@@ -357,7 +329,7 @@ footer
     color:white;
     background-color: black;
     min-height: 100px;
-    width: 100%;
+    width: 100%; 
 }
 .footer1
 {
@@ -370,7 +342,7 @@ footer
 }
 .footer2
 {
-
+    
     float:left;
     min-height: 100px;
     min-width: 150px;
@@ -381,7 +353,7 @@ footer
 
 .footer3
 {
-
+    
     float:left;
     min-height: 100px;
     min-width: 150px;
@@ -389,11 +361,11 @@ footer
     margin-left: 10px;
     color: white;
     font-family: sans-serif;
-
+    
 }
 .footer4
 {
-
+    
     float:left;
     min-height: 100px;
     min-width: 150px;
@@ -401,7 +373,7 @@ footer
     margin-left: 10px;
     color: white;
     font-family: sans-serif;
-
+    
 }
 
 .footerCopyright
@@ -413,7 +385,7 @@ footer
     color: white;
     font-family: sans-serif;
     font-size:12px;
-
+    
 }
 .footer3 p
 {
@@ -424,12 +396,12 @@ footer
     font-size:12px;
 }
 
-footer ul
+footer ul 
 {
     list-style:none;
     padding-left:0;
     margin-top: 0px;
-
+    
 }
 footer a
 {
@@ -445,11 +417,11 @@ footer a:hover
 
 footer h4
 {
-
+    
     border-bottom: solid 2px white;
     border-spacing: 20px;
     padding-bottom: 2px;
-
+    
 }
 
 /*NEWS STYLING */
@@ -466,7 +438,7 @@ button[type="submit"]
     text-decoration: none;
     cursor: pointer;
 }
-input[type="email"]
+input[type="email"] 
 {
     background-image: url(img/mailSmall.png);
     background-repeat: no-repeat;
@@ -485,11 +457,11 @@ button[type="submit"]:hover
 /* FOR ADAPTABILITY */
 
 @media only screen and (max-width: 568px) {
-    .headerDetails
+    .headerDetails 
     {
         float:left;
         clear:both;
-
+        
     }
     .con_Image1
     {
@@ -497,23 +469,19 @@ button[type="submit"]:hover
     }
 }
 @media.screen.and.(max-width:430px).{
-
+ 
     .nav ul li
     {
         display:block;
         width: 100%;
-    }
-
-    .button {
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-    }
+    } 
 
 
 }
+
+
+
+
+
+
+

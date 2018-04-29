@@ -15,9 +15,9 @@
         <h4>Help</h4>
             
              <ul>
-                 <li><a href="a">Contact Us</a></li>
-                 <li><a href="a">FAQ</a></li>
-                 <li><a href="a">Policy</a></li>
+                 <li><a href="contact%20us.php">Contact Us</a></li>
+                 <li><a href="faq.php">FAQ</a></li>
+                 <li><a href="policy.php">Policy</a></li>
                 
             </ul>
         </div>
@@ -41,7 +41,7 @@
             <h4>Newsletter</h4>
             <p>Signup to our newsletter for the latest news</p>
             <form action="index.html" method="post">
-                <input type="email" name="email"  placeholder="Email address" autofocus maxlength="32" size="14">
+                <input type="email" name="email"  placeholder="Email address"  maxlength="32" size="14">
                 <button type="submit">SUBSCRIBE</button>
             </form>
   

@@ -23,25 +23,13 @@
     
     <!-- SLIDESHOW -->
         <div class="slideShow">
-        <div class ="leftArrow" onclick="LeftArrow()">
-        </div>
             <div class="slideShowContent">
-                <h2>EXAMPLE TITLE GOES HERE</h2>
-               
+                <h2>"Customer Service is our number one goal".</h2> 
             </div>
-         <div 
-              class ="rightArrow" onclick="RightArrow()">
-        </div>
-        <div class="slideShowDotCon">
-            <div class="slideShowDot1"></div>
-            <div class="slideShowDot2"></div>
-            <div class="slideShowDot3"></div>
-            <div class="slideShowDot4"></div>
-        </div>
     </div>
     <!-- MAIN CONTENT -->
     <div class= "content"> 
-        <h2>SERVICES</h2>
+        <h2>OUR TEAM</h2>
         <div class = "con_Image1"> <!-- First image container -->
             
             <div class="con_Image">  

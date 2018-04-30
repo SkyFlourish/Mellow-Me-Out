@@ -262,11 +262,27 @@ transform: translate(-50%, -50%);
     float:left;
     clear: both;
     color:#666666;
+    font-family: sans-serif;
+    font-size: 90%;
     background-color: white;
     min-height: 420px;
     width: 100%; 
     
+
+    
+    
 }
+
+.textbody
+{
+    float:left;
+    clear: both;
+    color:#666666;
+    margin-left:5%;
+    margin-right:5%;
+    border-left:10%;
+    margin-bottom:2%;
+}	
 .con_Image1
 {
     float:left;
@@ -301,7 +317,7 @@ transform: translate(-50%, -50%);
 .con_Body /*for text underneath image */
 {
     margin:0;
-    padding:0;
+    padding:2;
     font-family: sans-serif;
     text-align: center;
     display:block;
@@ -480,8 +496,71 @@ button[type="submit"]:hover
 }
 
 
+.button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
+div.gallery {
+    border: 1px solid #ccc;
+	float: left;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 25%;
+    height:25%;
+    float: left;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
 

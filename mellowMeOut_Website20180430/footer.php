@@ -15,9 +15,9 @@
         <h4>Help</h4>
             
              <ul>
-                 <li><a href="contact%20us.php">Contact Us</a></li>
+                 <li><a href="contact-us.php">Contact Us</a></li>
                  <li><a href="faq.php">FAQ</a></li>
-                 <li><a href="policy.php">Policy</a></li>
+                 <li><a href="policy.php">Privacy Policy</a></li>
                 
             </ul>
         </div>

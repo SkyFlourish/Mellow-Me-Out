@@ -14,81 +14,59 @@
     
 <body onload="ChangeDots">
     <div class="wrapper">
-        <!-- Header -->
-        <?php include('header.php')?>
-        
-    
-    <!-- Navigation bar -->
-        <?php include('nav.php')?>
-    
-    <!-- SLIDESHOW -->
-        <div class="slideShow">
-        <div class ="leftArrow" onclick="LeftArrow()">
-        </div>
-            <div class="slideShowContent">
-                <h2>EXAMPLE TITLE GOES HERE</h2>
-               
-            </div>
-         <div 
-              class ="rightArrow" onclick="RightArrow()">
-        </div>
-        <div class="slideShowDotCon">
-            <div class="slideShowDot1"></div>
-            <div class="slideShowDot2"></div>
-            <div class="slideShowDot3"></div>
-            <div class="slideShowDot4"></div>
-        </div>
-    </div>
+        <?php include 'header.php';?>
+        <?php include 'nav.php';?>
     <!-- MAIN CONTENT -->
     <div class= "content"> 
-        <h2>SERVICES</h2>
-        <div class = "con_Image1"> <!-- First image container -->
-            
-            <div class="con_Image">  
-                <img src="img/eyelash.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-          
-            <div class="con_Body">
-                <h3>Eyelash Extensions</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        
-        </div>
-        <div class = "con_Image2"> <!-- Second image container -->
-            <div class="con_Image">
-            <img src="img/massage.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-            
-            <div class="con_Body">
-                <h3>Pampering Massages</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        </div>
-        
-        <div class = "con_Image3"><!-- Third image container -->
-        <div class="con_Image">
-            <img src="img/spa.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-            
-            <div class="con_Body">
-                <h3>Relaxing Spas</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        </div>
+     <div class= "textbody"><br> <br>
+<h1>Gallery</h1>
+Here are some photos of our amazing work. You will be as pampered as the people you see here.
+<br><br>
+<!--You can change the images by either replacing the image in the img folder or
+ by renaming the img/gallery#.jpg with the image you want to use-->
+<div class="row"> 
+  <div class="column">
+      <div class="gallery">
+      <a target="_blank" href="img/gallery1.jpg"><img src="img/gallery1.jpg" height=170></a>
+          </div>
+      <div class="gallery">
+      <a target="_blank" href="img/gallery2.jpg">
+          <img src="img/gallery2.jpg" height=170></a>
+      </div>
+      <div class="gallery">
+    <a target="_blank" href="img/gallery3.jpg">
+      <img src="img/gallery3.jpg" height=170>
+      </a>
     </div>
+      <div class="gallery">
+    <a target="_blank" href="img/gallery4.jpg">
+      <img src="img/gallery4.jpg" height=170>
+    </a>
+         </div>
+      <div class="gallery">
+    <a target="_blank" href="img/gallery5.jpg">
+      <img src="img/gallery5.jpg" height=170>
+         </a>
+        </div>
+      <div class="gallery">
+    <a target="_blank" href="img/gallery6.jpg">
+      <img src="img/gallery6.jpg" height=170>
+        </a>
+        </div>
+  
+  </div>
+
+<br><br><br><br><br>
+<p>
+
+</div>
+
+    </div>
+        </div>
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
-       <?php include('footer.php')?>  
-</div>
-    
-    
-   
+        <?php include 'footer.php';?>
 
+  </div>  
 </body>
 </html>

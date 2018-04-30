@@ -41,7 +41,7 @@
     </div>
     <!-- MAIN CONTENT -->
     <div class= "content"> 
-        <h2>SERVICES</h2>
+        <h2>Our Featured Services</h2>
         <div class = "con_Image1"> <!-- First image container -->
             
             <div class="con_Image">  

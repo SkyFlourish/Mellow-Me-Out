@@ -8,7 +8,7 @@
     
     <meta name="description" content="Relaxing Spas. Book now today!">
     
-    <link rel="stylesheet" type="text/css" href="our%20team.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="our-team.css"> <!-- Link to external CSS file -->
     <script type="text/javascript" src="slideshow.js"></script>
 </head>
     

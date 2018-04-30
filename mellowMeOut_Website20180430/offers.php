@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Services & Offers</title> <!-- Web Tab Title -->
+    <title>Offers</title> <!-- Web Tab Title -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enabling zoom on mobile devices -->
     
     <meta name="keywords" content="spas, beauty, massages, eyelashes, melbourne">
     
     <meta name="description" content="Relaxing Spas. Book now today!">
     
-    <link rel="stylesheet" type="text/css" href="services & offers.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="offers.css"> <!-- Link to external CSS file -->
     <script type="text/javascript" src="slideshow.js"></script>
 </head>
     

@@ -28,9 +28,9 @@ Mellow Me Out wants to be your primary choice for all your beauty and relaxation
 Nestled in the heart of Boronia Victoria, Mellow Me Out offers a full range of beauty treatments, massage services and skin care amenities with a reputation for outstanding service in a relaxed and friendly environment. We pride ourselves on our one of a kind service, guaranteeing satisfaction each time you visit. <br><br>
 Choose from a wide range of beauty, health and spa treatments. Retreat to this tranquil day spa and take a chance to unwind and replenish your body’s balance.
 <br><br>
-<a itemprop="url" href="services & offers.html" target="_self" data-hover-background-color="#d96199" class="button  default" style="background-color: rgb(169, 210, 85);">Services & Offers</a>
-<a itemprop="url" href="book now.html" target="_self" data-hover-background-color="#d96199" class="button  default" style="background-color: rgb(169, 210, 85);">Book Now</a>
-<a itemprop="url" href="contact us.html" target="_self" data-hover-background-color="#d96199" class="button  default" style="background-color: rgb(169, 210, 85);">Contact Us</a>
+<a itemprop="url" href="services%20&%20offers.php" target="_self"  class="button  default" style="">Services & Offers</a>
+<a itemprop="url" href="book%20now.php" target="_self" class="button  default" style="">Book Now</a>
+<a itemprop="url" href="contact%20us.php" target="_self" class="button default" style="">Contact Us</a>
 <br><br>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.935164528827!2d145.2786028158304!3d-37.8618074445681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63b7d295e7191%3A0x83ea75e9583d0bf3!2sRedefine+Life+Counselling+and+Support!5e0!3m2!1sen!2sau!4v1524644385451" width="100%" height="40%" align="left" padding-left="5%" padding-right="5%"frameborder="0" style="border:0" allowfullscreen></iframe>

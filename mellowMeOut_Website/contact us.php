@@ -14,79 +14,51 @@
     
 <body onload="ChangeDots">
     <div class="wrapper">
-        <!-- Header -->
-        <?php include('header.php')?>
-        
+<?php include 'header.php';?>
+<?php include 'nav.php';?>
     
-    <!-- Navigation bar -->
-        <?php include('nav.php')?>
-    
-    <!-- SLIDESHOW -->
-        <div class="slideShow">
-        <div class ="leftArrow" onclick="LeftArrow()">
-        </div>
-            <div class="slideShowContent">
-                <h2>EXAMPLE TITLE GOES HERE</h2>
-               
-            </div>
-         <div 
-              class ="rightArrow" onclick="RightArrow()">
-        </div>
-        <div class="slideShowDotCon">
-            <div class="slideShowDot1"></div>
-            <div class="slideShowDot2"></div>
-            <div class="slideShowDot3"></div>
-            <div class="slideShowDot4"></div>
-        </div>
-    </div>
     <!-- MAIN CONTENT -->
-    <div class= "content"> 
-        <h2>SERVICES</h2>
-        <div class = "con_Image1"> <!-- First image container -->
-            
-            <div class="con_Image">  
-                <img src="img/eyelash.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-          
-            <div class="con_Body">
-                <h3>Eyelash Extensions</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        
-        </div>
-        <div class = "con_Image2"> <!-- Second image container -->
-            <div class="con_Image">
-            <img src="img/massage.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-            
-            <div class="con_Body">
-                <h3>Pampering Massages</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        </div>
-        
-        <div class = "con_Image3"><!-- Third image container -->
-        <div class="con_Image">
-            <img src="img/spa.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-            
-            <div class="con_Body">
-                <h3>Relaxing Spas</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- MAIN CONTENT END -->
-    <!-- FOOTER CONTENT -->
-       <?php include('footer.php')?>  
+    <div class= "content">
+     <h2>Contact Us</h2>
+   <p>Have some questions not covered by our FAQ? Send it from here and we'll be sure to respond as quickly as we can. Here at MellowMeOut, your feedback helps improve our services. </p>
+  
+<div class = "formBody">
+    <form>
+        <label for="fname">First Name:</label>
+         <br>
+        <input type="text"  id="fname" name="firstname" placeholder="Please enter first name" maxlength="32"/>
+    <br>
+     <br>
+        <label for="lname">Last Name:</label>
+         <br>
+        <input type="text" id="lname" name="lastname" placeholder="Please enter last name" size="16" maxlength="32"//>
+     <br>
+     <br>
+        <label for="email">Email:</label>
+         <br>
+        <input type="email" id="email" name="email" placeholder="Example: JaneDoe@gmail.com" size="32" maxlength="48"/>
+     <br>
+     <br>
+<label for="subject">Subject:</label>     
+ <br>
+        <input type="text" id="subject" name="subject" placeholder="What's your question regarding" size="35" maxlength="100"/>
+     <br>
+     <br>
+<label for="message">Message:</label>
+         <br>
+        <textarea name="message" id="message" class="messagebox" placeholder="Write something..." maxlength="300">
+       </textarea>
+        <br>
+        <input type="submit" value="Submit">
+</form>
+  </div>
 </div>
     
+    <!-- MAIN CONTENT END -->
+    <!-- FOOTER CONTENT -->
+        <?php include 'footer.php';?>
+
+ </div>   
     
    
 

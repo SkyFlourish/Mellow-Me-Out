@@ -25,10 +25,10 @@
     <!-- MAIN CONTENT -->
     <div class= "content"> 
         <h2>FAQ</h2>
-        <p>Information goes here</p>
+        <p>Looking for answers? Some of the most common questions can be answered by expanding the boxes bellow.</p>
         <div class="faqContent">
-          <button class="faqCollapse">What payment options do you offer in store?</button>
-           <button class="faqCollapse">blah blah blah blah?</button>
+          <button class="faqCollapse">What payment options do you offer in store?<div class="collapseIcon"></div></button>
+           <button class="faqCollapse">blah blah blah blah?<div class="collapseIcon"></div></button>
         </div>
         
        

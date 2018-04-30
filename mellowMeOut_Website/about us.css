@@ -497,7 +497,8 @@ button[type="submit"]:hover
 
 
 .button {
-    background-color: #4CAF50; 
+    background-color: rgb(169, 210, 85);
+    transition:0.5s;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -506,18 +507,9 @@ button[type="submit"]:hover
     display: inline-block;
     font-size: 16px;
 }
-
-  animation-name: fade;
-  animation-duration: 1.5s;
+.button:hover{
+    transition:0.5s;
+    background-color: #45a049;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 

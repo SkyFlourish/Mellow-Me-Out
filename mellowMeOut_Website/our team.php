@@ -46,9 +46,10 @@
             </div>
             
             <div class="teamContent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in accumsan nunc. Cras erat nisl, maximus eu ligula a, aliquam ultrices libero. Etiam eget ante ex. Fusce aliquam varius mi vitae tincidunt. Duis non dolor nec erat congue tempor. Nullam felis leo, blandit vel justo vitae, feugiat tincidunt orci. Duis vestibulum feugiat placerat. Maecenas quis purus eget libero suscipit pretium. Maecenas a nunc sit amet ligula rhoncus porttitor. Maecenas volutpat hendrerit diam, ornare dapibus urna convallis ac. Integer nec ipsum condimentum, eleifend lorem a, efficitur sem. Pellentesque sagittis pretium mi, eu facilisis tortor pulvinar et. Maecenas vitae leo quis eros aliquam euismod ut et dolor. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in accumsan nunc. Cras erat nisl, maximus eu ligula a, aliquam ultrices libero. Etiam eget ante ex. Fusce aliquam varius mi vitae tincidunt. Duis non dolor nec erat congue tempor. Nullam felis leo, blandit vel justo vitae, feugiat tincidunt orci. Duis vestibulum . </p>
             </div>
      
+        
         </div>
         </div>
         

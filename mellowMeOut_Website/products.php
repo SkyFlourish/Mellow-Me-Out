@@ -30,7 +30,7 @@
 		</p>
 		</div>
 		<br/>
-		<a itemprop="url" href="bodymassage.php" target="_self" data-hover-background-color="#d96199" class="button default" style="background-color: rgb(169, 210, 85);">Details</a>
+		<a itemprop="url" href="bodymassage.php" target="_self"  class="button default" style="">Details</a>
 		<br/><br/>
 
 		<h2>Eyelash Extensions</h2>
@@ -41,8 +41,9 @@
 		</p>
 		</div>
 		<br/>
-		<a itemprop="url" href="eyelash.php" target="_self" data-hover-background-color="#d96199" class="button default" style="background-color: rgb(169, 210, 85);">Details</a>
+		<a itemprop="url" href="eyelash.php" target="_self"  class="button default" style="">Details</a>
 		<br/><br/>
+    
 
 		<h2>Ear Candling</h2>
 		<div class="imgDes">
@@ -52,7 +53,7 @@
 		</p>
 		</div>
 		<br/>
-		<a itemprop="url" href="ear-candling.php" target="_self" data-hover-background-color="#d96199" class="button default" style="background-color: rgb(169, 210, 85);">Details</a>
+		<a itemprop="url" href="ear-candling.php" target="_self" class="button default" style="">Details</a>
 		<br/><br/>
 
 		<h2>Brow Tint</h2>
@@ -65,7 +66,7 @@
 		</p>
 		</div>
 		<br/>
-		<a itemprop="url" href="brow-tint.php" target="_self" data-hover-background-color="#d96199" class="button default" style="background-color: rgb(169, 210, 85);">Details</a>
+		<a itemprop="url" href="brow-tint.php" target="_self"  class="button default" style="">Details</a>
 		<br/><br/>
 
 		<h2>Spa Treatments</h2>
@@ -76,7 +77,7 @@
 		</p>
 		</div>
 		<br/>
-		<a itemprop="url" href="spa-treatments.php" target="_self" data-hover-background-color="#d96199" class="button default" style="background-color: rgb(169, 210, 85);">Details</a>
+		<a itemprop="url" href="spa-treatments.php" target="_self"  class="button default" style="">Details</a>
 		<br/><br/>
 </div>
 

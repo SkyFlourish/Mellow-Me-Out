@@ -25,7 +25,14 @@
     <!-- MAIN CONTENT -->
     <div class= "content"> 
         <h2>Privacy Policy</h2>
-        <p>Below is a list of frequently asked questions about our services:</p>
+        <p> Effective Date:  May 1, 2018</p>
+        <p>This privacy notice discloses the privacy practices for MellowMeOut and our website; http://www. [Your Website URL Here]. This privacy notice applies solely to information collected by this website, except where stated otherwise. It will notify you of the following:</p>
+        <ul>
+        <li> What information we collect</li>
+            <li> Who it is shared to</li>
+            <li> How it is secured</li>
+        </ul>
+        
 
         </div>
         

@@ -159,7 +159,8 @@ animation-duration: 2s;
     min-height: 420px;
     width: 100%; 
     font-family: sans-serif;
-    font-size: 16px;      
+    font-size: 16px;  
+    position:relative;
 }
 .content p
 {
@@ -174,10 +175,13 @@ animation-duration: 2s;
 .faqContent
 {
   
-    width:960px;
+    width:94.12%;
     height:200px;
-    margin-left: 30px;
+    margin-left: 2.94%;
+    margin-right:2.94%;
+    position:relative;
     overflow:hidden;
+    
 }
 .faqCollapse
 {
@@ -190,11 +194,20 @@ animation-duration: 2s;
     transition:0.5s;
     padding:8px;
     margin-top:2px;
+    position:relative;
 }
 .faqCollapse:hover
 {
     background-color:darkgrey;
     transition:0.5s;
+}
+.collapseIcon
+{
+    min-width:16px;
+    min-height:16px;
+    background:url(img/plusIcon.png);
+    float:right;
+    
 }
 /*Team Part*/
 .teamContainer

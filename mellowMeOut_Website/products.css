@@ -456,6 +456,20 @@ button[type="submit"]
     text-decoration: none;
     cursor: pointer;
 }
+
+button[type="submit"]:hover
+{
+    border-radius: 2px;
+    margin-top:5px;
+    margin-bottom:5px;
+    width:100%;
+    background-color: #333333;
+    color:white;
+    transition-duration: 0.5s;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
 input[type="email"] 
 {
     background-image: url(img/mailSmall.png);
@@ -494,12 +508,11 @@ button[type="submit"]:hover
         width: 100%;
     } 
 
-
 }
 
-
 .button {
-    background-color: #4CAF50; 
+    background-color: rgb(169, 210, 85);
+    transition:0.5s;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -508,18 +521,10 @@ button[type="submit"]:hover
     display: inline-block;
     font-size: 16px;
 }
-
-  animation-name: fade;
-  animation-duration: 1.5s;
+.button:hover{
+    transition:0.5s;
+    background-color: #45a049;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 

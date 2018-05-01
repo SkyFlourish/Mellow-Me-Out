@@ -20,56 +20,31 @@
     
     <!-- Navigation bar -->
         <?php include('nav.php')?>
-    
-    <!-- SLIDESHOW -->
-        <div class="slideShow">
-            <div class="slideShowContent">
-                <h2>"Customer Service is our number one goal".</h2> 
-            </div>
-    </div>
+
     <!-- MAIN CONTENT -->
-    <div class= "content"> 
-        <h2>OUR TEAM</h2>
-        <div class = "con_Image1"> <!-- First image container -->
-            
-            <div class="con_Image">  
-                <img src="img/eyelash.jpg" alt="Test" title="Test" width=240px height = 180px>
+        <div class="content">
+        <h2>Special Offers</h2>
+            <p>Here are our latest offers! To use the vouchers, visit MellowMeOut and present these at payment.</p>
+            <div class="voucher">
+           
+                <div class="voucherLeft">
+                <div class="voucherImage"></div>
+                <div class="voucherExpiry">
+                    <h5>Apr 04, 2018 - Apr 16, 2018</h5>
+                </div>
             </div>
-          
-            <div class="con_Body">
-                <h3>Eyelash Extensions</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        
-        </div>
-        <div class = "con_Image2"> <!-- Second image container -->
-            <div class="con_Image">
-            <img src="img/massage.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-            
-            <div class="con_Body">
-                <h3>Pampering Massages</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
+                <div class="voucherRight">
+                sadasd</div>
+                </div>
+        <h2>Other special Offers</h2>
+            <ul>
+            <li>Bring a friend get 50% off your next treatment
+                </li>
+            <li>Get your first aromatic massage with 20% off
+                </li>
+            </ul>
         </div>
         
-        <div class = "con_Image3"><!-- Third image container -->
-        <div class="con_Image">
-            <img src="img/spa.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-            
-            <div class="con_Body">
-                <h3>Relaxing Spas</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        </div>
-    </div>
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
        <?php include('footer.php')?>  

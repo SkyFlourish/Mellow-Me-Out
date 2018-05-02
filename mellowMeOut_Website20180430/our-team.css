@@ -144,10 +144,15 @@ left: 50%;
 opacity: 1;
 transform: translate(-50%, -50%);
 animation-name: fadein;
-animation-duration: 2s;
+animation-duration: 3s;
+animation-direction:alternate;
+animation-iteration-count: infinite;
 
 }
-
+.test
+{
+    
+}
 
 
 /* END OF SLIDESHOW */

@@ -21,11 +21,38 @@
     <!-- Navigation bar -->
         <?php include('nav.php')?>
     
-    <!-- SLIDESHOW -->
+    <!-- SLIDESHOW JAVASCRIPT -->
+        <script type="text/javascript">
+        var count = 0;//controls selection of text
+            function changeText(){
+                count++;//increment count on function call
+                if (count==0)
+                    {
+                        document.getElementsByClassName("test")[0].innerHTML = ("Customer Service is number one");
+                    }
+                
+                else if (count==1)
+               {
+                   document.getElementsByClassName("test")[0].innerHTML = ("We care for our people");
+               }
+                    
+               else if (count==2)
+               {
+                   document.getElementsByClassName("test")[0].innerHTML = ("We respect all our customers");
+                   count=-1;
+               }
+               
+                   
+                
+            }
+            window.onload = setInterval(changeText, 6000); //run code on load          
+        </script>
+<!-- SLIDESHOW HTML -->
         <div class="slideShow">
             <div class="slideShowContent">
-                <h2>"Customer Service is our number one goal".</h2> 
+                <h2 class="test">Customer Service is number one</h2> 
             </div>
+            
     </div>
     <!-- MAIN CONTENT -->
     <div class= "content"> 

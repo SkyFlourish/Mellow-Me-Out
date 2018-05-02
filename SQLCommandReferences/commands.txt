@@ -4,7 +4,7 @@ show databases;
 
 use mellowmeout;
 
-DROP TABLE ServicesInOrder, ServiceDescription, Services, Discount, Staff, Users, Orders;
+DROP TABLE ServicesInBooking, ServiceDescription, Services, Discount, Staff, Users, ServicesBooked, NonBussinessDays, Booking;
 
 show tables;
 

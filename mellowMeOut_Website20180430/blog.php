@@ -10,6 +10,48 @@
     
     <link rel="stylesheet" type="text/css" href="blog.css"> <!-- Link to external CSS file -->
     <script type="text/javascript" src="slideshow.js"></script>
+	<style>
+	#left, #right {
+		float:left;
+		position:relative;
+	}
+	#left {
+		font-family:Helvetica;
+		//background-color: pink;
+		margin-left:200px;
+		right:200px;
+		width:800px;
+		padding-bottom:auto;
+	}
+	#right {
+		text-align:center;
+		font-family:Arial;
+		//background-color: red;
+		margin-left:-200px;
+		width:220px;
+		padding-bottom:auto;
+	}
+	.categories {
+		font-family: Georgia;
+		font-size: 16px;
+		font-style:italic;
+	}
+	.contents {
+		font-family: times;
+		font-weight:bold;
+		font-size: 18px;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	#bar {
+		text-align:left;
+		
+	}
+	#tags{
+		text-align:left;
+		margin-left:10px;
+	}
+	</style>
 </head>
     
 <body onload="ChangeDots">
@@ -21,66 +63,44 @@
     <!-- Navigation bar -->
         <?php include('nav.php')?>
     
-    <!-- SLIDESHOW -->
-        <div class="slideShow">
-        <div class ="leftArrow" onclick="LeftArrow()">
-        </div>
-            <div class="slideShowContent">
-                <h2>EXAMPLE TITLE GOES HERE</h2>
-               
-            </div>
-         <div 
-              class ="rightArrow" onclick="RightArrow()">
-        </div>
-        <div class="slideShowDotCon">
-            <div class="slideShowDot1"></div>
-            <div class="slideShowDot2"></div>
-            <div class="slideShowDot3"></div>
-            <div class="slideShowDot4"></div>
-        </div>
-    </div>
-    <!-- MAIN CONTENT -->
+	<!-- MAIN CONTENT -->
     <div class= "content"> 
-        <h2>SERVICES</h2>
-        <div class = "con_Image1"> <!-- First image container -->
-            
-            <div class="con_Image">  
-                <img src="img/eyelash.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-          
-            <div class="con_Body">
-                <h3>Eyelash Extensions</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        
-        </div>
-        <div class = "con_Image2"> <!-- Second image container -->
-            <div class="con_Image">
-            <img src="img/massage.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-            
-            <div class="con_Body">
-                <h3>Pampering Massages</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        </div>
-        
-        <div class = "con_Image3"><!-- Third image container -->
-        <div class="con_Image">
-            <img src="img/spa.jpg" alt="Test" title="Test" width=240px height = 180px>
-            </div>
-            
-            <div class="con_Body">
-                <h3>Relaxing Spas</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed diam id ligula sollicitudin gravida et vel nulla. Aenean ac dignissim purus.
-                </p>
-            </div>
-        </div>
+       <div id="left">
+		<h1 style="text-align:center">Post</h1>
+		<h2>First blog</h2>
+			<p class="categories">May, 2nd, 2018 | <a href>Dairy</a> | <a href>14 Comment</a></p><hr>
+			<p class= "contents">This is your first article. 
+			Click the edit link to modify or delete the article, 
+			or start writing a new article. 
+			If you wish, you can tell the reader through this article why you created this blog and what you intend to do with it. 
+			If you need help, you are welcome to support BBS.
+			</p>
+		<p style="text-align:right;margin-right:10px">Tagged: <a href>Students</a></p><hr>
+		
+		<h2>Second blog</h2>
+			<p class="categories">May, 2nd, 2018 | <a href>Dairy</a> | <a href>14 Comment</a></p><hr>
+			<p class= "contents">This is your first article. 
+			Click the edit link to modify or delete the article, 
+			or start writing a new article. 
+			If you wish, you can tell the reader through this article why you created this blog and what you intend to do with it. 
+			If you need help, you are welcome to support BBS.
+			</p>
+		<p style="text-align:right;margin-right:10px">Tagged: <a href>Business</a></p><hr>
+	   </div>
+	   <div id="right">
+		<h1 style="text-align:center">Blog Bar</h1><hr>
+		<h3 id="bar">CATEGORIES</h3>
+		<p id="tags"><a href>Dairy</a></p>
+		<p id="tags"><a href>Discount</a></p>
+		<p id="tags"><a href>Special</a></p>
+		<p id="tags"><a href>Pictures</a></p>
+		<p id="tags"><a href>Uncategories</a></p>
+		<hr>
+		<h3 id="bar">TAG</h3>
+		<p id="tags"><a href>Students,Business,Games,</a></p>
+		<p id="tags"><a href>RRS,Widgets,Video</a></p>
+		
+	   </div>
     </div>
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->

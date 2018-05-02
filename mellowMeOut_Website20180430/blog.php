@@ -11,46 +11,7 @@
     <link rel="stylesheet" type="text/css" href="blog.css"> <!-- Link to external CSS file -->
     <script type="text/javascript" src="slideshow.js"></script>
 	<style>
-	#left, #right {
-		float:left;
-		position:relative;
-	}
-	#left {
-		font-family:Helvetica;
-		//background-color: pink;
-		margin-left:200px;
-		right:200px;
-		width:800px;
-		padding-bottom:auto;
-	}
-	#right {
-		text-align:center;
-		font-family:Arial;
-		//background-color: red;
-		margin-left:-200px;
-		width:220px;
-		padding-bottom:auto;
-	}
-	.categories {
-		font-family: Georgia;
-		font-size: 16px;
-		font-style:italic;
-	}
-	.contents {
-		font-family: times;
-		font-weight:bold;
-		font-size: 18px;
-		margin-left:10px;
-		margin-right:10px;
-	}
-	#bar {
-		text-align:left;
-		
-	}
-	#tags{
-		text-align:left;
-		margin-left:10px;
-	}
+	
 	</style>
 </head>
     
@@ -66,8 +27,8 @@
 	<!-- MAIN CONTENT -->
     <div class= "content"> 
        <div id="left">
-		<h1 style="text-align:center">Post</h1>
-		<h2>First blog</h2>
+		<h2 style="text-align:center">Mellow Me Out Blog</h2>
+		<h2 style="text-align:left">First blog</h2>
 			<p class="categories">May, 2nd, 2018 | <a href>Dairy</a> | <a href>14 Comment</a></p><hr>
 			<p class= "contents">This is your first article. 
 			Click the edit link to modify or delete the article, 
@@ -77,7 +38,7 @@
 			</p>
 		<p style="text-align:right;margin-right:10px">Tagged: <a href>Students</a></p><hr>
 		
-		<h2>Second blog</h2>
+		<h2 style="text-align:left">Second blog</h2>
 			<p class="categories">May, 2nd, 2018 | <a href>Dairy</a> | <a href>14 Comment</a></p><hr>
 			<p class= "contents">This is your first article. 
 			Click the edit link to modify or delete the article, 

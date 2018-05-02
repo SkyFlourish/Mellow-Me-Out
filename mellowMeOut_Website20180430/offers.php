@@ -25,24 +25,47 @@
         <div class="content">
         <h2>Special Offers</h2>
             <p>Here are our latest offers! To use the vouchers, visit MellowMeOut and present these at payment.</p>
+            <!--Voucher stuff-->
             <div class="voucher">
            
                 <div class="voucherLeft">
-                <div class="voucherImage"></div>
+                <div class="voucherImage">
+                    </div>
+              
                 <div class="voucherExpiry">
                     <h5>Apr 04, 2018 - Apr 16, 2018</h5>
                 </div>
             </div>
+                
                 <div class="voucherRight">
-                sadasd</div>
+                <div class="voucherLogo">
+                    <img src="img/mellowMeOut_Logo.png" alt="Mellow Me Out logo">
+                    </div>
+                    <h4>Get 10% off any massage when you present this at the counter</h4>
+                    <br>
+                    <h5>Voucher terms and conditions:</h5>
+                    <ul>
+                       <li>Each voucher is redeemable for one serice only</li>
+                           <li>Each voucher can only be used for one transaction</li>
+                         <li>No replacement or extenstion is given to expired vouchers</li>
+                        <li>Voucher can be used on all services except discounted specials</li> 
+                    </ul>
                 </div>
-        <h2>Other special Offers</h2>
+                
+            </div>
+            <!--Other special offers part-->
+            <h2 class="">Other special Offers</h2>
+            <div class="centerList">
             <ul>
-            <li>Bring a friend get 50% off your next treatment
+            <li>Bring a friend get 25% off your next treatment
                 </li>
             <li>Get your first aromatic massage with 20% off
                 </li>
             </ul>
+            </div>
+            <br>
+            <br>
+            <br>
         </div>
         
     <!-- MAIN CONTENT END -->

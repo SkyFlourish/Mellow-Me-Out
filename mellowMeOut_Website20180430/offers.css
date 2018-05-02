@@ -130,29 +130,46 @@ nav ul li:hover
     text-align: center;
 
 }
-/*voucher styling */
+/*Voucher right side styling */
 .voucher
 {
     width:100%;
     min-height: 240px;
-    max-height: 240px;
     background-color: gainsboro;
     position: relative;
+    overflow: hidden;
 }
-.voucherLeft
-{
-    float:left;
-    background-color: red;
-    min-width: 230px;
-}
+
 .voucherRight
 {
     float:left;
-    background-color: greenyellow;
-    min-width: 730px;
+    width:50%;
+}
+.voucherRight h4
+{
+    margin:0px;
+    margin-top:6px;
+    text-align: left;
+}
+.voucherRight h5
+{
+    margin:0px;
+    text-align: left;
+    
 }
 
-
+.voucherLogo
+{
+    margin-top:30px;
+    text-align: center;
+    background-color: darkgray;
+}
+/*voucher left side stuff */
+.voucherLeft
+{
+    float:left;
+    min-width: 260px;
+}
 .voucherImage
 {
     min-width: 140px;
@@ -177,6 +194,30 @@ nav ul li:hover
     margin:0px;
     margin-top:3px;
 }
+.voucherRight ul
+{
+    font-size: 12px;
+    text-align: left;
+    
+}
+
+/* list centering */
+.centerList
+{
+   
+    text-align: center;
+    padding: 0px;
+    margin:0px;
+    
+}
+.centerList ul
+{
+    display: inline-block;
+    text-align: left;
+    margin-top:0px;
+    list-style-image: url(img/discountIcon.png);
+}
+
 /* END OF CONTENT AND IMAGES*/
 /* FOOTER CONTENT*/
 footer
@@ -334,6 +375,4 @@ button[type="submit"]:hover
     } 
 
 }
-
-
 

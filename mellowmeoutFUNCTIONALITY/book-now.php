@@ -26,12 +26,20 @@
                 <h3>Show Available Times</h3>
                 <p>
                 Please Select Date</br> Of Booking:</p>
-		  
+						
+            
+	<?php //If logged in as standard user 
+		  if (isset($_SESSION['u_id'])) {
+			  echo '
 			<form name="submit" action="" id="name" method="POST">
 				<input name = "datepicked" type="date"/></br>
-				<br><button type="submit" name="submit" style="background-color: green; height: 40px;width: 145px;color: white;">Show Available Times</button><br>
+				<br><button type="submit" name="submit" style="background-color: green; 
+					height: 40px;
+					width: 145px;
+					color: white;">Show Available Times</button><br>
 				</form>
-		<?php 
+		';
+		  }
 		//if user submit
 		if (isset($_POST['submit']) && $_POST['datepicked'] != "") {
 		include 'code.php';
@@ -60,7 +68,10 @@
 		</select>
 		';
 		}
-		
+		  //if not logged in
+		else if (isset($_SESSION['u_id']) == false) {
+			  echo '<h1>Please log in to make a booking<h1>';
+		  }
 		?>
 		</div>
 		</div>

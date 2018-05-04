@@ -14,7 +14,7 @@ if(isset($_POST['submit'])) {
 	//if anything is empty show error
 	if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) 
 	{
-		header("Location: signup.php");
+		header("Location: sign-up.php");
 		exit();
 	} 
 	else {
@@ -33,7 +33,7 @@ if(isset($_POST['submit'])) {
 			$sql = "INSERT INTO users (user_first, user_last, user_email, user_username, user_password) VALUES ('$first', '$last', '$email', '$uid', '$hashedPwd');";
 			mysqli_query($conn, $sql);
 			//show success in top bar
-			header("Location: signup.php");
+			header("Location: sign-up.php");
 			exit();
 		}
 	}

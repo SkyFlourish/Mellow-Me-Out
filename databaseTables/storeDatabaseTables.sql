@@ -114,6 +114,14 @@ CREATE TABLE Staff
     PRIMARY KEY (StaffID)
 );
 
+CREATE TABLE AdminStaff
+(
+    AdminStaffID                INT             NOT NULL    AUTO_INCREMENT,
+    StaffID                     INT             NOT NULL,
+    PRIMARY KEY (AdminStaffID),
+    FOREIGN KEY (StaffID) REFERENCES Staff(StaffID)
+);
+
 /* Table name change */
 CREATE TABLE Users
 (

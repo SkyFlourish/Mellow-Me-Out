@@ -16,6 +16,8 @@
                 and a booking time.
                 Changes references of order to booking.
     24/04/2018 - Added a table for closed days and holidays.
+    09/05/2018 - Added blog and faq table, will likely need to change to
+                something more functional.
 */
 
 CREATE TABLE Services (
@@ -60,6 +62,48 @@ CREATE TABLE Discount
     PRIMARY KEY (DiscountID)
 );
 
+CREATE TABLE Faq
+(
+    FaqID                       INT             NOT NULL    AUTO_INCREMENT,
+    FaqTitle                    TEXT            NOT NULL,
+    FaqContents                 TEXT            NOT NULL,
+    PRIMARY KEY (FaqID)
+);
+
+CREATE TABLE BlogContent
+(
+    BlogID                      INT             NOT NULL    AUTO_INCREMENT,
+    BlogTitle                   TEXT            NOT NULL,
+    BlogContent                 TEXT            NULL,
+    BlogTime                    DATETIME        NOT NULL,
+    BlogCategory                VARCHAR(50)     NULL,
+    BlogTags                    VARCHAR(100)    NULL,
+    BlogStaffID                 INT             NOT NULL,
+    PRIMARY KEY (BlogID),
+    FOREIGN KEY (BlogStaffID) REFERENCES Staff(StaffID)
+);
+
+CREATE TABLE BlogComments
+(
+    BlogCommentID               INT             NOT NULL    AUTO_INCREMENT,
+    BlogCommentText             TEXT            NOT NULL,
+    BlogCommentUserID           INT             NOT NULL,
+);
+
+CREATE TABLE BlogCommentDisplay
+(
+    BlogDisplayID               INT             NOT NULL    AUTO_INCREMENT,
+    BlogID                      INT             NOT NULL,
+    BlogCommentID               INT             NOT NULL,
+    PRIMARY KEY (BlogDisplayID),
+    FOREIGN KEY (BlogID) REFERENCES BlogContent(BlogID),
+    FOREIGN KEY (BlogCommentID) REFERENCES BlogComments(BlogCommentID)
+);
+/* Should act as a one-to-many table relationship, loading the blog conntent
+    and then iterating through the comments depending on the blog's ID,
+    it will also allow for an easy count function when it comes time to
+    implement */
+
 CREATE TABLE Staff
 (
     StaffID                     INT             NOT NULL    AUTO_INCREMENT,
@@ -82,6 +126,7 @@ CREATE TABLE Users
     Passphrase                  VARCHAR(50)     NOT NULL,
     PRIMARY KEY (UserID)
 );
+
 
 /* Need a one to many relation table in addition */
 CREATE TABLE Bookings
@@ -106,8 +151,11 @@ CREATE TABLE Bookings
 
 CREATE TABLE ServicesInBooking
 (
+    /* SibID = Services in booking ID */
+    SibID                       INT             NOT NULL    AUTO_INCREMENT,
     ServiceID                   INT             NOT NULL,
     BookingID                   INT             NOT NULL,
+    PRIMARY KEY (SibID),
     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID),
     FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
 );

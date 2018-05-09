@@ -8,9 +8,9 @@
     15/04/2018 - Changed Customer table name to Users to align with other code,
                  alongside the first column name.
     22/04/2018 - Added new table (ServiceDescriptions).
-                Changed Items table to services table to 
+                Changed Items table to services table to
                 better reflect the clients needs.
-                Put in a number assignment. 
+                Put in a number assignment.
                 Hopefully add booking functionality.
     23/04/2018 - Changes orders table to booking table, added a service length
                 and a booking time.
@@ -20,13 +20,13 @@
 
 CREATE TABLE Services (
     ServiceID                   INT             NOT NULL    AUTO_INCREMENT,
-    ServiceName                 VARCHAR(50)     NOT NULL, 
+    ServiceName                 VARCHAR(50)     NOT NULL,
     ServicePrice                DECIMAL(15,2)   NOT NULL,
     ServiceType                 INT             NOT NULL,
     ServiceTime                 INT,
     PRIMARY KEY (ServiceID)
 );
-/* Service types (massages, eyelash extensions and others will be assigned a number) 
+/* Service types (massages, eyelash extensions and others will be assigned a number)
     This will help in displaying data depending on the users viewing selection */
 /* For now services will be assigned as follows:
 Massage             = 1
@@ -42,17 +42,17 @@ CREATE TABLE ServiceDescription
     ServiceDescriptionID        INT             NOT NULL    AUTO_INCREMENT,
     ServiceID                   INT             NOT NULL,
     ServiceDescription          TEXT,
-    PRIMARY KEY (ServiceDescriptionID), 
+    PRIMARY KEY (ServiceDescriptionID),
     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID)
 );
-/* 
-    Due to the nature of the services potentially being divied 
+/*
+    Due to the nature of the services potentially being divied
     between time allocations, we may wither need loops to ensure both entries will
     have the same desctiption if ever the situation arose where one was
     deleted.
 */
 
-CREATE TABLE Discount 
+CREATE TABLE Discount
 (
     DiscountID                  INT             NOT NULL    AUTO_INCREMENT,
     DiscountCode                VARCHAR(50)     NOT NULL,
@@ -91,15 +91,19 @@ CREATE TABLE Bookings
     /* ItemID  INT NOT NULL, */
     /* will need to be able to implement multiple item ID's, or else
         people will only be able to order one thing at a time */
-    BookingDate                 DATE            NOT NULL,
-    BookingTime                 VARCHAR(50)     NOT NULL,
-    BookingServiceLength        INT             NULL,
+    /*  Question - will we have an appointment system for all our
+        services? Will they fit the time blocks that have been proposed by
+        Lachy? */
+    BookingDateTimeStart        DATETIME       NOT NULL,
+    BookingDateTimeEnd          DATETIME       NOT NULL,
+    /* BookingTime                 VARCHAR(50)     NOT NULL, */
+    /* BookingServiceLength        INT             NULL, */
     TotalOrderTab               DECIMAL(15,2)   NOT NULL,
     PRIMARY KEY (BookingID),
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
     /* FOREIGN KEY (ItemID) REFERENCES Items(ItemID) */
 );
-    
+
 CREATE TABLE ServicesInBooking
 (
     ServiceID                   INT             NOT NULL,
@@ -129,7 +133,7 @@ CREATE TABLE NonBussinessDays
 /* Customer will make an order and  */
 
 /* Assumed workflow for ordering is as follows */
-/*  1. Customer registers details 
+/*  1. Customer registers details
     2. Customer puts orders in a cart for later ordering
     3. Customer orders items
     4. Order is generated and details are stored in 'Orders' table
@@ -142,7 +146,7 @@ CREATE TABLE NonBussinessDays
 /* Vestigial tables for reference and backtracking
 CREATE TABLE Items (
     ItemID              INT             NOT NULL    AUTO_INCREMENT,
-    ItemName            VARCHAR(50)     NOT NULL, 
+    ItemName            VARCHAR(50)     NOT NULL,
     ItemPrice           DECIMAL(15,2)   NOT NULL,
     ItemQuantity        INT             NOT NULL,
     PRIMARY KEY (ItemID)

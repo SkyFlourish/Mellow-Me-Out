@@ -68,8 +68,8 @@
 		 //if not logged in at all
 			else { 
 				echo'<ul>
-						<a href="sign-up.php">Sign Up</br></a>
-						<a>Or Log In</a>
+						<a href="sign-up.php"><b><u>Sign Up</u></b></br></a>
+						Or Log In Below
 					</ul>
 					<form action="login.inc.php" method="POST">
 						<input type="username" name="uid"  placeholder="Username"  maxlength="32" size="14">

@@ -66,6 +66,10 @@ Here are some photos of our amazing work. You will be as pampered as the people 
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
         <?php include 'footer.php';?>
+             <style>
+            /* dynamic styling of footer across all pages */
+            <?php include 'footer.css'; ?>
+        </style>
 
   </div>  
 </body>

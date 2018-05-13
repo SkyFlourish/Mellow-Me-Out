@@ -21,24 +21,69 @@
     <!-- Navigation bar -->
         <?php include('nav.php')?>
     
-
+<script type="text/javascript">
+//javascript implementation
+    var faqNum = 0;
+    function toggle()
+    {
+        
+        var x = document.getElementsByClassName("collapseContent")[faqNum];
+        var icon = document.getElementsByClassName("collapseIcon")[faqNum];
+        
+        if(x.style.display==="block")
+            {
+                x.style.display="none"; icon.style.background="url(img/plusIcon.png)";
+            }
+        else
+        {
+           x.style.display="block";  icon.style.background="url(img/minusIcon.png)";
+        }
+                
+    }
+    function collapseAll()
+        { 
+            faqNum=0;
+            while(faqNum < 5)
+            {
+            var x = document.getElementsByClassName("collapseContent")[faqNum];
+            var icon = document.getElementsByClassName("collapseIcon")[faqNum];
+            
+                if (x.style.display==="block")
+                {
+                    x.style.display="none"; 
+                    icon.style.background="url(img/plusIcon.png)";
+                }
+            faqNum++;
+            }
+            
+        }
+          
+        </script>
     <!-- MAIN CONTENT -->
     <div class= "content"> 
         <h2>FAQ</h2>
         <p>Looking for answers? Some of the most common questions can be answered by expanding the boxes bellow.</p>
         <div class="faqContent">
-          <button class="faqCollapse">What payment options do you offer in store?<div class="collapseIcon"></div></button>
-           <button class="faqCollapse">blah blah blah blah?<div class="collapseIcon"></div></button>
-        </div>
+          
+            <button class="faqBox" onclick="faqNum = 0; toggle();">What payment options do you offer in store?<div class="collapseIcon"></div></button>
+            <div class="collapseContent">test, test ,test, test, test, test, test, test ,test, test, test, test,test, test ,test, test, test, test the value is 
+            </div>
         
-       
-       
+     <button class="faqBox" onclick="faqNum = 1; toggle();">What payment options do you offer in store?<div class="collapseIcon"></div></button>
+            <div class="collapseContent">test, test ,test, test, test, test, test, test 
+            </div>
+            <button class="collapseAllBut"  onclick="collapseAll();">Collapse all</button>       
+        </div>
         </div>
         
       
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
        <?php include('footer.php')?>  
+             <style>
+            /* dynamic styling of footer across all pages */
+            <?php include 'footer.css'; ?>
+        </style>
 </div>
     
   

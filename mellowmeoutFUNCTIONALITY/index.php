@@ -84,7 +84,11 @@
     </div>
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
-       <?php include('footer.php')?>  
+       <?php include('footer.php')?>
+        <style>
+            /* dynamic styling of footer across all pages */
+            <?php include 'footer.css'; ?>
+        </style>
 </div>
     
     

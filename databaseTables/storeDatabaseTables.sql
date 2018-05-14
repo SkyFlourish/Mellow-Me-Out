@@ -18,6 +18,11 @@
     24/04/2018 - Added a table for closed days and holidays.
     09/05/2018 - Added blog and faq table, will likely need to change to
                 something more functional.
+    12/05/2018 - Split blog tables up, changed booking table to allow
+                for bookings without an account with the site.
+    13/05/2018 - Added table for contact-us page
+    14/05/2018 - Corrected table structure and made sure tables can be made
+                withour error
 */
 
 CREATE TABLE Services (
@@ -33,7 +38,7 @@ CREATE TABLE Services (
 /* For now services will be assigned as follows:
 Massage             = 1
 Spa                 = 2
-Eyelash extensions  = 3
+Eyelash extensions  = 4
 */
 /* Service time will be stored as an integer to simplify the storing process.
     It can be stored as NULL due to not all services having a time assignment,
@@ -70,69 +75,46 @@ CREATE TABLE Faq
     PRIMARY KEY (FaqID)
 );
 
-CREATE TABLE BlogContent
-(
-    BlogID                      INT             NOT NULL    AUTO_INCREMENT,
-    BlogTitle                   TEXT            NOT NULL,
-    BlogContent                 TEXT            NULL,
-    BlogTime                    DATETIME        NOT NULL,
-    BlogCategory                VARCHAR(50)     NULL,
-    BlogTags                    VARCHAR(100)    NULL,
-    BlogStaffID                 INT             NOT NULL,
-    PRIMARY KEY (BlogID),
-    FOREIGN KEY (BlogStaffID) REFERENCES Staff(StaffID)
-);
 
-CREATE TABLE BlogComments
+CREATE TABLE ContactUs
 (
-    BlogCommentID               INT             NOT NULL    AUTO_INCREMENT,
-    BlogCommentText             TEXT            NOT NULL,
-    BlogCommentUserID           INT             NOT NULL,
+  ContactUsID                 INT               NOT NULL    AUTO_INCREMENT,
+  FirstName                   VARCHAR(50)       NOT NULL,
+  LastName                    VARCHAR(50)       NOT NULL,
+  EmailAddress                VARCHAR(100)      NOT NULL,
+  Subject                     TEXT              NOT NULL,
+  Message                     TEXT              NOT NULL,
+  PRIMARY KEY (ContactUsID)
 );
-
-CREATE TABLE BlogCommentDisplay
-(
-    BlogDisplayID               INT             NOT NULL    AUTO_INCREMENT,
-    BlogID                      INT             NOT NULL,
-    BlogCommentID               INT             NOT NULL,
-    PRIMARY KEY (BlogDisplayID),
-    FOREIGN KEY (BlogID) REFERENCES BlogContent(BlogID),
-    FOREIGN KEY (BlogCommentID) REFERENCES BlogComments(BlogCommentID)
-);
-/* Should act as a one-to-many table relationship, loading the blog conntent
-    and then iterating through the comments depending on the blog's ID,
-    it will also allow for an easy count function when it comes time to
-    implement */
 
 CREATE TABLE Staff
 (
-    StaffID                     INT             NOT NULL    AUTO_INCREMENT,
     FirstName                   VARCHAR(50)     NOT NULL,
     LastName                    VARCHAR(50)     NOT NULL,
     Username                    VARCHAR(50)     NOT NULL,
     Passphrase                  VARCHAR(50)     NOT NULL,
-    PRIMARY KEY (StaffID)
+    PRIMARY KEY (Username)
 );
 
 CREATE TABLE AdminStaff
 (
     AdminStaffID                INT             NOT NULL    AUTO_INCREMENT,
-    StaffID                     INT             NOT NULL,
+    Username                    VARCHAR(50)     NOT NULL,
     PRIMARY KEY (AdminStaffID),
-    FOREIGN KEY (StaffID) REFERENCES Staff(StaffID)
+    FOREIGN KEY (Username) REFERENCES Staff(Username)
 );
 
 /* Table name change */
 CREATE TABLE Users
 (
-    /* First field name changed */
-    UserID                      INT             NOT NULL    AUTO_INCREMENT,
+    /* UserID removed, Username should be forced to be unique */
+    Username                    VARCHAR(50)     NOT NULL,
+    Passphrase                  VARCHAR(50)     NOT NULL,
     FirstName                   VARCHAR(50)     NOT NULL,
     LastName                    VARCHAR(50)     NOT NULL,
     EmailAddress                VARCHAR(100)    NOT NULL,
-    Username                    VARCHAR(50)     NOT NULL,
-    Passphrase                  VARCHAR(50)     NOT NULL,
-    PRIMARY KEY (UserID)
+    PhoneNumber                 INT             NULL,
+    PRIMARY KEY (Username)
 );
 
 
@@ -140,22 +122,28 @@ CREATE TABLE Users
 CREATE TABLE Bookings
 (
     BookingID                   INT             NOT NULL    AUTO_INCREMENT,
-    UserID                      INT             NOT NULL,
     /* ItemID  INT NOT NULL, */
     /* will need to be able to implement multiple item ID's, or else
         people will only be able to order one thing at a time */
     /*  Question - will we have an appointment system for all our
         services? Will they fit the time blocks that have been proposed by
         Lachy? */
-    BookingDateTimeStart        DATETIME       NOT NULL,
-    BookingDateTimeEnd          DATETIME       NOT NULL,
+    BookingDateTimeStart        DATETIME        NOT NULL,
+    BookingDateTimeEnd          DATETIME        NOT NULL,
+    BookingRegisteredFirstName  VARCHAR(50)     NOT NULL,
+    BookingRegisteredLastName   VARCHAR(50)     NOT NULL,
+    BookingRegisteredPhone      INT             NOT NULL,
+    BookingRegisteredEmail      VARCHAR(100)    NOT NULL,
     /* BookingTime                 VARCHAR(50)     NOT NULL, */
     /* BookingServiceLength        INT             NULL, */
     TotalOrderTab               DECIMAL(15,2)   NOT NULL,
-    PRIMARY KEY (BookingID),
-    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+    PRIMARY KEY (BookingID)
     /* FOREIGN KEY (ItemID) REFERENCES Items(ItemID) */
 );
+/* People should be able to book a session without having to log in to
+  an account, therefore either details from a the logged in users table-row
+  should be used or if those details do not exist, then they will need to be
+  asked for so that validation can happen after the fact */
 
 CREATE TABLE ServicesInBooking
 (
@@ -186,7 +174,49 @@ CREATE TABLE NonBussinessDays
     to input the dates themselves due to the nature of public holidays being optional for
     busineeses and the like */
 
-/* Customer will make an order and  */
+CREATE TABLE BlogContent
+(
+    BlogID                      INT             NOT NULL    AUTO_INCREMENT,
+    BlogTitle                   TEXT            NOT NULL,
+    BlogContent                 TEXT            NULL,
+    BlogTime                    DATETIME        NOT NULL,
+    BlogCategory                VARCHAR(50)     NULL,
+    Username                    VARCHAR(50)     NOT NULL,
+    PRIMARY KEY (BlogID),
+    FOREIGN KEY (Username) REFERENCES Staff(Username)
+);
+
+CREATE TABLE BlogComments
+(
+    BlogCommentID               INT             NOT NULL    AUTO_INCREMENT,
+    BlogCommentText             TEXT            NOT NULL,
+    Username                    VARCHAR(50)     NOT NULL,
+    PRIMARY KEY (BlogCommentID),
+    FOREIGN KEY (Username) REFERENCES Users(Username)
+);
+
+CREATE TABLE BlogTags
+(
+    BlogTagID                   INT             NOT NULL    AUTO_INCREMENT,
+    BlogTag                     VARCHAR(100)    NOT NULL,
+    BlogID                      INT             NOT NULL,
+    PRIMARY KEY (BlogTagID),
+    FOREIGN KEY (BlogID) REFERENCES BlogContent(BlogID)
+);
+
+CREATE TABLE BlogCommentDisplay
+(
+    BlogDisplayID               INT             NOT NULL    AUTO_INCREMENT,
+    BlogID                      INT             NOT NULL,
+    BlogCommentID               INT             NOT NULL,
+    PRIMARY KEY (BlogDisplayID),
+    FOREIGN KEY (BlogID) REFERENCES BlogContent(BlogID),
+    FOREIGN KEY (BlogCommentID) REFERENCES BlogComments(BlogCommentID)
+);
+/* Should act as a one-to-many table relationship, loading the blog conntent
+    and then iterating through the comments depending on the blog's ID,
+    it will also allow for an easy count function when it comes time to
+    implement */
 
 /* Assumed workflow for ordering is as follows */
 /*  1. Customer registers details

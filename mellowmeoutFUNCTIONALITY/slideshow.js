@@ -2,7 +2,7 @@ var counter = 0;
 var slideIndex = 0;
 autoSlideShow();
 
-function autoSlideShow()
+/*(function autoSlideShow()
 {
   var i;
   var slides = document.getElementsByClassName('slide');
@@ -25,7 +25,7 @@ function autoSlideShow()
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].style.opacity ="0.9";
   setTimeout(autoSlideShow, 2000);
-}
+} */
 
 function LeftArrow() /* Increment counter*/
 {

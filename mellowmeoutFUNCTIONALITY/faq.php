@@ -62,14 +62,14 @@
     <!-- MAIN CONTENT -->
     <div class= "content"> 
         <h2>FAQ</h2>
-        <p>Looking for answers? Some of the most common questions can be answered by expanding the boxes bellow.</p>
+        <p>Looking for answers? Some of the most common questions can be answered by expanding the boxes bellow. Please contact us if the questions here do not answer your Inquiries.</p>
         <div class="faqContent">
           
-            <button class="faqBox" onclick="faqNum = 0; toggle();">What payment options do you offer in store?<div class="collapseIcon"></div></button>
+            <button class="faqCollapse" onclick="faqNum = 0; toggle();">What payment options do you offer in store?<div class="collapseIcon"></div></button>
             <div class="collapseContent">test, test ,test, test, test, test, test, test ,test, test, test, test,test, test ,test, test, test, test the value is 
             </div>
         
-     <button class="faqBox" onclick="faqNum = 1; toggle();">What payment options do you offer in store?<div class="collapseIcon"></div></button>
+     <button class="faqCollapse" onclick="faqNum = 1; toggle();">What payment options do you offer in store?<div class="collapseIcon"></div></button>
             <div class="collapseContent">test, test ,test, test, test, test, test, test 
             </div>
             <button class="collapseAllBut"  onclick="collapseAll();">Collapse all</button>       

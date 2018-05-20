@@ -11,8 +11,9 @@
     <link rel="stylesheet" type="text/css" href="gallery.css"> <!-- Link to external CSS file -->
     <script type="text/javascript" src="slideshow.js"></script>
 </head>
+
     
-<body onload="ChangeDots">
+<body onload="images();">
     <div class="wrapper">
         <?php include 'header.php';?>
         <?php include 'nav.php';?>
@@ -20,7 +21,13 @@
     <div class= "content"> 
      <div class= "textbody"><br> <br>
 <h1>Gallery</h1>
-Here are some photos of our amazing work. You will be as pampered as the people you see here.
+ 
+
+
+
+<h3 id="demo"></h3>
+
+         Here are some photos of our amazing work. You will be as pampered as the people you see here.
 <br><br>
 <!--You can change the images by either replacing the image in the img folder or
  by renaming the img/gallery#.jpg with the image you want to use-->
@@ -58,11 +65,24 @@ Here are some photos of our amazing work. You will be as pampered as the people 
 
 <br><br><br><br><br>
 <p>
+ <p id="demo"></p>
 
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var x = document.getElementsByClassName("gallery");
+    document.getElementById("demo").innerHTML = "Number of images: " + x.length;
+   
+}
+     window.onload = myFunction;
+</script>
 </div>
 
     </div>
         </div>
+       
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
         <?php include 'footer.php';?>
@@ -72,5 +92,7 @@ Here are some photos of our amazing work. You will be as pampered as the people 
         </style>
 
   </div>  
+    
+    
 </body>
 </html>

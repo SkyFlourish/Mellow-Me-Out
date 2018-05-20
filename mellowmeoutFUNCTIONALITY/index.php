@@ -20,38 +20,93 @@
     <!-- Navigation bar -->
         <?php include('nav.php')?>
 
+        
+<script type="text/javascript"> 
+var counter = 0; //keeps track of slideshow
+
+    function toggle(){
+    var dots = document.getElementsByClassName("slideShowDot")[counter];
+    var slideCon = document.getElementsByClassName("slideShowContainer")[0];
+   
+if (counter >3)
+        {
+            counter = 0;
+        }
+if (counter <0)
+        {
+            counter = 3;
+        }
+
+if(counter == 0)
+            {
+                var slideText = document.getElementsByClassName("slideShowHeader")[0].innerHTML=("EXAMPLE TEXT 1");
+                    slideCon.style.background="linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(img/slideShow_Spa1.jpg) ";
+                slideCon.style.backgroundRepeat="no-repeat";
+                 slideCon.style.backgroundSize="cover";
+             
+           
+            }
+
+if(counter == 1)
+            {
+                
+                  var slideText = document.getElementsByClassName("slideShowHeader")[0].innerHTML=("EXAMPLE TEXT 2");
+                slideCon.style.background="linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(img/spa.jpg) ";
+                slideCon.style.backgroundRepeat="no-repeat";
+                 slideCon.style.backgroundSize="cover";
+           
+            }
+if(counter == 2)
+            {
+                var slideText = document.getElementsByClassName("slideShowHeader")[0].innerHTML=("EXAMPLE TEXT 3");
+                   slideCon.style.background="linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(img/ourTeam.jpg) ";
+                slideCon.style.backgroundRepeat="no-repeat";
+                 slideCon.style.backgroundSize="cover";
+            
+                
+            }
+if(counter == 3)
+            {
+               var slideText = document.getElementsByClassName("slideShowHeader")[0].innerHTML=("EXAMPLE TEXT 4");
+                   slideCon.style.background="linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(img/massage.jpg) ";
+                slideCon.style.backgroundRepeat="no-repeat";
+                 slideCon.style.backgroundSize="cover";
+              
+            }
+}
+//arrow incrementing
+function LeftArrow() /* Increment counter*/
+{
+   
+    counter--;
+     toggle();
+}
+
+function RightArrow() /* Decrement counter*/
+{
+     
+    counter++;
+     toggle();
+}
+    const slideTime = 3000;
+    var myTimer = setInterval(RightArrow, slideTime); //run code on load  
+        </script>
     <!-- SLIDESHOW -->
         <div class="slideShowContainer">
 
-          <div class = "slide fade">
-            <img src="img/slideShow_Spa.jpg" alt="Refreshing Spa Bath" style ="width:100%">
-          </div>
-
-          <div class = "slide fade">
-            <img src="img/slide_cucumber_mask.jpg" alt="Relaxing Cucumber Masks" style ="width:100%">
-          </div>
-
-          <div class = "slide fade">
-            <img src="img/slide_back_massage.jpg" alt="Stress Releasing Back massage" style ="width:100%">
-          </div>
-
-          <div class = "slide fade">
-            <img src="img/slide_foot_massage.jpg" alt="Theraputic Foot Massage" style ="width:100%">
-          </div>
-
-          <div class ="leftArrow" onclick="LeftArrow()"></div>
+          <div class ="leftArrow" onclick="LeftArrow(); clearInterval(myTimer); myTimer = setInterval(RightArrow, slideTime); "></div>
 
           <div class="slideShowContent">
-              <h2>EXAMPLE TITLE GOES HERE</h2>
+              <h2 class="slideShowHeader">EXAMPLE TEXT 1</h2>
           </div>
 
-         <div class ="rightArrow" onclick="RightArrow()"></div>
+         <div class ="rightArrow" onclick="RightArrow(); clearInterval(myTimer); myTimer = setInterval(RightArrow, slideTime); "></div>
 
          <div class="slideShowDotCon">
-            <span class="slideShowDot"></span>
-            <span class="slideShowDot"></span>
-            <span class="slideShowDot"></span>
-            <span class="slideShowDot"></span>
+            <div class="slideShowDot" onclick="counter=0; toggle(); clearInterval(myTimer); myTimer = setInterval(RightArrow, slideTime);"></div>
+            <div class="slideShowDot" onclick="counter=1; toggle(); clearInterval(myTimer); myTimer = setInterval(RightArrow, slideTime);"></div>
+            <div class="slideShowDot" onclick="counter=2; toggle(); clearInterval(myTimer); myTimer = setInterval(RightArrow, slideTime);"></div>
+            <div class="slideShowDot" onclick="counter=3; toggle(); clearInterval(myTimer); myTimer = setInterval(RightArrow, slideTime); "></div>
         </div>
 
     </div>

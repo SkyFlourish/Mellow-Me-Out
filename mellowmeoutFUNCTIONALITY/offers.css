@@ -136,6 +136,7 @@ nav ul li:hover
     width:100%;
     min-height: 240px;
     background-color: gainsboro;
+    background-image: url(img/flower_Pattern.png);
     position: relative;
     overflow: hidden;
 }

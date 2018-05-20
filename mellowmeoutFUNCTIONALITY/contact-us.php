@@ -20,7 +20,31 @@
     <!-- MAIN CONTENT -->
     <div class= "content">
      <h2>Contact Us</h2>
-   <p>Have some questions not covered by our FAQ? Send it from here and we'll be sure to respond as quickly as we can. Here at MellowMeOut, your feedback helps improve our services. </p>
+   <p>Have some questions not covered by our FAQ? Send it from here and we'll be sure to respond as quickly as we can. Here at MellowMeOut, your feedback helps improve our services so that everyone is satisfied. </p>
+        <div class = "contactInfoContainer">
+            <div class = "contactOpeningTimes"><h3>Store Opening Times</h3>
+                    <ul>       
+                        <li><b>Monday:</b> 9am - 5pm</li>
+                    <li><b>Tuesday:</b>  9am - 5pm</li>
+                    <li><b>Wednesday:</b>  9am - 5pm</li>
+                    <li><b>Thursday:</b>  9am - 5pm</li>
+                    <li><b>Friday:</b>  9am - 5pm</li>
+                    <li><b>Saturday:</b>  Closed</li>
+                        <li><b>Sunday:</b> Closed</li>
+                </ul>
+            </div>
+            <div class = "contactDetails">
+                <h3>Contact Details</h3>
+                <p><b>Address:</b> 123 dove road Boronia, VIC, AUSTRALIA
+                <br>
+                <b>Phone:</b> (03)98278685
+                 <br>
+                <b>Email:</b> info@mellowmeout.com
+                </p>
+            
+         
+            </div>
+        </div>
   
 <div class = "formBody">
     <form>
@@ -52,6 +76,7 @@
         <input type="submit" value="Submit">
 </form>
   </div>
+        <br><br>
 </div>
     
     <!-- MAIN CONTENT END -->

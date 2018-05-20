@@ -10,26 +10,41 @@ show tables;
 
 Data Insertion:
 -------------------------------------------------------------------------------
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Aromatherapy Massage', '75.00', '1', '60');
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Aromatherapy Massage', '45.00', '1', '30');
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Lymphatic Massage', '75.00', '1', '60');
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Indian Head Massage', '45.00', '1', '30');
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Body Mud Wrap', '70.00', '2', NULL);
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Body Exfoliate', '50.00', '2', NULL);
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Natural Full Set', '90.00', '3', NULL);
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Half Set', '70.00', '3', NULL);
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Refills', '45.00', '3', NULL);
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Eyelash Tint', '25.00', '3', NULL);
-INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime) 
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
 VALUES ('Eyebrow Tint', '15.00', '3', NULL);
 -------------------------------------------------------------------------------
+
+SELECT b.Username,
+  b.BlogTitle,
+  b.BlogContent,
+  b.BlogContentTimestamp,
+  b.BlogCategory,
+  bc.BlogCommentText,
+  bc.Username,
+  bc.BlogCommentTimestamp,
+  bt.BlogTag
+FROM BlogContent AS b
+INNER JOIN BlogTags AS bt
+    ON b.BlogID = bt.BlogID
+INNER JOIN BlogComments AS bc
+    ON b.BlogID = bc.BlogID

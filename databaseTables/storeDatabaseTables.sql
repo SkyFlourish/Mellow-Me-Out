@@ -58,14 +58,16 @@ CREATE TABLE ServiceDescription
     have the same desctiption if ever the situation arose where one was
     deleted.
 */
+/* She would also like package deals, keep that in mind */
 
 CREATE TABLE Discount
 (
-    DiscountID                  INT             NOT NULL    AUTO_INCREMENT,
+    /* DiscountID                  INT             NOT NULL    AUTO_INCREMENT, */
     DiscountCode                VARCHAR(50)     NOT NULL,
     DiscountPercentage          INT             NOT NULL,
-    PRIMARY KEY (DiscountID)
+    PRIMARY KEY (DiscountCode)
 );
+/* Likely to be generated via Excel or some other such tool */
 
 CREATE TABLE Faq
 (
@@ -179,7 +181,7 @@ CREATE TABLE BlogContent
     BlogID                      INT             NOT NULL    AUTO_INCREMENT,
     BlogTitle                   TEXT            NOT NULL,
     BlogContent                 TEXT            NULL,
-    BlogTime                    DATETIME        NOT NULL,
+    BlogContentTimestamp        DATETIME        NOT NULL    DEFAULT   CURRENT_TIMESTAMP,
     BlogCategory                VARCHAR(50)     NULL,
     Username                    VARCHAR(50)     NOT NULL,
     PRIMARY KEY (BlogID),
@@ -191,8 +193,11 @@ CREATE TABLE BlogComments
     BlogCommentID               INT             NOT NULL    AUTO_INCREMENT,
     BlogCommentText             TEXT            NOT NULL,
     Username                    VARCHAR(50)     NOT NULL,
+    BlogID                      INT             NOT NULL,
+    BlogCommentTimestamp        DATETIME        NOT NULL    DEFAULT   CURRENT_TIMESTAMP,
     PRIMARY KEY (BlogCommentID),
-    FOREIGN KEY (Username) REFERENCES Users(Username)
+    FOREIGN KEY (Username) REFERENCES Users(Username),
+    FOREIGN KEY (BlogID) REFERENCES BlogContent(BlogID)
 );
 
 CREATE TABLE BlogTags
@@ -204,7 +209,7 @@ CREATE TABLE BlogTags
     FOREIGN KEY (BlogID) REFERENCES BlogContent(BlogID)
 );
 
-CREATE TABLE BlogCommentDisplay
+/* CREATE TABLE BlogCommentDisplay
 (
     BlogDisplayID               INT             NOT NULL    AUTO_INCREMENT,
     BlogID                      INT             NOT NULL,
@@ -212,7 +217,7 @@ CREATE TABLE BlogCommentDisplay
     PRIMARY KEY (BlogDisplayID),
     FOREIGN KEY (BlogID) REFERENCES BlogContent(BlogID),
     FOREIGN KEY (BlogCommentID) REFERENCES BlogComments(BlogCommentID)
-);
+); */
 /* Should act as a one-to-many table relationship, loading the blog conntent
     and then iterating through the comments depending on the blog's ID,
     it will also allow for an easy count function when it comes time to

@@ -57,7 +57,7 @@
     <!-- MAIN CONTENT -->
     <div class= "content"> 
         <h2>OUR TEAM</h2>
-        <p>We are dedicated to bring happiness to all of our customers.</p>
+        <p>At Mellow Me Out, we are dedicated to bring happiness to all of our customers. We will always listen to our customers and do what is right.</p>
         <div class="teamContainer">
             <div class="profileContainer">
             <div class="teamContainerProfile">

@@ -11,6 +11,11 @@
     <link rel="stylesheet" type="text/css" href="book-now.css"> <!-- Link to external CSS file -->
     <script type="text/javascript" src="slideshow.js"></script>
 </head>
+ 
+<style>
+    /* dynamic styling of footer across all pages */
+    <?php include 'footer.css'; ?>
+</style>
     
 <body onload="ChangeDots">
     <div class="wrapper">
@@ -21,11 +26,12 @@
 		<!-- MAIN CONTENT -->
 		<h2>Make Booking</h2>
         
+        <div class ="parentContainer"> 
             <div class = "con_Image1">
 			<div class="con_Body">
                 <h3>Show Available Times</h3>
                 <p>
-                Please Select Date</br> Of Booking:</p>
+                Please Select Date<br> Of Booking:</p>
 						
             
 	<?php //If logged in as standard user 
@@ -79,30 +85,32 @@
         <div class = "con_Image2">
             
             <div class="con_Body">
-                <h3>Choose Your Service & Email</h3>
+                <h3>Choose Your Service</h3>
                 <p>
-				
-                Select Service:</p>
+                Select Service:
 				<?php include_once("dbfunctions.php");
 				//show products stored in database so its dynamic rather than static
 				datas("SELECT user_body, user_header FROM datas"); 
 				?>
-				</br></br> Confirmation Email Address:</br></br>	
-				<input name='email'></br></br>
+                    <br>
+                    <br>
+				Confirmation Email Address: 
+				<input name='email' type='email'>
+                    </p><br><br>
             </div>
         </div>
         
         <div class = "con_Image3">
             <div class="con_Body">
-                <h3>Your Details</h3>
+                <h3>Enter Your Details</h3>
                 <p>
 				Your Full Name:
-				<input name='name'/></br></br>
+				<input name='name' type='text'/><br><br>
 				
 				Your Phone Number:
-				<input name='phone'>
+				<input name='phone' type='text' >
                 </p>
-				<button type="submit" name="submitform" style="background-color: green; height: 40px;width: 145px; color: white;">BOOK NOW!</button>
+				<button type="submit" name="submitform"  >BOOK NOW!</button>
 				</form>
 				<!--email form-->
 				<?php 

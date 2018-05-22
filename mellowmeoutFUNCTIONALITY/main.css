@@ -1,129 +1,29 @@
-body
-{
-    background: url(img/web_Background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
 
-
-}
-.wrapper /* Making website centered */
-{
-
-    margin: 0 auto;
-    max-width:1020px;
-    float: none
-}
-
-/* HEADER STYLING */
-header
-{
-    float: left;
-    clear:both;
-    background-color: black;
-    color:lightgrey;
-    width: 100%;
-    font-family: sans-serif;
-    position: relative;
-    overflow:hidden;
-
-}
-.logo
-{
-    float:left;
-    min-width:320px;
-    min-height: 50px;
-    margin: 0px;
-    position:relative;
-    margin-top: 15px;
-    margin-left: 30px;
-
-}
-
-.headerDetails      /*For phone number and address */
-{
-
-    min-height:80px;
-    min-width:180px;
-    float:right;
-}
-.headerDetails h4
-{
-    text-align: center;
-    margin:10px;
-}
-.headerDetails p
-{
-    text-align: center;
-    margin:0px;
-}
-/* END OF HEADER */
-/* NAVIGATION STYLING */
-nav
-{
-    float: left;
-    clear:both;
-    background-color: #333333;
-    color:white;
-    width:100%;
-    padding: 0px;
-    margin:0px;
-}
-nav ul
-{
-    margin:0;
-}
-nav ul li
-{
-    transition-duration: 0.5s;
-    display:inline-block;
-    list-style-type: none;
-    color:white;
-    padding: 5px 10px;
-    font-family: sans-serif;
-}
-
-nav ul li a
-{
-    color:white;
-    text-decoration: none;
-}
-
-nav ul li:hover
-{
-    transition-duration: 0.5s;
-    background-color: darkgray;
-}
-
-/* END OF NAVIGATION */
 /* SLIDESHOW STYLING */
 .slideShowContainer
 {
     position:relative;
     float:left;
     clear: both;
-    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ); /*linear grad darkens the image */
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(img/slideShow_Spa1.jpg); /*linear grad darkens the image */
     background-repeat: no-repeat;
-    background-size:100% 100%;
+    background-size:cover;
     color: white;
     min-height: 400px;
     max-height:400px;
     width: 100%;
+
+  animation-name: fade;
+  animation-duration: 1s;
+    
 }
 
-.slide
-{
-  display : none;
-}
 
-img {vertical-align: middle;}
 
 /* Fade animation */
 .fade
 {
-  -webkit- animation-name: fade;
-  -webkit- animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+
 }
 
 @-webkit-keyframes fade
@@ -198,6 +98,14 @@ img {vertical-align: middle;}
     overflow:hidden;
     text-align: center;
   }
+.slideShowHeader
+{
+position:absolute;
+top: 30%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+}
 
 .slideShowDotCon
 {
@@ -226,18 +134,15 @@ img {vertical-align: middle;}
     max-width: 15px;
     max-height: 15px;
     opacity: 0.5;
-    transition: background-color 0.6s ease;
+    transition:  0.5s ease;
     cursor: pointer;
 }
-
-.slideShowContent h2
+.slideShowDot:hover
 {
-position:absolute;
-top: 30%;
-left: 50%;
-transform: translate(-50%, -50%);
-
+    opacity:1.0;
+    transition: 0.5s ease;
 }
+
 
 /* END OF SLIDESHOW */
 /* CONTENT DIV AND IMAGES*/
@@ -313,8 +218,9 @@ transform: translate(-50%, -50%);
 @media only screen and (max-width: 568px) {
     .headerDetails
     {
-        float:left;
         clear:both;
+        float:left;
+        
 
     }
     .con_Image1
@@ -322,13 +228,4 @@ transform: translate(-50%, -50%);
         margin-left: 2.94%;
     }
 }
-@media.screen.and.(max-width:430px).{
 
-    .nav ul li
-    {
-        display:block;
-        width: 100%;
-    }
-
-
-}

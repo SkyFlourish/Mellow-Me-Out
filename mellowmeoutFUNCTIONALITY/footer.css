@@ -1,3 +1,126 @@
+body
+{
+    background: url(img/roses.jpeg);
+    background-size:auto;
+    background-repeat:no-repeat;
+
+
+}
+.wrapper /* Making website centered */
+{
+
+    margin: 0 auto;
+    max-width:1020px;
+    float: none
+}
+
+/* HEADER STYLING */
+header
+{
+    float: left;
+    clear:both;
+    background-color: black;
+    color:lightgrey;
+    width: 100%;
+    font-family: sans-serif;
+    position: relative;
+    overflow:hidden;
+
+}
+.logo
+{
+    float:left;
+    min-width:320px;
+    min-height: 50px;
+    margin: 0px;
+    position:relative;
+    margin-top: 15px;
+    margin-left: 30px;
+
+}
+
+.headerDetails      /*For phone number and address */
+{
+
+    min-height:80px;
+    min-width:180px;
+    float:right;
+}
+.headerDetails h4
+{
+    text-align: center;
+    margin:10px;
+}
+.headerDetails p
+{
+    text-align: center;
+    margin:0px;
+}
+/* END OF HEADER */
+/* NAVIGATION STYLING */
+nav
+{
+    float: left;
+    clear:both;
+    background-color: #333333;
+    color:white;
+    width:100%;
+    padding: 0px;
+    margin:0px;
+    overflow: hidden;
+    display:block;
+}
+nav ul
+{
+    margin:0;
+}
+
+nav ul li
+{
+    transition-duration: 0.5s;
+    display:inline-block;
+    list-style-type: none;
+    color:white;
+    padding: 5px 10px;
+    font-family: sans-serif;
+}
+
+nav ul li a
+{
+    color:white;
+    text-decoration: none;
+}
+
+nav ul li:hover
+{
+    transition-duration: 0.5s;
+    background-color: darkgray;
+  
+}
+.hamburger
+{
+    background-color: #333333;
+    display:none;
+    font-family: sans-serif;
+    color:white;
+      border-style: solid;
+    border-color:grey; 
+    border-width: 1px;
+    cursor: pointer;
+}
+.hamburger h3
+{
+    padding:0;
+    margin:0;
+    margin-left:30px;
+    
+    
+}
+.testy
+{
+    
+}
+/* END OF NAVIGATION */
 /* FOOTER CONTENT*/
 footer
 {
@@ -148,3 +271,28 @@ button[type="submit"]:hover
 }
 
 /* END OF FOOTER CONTENT*/
+
+@media only screen and (max-width:430px){
+
+    nav ul li
+    {
+        color:red;
+        width: 100%;
+    }
+    .hamburger
+    {
+        display:block;
+    }
+}
+@media only screen and (min-width:450px){
+
+    nav{
+        display:block;
+        
+    }
+}
+
+
+
+
+

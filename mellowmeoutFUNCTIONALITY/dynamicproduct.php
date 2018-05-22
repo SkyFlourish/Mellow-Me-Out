@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enabling zoom on mobile devices -->
     <link rel="stylesheet" type="text/css" href="products.css"> <!-- Link to external CSS file -->
 </head>
+                <style>
+            /* dynamic styling of footer across all pages */
+            <?php include 'footer.css'; ?>
+        </style>
 
 <body onload="ChangeDots">
     <div class="wrapper">
@@ -43,6 +47,7 @@
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
         <?php include('footer.php')?>
+    
 </div>
 </body>
 </html>

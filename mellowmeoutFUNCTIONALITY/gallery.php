@@ -67,9 +67,6 @@
 <p>
  <p id="demo"></p>
 
-
-<button onclick="myFunction()">Try it</button>
-
 <script>
 function myFunction() {
     var x = document.getElementsByClassName("gallery");

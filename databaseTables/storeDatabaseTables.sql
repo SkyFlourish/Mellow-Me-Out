@@ -23,6 +23,8 @@
     13/05/2018 - Added table for contact-us page
     14/05/2018 - Corrected table structure and made sure tables can be made
                 withour error
+    20/05/2018 - Added image storage location line to services table, not likely to be
+                permanent spot for it
 */
 
 CREATE TABLE Services (
@@ -33,6 +35,17 @@ CREATE TABLE Services (
     ServiceTime                 INT,
     PRIMARY KEY (ServiceID)
 );
+CREATE TABLE ServicesImgVariant (
+    ServiceID                   INT             NOT NULL    AUTO_INCREMENT,
+    ServiceName                 VARCHAR(50)     NOT NULL,
+    ServicePrice                DECIMAL(15,2)   NOT NULL,
+    ServiceType                 INT             NOT NULL,
+    ServiceTime                 INT,
+    ServiceImg                  VARCHAR(100)    NULL,
+    PRIMARY KEY (ServiceID)
+);
+/* Running under the assumption that services will only have one photo attached for now */
+/* Also assuming that the string will be built in PHP and that the directory will be specified */
 /* Service types (massages, eyelash extensions and others will be assigned a number)
     This will help in displaying data depending on the users viewing selection */
 /* For now services will be assigned as follows:

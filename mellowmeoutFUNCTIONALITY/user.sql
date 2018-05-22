@@ -109,6 +109,24 @@ CREATE TABLE `images` (
 -- --------------------------------------------------------
 
 --
+-- Temporary insert of blog content for testings sake
+--
+CREATE TABLE `BlogContent` (
+    BlogID                      INT,
+    BlogTitle                   TEXT            NOT NULL,
+    BlogContent                 TEXT            NULL,
+    BlogContentTimestamp        DATETIME        NOT NULL    DEFAULT   CURRENT_TIMESTAMP,
+    BlogCategory                VARCHAR(50)     NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory)
+VALUES ('This is a title','This is content','This is a category');
+INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory,Username)
+VALUES ('This a title','is content','This a category');
+INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory,Username)
+VALUES ('This is title','This content','This is category');
+
+--
 -- Table structure for table `users`
 --
 
@@ -154,6 +172,9 @@ ALTER TABLE `users`
 ALTER TABLE `users`
   MODIFY `user_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
+
+ALTER TABLE 'BlogContent'
+  ADD PRIMARY KEY ('BlogID');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

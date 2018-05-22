@@ -35,6 +35,11 @@ VALUES ('Eyebrow Tint', '15.00', '3', NULL);
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
+INSERT INTO Services (ServiceName, ServicePrice, ServiceType, ServiceTime)
+VALUES ('Eyebrow Tint', '15.00', '3', NULL,'img/brow-tint.jpg');
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
 INSERT INTO Users (Username,Passphrase,FirstName,LastName,EmailAddress,PhoneNumber)
 VALUES ('someUSER','thisisapassword','first','last','email@email.com','5555555');
 -------------------------------------------------------------------------------

@@ -122,9 +122,9 @@ CREATE TABLE `BlogContent` (
 
 INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory)
 VALUES ('This is a title','This is content','This is a category');
-INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory,Username)
+INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory)
 VALUES ('This a title','is content','This a category');
-INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory,Username)
+INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory)
 VALUES ('This is title','This content','This is category');
 
 --

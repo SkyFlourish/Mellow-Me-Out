@@ -31,8 +31,9 @@
     <?php
     include_once("dbfunctions.php");
     // Function parameters would be here
-    showblog("");
+    showblog("SELECT BlogTitle,BlogContent,BlogContentTimestamp FROM BlogContent");
     ?>
+    </div>
 	   <div id="right">
 		<h1 style="text-align:center">Blog Bar</h1><hr>
 		<h3 id="bar">CATEGORIES</h3>
@@ -47,7 +48,6 @@
 		<p id="tags"><a href>RRS,Widgets,Video</a></p>
 
 	   </div>
-    </div>
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
        <?php include('footer.php')?>

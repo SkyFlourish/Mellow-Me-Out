@@ -127,8 +127,7 @@ if (mysqli_num_rows($result) > 0) {
 			<p class= 'contents'>". $row["BlogContent"]. "
       </p>
 		<p style='text-align:right;margin-right:10px'>Tagged: <a href>Students</a></p><hr>
-	   </div>
-    "
+    ";
   }
 }
 }

@@ -31,7 +31,7 @@
     <?php
     include_once("dbfunctions.php");
     // Function parameters would be here
-    showblog("SELECT BlogID,BlogTitle,BlogContent,BlogContentTimestamp FROM BlogContent");
+    include('showcomments.inc.php');
     ?>
     </div>
 	   <div id="right">

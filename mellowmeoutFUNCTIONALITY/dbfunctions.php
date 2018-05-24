@@ -107,18 +107,43 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 function showblog($sqli) {
-include 'code.php';
+include 'db-connect.php';
 $sql = $sqli;
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   while ($row = mysqli_fetch_assoc($result)) {
-    $localresult = $result;
+    $BlogID = $row["BlogID"];
     // Timie string should be grabbed and made into something that fits
     // our agreed format format.
     // Comment count will be a seperate query that will be needed (or a subquery).
     echo "
-		<h2 style='text-align:left'>". $row["BlogTitle"]. "First blog</h2>
+		<h2 style='text-align:left'>". $row["BlogTitle"]. "</h2>
+      <!-- Title & comment count -->
+      <!-- Comment link would either open another page where the comment and the blog post would
+      be on the one page, alongside a back button -->
+			<p class='categories'>". $row["BlogContentTimestamp"]. " | <a href='showcomments.php?BlogID=". $BlogID. "'>View Comments...</a></p><hr>
+      <!-- Content -->
+			<p class= 'contents'>". $row["BlogContent"]. "
+      </p>
+		<p style='text-align:right;margin-right:10px'>Tagged: <a href>Students</a></p><hr>
+    ";
+  }
+}
+}
+
+function showblogandcomments($sqli) {
+include 'db-connect.php';
+$sql = $sqli;
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  while ($row = mysqli_fetch_assoc($result)) {
+    // Timie string should be grabbed and made into something that fits
+    // our agreed format format.
+    // Comment count will be a seperate query that will be needed (or a subquery).
+    echo "
+		<h2 style='text-align:left'>". $row["BlogTitle"]. "</h2>
       <!-- Title & comment count -->
       <!-- Comment link would either open another page where the comment and the blog post would
       be on the one page, alongside a back button -->

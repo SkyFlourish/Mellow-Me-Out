@@ -7,12 +7,12 @@ if (isset($_GET["BlogID"])) {
   $BlogID = mysqli_real_escape_string($conn,$_GET['BlogID']);
 
   $sqlquery1 = "SELECT BlogContent,BlogContentTimestamp,BlogTitle FROM BlogContent";
-  $sqlquery2 = "SELECT bc.BlogCommentText, bc.Username as Username, bc.BlogCommentTimestamp FROM BlogContent AS b INNER JOIN BlogComments AS bc ON b.BlogID = bc.BlogID WHERE b.BlogID = 1";
+  $sqlquery2 = "SELECT bc.BlogCommentText, bc.Username as Username, bc.BlogCommentTimestamp FROM BlogContent AS b INNER JOIN BlogComments AS bc ON b.BlogID = bc.BlogID WHERE b.BlogID = $BlogID";
 
   $contentqueryresult = mysqli_query($conn, $sqlquery1);
   $commentqueryresult = mysqli_query($conn, $sqlquery2);
 
-  if (mysqli_num_rows($contentqueryresult) == 1) {
+  if (mysqli_num_rows($contentqueryresult) > 0) {
       $row = mysqli_fetch_assoc($contentqueryresult);
       // Timie string should be grabbed and made into something that fits
       // our agreed format format.

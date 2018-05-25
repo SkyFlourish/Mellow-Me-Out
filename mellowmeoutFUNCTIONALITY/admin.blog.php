@@ -22,10 +22,26 @@
      <div class= "textbody"><br> <br>
 <?php	  //if admin logged in
 		 if (isset($_SESSION['u_ad'])) {
-			 
+
 			 //show whatever admin function inside the echo..
-			 echo '';
-			 
+			 echo '
+        <form action="addblog.inc.php" method="POST">
+            <p>
+            <h4>Blog Title:</h4>
+            <textarea placeholder="Title..." name="title" type="text"></textarea>
+            </p>
+            <p>
+            <h4>Blog Category:</h4>
+            <textarea placeholder="Category..." name="category" type="text"></textarea>
+            </p>
+            <p>
+            <h4>Blog Contents</h4>
+            <textarea placeholder="Blog content..." name="content" type="text" rows=15 cols=80></textarea>
+            </p>
+            <button type="submit" name="submitblog" sytle="background-color: green; height: 340px; width: 340px; color: white; ">
+            </button>
+          </form>
+       ';
 		 }
 		 ?>
 		 </div>

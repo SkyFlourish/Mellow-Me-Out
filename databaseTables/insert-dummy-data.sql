@@ -39,7 +39,12 @@ INSERT INTO Staff (FirstName,LastName,Username,Passphrase)
 VALUES ('stafffirst','stafflast','someSTAFF','somepassword');
 INSERT INTO Staff (FirstName,LastName,Username,Passphrase)
 VALUES ('stafffirstsecond','stafflastsecond','someSTAFFsecond','somepassword');
+INSERT INTO Staff (FirstName,LastName,Username,Passphrase)
+VALUES ('user','name','Username','Password');
 -------------------------------------------------------------------------------
+
+INSERT INTO AdminStaff (username)
+VALUES ('Username');
 
 -------------------------------------------------------------------------------
 INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory,Username)

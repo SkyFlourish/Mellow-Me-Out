@@ -33,17 +33,18 @@ CREATE TABLE Services (
     ServicePrice                DECIMAL(15,2)   NOT NULL,
     ServiceType                 INT             NOT NULL,
     ServiceTime                 INT,
-    PRIMARY KEY (ServiceID)
-);
-CREATE TABLE ServicesImgVariant (
-    ServiceID                   INT             NOT NULL    AUTO_INCREMENT,
-    ServiceName                 VARCHAR(50)     NOT NULL,
-    ServicePrice                DECIMAL(15,2)   NOT NULL,
-    ServiceType                 INT             NOT NULL,
-    ServiceTime                 INT,
     ServiceImg                  VARCHAR(100)    NULL,
     PRIMARY KEY (ServiceID)
 );
+-- CREATE TABLE ServicesImgVariant (
+--     ServiceID                   INT             NOT NULL    AUTO_INCREMENT,
+--     ServiceName                 VARCHAR(50)     NOT NULL,
+--     ServicePrice                DECIMAL(15,2)   NOT NULL,
+--     ServiceType                 INT             NOT NULL,
+--     ServiceTime                 INT,
+--     ServiceImg                  VARCHAR(100)    NULL,
+--     PRIMARY KEY (ServiceID)
+-- );
 /* Running under the assumption that services will only have one photo attached for now */
 /* Also assuming that the string will be built in PHP and that the directory will be specified */
 /* Service types (massages, eyelash extensions and others will be assigned a number)
@@ -51,7 +52,9 @@ CREATE TABLE ServicesImgVariant (
 /* For now services will be assigned as follows:
 Massage             = 1
 Spa                 = 2
+Nails               = 3
 Eyelash extensions  = 4
+Undefined           = 0
 */
 /* Service time will be stored as an integer to simplify the storing process.
     It can be stored as NULL due to not all services having a time assignment,

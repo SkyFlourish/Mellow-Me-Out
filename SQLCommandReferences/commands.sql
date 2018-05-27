@@ -73,6 +73,30 @@ INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
 VALUES ('This is a comment','someUSER','3');
 INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
 VALUES ('This is a comment','someUSER','3');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('This is another comment','someUSER','1');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('This isacomnt','someUSER','1');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('This is a test','someUSER','2');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('This is a comment','someUSER','2');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('This is a comment','someUSER','3');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('This is a comment','someUSER','3');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('This is yuet another cococococment comment','someUSER','1');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('TTTThis is a comment','someUSER','1');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('Thhhhhis is a comment','someUSER','2');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('This iiiiis a comment','someUSER','2');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('This is a ccccccomment','someUSER','3');
+INSERT INTO BlogComments (BlogCommentText,Username,BlogID)
+VALUES ('This isisjajis a comment','someUSER','3');
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
@@ -110,7 +134,6 @@ WHERE b.BlogID = 1;
 /* How do we get the blog ID number? */
 SELECT bc.BlogCommentText,
   bc.Username,
-  bc.BlogCommentID,
   bc.BlogCommentTimestamp
 FROM BlogContent AS b
 INNER JOIN BlogComments AS bc

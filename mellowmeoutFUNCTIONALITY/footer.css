@@ -95,7 +95,7 @@ nav ul li:hover
 {
     transition-duration: 0.5s;
     background-color: darkgray;
-  
+
 }
 .hamburger
 {
@@ -104,7 +104,7 @@ nav ul li:hover
     font-family: sans-serif;
     color:white;
       border-style: solid;
-    border-color:grey; 
+    border-color:grey;
     border-width: 1px;
     cursor: pointer;
 }
@@ -113,12 +113,12 @@ nav ul li:hover
     padding:0;
     margin:0;
     margin-left:30px;
-    
-    
+
+
 }
 .testy
 {
-    
+
 }
 /* END OF NAVIGATION */
 /* FOOTER CONTENT*/
@@ -129,7 +129,7 @@ footer
     color:white;
     background-color: black;
     min-height: 100px;
-    width: 100%; 
+    width: 100%;
 }
 .footer1
 {
@@ -142,7 +142,7 @@ footer
 }
 .footer2
 {
-    
+
     float:left;
     min-height: 100px;
     min-width: 150px;
@@ -153,7 +153,7 @@ footer
 
 .footer3
 {
-    
+
     float:left;
     min-height: 100px;
     min-width: 150px;
@@ -161,11 +161,11 @@ footer
     margin-left: 10px;
     color: white;
     font-family: sans-serif;
-    
+
 }
 .footer4
 {
-    
+
     float:left;
     min-height: 100px;
     min-width: 150px;
@@ -173,7 +173,7 @@ footer
     margin-left: 10px;
     color: white;
     font-family: sans-serif;
-    
+
 }
 
 .footerCopyright
@@ -185,7 +185,7 @@ footer
     color: white;
     font-family: sans-serif;
     font-size:12px;
-    
+
 }
 .footer3 p
 {
@@ -196,12 +196,12 @@ footer
     font-size:12px;
 }
 
-footer ul 
+footer ul
 {
     list-style:none;
     padding-left:0;
     margin-top: 0px;
-    
+
 }
 footer a
 {
@@ -217,13 +217,13 @@ footer a:hover
 
 footer h4
 {
-    
+
     border-bottom: solid 2px white;
     border-spacing: 20px;
     padding-bottom: 2px;
-    
+
 }
-input[type="email"] 
+input[type="email"]
 {
     background-image: url(img/mailSmall.png);
     background-repeat: no-repeat;
@@ -231,15 +231,15 @@ input[type="email"]
     width:124px;
 }
 
-input[type="username"] 
+input[type="username"]
 {
     background-image: url(img/user_Icon.png);
     background-repeat: no-repeat;
     padding-left:22px;
     width:124px;
-    
+
 }
-input[type="password"] 
+input[type="password"]
 {
     background-image: url(img/pass_Icon.png);
     background-repeat: no-repeat;
@@ -270,6 +270,27 @@ button[type="submit"]:hover
     background-color: darkgrey;
 }
 
+button[type="button"]
+{
+    border-radius: 2px;
+    margin-top:5px;
+    margin-bottom:5px;
+    width:100%;
+    background-color: #333333;
+    color:white;
+    transition-duration: 0.5s;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+button[type="button"]:hover
+{
+    transition-duration: 0.5s;
+    background-color: darkgrey;
+}
+
 /* END OF FOOTER CONTENT*/
 
 @media only screen and (max-width:430px){
@@ -288,11 +309,6 @@ button[type="submit"]:hover
 
     nav{
         display:block;
-        
+
     }
 }
-
-
-
-
-

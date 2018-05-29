@@ -20,10 +20,11 @@
     
     <!-- Navigation bar -->
         <?php include('nav.php')?>
-    
+
+
 <script type="text/javascript">
 //javascript implementation
-    var faqNum = 0;
+    var faqNum = 0;    
     function toggle()
     {
         
@@ -33,10 +34,14 @@
         if(x.style.display==="block")
             {
                 x.style.display="none"; icon.style.background="url(img/plusIcon.png)";
+                x.style.maxHeight=null;
+                
+          
             }
         else
         {
            x.style.display="block";  icon.style.background="url(img/minusIcon.png)";
+            x.style.maxHeight=x.scrollHeight + "px";
         }
                 
     }
@@ -63,16 +68,26 @@
     <div class= "content"> 
         <h2>FAQ</h2>
         <p>Looking for answers? Some of the most common questions can be answered by expanding the boxes bellow. Please contact us if the questions here do not answer your Inquiries.</p>
+       
         <div class="faqContent">
-          
+          <h3>General Inquiries</h3>
             <button class="faqCollapse" onclick="faqNum = 0; toggle();">What payment options do you offer in store?<div class="collapseIcon"></div></button>
-            <div class="collapseContent">test, test ,test, test, test, test, test, test ,test, test, test, test,test, test ,test, test, test, test the value is 
+            <div class="collapseContent">We offer a wide range of payment options in store. You can either pay with cash or card. Currently there is no online payment for security reasons.
             </div>
         
-     <button class="faqCollapse" onclick="faqNum = 1; toggle();">What payment options do you offer in store?<div class="collapseIcon"></div></button>
-            <div class="collapseContent">test, test ,test, test, test, test, test, test 
+     <button class="faqCollapse" onclick="faqNum = 1; toggle();">What is the massage attire?<div class="collapseIcon"></div></button>
+            <div class="collapseContent">Attire is not strict at Mellow Me Out and we encourage you to wear the most comfortable clothes you can. When wearing our robes, please keep underwear on for hygenic reasons.
             </div>
-            <button class="collapseAllBut"  onclick="collapseAll();">Collapse all</button>       
+                
+        
+            
+            <h3>Massage and Skin Treatment</h3>
+             <button class="faqCollapse" onclick="faqNum = 2; toggle();">Is Mellow Me Out suitable for men?<div class="collapseIcon"></div></button>
+            <div class="collapseContent">
+            Content coming soon..
+            </div>
+            
+            <button class="collapseAllBut"  onclick="collapseAll();">Collapse all</button>   
         </div>
         </div>
         

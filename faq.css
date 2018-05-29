@@ -1,0 +1,134 @@
+
+
+
+/* END OF SLIDESHOW */
+/* CONTENT DIV AND IMAGES*/
+.content
+{
+    float:left;
+    clear: both;
+    color:#666666;
+    background-color: white;
+    min-height: 420px;
+    width: 100%; 
+    font-family: sans-serif;
+    font-size: 16px;  
+    position:relative;
+}
+.content p
+{
+    text-align:center;
+    margin:10px;
+}
+.content h2
+{
+    font-family: sans-serif;
+    text-align: center;
+
+}
+.content h3
+{
+    font-family: sans-serif;
+    text-align: left;
+    margin:0px;
+    margin-top:30px;
+ 
+
+}
+.faqContent
+{
+  
+    width:94.12%;
+   
+    margin-left: 2.94%;
+    margin-right:2.94%;
+    position:relative;
+    overflow:hidden;
+    
+}
+.faqCollapse
+{
+    text-align: left;
+    cursor:pointer;
+    width:100%;
+    background-color: lightgray;
+    outline: none;
+    border: none;
+    transition:0.5s;
+    padding:8px;
+    margin-top:2px;
+    position:relative;
+}
+.faqCollapse:hover
+{
+    background-color:darkgrey;
+    transition:0.5s;
+}
+.collapseIcon
+{
+    min-width:16px;
+    min-height:16px;
+    background:url(img/plusIcon.png);
+    float:right;
+    
+}
+.collapseContent
+{
+    display:none;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-top: 0px;
+    border-bottom-width: thin;
+    border-right-width: thin;
+    border-left-width: thin;  
+    padding:10px;
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+      
+}
+
+
+.collapseAllBut
+{
+    background-color: gray;
+    transition:0.5s;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 32px;
+}
+.collapseAllBut:hover {
+    background-color: darkgrey;
+    transition: 0.5s;
+}
+/* FOR ADAPTABILITY */
+
+@media only screen and (max-width: 568px) {
+    .headerDetails 
+    {
+        float:left;
+        clear:both;
+        
+    }
+    .con_Image1
+    {
+        margin-left: 2.94%;
+    }
+}
+@media.screen.and.(max-width:430px).{
+ 
+    .nav ul li
+    {
+        display:block;
+        width: 100%;
+    } 
+
+
+}

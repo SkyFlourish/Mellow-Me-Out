@@ -24,7 +24,14 @@
         <?php include('nav.php')?>
 		<div class= "content"> 
 		<!-- MAIN CONTENT -->
-		<h2>Make Booking</h2>
+		<div class="slideShow">
+            <div class="slideShowContent">
+                <h2 class="test">Our booking system has many benefiets<hr></h2> 
+                <p>- Beat queues<br>- Avoid busy days by seeing available times<br></p>
+            </div>
+            
+    </div>
+            <h2>Make Booking</h2>
         
         <div class ="parentContainer"> 
             <div class = "con_Image1">

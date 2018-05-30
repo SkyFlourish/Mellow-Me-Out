@@ -156,6 +156,15 @@ left: 50%;
 transform: translate(-50%, -50%);
 
 }
+.slideShowContent p
+{
+position:absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%, -50%);
+    font-weight: bold;
+
+}
 
 
 
@@ -230,7 +239,10 @@ transform: translate(-50%, -50%);
 {
     font-family: sans-serif;
     text-align: center;
+    
 }
+
+
 .con_Body button  {
     background-color: gray;
     background-image: url(img/submitArrow.png);

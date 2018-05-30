@@ -12,11 +12,7 @@
     <script type="text/javascript" src="slideshow.js"></script>
 </head>
  
-<style>
-    /* dynamic styling of footer across all pages */
-    <?php include 'footer.css'; ?>
-</style>
-    
+
 <body onload="ChangeDots">
     <div class="wrapper">
         <!-- Header -->
@@ -134,7 +130,11 @@
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
        <?php include('footer.php')?>  
-	
+	<style>
+    /* dynamic styling of footer across all pages */
+    <?php include 'footer.css'; ?>
+</style>
+    
     </div>
     
    

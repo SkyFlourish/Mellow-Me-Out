@@ -1,1 +1,0 @@
-/* General SQL statement index for website backend. */

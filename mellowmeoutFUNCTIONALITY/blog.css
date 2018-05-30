@@ -25,9 +25,10 @@
 	}
 	.contents {
 		font-family:sans-serif;
+		width:100%;
 		font-weight:bold;
 		font-size: 14px;
-        width:100%;
+        width:50%;
         overflow:hidden;
 	}
 	#bar {
@@ -39,7 +40,17 @@
 		margin-left:10px;
         font-size:16px;
 	}
-
+	.content a{
+		text-decoration: none;
+		color:#6699ff;
+		width: 100%;
+		padding:5px 0;
+	}
+	.content a:hover
+	{
+		background:#99ccff;
+		padding:5px 0;
+	}
 /* CONTENT DIV AND IMAGES*/
 .content
 {

@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-  function validate()
+$(document).ready(function() {
+    var text_max = 300;
+    $('#charLimit').html(text_max + ' characters remaining');
+
+    $('#message').keyup(function() {
+        var text_length = $('#message').val().length;
+        var text_remaining = text_max - text_length;
+
+        $('#charLimit').html(text_remaining + ' characters remaining');
+    });
+});
+    
+function validate()
   {
     var x = document.forms["contactUs"]["firstname"].value;
     var y = document.forms["contactUs"]["lastname"].value;
     var z = document.forms["contactUs"]["email"].value;
     var b = document.forms["contactUs"]["subject"].value;
     var a = document.forms["contactUs"]["message"].value;
-
-
+    
+    var x_Mes = document.getElementsByClassName("errorMessage")[0];
+    var y_Mes = document.getElementsByClassName("errorMessage")[1];
+    var z_Mes = document.getElementsByClassName("errorMessage")[2];
+    var b_Mes = document.getElementsByClassName("errorMessage")[3];
+    var a_Mes = document.getElementsByClassName("errorMessage")[4];
+    
     if(x == "")
     {
-      alert("A first name is required.");
+    x_Mes.style.display="block";  
+    
       return false;
+    }
+    else
+    {
+        x_Mes.style.display="none";  
     }
 
     if(y == "")
     {
-      alert("A last name is required.");
+    y_Mes.style.display="block";   
       return false;
     }
+      else
+        {
+            y_Mes.style.display="none";  
+        }
 
     if(z == "")
     {
-      alert("An email is required for a response back.");
+      z_Mes.style.display="block"; 
       return false;
     }
     else if (!z.includes("@") || !z.includes("."))
     {
-      alert("The email is not in the proper from.");
+      z_Mes.style.display="block"; 
       return false;
     }
+    else{
+        z_Mes.style.display="none";  
+    }  
 
     if(b == "")
     {
-      alert("The subject of the message is required.");
-      return false;
+        b_Mes.style.display="block";
+         return false;
     }
+  else{
+        b_Mes.style.display="none";  
+    }  
 
     if(a == "")
     {
-      alert("We need to know what you want to ask.");
-      return false;
+    a_Mes.style.display="block";
+        return false;
+    }
+  else{
+        a_Mes.style.display="none";  
     }
 
   }
@@ -100,27 +136,29 @@
         <label for="fname">First Name:</label>
          <br>
         <input type="text"  id="fname" name="firstname" placeholder="Please enter first name" maxlength="32"/>
-    <br>
+        <div class="errorMessage">ERROR: You must specify a first name.</div>
+    
      <br>
         <label for="lname">Last Name:</label>
          <br>
-        <input type="text" id="lname" name="lastname" placeholder="Please enter last name" size="16" maxlength="32"//>
-     <br>
+        <input type="text" id="lname" name="lastname" placeholder="Please enter last name" size="16" maxlength="32"/>
+     <div class="errorMessage">ERROR: You must specify a last name.</div>
      <br>
         <label for="email">Email:</label>
          <br>
         <input type="email" id="email" name="email" placeholder="Example: JaneDoe@gmail.com" size="32" maxlength="48"/>
-     <br>
+     <div class="errorMessage">ERROR: Email must be a proper format (Ex: you@gmail.com).</div>
      <br>
 <label for="subject">Subject:</label>
  <br>
         <input type="text" id="subject" name="subject" placeholder="What's your question regarding" size="35" maxlength="100"/>
-     <br>
+     <div class="errorMessage">ERROR: You must specify the subject of the message.</div>
      <br>
 <label for="message">Message:</label>
          <br>
-        <textarea name="message" id="message" class="messagebox" placeholder="Write something..." maxlength="300">
-       </textarea>
+        <textarea name="message" id="message" class="messagebox" placeholder="Write something..." maxlength="300"></textarea>
+        <div id="charLimit" class="characterLimit">test</div>
+        <div class="errorMessage">ERROR: You must specify a message that is less than 300 characters.</div>
         <br>
         <input type="submit" value="Submit" onclick="return validate()">
 </form>

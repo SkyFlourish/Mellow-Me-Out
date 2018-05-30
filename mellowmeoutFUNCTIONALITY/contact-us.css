@@ -56,6 +56,10 @@
     text-align:left;
     margin:0px;
 }
+.characterLimit
+{
+    font-size:12px;
+}
 
 
 /* FORM STYLING */
@@ -122,7 +126,17 @@ input[type=submit]:hover {
     background-color: darkgrey;
     transition: 0.5s;
 }
-
+.errorMessage
+{
+    
+    max-height:16px;
+    width:100%;
+    color:red;
+    font-size:12px;
+    margin:0px;
+    padding:0px;
+    display:none;
+}
 
 /* END OF CONTENT AND IMAGES*/
 

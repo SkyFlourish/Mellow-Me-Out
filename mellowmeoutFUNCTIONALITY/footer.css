@@ -1,8 +1,8 @@
 body
 {
-    background: url(img/roses.jpeg);
+    background: url(img/roses_darkGrey.png);
     background-size:auto;
-    background-repeat:no-repeat;
+    background-repeat:repeat;
 
 
 }
@@ -96,6 +96,16 @@ nav ul li:hover
     transition-duration: 0.5s;
     background-color: darkgray;
 
+}
+
+.navImg
+{
+    width: 16px;
+    height: 16px;
+    padding-right:4px;
+    float:left;
+    background-repeat: no-repeat;
+    
 }
 .hamburger
 {

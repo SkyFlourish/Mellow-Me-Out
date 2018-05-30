@@ -28,8 +28,10 @@
     <div class= "content"> 
        <div id="left">
 		<h2 style="text-align:center">Mellow Me Out Blog</h2>
-		<h2 style="text-align:left">First blog</h2>
-			<p class="categories">May, 2nd, 2018 | <a href>Dairy</a> | <a href>14 Comment</a></p><hr>
+		<h2 style="text-align:left">New services coming out soon!!</h2>
+			<p class="categories">May 2nd, 2018 | <a href>Dairy</a> | <a href>14 Comments</a></p>
+           <div class="blogImage"><img src="img/gallery3.jpg"></div>
+           <hr>
 			<p class= "contents">This is your first article. 
 			Click the edit link to modify or delete the article, 
 			or start writing a new article. 
@@ -39,7 +41,9 @@
 		<p style="text-align:right;margin-right:10px">Tagged: <a href>Students</a></p><hr>
 		
 		<h2 style="text-align:left">Second blog</h2>
-			<p class="categories">May, 2nd, 2018 | <a href>Dairy</a> | <a href>14 Comment</a></p><hr>
+			<p class="categories">May 2nd, 2018 | <a href>Dairy</a> | <a href>14 Comments</a></p>
+           <div class="blogImage"><img src="img/gallery4.jpg"></div>
+           <hr>
 			<p class= "contents">This is your first article. 
 			Click the edit link to modify or delete the article, 
 			or start writing a new article. 

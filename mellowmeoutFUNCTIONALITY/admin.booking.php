@@ -8,7 +8,7 @@
     
     <meta name="description" content="Relaxing Spas. Book now today!">
     
-    <link rel="stylesheet" type="text/css" href="book-now.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="admin.css"> <!-- Link to external CSS file -->
     <script type="text/javascript" src="slideshow.js"></script>
 </head>
     
@@ -147,7 +147,10 @@
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
        <?php include('footer.php')?>  
-	
+	<style>
+            /* dynamic styling of footer across all pages */
+            <?php include 'footer.css'; ?>
+        </style>
     </div>
     
     

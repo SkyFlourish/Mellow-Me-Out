@@ -38,7 +38,7 @@
             <h4>Blog Contents</h4>
             <textarea placeholder="Blog content..." name="content" type="text" rows=15 cols=80></textarea>
             </p>
-            <button type="submit" name="submitblog" sytle="background-color: green; height: 340px; width: 340px; color: white; ">
+            <button type="submit" name="submitblog" sytle="background-color: green; height: 340px; width: 340px; color: white; ">SUBMIT BLOG
             </button>
           </form>
        ';
@@ -52,6 +52,10 @@
     <!-- MAIN CONTENT END -->
     <!-- FOOTER CONTENT -->
 <?php include('footer.php')?>
+<style>
+            /* dynamic styling of footer across all pages */
+            <?php include 'footer.css'; ?>
+        </style>
 </div>
 </body>
 </html>

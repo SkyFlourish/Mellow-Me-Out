@@ -119,9 +119,9 @@ function validateNewsletter()
 					<form action="login.inc.php" method="POST" name="login">
 						<input type="username" name="uid"  placeholder="Username"  maxlength="32" size="14">
 						<input type="password" name="pwd"  placeholder="Password"  maxlength="32" size="14">
-            <button type="button" name ="button" onclick="return validateLogin()">LOG IN</button>
             <!--- Disabled for testing at the moment -->
-            <!---  <button type="submit" name ="submit">LOG IN</button> -->
+            <!--- <button type="button" name ="button" onclick="return validateLogin()">LOG IN</button>-->
+             <button type="submit" name ="submit" onclick="return validateLogin()">LOG IN</button> 
 					</form>';}
 			?>
         </div>

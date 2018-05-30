@@ -29,7 +29,7 @@
        <div id="left">
 		<h2 style="text-align:center">Mellow Me Out Blog</h2>
 		<h2 style="text-align:left">New services coming out soon!!</h2>
-			<p class="categories">May 2nd, 2018 | <a href>Dairy</a> | <a href>14 Comments</a></p>
+			<p class="categories">May 1st, 2018 | <a href>Dairy</a> | Tag: <a href>Students</a> | <a href>14 Comments</a></p>
            <div class="blogImage"><img src="img/gallery3.jpg"></div>
            <hr>
 			<p class= "contents">This is your first article. 
@@ -38,10 +38,9 @@
 			If you wish, you can tell the reader through this article why you created this blog and what you intend to do with it. 
 			If you need help, you are welcome to support BBS.
 			</p>
-		<p style="text-align:right;margin-right:10px">Tagged: <a href>Students</a></p><hr>
 		
 		<h2 style="text-align:left">Second blog</h2>
-			<p class="categories">May 2nd, 2018 | <a href>Dairy</a> | <a href>14 Comments</a></p>
+			<p class="categories">May 30, 2018 | <a href>Dairy</a> | Tag: <a href>Business</a> | <a href>145 Comments</a></p>
            <div class="blogImage"><img src="img/gallery4.jpg"></div>
            <hr>
 			<p class= "contents">This is your first article. 
@@ -50,7 +49,6 @@
 			If you wish, you can tell the reader through this article why you created this blog and what you intend to do with it. 
 			If you need help, you are welcome to support BBS.
 			</p>
-		<p style="text-align:right;margin-right:10px">Tagged: <a href>Business</a></p><hr>
 	   </div>
 	   <div id="right">
 		<h1 style="text-align:center">Blog Bar</h1><hr>

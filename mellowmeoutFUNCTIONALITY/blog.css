@@ -50,7 +50,15 @@
 		margin-left:10px;
         font-size:16px;
 	}
-
+	.content a{
+		text-decoration:none;
+		padding: 10px 10px;
+		color: #0066ff;
+		width: 100%;
+	}
+	.content a:hover{
+		background:#ccebff;
+	}
 /* CONTENT DIV AND IMAGES*/
 .content
 {

@@ -8,25 +8,13 @@
     margin-right:auto;
     margin-left:auto
  }
-/*====NAVIGATION STYLE*/
-nav{
-    border-bottom-style: solid;
-    border-bottom-color: black;
-    border-bottom-width:thin;
-}
-nav ul li a{
-    background-color: none;
-    border-radius: 5px;
-    transition: 0.2s;
-}
-nav ul li a:hover{
-    background-color: #7f8c8d;
-    transition: 0.2s;
-}
+
 /*====SLIDESHOW*/
 #slideshow-bg{
     background-image: url(img/flowers.jpg);
     background-size:cover;
+    transition: 1s;
+    overflow:hidden;
 }
 
 #slideshow-content{
@@ -50,7 +38,41 @@ nav ul li a:hover{
     background-color: #7f8c8d; 
     color:#ecf0f1;
 }
-
+/*====SLIDESHOW SELECTORS*/
+.slide-circle{
+    background-color:none;
+    border-color:#ecf0f1;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    float:left;
+    margin: 4px;
+    width:20px;
+    height:20px;
+    transition:0.2s;
+    
+}
+.slide-circle:hover{
+    background-color:#ecf0f1;
+    border-color:#ecf0f1;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    float:left;
+    margin: 4px;
+    width:20px;
+    height:20px;
+    cursor: pointer;
+    transition:0.2s;
+    
+}
+.slide-circle-container{
+    
+    position: relative;
+    top:95%;
+    left:50%;
+    overflow:hidden;
+}
 /*====SERVICES */
 #services{
     background-color:#ecf0f1;
@@ -58,43 +80,21 @@ nav ul li a:hover{
 }
 #img-services{
     
-    max-height:260px;
+    max-height:300px;
     width:100%;
 }
+
 /*====ABOUT US */
 #about{
     background-color:#2c3e50;
-    color:#ecf0f1; 
+    color:#ecf0f1;
+    padding:30px 0;
 }
-/*====FOOTER */
-footer{
-    background-color: #2d3436;
-    color:#ecf0f1; 
-}
-#social-icon{
-    color:#bdc3c7;
-    font-size: 30px;
-    padding-right:10px;
-    transition:0.2s;
-}
-#social-icon:hover{
-    color:#ecf0f1; 
-    font-size: 30px;
-    padding-right:10px;
-    transition:0.2s;
-}
-footer hr{
-    color:white;
-    margin:10px 0px;
-}
-footer a{
-    color: #bdc3c7;
-    transition: 0.2s;
-}
-footer a:hover{
-    color: #ecf0f1;
-    transition: 0.2s;
-}
-#footer-copyright{
-    margin-left:30px;
+/*====Media Queries */
+@media only screen and (max-width: 768px) {
+    .slide-circle-container{
+        top:10%;
+        left:40%;
+    }
+ 
 }

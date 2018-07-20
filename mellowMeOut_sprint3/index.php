@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
         <meta charset="utf-8">
-        <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas"> <!--Keywords for search-->
-        <meta name="description" content=""> <!--Description of page-->
+        <!--Icon and Title-->
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <title>Home - MellowMeOut</title>
+        <!--Keywords for search-->
+        <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas, Brow Tint, Aromatherapy Massage, Lymphatic massage, Indian head massage, Body Mud wrap, Body exfoliate, Eyelash Tint, Combat Stress, Revitalise ">
+        <!--Description of page-->
+        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief."> 
+    
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mobile view-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -20,9 +26,41 @@
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
-
-      
     </head>
+<!-- Style Sheet for Nav and Footer-->  
+<style>
+    <?php include 'nav_footer.css';?>
+</style>
+
+<script>
+    //====SLIDE SHOW CODE ======
+    var slide_Counter = 0; //Variable chooses the image
+    showSlides(); //function for seeing what image to display
+    
+    function showSlides(){
+        var slide_Img = $("#slideshow-bg");
+        
+        if(slide_Counter==0){
+            slide_Img.css("background-image", "url('img/flowers.jpg')");
+        }
+        else if(slide_Counter==1){
+            slide_Img.css("background-image", "url('img/candles.jpg')");
+        }
+        else if(slide_Counter==2){
+            slide_Img.css("background-image", "url('img/massage.jpg')");
+        }
+        
+        
+        setTimeout(showSlides,5000); //timer
+        slide_Counter++;//increment
+        
+        if(slide_Counter>2){
+            slide_Counter = 0;
+        }
+    }
+</script>
+    
+ <!-- ===HOMEPAGE CODE START=== -->    
 <body>
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
@@ -41,8 +79,16 @@
             </div>
             </div>
         </div>
-        <div class="col-sm-4">
-        
+        <div class="col-sm-4 ">
+             <!-- SLIDE CIRCLE SELECTORS -->
+            <div class="slide-circle-container">
+                <div class="slide-circle">
+                </div>
+                <div class="slide-circle">
+                </div>
+                <div class="slide-circle">
+                </div>
+            </div>
         </div>
         <div class="col-sm-4">
         
@@ -53,7 +99,9 @@
     <!-- SERVICES CODE -->
     <article id="services">
     <br>
-    <h1 class="text-center">Our Services</h1>
+    <h1 class="text-center">Our Services
+    <small class="text-muted"><br>We offer many more services at our products page</small>
+    </h1>
     <div class="row">
         <div class="col-sm-4 text-center ">
             <img id="img-services" class="img-fluid" src="img/massage.jpg">
@@ -83,7 +131,7 @@
 <article id="about">
     <div class="row">
         <div class="col-sm-6">
-        <br>
+        
         <h1>About Us</h1>
         <p>Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief.</p>
         <p>
@@ -95,12 +143,12 @@
         </div>
         <!--DISPLAY MAP -->
         <div class="col-sm-6">
-            <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.935164528827!2d145.2786028158304!3d-37.8618074445681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63b7d295e7191%3A0x83ea75e9583d0bf3!2sRedefine+Life+Counselling+and+Support!5e0!3m2!1sen!2sau!4v1524644385451" width="100%" height="90%" align="left" padding-left="5%" padding-right="5%"padding-bottom="5%"frameborder="0" style="border:0" allowfullscreen></iframe>
-            <br>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.935164528827!2d145.2786028158304!3d-37.8618074445681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63b7d295e7191%3A0x83ea75e9583d0bf3!2sRedefine+Life+Counselling+and+Support!5e0!3m2!1sen!2sau!4v1524644385451" width="100%" height="100%" align="left" padding-left="5%" padding-right="5%"padding-bottom="5%"frameborder="0" style="border:0" allowfullscreen></iframe>
+            
         </div>
     </div>
-    <br>
+    
 </article>
 <!-- END OF ABOUT US-->
 <!-- FOOTER CODE-->

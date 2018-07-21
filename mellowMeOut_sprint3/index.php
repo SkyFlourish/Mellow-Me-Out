@@ -76,11 +76,10 @@
                 <h1>Welcome to Mellow Me Out</h1>
                 <h3>Book your service now!</h3>
                 <button id="btn-book" type="button" class="btn" style=""><strong>BOOK NOW</strong></button>
+            
+                </div>
             </div>
-            </div>
-        </div>
-        <div class="col-sm-4 ">
-             <!-- SLIDE CIRCLE SELECTORS -->
+            <!-- SLIDE CIRCLE SELECTORS -->
             <div class="slide-circle-container">
                 <div class="slide-circle">
                 </div>
@@ -89,6 +88,9 @@
                 <div class="slide-circle">
                 </div>
             </div>
+        </div>
+        <div class="col-sm-4 ">
+     
         </div>
         <div class="col-sm-4">
         

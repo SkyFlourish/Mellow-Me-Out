@@ -14,9 +14,9 @@
             <h5>Help</h5>
             <hr>
              <ul class="list-unstyled">
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="contact-us.php">Contact Us</a></li>
                 <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="policy.php">Privacy Policy</a></li>
             </ul>
         </div>
         <!-- STORE HOURS-->
@@ -41,14 +41,14 @@
             
             <form class="form-inline" action="/action_page.php">
                 <input type="email" class="form-control mb-2 mr-sm-2" id="email" maxlength="42" placeholder="Enter Email Here">
-                <button type="submit" class="btn btn-secondary mb-2">Submit</button>
+                <button type="submit" class="btn btn-secondary mb-2">Subscribe</button>
             </form>
         </div>
         <!-- Account Login-->
         <div class="col-sm-2">
         <h5>Account</h5>
             <hr>
-            <p>UNDER CONSTRICTION</p>
+            <p>UNDER CONSTRUCTION</p>
         </div>
     </div>
     <p id="footer-copyright">© 2018 Mellow Me Out <br>Icons by Font Awesome</p>

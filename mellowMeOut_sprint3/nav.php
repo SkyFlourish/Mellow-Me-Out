@@ -10,20 +10,18 @@
       <a class="nav-link" href="index.php">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Book Now</a>
+      <a class="nav-link" href="book-now.php">Book Now</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Products</a>
+      <a class="nav-link" href="products.php">Products</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Gallery</a>
+      <a class="nav-link" href="gallery.php">Gallery</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Blog</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Contact Us</a>
-    </li>
+    
   </ul>
 </nav>       
 </div>

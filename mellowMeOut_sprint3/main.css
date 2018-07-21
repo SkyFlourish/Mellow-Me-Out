@@ -67,11 +67,10 @@
     
 }
 .slide-circle-container{
-    
     position: relative;
-    top:95%;
-    left:50%;
-    overflow:hidden;
+    bottom:7%;
+    left:35%;
+   
 }
 /*====SERVICES */
 #services{
@@ -80,7 +79,7 @@
 }
 #img-services{
     
-    max-height:300px;
+    max-height:270px;
     width:100%;
 }
 
@@ -93,8 +92,7 @@
 /*====Media Queries */
 @media only screen and (max-width: 768px) {
     .slide-circle-container{
-        top:10%;
-        left:40%;
+       
     }
  
 }

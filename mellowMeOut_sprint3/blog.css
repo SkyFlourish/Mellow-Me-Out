@@ -3,10 +3,11 @@
     padding-right:30px;
 }
 .container-fluid {
-    padding-right:0;
-    padding-left:0;
+    padding-right:0px;
+    padding-left:0px;
     margin-right:auto;
-    margin-left:auto
+    margin-left:auto;
+    overflow:hidden;
  }
 /*POLICY STYLING */
 .policy-padding{

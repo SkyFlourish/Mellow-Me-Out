@@ -1,0 +1,26 @@
+This pseudocode is running under a number of assumptions, feel free to note
+things that you would consider important to the process here if you have any
+ideas.
+Thanks, Zac.
+
+1. User clicks into the booking page, a number of checks are done before the
+  user sees the page.
+2. Check 1 is for any days in the database that are marked as either public
+  holidays or days that are booked out entirely (unlikely to be the case)
+3. Check 2 is for any days that have bookings within the day, these days will
+  require extra work from the code to present times for certain services as
+  already taken.
+4. Check 3 might require us to take into account extra staff who are assigned
+  this thing or that thing (specialized in one service or another).
+  This check might become the most difficult as we may need to have a staff
+  member call the user if the time does not suit, and arrange another time.
+5. Check 4 checks the user inputs after the fact, and makes sure that they
+  have left staff sufficient details to contact them for confirmation or
+  troubles with the booking (there might be a final step on the staff side to
+  confirm the final steps so that contact has been made before finalization).
+6. Check 5 checks the relevant database tables and ensures that no missteps have
+  occurred in the process, that the booking time is unoccupied, and that the
+  modification was indeed successful.
+7. User is likely to be emailed an initial booking confirmation email, informing
+  them of any other steps likely to occur, their booked time and date, the
+  amount to be owed at arrival, and a booking number perhaps.

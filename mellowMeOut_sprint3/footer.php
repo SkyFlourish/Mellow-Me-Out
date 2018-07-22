@@ -15,7 +15,7 @@
             <hr>
              <ul class="list-unstyled">
                 <li><a href="contact-us.php">Contact Us</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="faq.php">FAQ</a></li>
                 <li><a href="policy.php">Privacy Policy</a></li>
             </ul>
         </div>

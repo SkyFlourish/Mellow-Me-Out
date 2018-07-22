@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <!--Icon and Title-->
         <link rel="icon" type="image/png" href="img/favicon.png">
-        <title>Gallery - MellowMeOut</title>
+        <title>FAQ - MellowMeOut</title>
         <!--Keywords for search-->
         <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas, Brow Tint, Aromatherapy Massage, Lymphatic massage, Indian head massage, Body Mud wrap, Body exfoliate, Eyelash Tint, Combat Stress, Revitalise ">
         <!--Description of page-->
@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mobile view-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="gallery.css">
+        <link rel="stylesheet" href="faq.css">
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -25,11 +25,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-        <script>
-            document.addEventListener("DOMContentLoaded", function(event) { //run when page loads
-                nav_Counter=3;
-            });
-        </script>
+
     </head>
 <!-- Style Sheet for Nav and Footer-->  
 <style>
@@ -42,35 +38,23 @@
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
 <div class="container-fluid ">
-    <!-- POLICY CONTENT -->
-<article class="gallery-padding text-center">
-    <h1>Gallery<br>
-    <small class="text-muted">Here are some photos of our amazing work. You will be as pampered as the people you see here. </small>
+    <!-- FAQ CONTENT -->
+<article class="faq-padding">
+    <h1>FAQ - Frequently Asked Questions<br>
+        <small class="text-muted">Looking for answers? Some of the most common questions can be answered by expanding the boxes bellow.</small>
     </h1>
-    
     <div class="row">
-        <div class="col-sm-4">
-            <a href="https://placeholder.com"><img class="img-fluid gallery-style" src="http://via.placeholder.com/350x350"></a>
+        <div class="col-sm-8">
+            <h3>General Inquiries</h3>
+                <button class="btn btn-faq"><h5>What payment offers do you offer in store?</h5></button>
+                <button class="btn btn-faq"><h5>What is the massage attire?</h5></button> 
+            <h3>Massage and Skin Treatment</h3>
+                <button class="btn btn-faq"><h5>Is Mellow Me Out suitable for men?</h5></button> 
         </div>
-            <div class="col-sm-4">
-        <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
-        </div>
-        <div class="col-sm-4">
-            <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
+         <div class="col-sm-4">
+             
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <a href="https://placeholder.com"><img class="img-fluid gallery-style" src="http://via.placeholder.com/350x350"></a>
-        </div>
-            <div class="col-sm-4">
-        <a href="https://placeholder.com"><img  class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
-        </div>
-        <div class="col-sm-4">
-            <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
-        </div>
-    </div>
-    
 </article>
 
 

@@ -1,0 +1,29 @@
+.row{
+    padding-left:30px;
+    padding-right:30px;
+}
+.container-fluid {
+    padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto
+ }
+/*FAQ STYLING */
+.faq-padding{
+    padding:30px;
+    background-color: #ecf0f1;
+}
+/*FAQ ACCORDION */
+.btn-faq{
+    background-color:#bdc3c7;
+    width:100%;
+    text-align:left;
+    margin-bottom: 10px;
+    transition:0.2s;
+}
+
+.btn-faq:hover{
+    background-color:#95a5a6;
+    transition:0.2s;
+
+}

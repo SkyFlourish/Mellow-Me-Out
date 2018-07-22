@@ -9,6 +9,8 @@ nav ul li a{
     background-color: none;
     border-radius: 5px;
     transition: 0.2s;
+    border-bottom-style: none;
+    border-bottom-color:#e74c3c
 }
 nav ul li a:hover{
     background-color: #7f8c8d;

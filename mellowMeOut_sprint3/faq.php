@@ -25,6 +25,26 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <script>
+        $(document).ready(function(){
+            nav_Counter=-1; //Stop the error in js console
+            
+            var i;
+            var acc = document.getElementsByClassName("btn-faq");
+
+            for(i=0; i < acc.length; i++){
+                acc[i].addEventListener("click", function(){
+                    
+                    var faqContent = this.nextElementSibling;
+                    if(faqContent.style.display==="block"){
+                        $(faqContent).slideUp(); 
+                    }else{
+                        $(faqContent).slideDown(); 
+                    }
+                });
+            }
+        });
+    </script>
 
     </head>
 <!-- Style Sheet for Nav and Footer-->  
@@ -43,13 +63,22 @@
     <h1>FAQ - Frequently Asked Questions<br>
         <small class="text-muted">Looking for answers? Some of the most common questions can be answered by expanding the boxes bellow.</small>
     </h1>
-    <div class="row">
+    <div class="row" style="padding:0px;">
         <div class="col-sm-8">
             <h3>General Inquiries</h3>
                 <button class="btn btn-faq"><h5>What payment offers do you offer in store?</h5></button>
-                <button class="btn btn-faq"><h5>What is the massage attire?</h5></button> 
+                    <div class="faq-box-style faqBox" id=""> 
+                        We offer a wide range of payment options in store. You can either pay with cash or card. Currently there is no online payment for security reasons.
+                    </div>
+                <button class="btn btn-faq "><h5>What is the massage attire?</h5></button>
+                 <div class="faq-box-style faqBox" id=""> 
+                        We offer a wide range of payment options in store. You can either pay with cash or card. Currently there is no online payment for security reasons.
+                    </div>
             <h3>Massage and Skin Treatment</h3>
-                <button class="btn btn-faq"><h5>Is Mellow Me Out suitable for men?</h5></button> 
+                <button class="btn btn-faq "><h5>Is Mellow Me Out suitable for men?</h5></button>
+                 <div class="faq-box-style faqBox" id=""> 
+                        We offer a wide range of payment options in store. You can either pay with cash or card. Currently there is no online payment for security reasons.
+                    </div>
         </div>
          <div class="col-sm-4">
              

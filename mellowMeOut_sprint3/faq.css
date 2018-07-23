@@ -28,3 +28,8 @@
     transition:0.2s;
 
 }
+
+.faqBox{
+    padding:10px;
+    display:none;
+}

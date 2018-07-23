@@ -43,8 +43,27 @@
  <!-- End of Nav Code -->
 <div class="container-fluid ">
     <!-- POLICY CONTENT -->
-<article class="policy-padding">
-    <h1>UNDER CONSTRUCTION</h1>
+    
+<article class="blog-padding text-center">
+    <h1>Mellow Me Out Blog</h1>
+    <div class="row">
+        <div class="col-sm-8 text-left">
+            <article>
+                <h2>New serivces coming out soon!</h2>
+            </article>
+        
+        </div>
+        <div class="col-sm-4">
+            <h2>Tags</h2>
+            <ul class="list-unstyled">
+                <li>General</li>
+                <li>Buisness</li>
+                <li>Beauty</li>
+            </ul>
+        </div>
+    </div>
+    
+    
     
 </article>
 

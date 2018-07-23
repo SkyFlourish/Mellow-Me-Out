@@ -26,6 +26,7 @@
 <script>
     //CONTROLS WHAT PAGE WE ARE IN
     $( document ).ready(function() {
+        
         if(nav_Counter ==0){
             $("#nav-home").css("border-bottom-style","solid");
         }
@@ -56,6 +57,8 @@
         else{
             $("#nav-blog").css("border-bottom-style","none");
         }
+        
+        //NOTE: PAGES THAT ARE NOT IN NAV ARE ASSIGNED -1 TO STOP CONSOLE ERRORS
     });    
 </script>
 </div>

@@ -25,7 +25,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-
+        
+        <script>
+        document.addEventListener("DOMContentLoaded", function(event) { //run when page loads
+            nav_Counter=-1;
+        });
+        </script>
     </head>
 <!-- Style Sheet for Nav and Footer-->  
 <style>

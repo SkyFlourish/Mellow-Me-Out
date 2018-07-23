@@ -6,23 +6,32 @@
     padding-right:0;
     padding-left:0;
     margin-right:auto;
-    margin-left:auto
+    margin-left:auto;
+    overflow:hidden;
  }
-/*POLICY STYLING */
+/*Products section Styling */
 .gallery-padding{
     padding:30px;
     background-color: #ecf0f1;
 }
 
-.gallery-style{
-    margin-top:30px;
-    outline: 4px solid #ecf0f1;
-    transition:0.2s;
-    max-height:350px;
+.img-style{ 
+    height:280px;
+    
+}
+.card-style{
+    margin-bottom:30px;
+    
+}
+/*Special Offers Styling */
+#specialOffers-styling{
+    background-color:#34495e;
+    color: #ecf0f1;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.icon-styles{
+    font-size: 80px;
+    padding:10px;
 }
 
-.gallery-style:hover{
-    margin-top:30px;
-    outline: 4px solid #e74c3c;
-    transition:0.2s;
-}

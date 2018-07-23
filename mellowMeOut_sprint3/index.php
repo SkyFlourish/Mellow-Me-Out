@@ -25,24 +25,35 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-
-    </head>
-<!-- Style Sheet for Nav and Footer-->  
-<style>
-    <?php include 'nav_footer.css';?>
-</style>
-
-<script>
-    //====SLIDE SHOW CODE ======
-    var slide_Counter = 0; //Variable chooses the image
-    showSlides(); //function for seeing what image to display
     
-    function showSlides(){
-        var slide_Img = $("#slideshow-bg");
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) { //run when page loads
+    //VARIABLE DECLARAION
+    nav_Counter =0; //controls the nav highlight
+    var slide_Counter = 0; //Variable chooses the image
+    const TimerValue = 5000;
+    var dot0 = document.getElementsByClassName("slide-circle")[0];
+    var dot1 = document.getElementsByClassName("slide-circle")[1];
+    var dot2 = document.getElementsByClassName("slide-circle")[2];
+
+    showSlides();//display circles on start
+    var myTimer = setInterval(showSlides, TimerValue); //run code on load
         
+    //ONCLICK FUNCTIONS FOR DOTS
+    $(".slide-circle").eq(0).on("click",function(){slide_Counter=0; clearInterval(myTimer); showSlides(); myTimer = setInterval(showSlides,5000);});
+    $(".slide-circle").eq(1).on("click",function(){slide_Counter=1; clearInterval(myTimer); showSlides(); myTimer = setInterval(showSlides,5000);});
+    $(".slide-circle").eq(2).on("click",function(){slide_Counter=2; clearInterval(myTimer); showSlides(); myTimer = setInterval(showSlides,5000);});
+    
+    //CHANGES THE IMAGE
+    function showSlides(){
+        //define varaible
+        var slide_Img = $("#slideshow-bg");
+        selectCircle();
+        //choose image and circle
         if(slide_Counter==0){
             slide_Img.css("background-image", "url('img/flowers.jpg')");
         }
+        
         else if(slide_Counter==1){
             slide_Img.css("background-image", "url('img/candles.jpg')");
         }
@@ -50,18 +61,44 @@
             slide_Img.css("background-image", "url('img/massage.jpg')");
         }
         
-        
-        setTimeout(showSlides,5000); //timer
         slide_Counter++;//increment
         
         if(slide_Counter>2){
             slide_Counter = 0;
         }
     }
+    //====CIRCLES CODE ======
+    function selectCircle(){
+        if(slide_Counter==0){
+            dot0.style.backgroundColor="#ecf0f1";
+            dot1.style.backgroundColor="transparent";
+            dot2.style.backgroundColor="transparent";
+        }
+        else if(slide_Counter==1){
+            dot0.style.backgroundColor="transparent";
+            dot1.style.backgroundColor="#ecf0f1";
+            dot2.style.backgroundColor="transparent";
+            
+        }
+        else if(slide_Counter==2){
+            dot0.style.backgroundColor="transparent";
+            dot1.style.backgroundColor="transparent";
+            dot2.style.backgroundColor="#ecf0f1";
+        }
+    }
+    });
 </script>
+    </head>
+<!-- Style Sheet for Nav and Footer-->  
+<style>
+    <?php include 'nav_footer.css';?>
+</style>
+
+
     
  <!-- ===HOMEPAGE CODE START=== -->    
 <body>
+
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
@@ -83,7 +120,7 @@
             <div class="slide-circle-container">
                 <div class="slide-circle">
                 </div>
-                <div class="slide-circle">
+                <div class="slide-circle">  
                 </div>
                 <div class="slide-circle">
                 </div>
@@ -156,6 +193,7 @@
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
 </div>    
+
 
 </body>
     

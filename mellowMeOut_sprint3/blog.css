@@ -10,19 +10,7 @@
     overflow:hidden;
  }
 /*POLICY STYLING */
-.gallery-padding{
+.blog-padding{
     padding:30px;
     background-color: #ecf0f1;
-}
-
-.gallery-style{
-    margin-top:30px;
-    outline: 4px solid #ecf0f1;
-    transition:0.2s;
-}
-
-.gallery-style:hover{
-    margin-top:30px;
-    outline: 4px solid #e74c3c;
-    transition:0.2s;
 }

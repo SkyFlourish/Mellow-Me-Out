@@ -3,10 +3,11 @@
     padding-right:30px;
 }
 .container-fluid {
-    padding-right:0;
-    padding-left:0;
+    padding-right:0px;
+    padding-left:0px;
     margin-right:auto;
-    margin-left:auto
+    margin-left:auto;
+    overflow:hidden;
  }
 
 /*====SLIDESHOW*/
@@ -40,7 +41,7 @@
 }
 /*====SLIDESHOW SELECTORS*/
 .slide-circle{
-    background-color:none;
+    background-color:transparent;
     border-color:#ecf0f1;
     border-style: solid;
     border-radius: 50%;
@@ -53,15 +54,7 @@
     
 }
 .slide-circle:hover{
-    background-color:#ecf0f1;
-    border-color:#ecf0f1;
-    border-style: solid;
-    border-radius: 50%;
-    border-width: 1px;
-    float:left;
-    margin: 4px;
-    width:20px;
-    height:20px;
+    border-color:#2c3e50;
     cursor: pointer;
     transition:0.2s;
     

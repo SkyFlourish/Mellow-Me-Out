@@ -24,3 +24,4 @@ Thanks, Zac.
 7. User is likely to be emailed an initial booking confirmation email, informing
   them of any other steps likely to occur, their booked time and date, the
   amount to be owed at arrival, and a booking number perhaps.
+  

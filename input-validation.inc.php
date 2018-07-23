@@ -1,6 +1,6 @@
 <?php
 
-  function validateInputNotNull($input, bool) {
+  function validateInputNotNull($input) {
     // Null is not data type specific
     if ($input != null) {
       // Input is not null, code behaviour is not specified

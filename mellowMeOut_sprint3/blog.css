@@ -17,6 +17,10 @@
     background-position: center;
     padding:60px;
 }
+#jumbo-style{
+    border-radius: 10px;
+    padding:10px;
+}
 /*Blog STYLING */
 .blog-padding{
     padding:30px;

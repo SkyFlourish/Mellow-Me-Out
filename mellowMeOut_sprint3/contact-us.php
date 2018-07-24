@@ -25,12 +25,23 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-        
-        <script>
-        document.addEventListener("DOMContentLoaded", function(event) { //run when page loads
+                 
+        <script type="text/javascript">
+        $(document).ready(function() { //run when page loads
             nav_Counter=-1;
+
+          function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+                if( document.myForm.fname.value == "" )
+             {
+                alert( "Please provide your name!" );
+                document.myForm.fname.focus() ;
+                return false;
+             }
+            }
         });
-        </script>
+            
+        </script>   
     </head>
 <!-- Style Sheet for Nav and Footer-->  
 <style>
@@ -48,7 +59,7 @@
         
         </div>
         <div class="col-sm-6">
-        <form action="/action_page.php" id="contact-style">
+        <form name="myForm"  method="post" action="form.php" id="contact-style" onsubmit="return validateForm();" >
             <h1 class="text-center">Contact Us</h1>
              <!-- CONTACT INFOMATION CODE -->
             
@@ -62,7 +73,7 @@
            <!-- FORM SECTION -->
             <div class="form-group" >
                 <label for="firstName">First Name: </label>
-                <input type="text" class="form-control" id="firstName" maxlength="24" placeholder="Enter first name here">
+                <input name="fname" type="text" class="form-control" id="firstName" maxlength="24" placeholder="Enter first name here">
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name: </label>
@@ -81,7 +92,7 @@
                 <textarea class="form-control" rows="5" id="message" maxlength="300" placeholder="Enter your message here"></textarea>
             </div>
             
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" value="Submit" class="btn btn-primary">
         </form>
         </div>
           <div class="col-sm-3">
@@ -96,6 +107,6 @@
 </div>    
 
 </body>
-    
+
 </html>
 

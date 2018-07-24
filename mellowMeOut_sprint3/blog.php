@@ -44,21 +44,26 @@
 <div class="container-fluid ">
    
    <!-- Blog Banner -->
-<header> 
-    <div id="blog-banner" class="text-center">
-        <h1>Mellow Me Out Blog
-            <small>
-                <br>News and updates
-            </small>
-        </h1>
+<div class="row" id="blog-banner">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+    <div  class="text-center">
+        <div class="jumbotron jumbotron-fluid" id="jumbo-style">
+            <div class="container">
+                 <h1>Mellow Me Out Blog</h1>
+                    <h4>Keep up to date with the latest news about our store</h4>
+            </div>
+            </div>
+        </div>
     </div>
-</header>  
-<article class="blog-padding text-center">
-
+    <div class="col-sm-3"></div>
+</div>
+ 
+<article>
     <div class="row">
         <!-- CONTAINS CODE FOR BLOG SIDE BAR -->
         <div class="col-sm-2">
-            <div class="card card-style text-left" style="margin:0px; padding:0px;">
+            <div class="card card-style text-left" style="margin-top:30px;">
                 <div class="card-body">
                  <!-- Catergories section-->
                 <h4>Catergories</h4>
@@ -81,14 +86,32 @@
         <div class="col-sm-10 text-left">
              <!-- Article 1 example -->
             <article>
-                <div class="card card-style" style="margin:0px; padding:0px;">
+                <div class="card card-style" style="margin-top:30px; margin-bottom:30px;">
                     <div class="card-body" >
                          <!-- Post title and sub titles -->
                         <h3 class="card-title">New massage services available!</h3>
                         <h6 class="card-subtitle mb-2 text-muted">Date: September 16, 2017</h6>
                         <h6 class="card-subtitle mb-2 text-muted">Catergory: Business</h6>
                          <!-- Post image -->
-                        <img class="card-img-top" src="img/spa.jpg" alt="Card image cap" style="max-height:400px; margin-bottom:20px;">
+                        <img class="card-img-top" src="img/candles.jpg" alt="Card image cap" style="max-height:500px; margin-bottom:20px;">
+                        <!-- Post Body -->
+                        <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a lectus vitae lectus vehicula pharetra et sit amet tortor. Praesent dignissim auctor lacus sed dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris massa, accumsan id orci vel, luctus molestie dolor. Integer gravida, eros non elementum fringilla, ligula lorem sollicitudin libero, convallis sollicitudin magna velit eget nibh. Nunc a varius ante, eget varius dui. Donec molestie turpis id massa gravida, sed tristique sem eleifend. Morbi ac mauris nisi. Curabitur eleifend sit amet magna vel molestie. Etiam consequat velit quis nisi vestibulum, lacinia commodo odio tristique. Quisque vestibulum interdum orci, mollis rhoncus est dictum placerat. Curabitur sed fermentum elit. Donec fringilla, ipsum ut congue pulvinar, turpis massa maximus massa, nec accumsan sapien velit vitae augue. Donec condimentum finibus enim sed efficitur. Aliquam ante nulla, dictum et nisl vel, pellentesque blandit lectus. Nullam at tellus dictum, posuere tellus ut, auctor nulla.
+                        </p>
+                        <p class="card-text"> Nunc dignissim dui in ornare tempus. In suscipit mauris malesuada nisl interdum condimentum. Aliquam consequat, metus ut facilisis feugiat, quam ante consequat dui, eget dapibus eros tellus suscipit eros. Quisque ut urna magna. In hac habitasse platea dictumst. Pellentesque vitae est aliquet, sollicitudin lectus vitae, pharetra velit. Nunc facilisis bibendum lacus, et imperdiet quam convallis ut. Ut pellentesque pellentesque cursus. Nunc orci est, pretium in efficitur nec, euismod a risus. Ut ullamcorper, tortor sit amet dignissim viverra, ex augue sollicitudin sapien, quis vehicula purus lacus sed sem. In quis nisl elementum magna condimentum consequat. Vestibulum convallis ex ac placerat malesuada.</p>
+                    </div>
+                </div>
+            </article>
+            <!-- Article 2 example -->
+            <article>
+                <div class="card card-style" style="margin-top:30px; margin-bottom:30px;">
+                    <div class="card-body" >
+                         <!-- Post title and sub titles -->
+                        <h3 class="card-title">New massage services available!</h3>
+                        <h6 class="card-subtitle mb-2 text-muted">Date: September 16, 2017</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Catergory: Business</h6>
+                         <!-- Post image -->
+                        <img class="card-img-top" src="img/spa.jpg" alt="Card image cap" style="max-height:500px; margin-bottom:20px;">
                         <!-- Post Body -->
                         <p class="card-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a lectus vitae lectus vehicula pharetra et sit amet tortor. Praesent dignissim auctor lacus sed dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris massa, accumsan id orci vel, luctus molestie dolor. Integer gravida, eros non elementum fringilla, ligula lorem sollicitudin libero, convallis sollicitudin magna velit eget nibh. Nunc a varius ante, eget varius dui. Donec molestie turpis id massa gravida, sed tristique sem eleifend. Morbi ac mauris nisi. Curabitur eleifend sit amet magna vel molestie. Etiam consequat velit quis nisi vestibulum, lacinia commodo odio tristique. Quisque vestibulum interdum orci, mollis rhoncus est dictum placerat. Curabitur sed fermentum elit. Donec fringilla, ipsum ut congue pulvinar, turpis massa maximus massa, nec accumsan sapien velit vitae augue. Donec condimentum finibus enim sed efficitur. Aliquam ante nulla, dictum et nisl vel, pellentesque blandit lectus. Nullam at tellus dictum, posuere tellus ut, auctor nulla.

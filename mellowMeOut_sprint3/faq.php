@@ -37,9 +37,11 @@
                     
                     var faqContent = this.nextElementSibling;
                     if(faqContent.style.display==="block"){
-                        $(faqContent).slideUp(); 
+                        $(faqContent).slideUp();
+                        $(this).css("background-color", "#bdc3c7");
                     }else{
-                        $(faqContent).slideDown(); 
+                        $(faqContent).slideDown();
+                        $(this).css("background-color", "#7f8c8d");
                     }
                 });
             }

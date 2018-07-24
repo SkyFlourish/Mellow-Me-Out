@@ -5,7 +5,7 @@
 
 require 'input-validation.inc.php';
 
-function stripTagsFromInput ($input) {
+function stripTagsFromInput($input) {
     // Should remove all web tags from user input and allow for safer use of
     // input given by the user. in this context, it would be input that the staff
     // would be viewing and using after the data has been stored in the tables previously.
@@ -16,5 +16,4 @@ function stripTagsFromInput ($input) {
     else {
         exit;
     }
-
 }

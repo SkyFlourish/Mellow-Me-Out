@@ -8,8 +8,8 @@
         <!--Keywords for search-->
         <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas, Brow Tint, Aromatherapy Massage, Lymphatic massage, Indian head massage, Body Mud wrap, Body exfoliate, Eyelash Tint, Combat Stress, Revitalise ">
         <!--Description of page-->
-        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief."> 
-    
+        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief.">
+
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mobile view-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -25,18 +25,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-        <script>
-        document.addEventListener("DOMContentLoaded", function(event) { //run when page loads
-            nav_Counter=1;
-        });
-        </script>
+
     </head>
-<!-- Style Sheet for Nav and Footer-->  
+<!-- Style Sheet for Nav and Footer   -->
 <style>
     <?php include 'nav_footer.css';?>
 </style>
-    
- <!-- ===CODE START=== -->    
+
+ <!-- ===CODE START=== -->
 <body>
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
@@ -49,8 +45,8 @@
             <article>
                 <h1 class="text-center"></h1>
                 <div class="jumbotron" id="booking-jumbo-style">
-                    <h1>Booking is flexible at Mellow Me Out</h1> 
-                    <p>See what dates are booked and cancel a booking on demand.</p> 
+                    <h1>Booking is flexible at Mellow Me Out</h1>
+                    <p>See what dates are booked and cancel a booking on demand.</p>
                 </div>
             </article>
         </div>
@@ -63,7 +59,7 @@
                 <input type="text" class="form-control" id="fullName" maxlength="24" placeholder="Enter full name here">
             </div>
             <div class="form-group">
-                <label for="lastName">Phone: </label>
+                <label for="phone">Phone: </label>
                 <input type="text" class="form-control" id="phone" maxlength="24" placeholder="Enter phone number">
             </div>
             <div class="form-group">
@@ -73,21 +69,29 @@
             <div class="form-group">
                 <label for="service">Choose your service: </label>
                 <br>
-                <select name="cars" id="service">
+                <select required name="cars" id="service">
+                    <option value "" disabled selected hidden>Please choose...</option>
                     <option value="volvo">Test 1</option>
                     <option value="saab">Test 2</option>
                     <option value="fiat">Test 3</option>
                     <option value="audi">Audi</option>
                 </select>
             </div>
-            <div>
+            <!-- <div> -->
             <div class="form-group" >
-                <label for="confirm-mail">Confirm your email: </label>
-                <input type="text" class="form-control" id="confirm-mail" maxlength="42" placeholder="Enter email here">
-            </div>    
+                <label for="email">Confirm your email address: </label>
+                <input type="text" class="form-control" id="email" maxlength="42" placeholder="Enter email here">
             </div>
+            <div class="form-group" >
+                <label for="confirm-email">Confirm your email address: </label>
+                <input type="text" class="form-control" id="confirm-email" maxlength="42" placeholder="Enter email here">
+            </div>
+            <!-- </div> -->
             <button type="submit" class="btn btn-secondary">Submit</button>
         </form>
+        <div class="Error message">
+        <?php require_once 'booking-processing.inc.php'; ?>
+        </div>
         </div>
 
     </div>
@@ -95,9 +99,8 @@
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-</div>    
+</div>
 
 </body>
-    
-</html>
 
+</html>

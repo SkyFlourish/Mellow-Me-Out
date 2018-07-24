@@ -25,3 +25,6 @@ Thanks, Zac.
   them of any other steps likely to occur, their booked time and date, the
   amount to be owed at arrival, and a booking number perhaps.
   
+I am also considering having two arrays iterated through at a given point, one to display
+times available (will be a static array), and an array for the database to fill with times
+that are already occupied.

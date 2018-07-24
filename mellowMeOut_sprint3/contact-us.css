@@ -22,3 +22,11 @@
     background-size: cover;
     
 }
+.alert-style{
+    display:none;
+    padding:2px 4px;
+}
+
+#textarea_feedback{
+    
+}

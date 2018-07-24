@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <!--Icon and Title-->
         <link rel="icon" type="image/png" href="img/favicon.png">
-        <title>Privacy Policy - MellowMeOut</title>
+        <title>Blog - MellowMeOut</title>
         <!--Keywords for search-->
         <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas, Brow Tint, Aromatherapy Massage, Lymphatic massage, Indian head massage, Body Mud wrap, Body exfoliate, Eyelash Tint, Combat Stress, Revitalise ">
         <!--Description of page-->
@@ -42,28 +42,63 @@
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
 <div class="container-fluid ">
-    <!-- POLICY CONTENT -->
-    
+   
+   <!-- Blog Banner -->
+<header> 
+    <div id="blog-banner" class="text-center">
+        <h1>Mellow Me Out Blog
+            <small>
+                <br>News and updates
+            </small>
+        </h1>
+    </div>
+</header>  
 <article class="blog-padding text-center">
-    <h1>Mellow Me Out Blog</h1>
+
     <div class="row">
-        <div class="col-sm-8 text-left">
-            <article>
-                <h2>New serivces coming out soon!</h2>
-            </article>
-        
+        <!-- CONTAINS CODE FOR BLOG SIDE BAR -->
+        <div class="col-sm-2">
+            <div class="card card-style text-left" style="margin:0px; padding:0px;">
+                <div class="card-body">
+                 <!-- Catergories section-->
+                <h4>Catergories</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">General</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Beauty</a></li>
+                </ul>
+                </div>
+                <div class="card-body">
+                 <!-- Catergories section-->
+                <h4>Pinned Posts</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">Test1</a></li>
+                </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <h2>Tags</h2>
-            <ul class="list-unstyled">
-                <li>General</li>
-                <li>Buisness</li>
-                <li>Beauty</li>
-            </ul>
+         <!-- CONTAINS MAIN CONTENT FOR BLOG POSTS -->
+        <div class="col-sm-10 text-left">
+             <!-- Article 1 example -->
+            <article>
+                <div class="card card-style" style="margin:0px; padding:0px;">
+                    <div class="card-body" >
+                         <!-- Post title and sub titles -->
+                        <h3 class="card-title">New massage services available!</h3>
+                        <h6 class="card-subtitle mb-2 text-muted">Date: September 16, 2017</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Catergory: Business</h6>
+                         <!-- Post image -->
+                        <img class="card-img-top" src="img/spa.jpg" alt="Card image cap" style="max-height:400px; margin-bottom:20px;">
+                        <!-- Post Body -->
+                        <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a lectus vitae lectus vehicula pharetra et sit amet tortor. Praesent dignissim auctor lacus sed dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris massa, accumsan id orci vel, luctus molestie dolor. Integer gravida, eros non elementum fringilla, ligula lorem sollicitudin libero, convallis sollicitudin magna velit eget nibh. Nunc a varius ante, eget varius dui. Donec molestie turpis id massa gravida, sed tristique sem eleifend. Morbi ac mauris nisi. Curabitur eleifend sit amet magna vel molestie. Etiam consequat velit quis nisi vestibulum, lacinia commodo odio tristique. Quisque vestibulum interdum orci, mollis rhoncus est dictum placerat. Curabitur sed fermentum elit. Donec fringilla, ipsum ut congue pulvinar, turpis massa maximus massa, nec accumsan sapien velit vitae augue. Donec condimentum finibus enim sed efficitur. Aliquam ante nulla, dictum et nisl vel, pellentesque blandit lectus. Nullam at tellus dictum, posuere tellus ut, auctor nulla.
+                        </p>
+                        <p class="card-text"> Nunc dignissim dui in ornare tempus. In suscipit mauris malesuada nisl interdum condimentum. Aliquam consequat, metus ut facilisis feugiat, quam ante consequat dui, eget dapibus eros tellus suscipit eros. Quisque ut urna magna. In hac habitasse platea dictumst. Pellentesque vitae est aliquet, sollicitudin lectus vitae, pharetra velit. Nunc facilisis bibendum lacus, et imperdiet quam convallis ut. Ut pellentesque pellentesque cursus. Nunc orci est, pretium in efficitur nec, euismod a risus. Ut ullamcorper, tortor sit amet dignissim viverra, ex augue sollicitudin sapien, quis vehicula purus lacus sed sem. In quis nisl elementum magna condimentum consequat. Vestibulum convallis ex ac placerat malesuada.</p>
+                    </div>
+                </div>
+            </article>
         </div>
     </div>
-    
-    
     
 </article>
 

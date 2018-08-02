@@ -1,17 +1,7 @@
-.row{
-    padding-left:30px;
-    padding-right:30px;
-}
-.container-fluid {
-    padding-right:0;
-    padding-left:0;
-    margin-right:auto;
-    margin-left:auto;
-    overflow:hidden;
- }
+
 /*Products section Styling */
 .gallery-padding{
-    padding:30px;
+    padding:5% 0;
     background-color: #ecf0f1;
 }
 
@@ -27,11 +17,10 @@
 #specialOffers-styling{
     background-color:#34495e;
     color: #ecf0f1;
-    padding-top:30px;
-    padding-bottom:30px;
+    padding:5% 0;
 }
 .icon-styles{
     font-size: 80px;
-    padding:10px;
+    padding:5% 0;
 }
 

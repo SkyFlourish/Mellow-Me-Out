@@ -41,12 +41,13 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
-<div class="container-fluid ">
+
    
    <!-- Blog Banner -->
+
 <div class="row" id="blog-banner">
-    <div class="col-sm-3"></div>
-    <div class="col-sm-6">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
     <div  class="text-center">
         <div class="jumbotron jumbotron-fluid" id="jumbo-style">
             <div class="container">
@@ -54,19 +55,20 @@
                     <h4>Keep up to date with the latest news about our store</h4>
             </div>
             </div>
-        </div>
     </div>
-    <div class="col-sm-3"></div>
+    </div>
+    <div class="col-md-3"></div>
 </div>
  
 <article>
+    <div class="container">
     <div class="row">
         <!-- CONTAINS CODE FOR BLOG SIDE BAR -->
-        <div class="col-sm-2">
+        <div class="col-md-2">
             <div class="card card-style text-left" style="margin-top:30px;">
                 <div class="card-body">
                  <!-- Catergories section-->
-                <h4>Catergories</h4>
+                <h6>Catergories</h6>
                 <ul class="list-unstyled">
                     <li><a href="#">General</a></li>
                     <li><a href="#">Business</a></li>
@@ -75,7 +77,7 @@
                 </div>
                 <div class="card-body">
                  <!-- Catergories section-->
-                <h4>Pinned Posts</h4>
+                <h6>Pinned Posts</h6>
                 <ul class="list-unstyled">
                     <li><a href="#">Test1</a></li>
                 </ul>
@@ -83,7 +85,7 @@
             </div>
         </div>
          <!-- CONTAINS MAIN CONTENT FOR BLOG POSTS -->
-        <div class="col-sm-10 text-left">
+        <div class="col-md-10 text-left">
              <!-- Article 1 example -->
             <article>
                 <div class="card card-style" style="margin-top:30px; margin-bottom:30px;">
@@ -122,13 +124,13 @@
             </article>
         </div>
     </div>
-    
+   </div> 
 </article>
 
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-</div>    
+  
 
 </body>
     

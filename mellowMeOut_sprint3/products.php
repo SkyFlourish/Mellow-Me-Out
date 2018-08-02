@@ -41,15 +41,16 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
-<div class="container-fluid ">
-    <!-- SERVICES CONTENT -->
 <article class="gallery-padding text-center">
+<div class="container">
+    <!-- SERVICES CONTENT -->
+
     <h1>Products<br>
     <small class="text-muted">Mellow Me Out offers many services with a wide variety of massages to eyelash extensions</small>
     </h1>
   
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <!-- Service cards -->
             <div class="card card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/eyelash2.jpg" alt="Card Image">
@@ -60,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
         <div class="card card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/eyelash.jpg" alt="Card Image">
                 <div class="card-body">
@@ -70,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="card card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/spa.jpg" alt="Card Image">
                 <div class="card-body">
@@ -82,7 +83,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <!-- Service cards -->
             <div class="card card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/eyelash2.jpg" alt="Card Image">
@@ -93,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
         <div class="card card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/eyelash.jpg" alt="Card Image">
                 <div class="card-body">
@@ -103,7 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="card card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/spa.jpg" alt="Card Image">
                 <div class="card-body">
@@ -113,37 +114,41 @@
                 </div>
             </div>
         </div>
+        
     </div>
+    </div>  
 </article>
 <!--END OF SERVICES-->
 <!--SPECIAL OFFERS CODE-->
 <article id="specialOffers-styling">
+    <div class="container">
     <h1 class="text-center">Special Offers<br>
         <small class="text-muted">We offer discounts on certain circumstances and offer vouchers.</small>
     </h1>
     <br>
     <div class="row">
-        <div class="col-sm-4 text-center">
+        <div class="col-md-4 text-center">
             <!--Offer 1-->
             <i class="far fa-money-bill-alt icon-styles"></i>
             <h6>Get your first aromatic massage with 20% off</h6>
         </div>
-        <div class="col-sm-4 text-center">
+        <div class="col-md-4 text-center">
             <!--Offer 2-->
             <i class="fas fa-users icon-styles"></i>
             <h6>Bring a friend get 25% off your next treatment</h6>
         </div>
         <!--Offer 3-->
-        <div class="col-sm-4 text-center">
+        <div class="col-md-4 text-center">
             <i class="far fa-heart icon-styles"></i>
             <h6>Like us on facebook, get 10% your bill</h6>
         </div>
+    </div>
     </div>
 </article>
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-</div>    
+  
 
 </body>
     

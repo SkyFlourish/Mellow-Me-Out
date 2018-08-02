@@ -1,10 +1,14 @@
-<div class="container-fluid">
+
 <nav class="navbar navbar-expand-sm navbar-dark navbar-style" style="background-color:#2d3436">
+<div class="container">
      <a class="navbar-brand" href="index.php">
     <img src="img/mellowMeOut_Logo.png" alt="Logo" style="width:240px;">
   </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
     <!-- Navbar text-->
-  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
     <li class="nav-item">
       <a class="nav-link" id="nav-home" href="index.php">Home</a>
@@ -22,6 +26,8 @@
       <a class="nav-link" id="nav-blog" href="blog.php">Blog</a>
     </li>
   </ul>
+    </div>
+    </div>
 </nav>
 <script>
     //CONTROLS WHAT PAGE WE ARE IN
@@ -61,4 +67,3 @@
         //NOTE: PAGES THAT ARE NOT IN NAV ARE ASSIGNED -1 TO STOP CONSOLE ERRORS
     });    
 </script>
-</div>

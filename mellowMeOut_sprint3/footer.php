@@ -1,8 +1,9 @@
 <footer>
+    <div class="container">
     <br>
     <div class="row">
         <!-- SOCIAL MEDIA-->
-        <div class="col-sm-2">
+        <div class="col-md-3">
             <h5>Follow Us</h5>
             <hr>
             <a href=""><i id="social-icon" class="fab fa-facebook"></i></a>
@@ -10,7 +11,7 @@
             <a href=""><i id="social-icon" class="fab fa-twitter"></i></a>
         </div>
         <!-- HELP LINKS-->
-        <div class="col-sm-2">
+        <div class="col-md-3">
             <h5>Help</h5>
             <hr>
              <ul class="list-unstyled">
@@ -20,7 +21,7 @@
             </ul>
         </div>
         <!-- STORE HOURS-->
-        <div class="col-sm-2">
+        <div class="col-md-3">
             <h5>Store Hours</h5>
             <hr>
             <ul class="list-unstyled">
@@ -34,7 +35,7 @@
             </ul>
         </div>
         <!-- MAIL LIST-->
-        <div class="col-sm-2">
+        <div class="col-md-3">
          <h5>Newsletter</h5>
             <hr>
             <p>Signup to our newsletter for the latest news</p>
@@ -44,14 +45,10 @@
                 <button type="submit" class="btn btn-secondary mb-2">Subscribe</button>
             </form>
         </div>
-        <!-- Account Login-->
-        <div class="col-sm-2">
-        <h5>Account</h5>
-            <hr>
-            <p>UNDER CONSTRUCTION</p>
-        </div>
+      
     </div>
     <p id="footer-copyright">© 2018 Mellow Me Out <br>Icons by Font Awesome</p>
     
     <br>
+    </div>
 </footer>   

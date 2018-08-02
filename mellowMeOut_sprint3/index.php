@@ -102,8 +102,9 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
-<div class="container-fluid">
-    <article id="slideshow-bg">
+  <article id="slideshow-bg">
+    <div class="container">
+  
         <div class="row">
         <!-- SLIDESHOW Content Code-->
         <div class="col-sm-4 text-left" id="slideshow-content">
@@ -133,43 +134,48 @@
         
         </div>
     </div>
-    </article>
+    
+    </div>
+      </article>
     <!-- END OF SLIDESHOW -->
     <!-- SERVICES CODE -->
     <article id="services">
-    <br>
+    <div class="container">
+    
     <h1 class="text-center">Our Services
     <small class="text-muted"><br>We offer many more services at our products page</small>
     </h1>
     <div class="row">
-        <div class="col-sm-4 text-center ">
+        <div class="col-md-4 text-center ">
             <img id="img-services" class="img-fluid" src="img/massage.jpg">
             <h3>Pampering Massages</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est. </p>
         </div>
-        <div class="col-sm-4 text-center">
+        <div class="col-md-4 text-center">
             <img id="img-services" class="img-fluid" src="img/candles.jpg">
             <h3>Relaxing Spas</h3>
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est. </p>
         </div>
-        <div class="col-sm-4 text-center">
+        <div class="col-md-4 text-center">
             <div>
                 <img class="img-fluid" src="img/eyelash.jpg" id="img-services" >
             </div>
             <h3>Eyelash Extensions</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est. .</p>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est.</p>
             
         </div>
     </div>
-        <br>
+        
+        </div>
     </article>
     
 
 <!-- end of SERVICES CODE -->
 <!-- ABOUT US CODE -->
 <article id="about">
+    <div class="container">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-md-6">
         
         <h1>About Us</h1>
         <p>Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief.</p>
@@ -181,10 +187,11 @@
         </p>         
         </div>
         <!--DISPLAY MAP -->
-        <div class="col-sm-6">
+        <div class="col-md-6">
             
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.935164528827!2d145.2786028158304!3d-37.8618074445681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63b7d295e7191%3A0x83ea75e9583d0bf3!2sRedefine+Life+Counselling+and+Support!5e0!3m2!1sen!2sau!4v1524644385451" width="100%" height="100%" align="left" padding-left="5%" padding-right="5%"padding-bottom="5%"frameborder="0" style="border:0" allowfullscreen></iframe>
             
+        </div>
         </div>
     </div>
     
@@ -192,7 +199,7 @@
 <!-- END OF ABOUT US-->
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-</div>    
+    
 
 
 </body>

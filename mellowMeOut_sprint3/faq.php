@@ -59,14 +59,16 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
-<div class="container-fluid ">
-    <!-- FAQ CONTENT -->
 <article class="faq-padding">
+<div class="container ">
+    <!-- FAQ CONTENT -->
+
+    <div class="row" style="padding:0px;">
+        <div class="col-md-8">
+            
     <h1>FAQ - Frequently Asked Questions<br>
         <small class="text-muted">Looking for answers? Some of the most common questions can be answered by expanding the boxes bellow.</small>
     </h1>
-    <div class="row" style="padding:0px;">
-        <div class="col-sm-8">
             <h3>General Inquiries</h3>
                 <button class="btn btn-faq"><h5>What payment offers do you offer in store?</h5></button>
                     <div class="faq-box-style faqBox" id=""> 
@@ -82,16 +84,17 @@
                         We offer a wide range of payment options in store. You can either pay with cash or card. Currently there is no online payment for security reasons.
                     </div>
         </div>
-         <div class="col-sm-4">
+         <div class="col-md-4">
              
         </div>
     </div>
+</div>  
 </article>
 
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-</div>    
+
 
 </body>
     

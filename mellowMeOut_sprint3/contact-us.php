@@ -139,12 +139,13 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
-<div class="container-fluid">
-    <div class="row" id="bg-form">
-        <div class="col-sm-3">
+<article id="bg-form">
+<div class="container">
+    <div class="row" >
+        <div class="col-md-3">
         
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-6">
         <form name="myForm"  method="post" action="form.php" id="contact-style" onsubmit="return validateForm();" >
             <h1 class="text-center">Contact Us</h1>
              <!-- CONTACT INFOMATION CODE -->
@@ -189,15 +190,15 @@
             
         </form>
         </div>
-          <div class="col-sm-3">
+          <div class="col-md-3">
         
         </div>
     </div>
-
+</div>    
+</article>
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-</div>    
 
 </body>
 

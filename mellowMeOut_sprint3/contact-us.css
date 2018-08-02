@@ -1,14 +1,4 @@
-.row{
-    padding-left:30px;
-    padding-right:30px;
-}
-.container-fluid {
-    padding-right:0;
-    padding-left:0;
-    margin-right:auto;
-    margin-left:auto;
-    overflow:hidden;
- }
+
 /*CONTACT FORM */
 #contact-style{
     background-color:#ecf0f1;
@@ -28,5 +18,5 @@
 }
 
 #textarea_feedback{
-    
+    color: #3498db;
 }

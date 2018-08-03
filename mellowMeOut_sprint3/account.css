@@ -1,0 +1,15 @@
+
+/*POLICY STYLING */
+
+#account-style{
+    padding:5% 0;
+}
+#account-login{
+     background-color: #ecf0f1;
+}
+#account-create{
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding:5% 0;
+    display:none;
+}

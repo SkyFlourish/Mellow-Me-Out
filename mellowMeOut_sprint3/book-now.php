@@ -26,7 +26,14 @@
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
+        <script>
+        // A $( document ).ready() block.
+            $( document ).ready(function() {
+                nav_Counter = 1;
+            });
+        </script>
     </head>
+
 <!-- Style Sheet for Nav and Footer   -->
 <style>
     <?php include 'nav_footer.css';?>
@@ -37,18 +44,19 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
+
 <div class="container-fluid">
     <!-- Booking Content -->
     <div class="row" style="padding-left:0px; padding-right:0px;">
         <div class="col-sm-6" id="booking-content">
             <!-- BOOKING JUMBO CODE -->
-            <article>
+            
                 <h1 class="text-center"></h1>
                 <div class="jumbotron" id="booking-jumbo-style">
                     <h1>Booking is flexible at Mellow Me Out</h1>
                     <p>See what dates are booked and cancel a booking on demand.</p>
                 </div>
-            </article>
+            
         </div>
         <!-- BOOKING FORM CODE -->
         <div class="col-sm-6" id="booking-style">
@@ -70,7 +78,7 @@
                 <label for="service">Choose your service: </label>
                 <br>
                 <select required name="cars" id="service">
-                    <option value "" disabled selected hidden>Please choose...</option>
+                    <option value= "" disabled selected hidden>Please choose...</option>
                     <option value="volvo">Test 1</option>
                     <option value="saab">Test 2</option>
                     <option value="fiat">Test 3</option>
@@ -87,7 +95,7 @@
                 <input type="text" class="form-control" id="confirm-email" maxlength="42" placeholder="Enter email here">
             </div>
             <!-- </div> -->
-            <button type="submit" class="btn btn-secondary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <div class="Error message">
         <?php require_once 'booking-processing.inc.php'; ?>

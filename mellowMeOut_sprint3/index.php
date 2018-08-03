@@ -31,6 +31,7 @@
     //VARIABLE DECLARAION
     nav_Counter =0; //controls the nav highlight
     var slide_Counter = 0; //Variable chooses the image
+    var slideLock = false; //When true, you cannot change slide. 
     const TimerValue = 5000;
     var dot0 = document.getElementsByClassName("slide-circle")[0];
     var dot1 = document.getElementsByClassName("slide-circle")[1];
@@ -40,14 +41,44 @@
     var myTimer = setInterval(showSlides, TimerValue); //run code on load
         
     //ONCLICK FUNCTIONS FOR DOTS
-    $(".slide-circle").eq(0).on("click",function(){slide_Counter=0; clearInterval(myTimer); showSlides(); myTimer = setInterval(showSlides,5000);});
-    $(".slide-circle").eq(1).on("click",function(){slide_Counter=1; clearInterval(myTimer); showSlides(); myTimer = setInterval(showSlides,5000);});
-    $(".slide-circle").eq(2).on("click",function(){slide_Counter=2; clearInterval(myTimer); showSlides(); myTimer = setInterval(showSlides,5000);});
+    $(".slide-circle").eq(0).on("click",function(){
+        if(slideLock ==false){
+            slideLock = true;
+            setTimeout(function(){ slideLock=false; },1500); //resets the timeout function
+            slide_Counter=0; 
+            clearInterval(myTimer); 
+            showSlides(); 
+            myTimer = setInterval(showSlides,5000);
+        }
+    });
+    
+    $(".slide-circle").eq(1).on("click",function(){
+        if(slideLock ==false){
+            slideLock = true;
+            setTimeout(function(){ slideLock=false; },1500); //resets the timeout function
+            slide_Counter=1; 
+            clearInterval(myTimer); 
+            showSlides(); 
+            myTimer = setInterval(showSlides,5000);
+        }
+    });
+    
+    $(".slide-circle").eq(2).on("click",function(){
+        if(slideLock ==false){
+            slideLock = true;
+            setTimeout(function(){ slideLock=false; },1500); //resets the timeout function
+            slide_Counter=2; 
+            clearInterval(myTimer); 
+            showSlides(); 
+            myTimer = setInterval(showSlides,5000);
+        }
+    });
     
     //CHANGES THE IMAGE
     function showSlides(){
         //define varaible
         var slide_Img = $("#slideshow-bg");
+        
         selectCircle();
         //choose image and circle
         if(slide_Counter==0){

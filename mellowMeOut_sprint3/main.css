@@ -1,26 +1,17 @@
-.row{
-    padding-left:30px;
-    padding-right:30px;
-}
-.container-fluid {
-    padding-right:0px;
-    padding-left:0px;
-    margin-right:auto;
-    margin-left:auto;
-    overflow:hidden;
- }
+
 
 /*====SLIDESHOW*/
 #slideshow-bg{
     background-image: url(img/flowers.jpg);
-    background-size:cover;
+    background-size:1400px 800px;
+    
     transition: 1s;
     overflow:hidden;
+    padding:5% 0;
 }
 
 #slideshow-content{
-    margin-top: 200px;
-    margin-bottom: 200px;
+    padding:0px;
     
 }
 #jumbo-style{
@@ -68,6 +59,7 @@
 /*====SERVICES */
 #services{
     background-color:#ecf0f1;
+    padding:5% 0;
     
 }
 #img-services{
@@ -80,7 +72,7 @@
 #about{
     background-color:#2c3e50;
     color:#ecf0f1;
-    padding:30px 0;
+    padding:5% 0;
 }
 /*====Media Queries */
 @media only screen and (max-width: 768px) {
@@ -89,3 +81,4 @@
     }
  
 }
+

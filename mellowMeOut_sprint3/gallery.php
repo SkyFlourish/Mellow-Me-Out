@@ -41,42 +41,44 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
-<div class="container-fluid ">
-    <!-- POLICY CONTENT -->
 <article class="gallery-padding text-center">
+<div class="container">
+    <!-- POLICY CONTENT -->
+
     <h1>Gallery<br>
     <small class="text-muted">Here are some photos of our amazing work. You will be as pampered as the people you see here. </small>
     </h1>
     
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <a href="https://placeholder.com"><img class="img-fluid gallery-style" src="http://via.placeholder.com/350x350"></a>
         </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
         <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <a href="https://placeholder.com"><img class="img-fluid gallery-style" src="http://via.placeholder.com/350x350"></a>
         </div>
-            <div class="col-sm-4">
-        <a href="https://placeholder.com"><img  class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
+            <div class="col-md-4">
+        <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
         </div>
     </div>
     
-</article>
 
+</div> 
+    </article>
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-</div>    
+  
 
 </body>
     

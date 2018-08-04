@@ -16,12 +16,22 @@ nav ul li a:hover{
     background-color: #7f8c8d;
     transition: 0.2s;
 }
+#hamburger-icon{
+    
+}
 
+.collapsing { /*BOOTSTRAP HAMBURGER MENU */
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
 /*====FOOTER */
 footer{
     background-color: #2d3436;
     color:#ecf0f1; 
+    overflow:hidden;
 }
+
 #social-icon{
     color:#bdc3c7;
     font-size: 30px;
@@ -47,7 +57,7 @@ footer a:hover{
     transition: 0.2s;
 }
 #footer-copyright{
-    margin-left:30px;
+    
 }
 /*MEDIA QUERIES */
 @media only screen and (max-width: 768px) {

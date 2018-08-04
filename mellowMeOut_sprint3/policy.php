@@ -41,12 +41,13 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
-<div class="container-fluid">
+<article class="policy-padding">
+<div class="container">
     <!-- POLICY CONTENT -->
 <div class="row" style="padding:0px; background-color: #ecf0f1">
     
-    <div class="col-sm-9">
-        <article class="policy-padding">
+    <div class="col-md-9">
+        
             <h1>Privacy Policy
                 <small class="text-muted"><br>Last updated on May 25, 2018</small>
             </h1>
@@ -96,9 +97,9 @@
     
     <p>For any complaints or queries about our Privacy Policy, please contact us at: Address: First Floor, 171 Boronia Rd, Boronia VIC 3155 Email: snezana.mitrovic@hotmail.com Phone: 0490 931 319</p>
     
-</article>
+
 </div>
-<div class="col-sm-3 policy-padding">
+<div class="col-md-3 policy-padding">
     <h4>Jump to</h4>
             <ul class="list-unstyled" id="nav-policy">
                 <li><a href="policy.php#section1">Personal Information</a></li>
@@ -116,10 +117,11 @@
 </div>
   
 </div>
-
+</div> 
+    </article>
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-</div>    
+
 
 </body>
     

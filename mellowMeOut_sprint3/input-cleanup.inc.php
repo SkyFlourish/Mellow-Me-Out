@@ -3,7 +3,7 @@
 // Includes stripping tags from string input and the like
 // Calls input-validation.inc.php for functions
 
-require 'input-validation.inc.php';
+// require 'input-validation.inc.php';
 
 function stripTagsFromInput($input) {
     // Should remove all web tags from user input and allow for safer use of

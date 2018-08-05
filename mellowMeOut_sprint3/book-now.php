@@ -60,7 +60,7 @@
         </div>
         <!-- BOOKING FORM CODE -->
         <div class="col-sm-6" id="booking-style">
-            <form>
+            <form action="book-now.php" method="post">
             <h1 class="text-center">Make a booking</h1>
             <div class="form-group" >
                 <label for="fullName">Full Name: </label>
@@ -99,7 +99,28 @@
             <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>
         </form>
         <div class="Error message">
-        <?php require_once 'booking-processing.inc.php'; ?>
+        <?php
+        require 'booking-processing.inc.php';
+        bookingProcessing();
+        // if ($formComplete == false) {
+        //     foreach ($errorMsgArray as $errorMsg) {
+        //         echo $errorMsg;
+        //         echo "</br>";
+        //     }
+        //     foreach ($debugMsgArray as $debugMsg) {
+        //         // code...
+        //         echo $debugMsg;
+        //         echo "</br>";
+        //     }
+        // }
+        // else {
+        //     foreach ($debugMsgArray as $debugMsg) {
+        //         echo $debugMsg;
+        //         echo "</br>";
+        //     }
+        //     echo "Apparently a success";
+        // }
+        ?>
         </div>
         </div>
 

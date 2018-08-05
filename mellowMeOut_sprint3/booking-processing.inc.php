@@ -17,6 +17,7 @@ function bookingProcessing() {
     $serviceValid = false;
     $emailValid = false;
     $emailConfirmValid = false;
+    $errorMsgArray = [];
 
     // There would also be an array of services that are crossed referenced with
     // the service that the user selects to ensure they haven't fooled around with
@@ -111,7 +112,7 @@ function bookingProcessing() {
                     echo "Confirm Email found valid";
                 }
                 else {
-                    echo "Confirm Email invalid";
+                    array_push($errorMsgArray, "Confirm Email Invalid");
                 }
             }
         }
@@ -124,6 +125,11 @@ function bookingProcessing() {
             $emailMissing == true || $emailConfirmMissing == true) {
                 echo "You have not filled out the entire form yet</br>";
                 echo "Please provide the required information above";
+                foreach ($errorMsgArray as $errorMsg) {
+                    echo $errorMsg;
+                    echo "</br>";
+                }
+                unset($errorMsgArray);
             }
             else {
                 if ($fullNameValid == true && $phoneValid == true &&

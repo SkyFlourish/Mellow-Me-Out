@@ -50,13 +50,13 @@
     <div class="row" style="padding-left:0px; padding-right:0px;">
         <div class="col-sm-6" id="booking-content">
             <!-- BOOKING JUMBO CODE -->
-            
+
                 <h1 class="text-center"></h1>
                 <div class="jumbotron" id="booking-jumbo-style">
                     <h1>Booking is flexible at Mellow Me Out</h1>
                     <p>See what dates are booked and cancel a booking on demand.</p>
                 </div>
-            
+
         </div>
         <!-- BOOKING FORM CODE -->
         <div class="col-sm-6" id="booking-style">
@@ -64,20 +64,21 @@
             <h1 class="text-center">Make a booking</h1>
             <div class="form-group" >
                 <label for="fullName">Full Name: </label>
-                <input type="text" class="form-control" id="fullName" maxlength="24" placeholder="Enter full name here">
+                <input type="text" class="form-control" id="fullName" maxlength="24" placeholder="Enter full name here" name="fullName">
             </div>
             <div class="form-group">
                 <label for="phone">Phone: </label>
-                <input type="text" class="form-control" id="phone" maxlength="24" placeholder="Enter phone number">
+                <input type="text" class="form-control" id="phone" maxlength="24" placeholder="Enter phone number" name="phone">
             </div>
             <div class="form-group">
                  <label for="select-booking">Please select date of booking: </label>
-                <input type="date" class="form-control" id="select-booking" >
+                <input type="date" class="form-control" id="select-booking" name="select-booking">
             </div>
             <div class="form-group">
                 <label for="service">Choose your service: </label>
                 <br>
-                <select required name="cars" id="service">
+                <select name="cars" id="service" name="service">
+                <!-- <select required name="cars" id="service"> -->
                     <option value= "" disabled selected hidden>Please choose...</option>
                     <option value="volvo">Test 1</option>
                     <option value="saab">Test 2</option>
@@ -88,14 +89,14 @@
             <!-- <div> -->
             <div class="form-group" >
                 <label for="email">Confirm your email address: </label>
-                <input type="text" class="form-control" id="email" maxlength="42" placeholder="Enter email here">
+                <input type="text" class="form-control" id="email" maxlength="42" placeholder="Enter email here" name="email">
             </div>
             <div class="form-group" >
                 <label for="confirm-email">Confirm your email address: </label>
-                <input type="text" class="form-control" id="confirm-email" maxlength="42" placeholder="Enter email here">
+                <input type="text" class="form-control" id="confirm-email" maxlength="42" placeholder="Enter email here" name="confirm-email">
             </div>
             <!-- </div> -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>
         </form>
         <div class="Error message">
         <?php require_once 'booking-processing.inc.php'; ?>

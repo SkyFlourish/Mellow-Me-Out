@@ -57,7 +57,7 @@ $inputVariableArray = [];
 // and the form will not progress.
 
 if (isset($_POST["submit"])) {
-    if (isset($_POST["fullName"])) {
+    if (!empty($_POST["fullName"])) {
         $fullName = $_POST["fullName"];
         if (validateInputNotNull($fullName) == true) {
             $fullName = stripTagsFromInput($fullName);
@@ -73,7 +73,7 @@ if (isset($_POST["submit"])) {
         $fullNameMissing = true;
         array_push($errorMsgArray, "Please enter your full name");
     }
-    if (isset($_POST["phone"])) {
+    if (!empty($_POST["phone"])) {
         $phone = $_POST["phone"];
         if (validateInputNotNull($phone) == true) {
             $phone = stripTagsFromInput($phone);
@@ -88,7 +88,7 @@ if (isset($_POST["submit"])) {
         $phoneMissing = true;
         array_push($errorMsgArray, "Please enter your phone number");
     }
-    if (isset($_POST["select-booking"])) {
+    if (!empty($_POST["select-booking"])) {
         $selectBooking = $_POST["select-booking"];
         if (validateInputNotNull($selectBooking) == true) {
             // $selectBooking = stripTagsFromInput($selectBooking);
@@ -103,7 +103,7 @@ if (isset($_POST["submit"])) {
         $selectBookingMissing = true;
         array_push($errorMsgArray, "Please select a booking date");
     }
-    if (isset($_POST["service"])) {
+    if (!empty($_POST["service"])) {
         $service = $_POST["service"];
         if (validateInputNotNull($service) == true) {
             $service = stripTagsFromInput($service);
@@ -118,7 +118,7 @@ if (isset($_POST["submit"])) {
         $serviceMissing = true;
         array_push($errorMsgArray, "Please select a service");
     }
-    if (isset($_POST["email"])) {
+    if (!empty($_POST["email"])) {
         $email = $_POST["email"];
         if (validateInputNotNull($email) == true) {
             if (validateEmailAddressInputFormat($email) == true) {
@@ -139,11 +139,11 @@ if (isset($_POST["submit"])) {
         $emailMissing = true;
         array_push($errorMsgArray, "Please enter your Email Address");
     }
-    if (isset($_POST["confirm-email"])) {
+    if (!empty($_POST["confirm-email"])) {
         $confirmEmail = $_POST["confirm-email"];
         if (validateInputNotNull($confirmEmail) == true) {
             if (validateEmailAddressInputFormat($confirmEmail) == true) {
-                $email = stripTagsFromInput($confirmEmail);
+                $confirmEmail = stripTagsFromInput($confirmEmail);
                 $confirmEmailValid = true;
                 $emailConfirmMissing = false;
                 // echo "Confirm Email found valid";
@@ -179,35 +179,49 @@ if (isset($_POST["submit"])) {
                 echo "</br>";
             }
             echo "</p>";
-
     }
-    else {
-        if ($fullNameValid == true && $phoneValid == true &&
-        $selectBookingValid == true && $serviceValid == true &&
-        $emailValid == true && $emailConfirmValid == true &&
-        $formComplete == true) {
-            if ($email == $confirmEmailValid) {
-                $formComplete = true;
-                array_push($debugMsgArray, "Form apparently complete");
-                echo "<p>";
-                foreach ($errorMsgArray as $errorMsg) {
-                    echo $errorMsg;
-                    echo "</br>";
-                }
-                echo "</p>";
-                echo "<p>";
-                foreach ($debugMsgArray as $debugMsg) {
-                    // code...
-                    echo $debugMsg;
-                    echo "</br>";
-                }
-                echo "</p>";
+    // if ($fullNameValid == true && $phoneValid == true &&
+    // $selectBookingValid == true && $serviceValid == true &&
+    // $emailValid == true && $emailConfirmValid == true) {
+    if ($fullNameMissing == false && $phoneMissing == false &&
+        $selectBookingMissing == false && $serviceMissing == false &&
+        $emailMissing == false && $emailConfirmMissing == false) {
+        if ($email == $confirmEmail) {
+            $formComplete = true;
+            array_push($debugMsgArray, "Form apparently complete");
+            echo "<p>";
+            foreach ($errorMsgArray as $errorMsg) {
+                echo $errorMsg;
+                echo "</br>";
             }
-            else {
-                echo "Email addresses entered do not match</br>";
-                echo "Please try again";
-                $formComplete = false;
+            echo "</p>";
+            echo "<p>";
+            foreach ($debugMsgArray as $debugMsg) {
+                // code...
+                echo $debugMsg;
+                echo "</br>";
             }
+            echo "</p>";
+        }
+        else {
+            // echo "Email addresses entered do not match</br>";
+            // echo "Please try again";
+            array_push($errorMsgArray, "Email address entered do not match");
+            array_push($errorMsgArray, "Please try again");
+            $formComplete = false;
+            echo "<p>";
+            foreach ($errorMsgArray as $errorMsg) {
+                echo $errorMsg;
+                echo "</br>";
+            }
+            echo "</p>";
+            echo "<p>";
+            foreach ($debugMsgArray as $debugMsg) {
+                // code...
+                echo $debugMsg;
+                echo "</br>";
+            }
+            echo "</p>";
         }
     }
 }
@@ -222,6 +236,12 @@ echo "</p>";
 unset($errorMsgArray);
 echo "POST array <p>";
 var_dump($_POST);
+echo "</p>";
+echo "Email <p>";
+var_dump($email);
+echo "</p>";
+echo "Confirm Email <p>";
+var_dump($confirmEmail);
 echo "</p>";
 
 }

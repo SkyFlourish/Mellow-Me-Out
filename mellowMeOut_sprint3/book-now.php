@@ -77,7 +77,7 @@
             <div class="form-group">
                 <label for="service">Choose your service: </label>
                 <br>
-                <select name="cars" id="service" name="service">
+                <select id="service" name="service">
                 <!-- <select required name="cars" id="service"> -->
                     <option value= "" disabled selected hidden>Please choose...</option>
                     <option value="volvo">Test 1</option>

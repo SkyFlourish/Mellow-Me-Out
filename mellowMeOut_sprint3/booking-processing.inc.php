@@ -1,6 +1,5 @@
 <?php
 
-
     // if ($fullNameMissing == true || $phoneMissing == true ||
     //     $selectBookingMissing == true || $serviceMissing == true ||
     //     $emailMissing == true || $emailConfirmMissing == true) {

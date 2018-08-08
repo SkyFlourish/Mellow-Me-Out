@@ -25,7 +25,31 @@
                 withour error
     20/05/2018 - Added image storage location line to services table, not likely to be
                 permanent spot for it
+    08/07/2018 - Added a sequence of table drops for deleting the tables
+                in the correct order
+                Notes:
+                We've decided not to have a user login I think, should simplify table structure
+                and security of the tables in question.
+                Commented in specific areas detailing ideas after having some time
+                away from them. As always, if you take issue with anything here
+                I am always willing to rethink the idea.
 */
+
+DROP TABLE DISCOUNT;
+DROP TABLE NONBUSSINESSDAYS;
+DROP TABLE CONTACTUS;
+DROP TABLE SERVICEDESCRIPTION;
+DROP TABLE SERVICESINBOOKING;
+DROP TABLE ADMINSTAFF;
+DROP TABLE SERVICESBOOKED;
+DROP TABLE BLOGTAGS;
+DROP TABLE BLOGCOMMENTS;
+DROP TABLE BLOGCONTENT;
+DROP TABLE STAFF;
+DROP TABLE BOOKINGS;
+DROP TABLE USERS;
+DROP TABLE SERVICES;
+DROP TABLE FAQ;
 
 CREATE TABLE Services (
     ServiceID                   INT             NOT NULL    AUTO_INCREMENT,
@@ -99,6 +123,7 @@ CREATE TABLE ContactUs
   ContactUsID                 INT               NOT NULL    AUTO_INCREMENT,
   FirstName                   VARCHAR(50)       NOT NULL,
   LastName                    VARCHAR(50)       NOT NULL,
+  PhoneNumber                 VARCHAR(50)       NOT NULL,
   EmailAddress                VARCHAR(100)      NOT NULL,
   Subject                     TEXT              NOT NULL,
   Message                     TEXT              NOT NULL,
@@ -122,18 +147,19 @@ CREATE TABLE AdminStaff
     FOREIGN KEY (Username) REFERENCES Staff(Username)
 );
 
-/* Table name change */
-CREATE TABLE Users
-(
-    /* UserID removed, Username should be forced to be unique */
-    Username                    VARCHAR(50)     NOT NULL,
-    Passphrase                  VARCHAR(50)     NOT NULL,
-    FirstName                   VARCHAR(50)     NOT NULL,
-    LastName                    VARCHAR(50)     NOT NULL,
-    EmailAddress                VARCHAR(100)    NOT NULL,
-    PhoneNumber                 INT             NULL,
-    PRIMARY KEY (Username)
-);
+-- /* Table name change */
+-- /* Table is considered vestigial */
+-- CREATE TABLE Users
+-- (
+--     /* UserID removed, Username should be forced to be unique */
+--     Username                    VARCHAR(50)     NOT NULL,
+--     Passphrase                  VARCHAR(50)     NOT NULL,
+--     FirstName                   VARCHAR(50)     NOT NULL,
+--     LastName                    VARCHAR(50)     NOT NULL,
+--     EmailAddress                VARCHAR(100)    NOT NULL,
+--     PhoneNumber                 INT             NULL,
+--     PRIMARY KEY (Username)
+-- );
 
 
 /* Need a one to many relation table in addition */
@@ -163,16 +189,18 @@ CREATE TABLE Bookings
   should be used or if those details do not exist, then they will need to be
   asked for so that validation can happen after the fact */
 
-CREATE TABLE ServicesInBooking
-(
-    /* SibID = Services in booking ID */
-    SibID                       INT             NOT NULL    AUTO_INCREMENT,
-    ServiceID                   INT             NOT NULL,
-    BookingID                   INT             NOT NULL,
-    PRIMARY KEY (SibID),
-    FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID),
-    FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
-);
+-- CREATE TABLE ServicesInBooking
+-- (
+--     /* SibID = Services in booking ID */
+--     SibID                       INT             NOT NULL    AUTO_INCREMENT,
+--     ServiceID                   INT             NOT NULL,
+--     BookingID                   INT             NOT NULL,
+--     PRIMARY KEY (SibID),
+--     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID),
+--     FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
+-- );
+-- /* We may end up having to do bundling in the services table to keep things simple */
+-- /* Removing from set untill we have confirmation one way or the other */
 
 CREATE TABLE ServicesBooked
 (
@@ -204,15 +232,28 @@ CREATE TABLE BlogContent
     FOREIGN KEY (Username) REFERENCES Staff(Username)
 );
 
+-- CREATE TABLE BlogComments
+-- (
+--     BlogCommentID               INT             NOT NULL    AUTO_INCREMENT,
+--     BlogCommentText             TEXT            NOT NULL,
+--     Username                    VARCHAR(50)     NOT NULL,
+--     BlogID                      INT             NOT NULL,
+--     BlogCommentTimestamp        DATETIME        NOT NULL    DEFAULT   CURRENT_TIMESTAMP,
+--     PRIMARY KEY (BlogCommentID),
+--     FOREIGN KEY (Username) REFERENCES Users(Username),
+--     FOREIGN KEY (BlogID) REFERENCES BlogContent(BlogID)
+-- );
+
 CREATE TABLE BlogComments
 (
     BlogCommentID               INT             NOT NULL    AUTO_INCREMENT,
     BlogCommentText             TEXT            NOT NULL,
-    Username                    VARCHAR(50)     NOT NULL,
+    Name                        VARCHAR(50)     NOT NULL,
+    PhoneNumber                 VARCHAR(50)     NULL,
+    EmailAddress                VARCHAR(50)     NULL,
     BlogID                      INT             NOT NULL,
     BlogCommentTimestamp        DATETIME        NOT NULL    DEFAULT   CURRENT_TIMESTAMP,
     PRIMARY KEY (BlogCommentID),
-    FOREIGN KEY (Username) REFERENCES Users(Username),
     FOREIGN KEY (BlogID) REFERENCES BlogContent(BlogID)
 );
 

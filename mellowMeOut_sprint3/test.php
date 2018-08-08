@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <!--Icon and Title-->
         <link rel="icon" type="image/png" href="img/favicon.png">
-        <title>Account - MellowMeOut</title>
+        <title>Privacy Policy - MellowMeOut</title>
         <!--Keywords for search-->
         <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas, Brow Tint, Aromatherapy Massage, Lymphatic massage, Indian head massage, Body Mud wrap, Body exfoliate, Eyelash Tint, Combat Stress, Revitalise ">
         <!--Description of page-->
@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mobile view-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="account.css">
+        <link rel="stylesheet" href="policy.css">
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -28,14 +28,15 @@
         <script>
         document.addEventListener("DOMContentLoaded", function(event) { //run when page loads
             nav_Counter=-1;
-            //TOGGLE THE CREATE ACCOUNT SECTION
-            $("#btn-create").click(function(){
-                $("#account-create").slideDown(250);
-                $("html, body").animate({ scrollTop: 500 },);
-            });
-                                   
-                              
+          
         });
+              function validateForm() {
+                var x = document.forms["myForm"]["fname"].value;
+                    if (x == "") {
+                    alert("Name must be filled out");
+                    return false;
+                    }
+                }
         </script>
     </head>
 <!-- Style Sheet for Nav and Footer-->  
@@ -48,41 +49,25 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
-
-<article id="account-login">
-<div class="container">
-    <!-- Login Content -->
+<div class="container-fluid">
+    <!-- POLICY CONTENT -->
 <div class="row" style="padding:0px; background-color: #ecf0f1">
-<div class="col-md-2">
     
-</div>
-<div class="col-md-8" id="account-style">
-    <h1 class="text-center">Staff Sign in</h1>
-    <form action="/action_page.php">
-        <div class="form-group">
-            <label for="email">Email address:</label>
-            <input type="email" class="form-control" id="email">
-        </div>
-    <div class="form-group">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd">
+    <div class="col-sm-12">
+        <article class="policy-padding">
+            <h1>Coding Ground: </h1>
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
+        </article>
     </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-    </form>
-    
-            
 </div>
-<div class="col-md-2">
-    
-</div>
-  
-</div>
-</div> 
-</article>
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-
+</div>    
 
 </body>
     

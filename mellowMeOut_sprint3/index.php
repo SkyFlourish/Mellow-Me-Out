@@ -178,18 +178,18 @@
     </h1>
     <div class="row">
         <div class="col-md-4 text-center ">
-            <img id="img-services" class="img-fluid" src="img/massage.jpg">
+            <img class="img-fluid img-services" src="img/massage.jpg">
             <h3>Pampering Massages</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est. </p>
         </div>
         <div class="col-md-4 text-center">
-            <img id="img-services" class="img-fluid" src="img/candles.jpg">
+            <img class="img-fluid img-services" src="img/candles.jpg">
             <h3>Relaxing Spas</h3>
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est. </p>
         </div>
         <div class="col-md-4 text-center">
             <div>
-                <img class="img-fluid" src="img/eyelash.jpg" id="img-services" >
+                <img class="img-fluid img-services" src="img/eyelash.jpg">
             </div>
             <h3>Eyelash Extensions</h3>
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est.</p>

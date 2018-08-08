@@ -18,6 +18,8 @@
                 <li><a href="contact-us.php">Contact Us</a></li>
                 <li><a href="faq.php">FAQ</a></li>
                 <li><a href="policy.php">Privacy Policy</a></li>
+                 <li><a href="terms.php">Terms and Conditions</a></li>
+                <li><a href="account.php">Admin</a></li>
             </ul>
         </div>
         <!-- STORE HOURS-->

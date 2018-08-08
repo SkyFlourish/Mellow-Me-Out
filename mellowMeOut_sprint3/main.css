@@ -1,10 +1,8 @@
 
-
 /*====SLIDESHOW*/
 #slideshow-bg{
     background-image: url(img/flowers.jpg);
     background-size:1400px 800px;
-    
     transition: 1s;
     overflow:hidden;
     padding:5% 0;
@@ -62,11 +60,12 @@
     padding:5% 0;
     
 }
-#img-services{
-    
-    max-height:270px;
+.img-services{
+    max-height:230px;
+    background-color:grey;
     width:100%;
 }
+
 
 /*====ABOUT US */
 #about{

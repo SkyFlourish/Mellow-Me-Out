@@ -139,12 +139,16 @@
         <div class="row">
         <!-- SLIDESHOW Content Code-->
         <div class="col-sm-4 text-left" id="slideshow-content">
-            
+             <!-- SLIDESHOW CONTENT-->
             <div class="jumbotron jumbotron-fluid" id="jumbo-style">
                 <div class="container">
                 <h1>Welcome to Mellow Me Out</h1>
-                <h3>Book your service now!</h3>
-                <button id="btn-book" type="button" class="btn" style=""><strong>BOOK NOW</strong></button>
+                <div id="slideshow-content-design">
+                    <h4>Take a journey with us <i class="fas fa-spa"></i></h4>
+                </div>
+                <!-- SLIDESHOW CONTENT- BUTTONS-->
+                <button type="button" id="btn-book"class="btn btn-danger btn-lg"><strong>Book Now</strong></button>
+                <button type="button" id="btn-services" class="btn btn-danger btn-lg"><strong>Pricing</strong></button>
             
                 </div>
             </div>

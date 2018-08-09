@@ -1,9 +1,9 @@
 
-/*====SLIDESHOW*/
+/*====SLIDESHOW===========*/
 #slideshow-bg{
     background-image: url(img/flowers.jpg);
     background-size:1400px 800px;
-    transition: 1s;
+    transition: 0.25s;
     overflow:hidden;
     padding:5% 0;
 }
@@ -18,17 +18,21 @@
     color:#ecf0f1;
         
 }
+
+#slideshow-content-design{
+    border-left-style: solid;
+    border-left-width: thin;
+    padding-left:4px;
+}
+
 #btn-book{
-    box-shadow: 1px 1px #2c3e50;
-    background-color: #e74c3c; 
-    color:#ecf0f1;
+    box-shadow: 0px 5px 0px 0px #CE3323;
 }
-#btn-book:hover{
-    box-shadow: 0px 0px #2c3e50;
-    background-color: #7f8c8d; 
-    color:#ecf0f1;
+#btn-services{
+    box-shadow: 0px 5px 0px 0px #CE3323;
 }
-/*====SLIDESHOW SELECTORS*/
+
+/*====SLIDESHOW SELECTORS=======*/
 .slide-circle{
     background-color:transparent;
     border-color:#ecf0f1;
@@ -54,7 +58,8 @@
     left:35%;
    
 }
-/*====SERVICES */
+
+/*====SERVICES =========*/
 #services{
     background-color:#ecf0f1;
     padding:5% 0;

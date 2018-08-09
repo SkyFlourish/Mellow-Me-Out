@@ -28,6 +28,14 @@
         <script>
             document.addEventListener("DOMContentLoaded", function(event) { //run when page loads
                 nav_Counter=3;
+                $('[data-toggle="tooltip"]').tooltip() //enable tooltips
+                //MODAL CONTENT DETERMINE
+                $(".popupimage").click(function(){
+                    var imgValue = ($(this).attr("src")); //get image source
+                    $("#img-modal").attr('src',imgValue);
+                    var index = $(".popupimage").index(this);//get index number
+                    $("#img-title").html("Image: " + index);
+                });
             });
         </script>
     </head>
@@ -43,32 +51,50 @@
  <!-- End of Nav Code -->
 <article class="gallery-padding text-center">
 <div class="container">
-    <!-- POLICY CONTENT -->
+    <!-- Gallery CONTENT -->
 
     <h1>Gallery<br>
     <small class="text-muted">Here are some photos of our amazing work. You will be as pampered as the people you see here. </small>
     </h1>
-    
+                <!-- Modal popup -->
+    <div class="modal" id="mymodal">
+        <div class= "modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="img-title" class="modal-title">Image</h2>
+                    <button class="close" type="button" data-dismiss="modal">x</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                            <img id="img-modal" src="img/eyelash2.jpg" class="img-modal-settings img-fluid">
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        </div>
+    </div>
+             <!-- Modal popup END-->
     <div class="row">
         <div class="col-md-4">
-            <a href="https://placeholder.com"><img class="img-fluid gallery-style" src="http://via.placeholder.com/350x350"></a>
+            <a href="#" data-toggle="modal" data-target="#mymodal"><img data-toggle="tooltip" data-placement="top" title="Click to enlarge" class="img-fluid gallery-style popupimage" src="img/eyelash2.jpg"></a>
         </div>
             <div class="col-md-4">
-        <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
+        <a href="#" data-toggle="modal" data-target="#mymodal"><img data-toggle="tooltip" data-placement="top" title="Click to enlarge" class="img-fluid gallery-style popupimage" src="img/eyelash.jpg"></a>
         </div>
         <div class="col-md-4">
-            <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
+            <a href="#" data-toggle="modal" data-target="#mymodal"><img data-toggle="tooltip" data-placement="top" title="Click to enlarge"  class="img-fluid gallery-style popupimage"  src="img/spa2.jpg"></a>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
-            <a href="https://placeholder.com"><img class="img-fluid gallery-style" src="http://via.placeholder.com/350x350"></a>
+            <a href="#" data-toggle="modal" data-target="#mymodal"><img data-toggle="tooltip" data-placement="top" title="Click to enlarge"  class="img-fluid gallery-style popupimage" src="img/oils.jpg"></a>
         </div>
             <div class="col-md-4">
-        <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
+        <a data-toggle="modal" data-target="#mymodal" href=""><img data-toggle="tooltip" data-placement="top" title="Click to enlarge" class="img-fluid gallery-style popupimage"  src="img/spa.jpg"></a>
         </div>
         <div class="col-md-4">
-            <a href="https://placeholder.com"><img class="img-fluid gallery-style"  src="http://via.placeholder.com/350x350"></a>
+            <a data-toggle="modal" data-target="#mymodal" href=""><img data-toggle="tooltip" data-placement="top" title="Click to enlarge"  class="img-fluid gallery-style popupimage"  src="img/candles.jpg"></a>
         </div>
     </div>
     

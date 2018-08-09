@@ -139,12 +139,16 @@
         <div class="row">
         <!-- SLIDESHOW Content Code-->
         <div class="col-sm-4 text-left" id="slideshow-content">
-            
+             <!-- SLIDESHOW CONTENT-->
             <div class="jumbotron jumbotron-fluid" id="jumbo-style">
                 <div class="container">
                 <h1>Welcome to Mellow Me Out</h1>
-                <h3>Book your service now!</h3>
-                <button id="btn-book" type="button" class="btn" style=""><strong>BOOK NOW</strong></button>
+                <div id="slideshow-content-design">
+                    <h4>Take a journey with us <i class="fas fa-spa"></i></h4>
+                </div>
+                <!-- SLIDESHOW CONTENT- BUTTONS-->
+                <button type="button" id="btn-book"class="btn btn-danger btn-lg"><strong>Book Now</strong></button>
+                <button type="button" id="btn-services" class="btn btn-danger btn-lg"><strong>Pricing</strong></button>
             
                 </div>
             </div>
@@ -178,18 +182,18 @@
     </h1>
     <div class="row">
         <div class="col-md-4 text-center ">
-            <img id="img-services" class="img-fluid" src="img/massage.jpg">
+            <img class="img-fluid img-services" src="img/massage.jpg">
             <h3>Pampering Massages</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est. </p>
         </div>
         <div class="col-md-4 text-center">
-            <img id="img-services" class="img-fluid" src="img/candles.jpg">
+            <img class="img-fluid img-services" src="img/candles.jpg">
             <h3>Relaxing Spas</h3>
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est. </p>
         </div>
         <div class="col-md-4 text-center">
             <div>
-                <img class="img-fluid" src="img/eyelash.jpg" id="img-services" >
+                <img class="img-fluid img-services" src="img/eyelash.jpg">
             </div>
             <h3>Eyelash Extensions</h3>
              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est.</p>

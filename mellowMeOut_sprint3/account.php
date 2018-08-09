@@ -57,7 +57,7 @@
     
 </div>
 <div class="col-md-8" id="account-style">
-    <h1 class="text-center">Sign in</h1>
+    <h1 class="text-center">Staff Sign in</h1>
     <form action="/action_page.php">
         <div class="form-group">
             <label for="email">Email address:</label>
@@ -67,15 +67,7 @@
         <label for="pwd">Password:</label>
         <input type="password" class="form-control" id="pwd">
     </div>
-    <div class="form-group form-check">
-        <label class="form-check-label">
-        <input class="form-check-input" type="checkbox"> Remember me |
-        </label>
-        <a href=#>Forgot your password?</a>
-  </div>
         <button type="submit" class="btn btn-primary">Login</button>
-        <button type="button" class="btn btn-outline-primary" id="btn-create">Create Account</button>
-        
     </form>
     
             
@@ -87,43 +79,7 @@
 </div>
 </div> 
 </article>
-<!-- Create Account Content -->
-<article id="account-create">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <h1>Create your account</h1>
-                <p class="">Creating an account is simple. It allows you to book online and access addtional features.</p>
-                <form action="/action_page.php">
-                    <div class="form-group">
-                        <label for="name">Full Name:</label>
-                        <input type="text" class="form-control" id="name" maxlength="24">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone:</label>
-                        <input type="text" class="form-control" id="phone" maxlength="10">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email address:</label>
-                        <input type="email" class="form-control" id="email" maxlength="48">
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd" maxlength="24">
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd">Confirm Password:</label>
-                        <input type="password" class="form-control" id="pwd" maxlength="24">
-                    </div>
-                    <p>By clicking submit, you agree to the <a href="#">Privacy Policy</a>.</p>
-                    <button type="submit" class="btn btn-primary" >Submit</button>
-                </form>
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-    </div>
-</article>
+
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
 

@@ -1,5 +1,5 @@
 
-/*POLICY STYLING */
+/*Gallery */
 .gallery-padding{
     padding:30px;
     background-color: #ecf0f1;
@@ -15,4 +15,9 @@
     margin-top:30px;
     outline: 4px solid #e74c3c;
     transition:0.2s;
+}
+/*MODAL*/
+.img-modal-settings{
+    max-width:100%;
+    
 }

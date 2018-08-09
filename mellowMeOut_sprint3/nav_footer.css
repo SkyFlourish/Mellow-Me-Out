@@ -16,9 +16,6 @@ nav ul li a:hover{
     background-color: #7f8c8d;
     transition: 0.2s;
 }
-#hamburger-icon{
-    
-}
 
 .collapsing { /*BOOTSTRAP HAMBURGER MENU */
     -webkit-transition: none;

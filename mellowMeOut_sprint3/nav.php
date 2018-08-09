@@ -10,13 +10,7 @@
   </button>
     <!-- Navbar text-->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li>
-            <a class="nav-link" id="nav-account" href="account.php"><i class="fas fa-user-alt" style="padding:4px;"></i>SIGN IN 
 
-</a>
-        </li>
-      </ul>
     <ul class="navbar-nav ml-auto">
     <li class="nav-item">
       <a class="nav-link" id="nav-home" href="index.php">Home</a>

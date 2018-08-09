@@ -18,6 +18,8 @@
                 <li><a href="contact-us.php">Contact Us</a></li>
                 <li><a href="faq.php">FAQ</a></li>
                 <li><a href="policy.php">Privacy Policy</a></li>
+                 <li><a href="terms.php">Terms and Conditions</a></li>
+                <li><a href="account.php">Admin</a></li>
             </ul>
         </div>
         <!-- STORE HOURS-->
@@ -47,7 +49,7 @@
         </div>
       
     </div>
-    <p id="footer-copyright">© 2018 Mellow Me Out <br>Icons by Font Awesome</p>
+    <p id="footer-copyright">© 2018 Mellow Me Out <br><a href=https://fontawesome.com target="_blank">Icons by Font Awesome</a></p>
     
     <br>
     </div>

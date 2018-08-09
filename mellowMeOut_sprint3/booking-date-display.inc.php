@@ -9,7 +9,7 @@ $limit = 12;
 $currentDate = new DateTime;
 $endDate = date_modify($currentDate, "+ 12 Month");
 // P1D is plus one day
-$interval = DateInterval('P1D');
+$interval = new DateInterval('P1D');
 $dateRange = new DatePeriod($currentDate, $interval, $endDate);
 
 foreach ($date as $dateRange) {

@@ -1,61 +1,22 @@
-<<<<<<< HEAD
 <?php
-
-// Iterate through the months within the year
-//
 
 function displayMonthsFromDate() {
 
-$limit = 12;
-$currentDate = new DateTime;
-$endDate = date_modify($currentDate, "+ 12 Month");
-// P1D is plus one day
-$interval = new DateInterval('P1D');
-$dateRange = new DatePeriod($currentDate, $interval, $endDate);
-
-foreach ($date as $dateRange) {
-    // code...
-    echo $date;
-    echo "</br>";
-}
-
-
-// $dates = array($currentDate);
-
-
-// for($i = 1; $i <= $limit; $i++) {
-//     $dates[$i]
-// }
-
-}
-=======
-<?php
-
-// Iterate through the months within the year
-//
-
-function displayMonthsFromDate() {
+date_default_timezone_set('Australia/Victoria');
 
 $limit = 12;
 $currentDate = new DateTime;
-$endDate = date_modify($currentDate, "+ 12 Month");
-// P1D is plus one day
-$interval = DateInterval('P1D');
-$dateRange = new DatePeriod($currentDate, $interval, $endDate);
+$endDate = date('d/m/Y', strtotime('+1 Year'));
+$interval = DateInterval::createFromDateString('1 months');
+$recurrences = 12;
 
-foreach ($date as $dateRange) {
+$dateRange = new DatePeriod($currentDate, $interval, $recurrences);
+
+foreach ($dateRange as $date) {
     // code...
-    echo $date;
+    echo $date->format("M Y");
+    // echo cal_days_in_month(CAL_GREGORIAN, $date('n'), $date('y'));
     echo "</br>";
 }
 
-
-// $dates = array($currentDate);
-
-
-// for($i = 1; $i <= $limit; $i++) {
-//     $dates[$i]
-// }
-
 }
->>>>>>> edf17ce629f6a0da7eadd2d1e75fce8227067b92

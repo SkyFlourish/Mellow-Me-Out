@@ -3,6 +3,8 @@
 // Puts the next years months from the time of call into an array to work with
 // First array key is always assumed to be the current month, and remaining days
 // need to be accounted for, the rest can be iterated through without issue.
+// Additionally, we can use the keys/values within arrays 1 and 2 to accurately
+// display days available for booking.
 
 function displayMonthsFromDate() {
 
@@ -23,6 +25,7 @@ $dateMonthYear = $currentDateUnmodified->format("M Y");
 $dateDayInt = (int)$currentDateUnmodified->format("d");
 $dateMonthInt = (int)$currentDateUnmodified->format("n");
 $dateYearInt = (int)$currentDateUnmodified->format("y");
+$dateDayOfWeek = $currentDateUnmodified->format("l");
 $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $dateMonthInt, $dateYearInt);
 
 echo "<p>";
@@ -46,6 +49,9 @@ var_dump($daysInMonth);
 echo "</br>";
 echo "Days remaining:";
 echo $daysInMonth - $dateDayInt;
+echo "</br>";
+echo "Day of the week:";
+var_dump($dateDayOfWeek);
 echo "</br>";
 echo "</p>";
 
@@ -94,5 +100,14 @@ foreach ($dateRange as $date) {
 }
 
 var_dump($dateRange);
+
+// For implementation later
+if ($dateDayOfWeek == "Saturday" || $dateDayOfWeek == "Sunday") {
+    echo '<select disabled value="">$dayValue</select>';
+}
+else {
+    echo '<select value="$dayValue">$dayValue</select>';
+}
+
 
 }

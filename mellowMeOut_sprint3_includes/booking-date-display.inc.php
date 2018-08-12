@@ -8,13 +8,46 @@ function displayMonthsFromDate() {
 
 date_default_timezone_set('Australia/Victoria');
 
-$limit = 12;
 $currentDate = new DateTime;
-$endDate = date('d/m/Y', strtotime('+1 Year'));
+$currentDateUnmodified = new DateTime;
+$firstDayOfNextMonth = $currentDate->modify('first day of next month');
+// $endDate = date('d/m/Y', strtotime('+1 Year'));
 $interval = DateInterval::createFromDateString('1 months');
-$recurrences = 12;
+$recurrences = 11;
+// $recurrences = 12;
 
-$dateRange = new DatePeriod($currentDate, $interval, $recurrences);
+// $dateRange = new DatePeriod($currentDate, $interval, $recurrences);
+$dateRange = new DatePeriod($firstDayOfNextMonth, $interval, $recurrences);
+
+$dateMonthYear = $currentDateUnmodified->format("M Y");
+$dateDayInt = (int)$currentDateUnmodified->format("d");
+$dateMonthInt = (int)$currentDateUnmodified->format("n");
+$dateYearInt = (int)$currentDateUnmodified->format("y");
+$daysInMonth = cal_days_in_month(CAL_GREGORIAN, $dateMonthInt, $dateYearInt);
+
+echo "<p>";
+echo "Date:";
+var_dump($currentDate);
+echo "</br>";
+echo "Date Month:";
+var_dump($dateMonthYear);
+echo "</br>";
+echo "Date day int:";
+var_dump($dateDayInt);
+echo "</br>";
+echo "Date month int:";
+var_dump($dateMonthInt);
+echo "</br>";
+echo "Date year int:";
+var_dump($dateYearInt);
+echo "</br>";
+echo "Days in month:";
+var_dump($daysInMonth);
+echo "</br>";
+echo "Days remaining:";
+echo $daysInMonth - $dateDayInt;
+echo "</br>";
+echo "</p>";
 
 foreach ($dateRange as $date) {
     // code...
@@ -54,9 +87,9 @@ foreach ($dateRange as $date) {
     echo "Days in month:";
     var_dump($daysInMonth);
     echo "</br>";
-    echo "Days remaining:";
-    echo $daysInMonth - $dateDayInt;
-    echo "</br>";
+    // echo "Days remaining:";
+    // echo $daysInMonth - $dateDayInt;
+    // echo "</br>";
     echo "</p>";
 }
 

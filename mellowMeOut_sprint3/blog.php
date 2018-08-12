@@ -101,6 +101,25 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a lectus vitae lectus vehicula pharetra et sit amet tortor. Praesent dignissim auctor lacus sed dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris massa, accumsan id orci vel, luctus molestie dolor. Integer gravida, eros non elementum fringilla, ligula lorem sollicitudin libero, convallis sollicitudin magna velit eget nibh. Nunc a varius ante, eget varius dui. Donec molestie turpis id massa gravida, sed tristique sem eleifend. Morbi ac mauris nisi. Curabitur eleifend sit amet magna vel molestie. Etiam consequat velit quis nisi vestibulum, lacinia commodo odio tristique. Quisque vestibulum interdum orci, mollis rhoncus est dictum placerat. Curabitur sed fermentum elit. Donec fringilla, ipsum ut congue pulvinar, turpis massa maximus massa, nec accumsan sapien velit vitae augue. Donec condimentum finibus enim sed efficitur. Aliquam ante nulla, dictum et nisl vel, pellentesque blandit lectus. Nullam at tellus dictum, posuere tellus ut, auctor nulla.
                         </p>
                         <p class="card-text"> Nunc dignissim dui in ornare tempus. In suscipit mauris malesuada nisl interdum condimentum. Aliquam consequat, metus ut facilisis feugiat, quam ante consequat dui, eget dapibus eros tellus suscipit eros. Quisque ut urna magna. In hac habitasse platea dictumst. Pellentesque vitae est aliquet, sollicitudin lectus vitae, pharetra velit. Nunc facilisis bibendum lacus, et imperdiet quam convallis ut. Ut pellentesque pellentesque cursus. Nunc orci est, pretium in efficitur nec, euismod a risus. Ut ullamcorper, tortor sit amet dignissim viverra, ex augue sollicitudin sapien, quis vehicula purus lacus sed sem. In quis nisl elementum magna condimentum consequat. Vestibulum convallis ex ac placerat malesuada.</p>
+                        
+                        <div class = "comment-box">
+                            <hr>
+                            <h4>Comments - 0</h4>
+                            <form action="/action_page.php">
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="name" class="form-control" id="name" maxlength="32">
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment">Message:</label>
+                                    <textarea class="form-control" rows="5" id="comment" maxlength="300"></textarea>
+                                </div>
+                                 <button type="button" class="btn btn-primary">Comment</button>
+                            </form>
+ 
+                               
+
+                        </div>
                     </div>
                 </div>
             </article>

@@ -26,8 +26,27 @@
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
         <script>
-        document.addEventListener("DOMContentLoaded", function(event) { //run when page loads
+        $( document ).ready(function() { //run when page loads
             nav_Counter=2;
+            
+            //Show and Hide sections
+            var i;
+            var acc = $(".btn-section");
+            var section = $(".products-section");
+
+            for(i=0; i < acc.length; i++){
+                acc[i].addEventListener("click", function(){
+                    var index = $(".btn-section").index(this);//get index number on click
+                    section.eq(index).stop().slideToggle(250);
+                    
+                    //change change text
+                    if ($(this).text() == 'Close') {
+                        $(this).html("Open");
+                    }else{
+                        $(this).html("Close");
+                    }
+                });
+            }
         });
         </script>
     </head>
@@ -48,8 +67,14 @@
     <h1>Products<br>
     <small class="text-muted">Mellow Me Out offers many services with a wide variety of massages to eyelash extensions</small>
     </h1>
-  
-    <div class="row">
+    <!--Section Subheader-->
+        <div class="sub-header">
+            <h3 class= "text-left">Section - Eyelashes and Eyebrows <button class="btn btn-outline-secondary btn-section" style="float:right;">Close</button></h3>
+        </div>
+        <hr>
+     <!--Section Subheader END-->
+    
+    <div class="row products-section">
         <div class="col-md-4">
             <!-- Service cards -->
             <div class="card card-style" style="width:100%">
@@ -66,53 +91,92 @@
                 <img class="card-img-top img-fluid img-style" src="img/eyelash.jpg" alt="Card Image">
                 <div class="card-body">
                     <h4 class="card-title">Eyelash Tinting</h4>
-                    <h6 class="mb-2 text-muted">Price: $15-35</h6>
+                    <h6 class="mb-2 text-muted">Price: $25</h6>
                     <p class="card-text">Define your brows and lashes with our safe dyes. No need for mascara.</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card card-style" style="width:100%">
-                <img class="card-img-top img-fluid img-style" src="img/spa.jpg" alt="Card Image">
+                <img class="card-img-top img-fluid img-style" src="img/eyebrow.jpg" alt="Card Image">
                 <div class="card-body">
-                    <h4 class="card-title">Body Mud Wrap</h4>
-                    <h6 class="mb-2 text-muted">Price: $70</h6>
-                    <p class="card-text">Stand out in the crowd with our attractive eyelash extensions</p>
+                    <h4 class="card-title">Eyebrow Tinting</h4>
+                    <h6 class="mb-2 text-muted">Price: $15</h6>
+                    <p class="card-text">Tint your brows with our safe but long lasting dyes</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
+    <!--Section Subheader-->
+        <div class="sub-header">
+            <h3 class= "text-left">Section - Massages <button class="btn btn-outline-secondary btn-section" style="float:right;">Close</button></h3>
+        </div>
+        <hr>
+     <!--Section Subheader END-->
+    <div class="row products-section">
         <div class="col-md-4">
             <!-- Service cards -->
             <div class="card card-style" style="width:100%">
-                <img class="card-img-top img-fluid img-style" src="img/eyelash2.jpg" alt="Card Image">
+                <img class="card-img-top img-fluid img-style" src="img/massage.jpg" alt="Card Image">
                 <div class="card-body">
-                    <h4 class="card-title">Eyelash Extensions</h4>
-                    <h6 class="mb-2 text-muted">Price: $40-90</h6>
-                    <p class="card-text">Stand out in the crowd with our attractive eyelash extensions</p>
+                    <h4 class="card-title">Aromatherapy Massage</h4>
+                    <h6 class="mb-2 text-muted">Price: $45-75</h6>
+                    <p class="card-text">Combat stress and revitalize your body with essential oils</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
         <div class="card card-style" style="width:100%">
-                <img class="card-img-top img-fluid img-style" src="img/eyelash.jpg" alt="Card Image">
+                <img class="card-img-top img-fluid img-style" src="img/massage2.jpg" alt="Card Image">
                 <div class="card-body">
-                    <h4 class="card-title">Eyelash Tinting</h4>
-                    <h6 class="mb-2 text-muted">Price: $15-35</h6>
-                    <p class="card-text">Define your brows and lashes with our safe dyes. No need for mascara.</p>
+                    <h4 class="card-title">Lymphatic massage</h4>
+                    <h6 class="mb-2 text-muted">Price: $45-75</h6>
+                    <p class="card-text">Circulation of the lymph which helps you feel healthier than ever</p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card card-style" style="width:100%">
-                <img class="card-img-top img-fluid img-style" src="img/spa.jpg" alt="Card Image">
+                <img class="card-img-top img-fluid img-style" src="img/spa2.jpg" alt="Card Image">
                 <div class="card-body">
-                    <h4 class="card-title">Body Mud Wrap</h4>
-                    <h6 class="mb-2 text-muted">Price: $70</h6>
-                    <p class="card-text">Stand out in the crowd with our attractive eyelash extensions</p>
+                    <h4 class="card-title">Indian head massage</h4>
+                    <h6 class="mb-2 text-muted">Price: $45</h6>
+                    <p class="card-text">Energize your mind and slip away with this ancient technique</p>
                 </div>
             </div>
+        </div>
+        
+    </div>
+    <!--Section Subheader-->
+        <div class="sub-header">
+            <h3 class= "text-left">Section - Body Cleansing <button class="btn btn-outline-secondary btn-section" style="float:right;">Close</button></h3>
+        </div>
+        <hr>
+     <!--Section Subheader END-->
+    <div class="row products-section">
+        <div class="col-md-4">
+            <!-- Service cards -->
+            <div class="card card-style" style="width:100%">
+                <img class="card-img-top img-fluid img-style" src="img/massage.jpg" alt="Card Image">
+                <div class="card-body">
+                    <h4 class="card-title">Body mud wrap</h4>
+                    <h6 class="mb-2 text-muted">Price: $45-75</h6>
+                    <p class="card-text">Revive and detoxify your body with aromotherapy oils. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+        <div class="card card-style" style="width:100%">
+                <img class="card-img-top img-fluid img-style" src="img/oils.jpg" alt="Card Image">
+                <div class="card-body">
+                    <h4 class="card-title">Body exfoliate</h4>
+                    <h6 class="mb-2 text-muted">Price: $45-75</h6>
+                    <p class="card-text">Circulation of the lymph which helps you feel healthier than ever</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+    
         </div>
         
     </div>

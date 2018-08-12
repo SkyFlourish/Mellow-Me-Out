@@ -100,7 +100,7 @@
         </form>
         <div class="Error message">
         <?php
-        require 'booking-processing.inc.php';
+        require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-processing.inc.php');
         bookingProcessing();
         // if ($formComplete == false) {
         //     foreach ($errorMsgArray as $errorMsg) {

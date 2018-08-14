@@ -8,8 +8,8 @@
         <!--Keywords for search-->
         <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas, Brow Tint, Aromatherapy Massage, Lymphatic massage, Indian head massage, Body Mud wrap, Body exfoliate, Eyelash Tint, Combat Stress, Revitalise ">
         <!--Description of page-->
-        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief."> 
-    
+        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief.">
+
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mobile view-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -33,17 +33,17 @@
                 $("#account-create").slideDown(250);
                 $("html, body").animate({ scrollTop: 500 },);
             });
-                                   
-                              
+
+
         });
         </script>
     </head>
-<!-- Style Sheet for Nav and Footer-->  
+<!-- Style Sheet for Nav and Footer-->
 <style>
     <?php include 'nav_footer.css';?>
 </style>
-    
- <!-- ===CODE START=== -->    
+
+ <!-- ===CODE START=== -->
 <body>
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
@@ -54,30 +54,34 @@
     <!-- Login Content -->
 <div class="row" style="padding:0px; background-color: #ecf0f1">
 <div class="col-md-2">
-    
+
 </div>
 <div class="col-md-8" id="account-style">
     <h1 class="text-center">Staff Sign in</h1>
     <form action="/action_page.php">
+        <!-- <div class="form-group"> -->
+            <!-- <label for="email">Email address:</label> -->
+            <!-- <input type="email" class="form-control" id="email"> -->
+        <!-- </div>  -->
         <div class="form-group">
-            <label for="email">Email address:</label>
-            <input type="email" class="form-control" id="email">
+            <label for="Username">Username:</label>
+            <input type="Username" class="form-control" id="username" name="username">
         </div>
-    <div class="form-group">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd">
-    </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" name="pwd">
+        </div>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
-    
-            
+
+
 </div>
 <div class="col-md-2">
-    
+
 </div>
-  
+
 </div>
-</div> 
+</div>
 </article>
 
 <!-- FOOTER CODE-->
@@ -85,6 +89,5 @@
 
 
 </body>
-    
-</html>
 
+</html>

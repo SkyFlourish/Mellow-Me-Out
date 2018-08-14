@@ -51,6 +51,12 @@ DROP TABLE USERS;
 DROP TABLE SERVICES;
 DROP TABLE FAQ;
 
+DROP USER 'adminstaff'@'localhost';
+DROP USER 'adminstaff'@'%';
+DROP USER 'staff'@'%';
+DROP USER 'customer'@'%';
+
+
 CREATE TABLE Services (
     ServiceID                   INT             NOT NULL    AUTO_INCREMENT,
     ServiceName                 VARCHAR(50)     NOT NULL,
@@ -265,6 +271,22 @@ CREATE TABLE BlogTags
     PRIMARY KEY (BlogTagID),
     FOREIGN KEY (BlogID) REFERENCES BlogContent(BlogID)
 );
+
+CREATE USER 'adminstaff'@'%' IDENTIFIED BY '43madLadStaff74@354';
+CREATE USER 'staff'@'%' IDENTIFIED BY 'adStaff74@354';
+CREATE USER 'customer'@'%' IDENTIFIED BY 'customer*Functions78';
+
+GRANT ALL PRIVILEGES ON *.* TO 'adminstaff'@'%' WITH GRANT OPTION;
+-- Grant for staff I'm not sure about...
+GRANT SELECT ON mellowmeout.Bookings TO 'customer'@'%';
+GRANT SELECT ON mellowmeout.BlogContent TO 'customer'@'%';
+GRANT SELECT ON mellowmeout.BlogComments TO 'customer'@'%';
+GRANT SELECT ON mellowmeout.BlogTags TO 'customer'@'%';
+GRANT SELECT ON mellowmeout.Services TO 'customer'@'%';
+GRANT SELECT ON mellowmeout.ServiceDescription TO 'customer'@'%';
+GRANT SELECT ON mellowmeout.NonBussinessDays TO 'customer'@'%';
+GRANT SELECT ON mellowmeout.Staff TO 'customer'@'%';
+GRANT SELECT ON mellowmeout.Discount TO 'customer'@'%';
 
 /* CREATE TABLE BlogCommentDisplay
 (

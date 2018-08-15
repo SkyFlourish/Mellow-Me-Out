@@ -51,10 +51,12 @@ DROP TABLE USERS;
 DROP TABLE SERVICES;
 DROP TABLE FAQ;
 
-DROP USER 'adminstaff'@'localhost';
 DROP USER 'adminstaff'@'%';
 DROP USER 'staff'@'%';
 DROP USER 'customer'@'%';
+DROP USER 'adminstaff'@'localhost';
+DROP USER 'staff'@'localhost';
+DROP USER 'customer'@'localhost';
 
 
 CREATE TABLE Services (
@@ -275,6 +277,9 @@ CREATE TABLE BlogTags
 CREATE USER 'adminstaff'@'%' IDENTIFIED BY '43madLadStaff74@354';
 CREATE USER 'staff'@'%' IDENTIFIED BY 'adStaff74@354';
 CREATE USER 'customer'@'%' IDENTIFIED BY 'customer*Functions78';
+CREATE USER 'adminstaff'@'localhost' IDENTIFIED BY '43madLadStaff74@354';
+CREATE USER 'staff'@'localhost' IDENTIFIED BY 'adStaff74@354';
+CREATE USER 'customer'@'localhost' IDENTIFIED BY '43madLadStaff74@354';
 
 GRANT ALL PRIVILEGES ON *.* TO 'adminstaff'@'%' WITH GRANT OPTION;
 -- Grant for staff I'm not sure about...
@@ -287,6 +292,16 @@ GRANT SELECT ON mellowmeout.ServiceDescription TO 'customer'@'%';
 GRANT SELECT ON mellowmeout.NonBussinessDays TO 'customer'@'%';
 GRANT SELECT ON mellowmeout.Staff TO 'customer'@'%';
 GRANT SELECT ON mellowmeout.Discount TO 'customer'@'%';
+
+GRANT SELECT ON mellowmeout.Bookings TO 'customer'@'localhost';
+GRANT SELECT ON mellowmeout.BlogContent TO 'customer'@'localhost';
+GRANT SELECT ON mellowmeout.BlogComments TO 'customer'@'localhost';
+GRANT SELECT ON mellowmeout.BlogTags TO 'customer'@'localhost';
+GRANT SELECT ON mellowmeout.Services TO 'customer'@'localhost';
+GRANT SELECT ON mellowmeout.ServiceDescription TO 'customer'@'localhost';
+GRANT SELECT ON mellowmeout.NonBussinessDays TO 'customer'@'localhost';
+GRANT SELECT ON mellowmeout.Staff TO 'customer'@'localhost';
+GRANT SELECT ON mellowmeout.Discount TO 'customer'@'localhost';
 
 /* CREATE TABLE BlogCommentDisplay
 (

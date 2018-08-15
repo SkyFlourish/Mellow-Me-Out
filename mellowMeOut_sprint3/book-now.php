@@ -79,11 +79,12 @@
                 <br>
                 <select id="service" name="service">
                 <!-- <select required name="cars" id="service"> -->
-                    <option value= "" disabled selected hidden>Please choose...</option>
-                    <option value="volvo">Test 1</option>
+                    <option value="" disabled selected hidden>Please choose...</option>
+                    <!-- <option value="volvo">Test 1</option>
                     <option value="saab">Test 2</option>
                     <option value="fiat">Test 3</option>
-                    <option value="audi">Audi</option>
+                    <option value="audi">Audi</option> -->
+                    <?php require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-services-selection.inc.php'); ?>
                 </select>
             </div>
             <!-- <div> -->

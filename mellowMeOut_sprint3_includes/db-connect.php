@@ -1,8 +1,8 @@
 <?php
-// Connect to local database
+//connect to local database
 $dbServername = "localhost";
-$dbUsername = "adminstaff";
-$dbPassword = "43madLadStaff74@354";
+$dbUsername = "root";
+$dbPassword = "";
 $dbName = "mellowmeout";
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);

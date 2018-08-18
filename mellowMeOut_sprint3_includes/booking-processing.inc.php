@@ -24,6 +24,7 @@
 
 // require 'input-validation.inc.php';
 // require 'input-cleanup.inc.php';
+// Make relative later
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-validation.inc.php');
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-cleanup.inc.php');
 
@@ -105,19 +106,37 @@ if (isset($_POST["submit"])) {
         $selectBookingMissing = true;
         array_push($errorMsgArray, "Please select a booking date");
     }
+    // if (!empty($_POST["service"])) {
+    //     $service = $_POST["service"];
+    //     if (validateInputNotNull($service) == true) {
+    //         $service = stripTagsFromInput($service);
+    //         $serviceValid = true;
+    //         $serviceMissing = false;
+    //         // echo "Service found valid";
+    //         array_push($debugMsgArray, "Service found valid");
+    //     }
+    // }
+    // else {
+    //     $formComplete = false;
+    //     $serviceMissing = true;
+    //     array_push($errorMsgArray, "Please select a service");
+    // }
     if (!empty($_POST["service"])) {
         $service = $_POST["service"];
-        if (validateInputNotNull($service) == true) {
-            $service = stripTagsFromInput($service);
+        if (validateServiceSelection($service) == 1) {
             $serviceValid = true;
             $serviceMissing = false;
-            // echo "Service found valid";
             array_push($debugMsgArray, "Service found valid");
+        }
+        else {
+            $serviceValid = false;
+            $serviceMissing = true;
+            array_push($errorMsgArray, "Service not found");
         }
     }
     else {
         $formComplete = false;
-        $serviceMissing = true;
+        $selectServiceMissing = true;
         array_push($errorMsgArray, "Please select a service");
     }
     if (!empty($_POST["email"])) {

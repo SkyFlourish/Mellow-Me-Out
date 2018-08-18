@@ -25,8 +25,30 @@ function validateEmailAddressInputFormat($input) {
     }
 }
 
-function validateDateInput($input) {
-    // Called after determining the input is not empty.
-    // Uses a native php format to evaluate the validity of the date input.
+// function validateDateInput($input) {
+//     // Called after determining the input is not empty.
+//     // Uses a native php format to evaluate the validity of the date input.
+//
+// }
 
+// funciton validateServiceSelection(Array $input) {
+funciton validateServiceSelection($input) {
+    // Called after determining a selection was made in the options menu
+    // Will refer to the database, and ensure that a match is found
+    // Should aleviate issues of input tampering by not allowing mismatches to pass
+    require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php');
+    $sql = "SELECT EXISTS(SELECT ServiceID,ServiceName,ServicePrice,ServiceTime FROM mellowmeout.Services WHERE ServiceName='$input["SerivceID"]');";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+
+    if ($resultCheck >= 1) {
+        $row = mysqli_fetch_assoc($result);
+        if ($row[0] == 1) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    mysqli_close($conn);
 }

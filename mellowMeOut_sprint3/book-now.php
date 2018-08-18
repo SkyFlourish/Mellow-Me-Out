@@ -126,6 +126,9 @@
         // }
         ?>
         <?php require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-services-selection-test.inc.php'); ?>
+        <p>
+        <?php var_dump($serviceArray); ?>
+        </p>
         </div>
         </div>
 

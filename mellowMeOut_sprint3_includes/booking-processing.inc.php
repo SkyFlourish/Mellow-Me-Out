@@ -239,10 +239,14 @@ if (isset($_POST["submit"])) {
             $sql = "INSERT INTO mellowmeout.Bookings (BookingDateTimeStart,BookingDateTimeEnd,BookingFullName,BookingRegisteredEmail,BookingRegisteredPhone) VALUES ('$selectBooking','$selectBooking','$fullName','$email','$phone');";
 
 	        if(mysqli_query($conn, $sql)) {
+                // A redirect aught to happen here
+                echo "<p>";
                 echo "Records inserted successfully";
+                echo "</p>";
             }
             else {
-                echo "Records could not be inserted.</br>SQL Statement - ". $sql. "</br>SQL Error - ". mysqli_error($conn). "";
+                // echo "Records could not be inserted.</br>SQL Statement - ". $sql. "</br>SQL Error - ". mysqli_error($conn). "";
+                array_push($errorMsgArray, "Booking could not be processed, please refresh and try again");
             }
             mysqli_close($conn);
         }
@@ -269,25 +273,28 @@ if (isset($_POST["submit"])) {
     }
 }
 
-echo "debug msg array <p>";
-var_dump($debugMsgArray);
-echo "</p>";
-unset($debugMsgArray);
-echo "error msg array <p>";
-var_dump($errorMsgArray);
-echo "</p>";
+// echo "debug msg array <p>";
+// var_dump($debugMsgArray);
+// echo "</p>";
+// unset($debugMsgArray);
+// echo "error msg array <p>";
+// var_dump($errorMsgArray);
+// echo "</p>";
+// unset($errorMsgArray);
+// echo "POST array <p>";
+// var_dump($_POST);
+// echo "</p>";
+// echo "Email <p>";
+// var_dump($email);
+// echo "</p>";
+// echo "Confirm Email <p>";
+// var_dump($confirmEmail);
+// echo "</p>";
+// echo "Service Time <p>";
+// var_dump($serviceTime);
+// echo "</p>";
+
 unset($errorMsgArray);
-echo "POST array <p>";
-var_dump($_POST);
-echo "</p>";
-echo "Email <p>";
-var_dump($email);
-echo "</p>";
-echo "Confirm Email <p>";
-var_dump($confirmEmail);
-echo "</p>";
-echo "Service Time <p>";
-var_dump($serviceTime);
-echo "</p>";
+unset($debugMsgArray);
 
 }

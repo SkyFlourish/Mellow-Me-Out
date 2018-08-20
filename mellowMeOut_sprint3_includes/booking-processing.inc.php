@@ -25,6 +25,7 @@
 // require 'input-validation.inc.php';
 // require 'input-cleanup.inc.php';
 // Make relative later
+require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php');
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-validation.inc.php');
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-cleanup.inc.php');
 
@@ -59,9 +60,11 @@ $inputVariableArray = [];
 // If any check returns false, then formComplete is set to false
 // and the form will not progress.
 
+global $conn;
+
 if (isset($_POST["submit"])) {
     if (!empty($_POST["fullName"])) {
-        $fullName = $_POST["fullName"];
+        $fullName = mysqli_real_escape_string($conn, $_POST["fullName"]);
         if (validateInputNotNull($fullName) == true) {
             $fullName = stripTagsFromInput($fullName);
             $fullNameValid = true;
@@ -77,7 +80,7 @@ if (isset($_POST["submit"])) {
         array_push($errorMsgArray, "Please enter your full name");
     }
     if (!empty($_POST["phone"])) {
-        $phone = $_POST["phone"];
+        $phone = mysqli_real_escape_string($conn, $_POST["phone"]);
         if (validateInputNotNull($phone) == true) {
             $phone = stripTagsFromInput($phone);
             $phoneValid = true;
@@ -92,7 +95,7 @@ if (isset($_POST["submit"])) {
         array_push($errorMsgArray, "Please enter your phone number");
     }
     if (!empty($_POST["select-booking"])) {
-        $selectBooking = $_POST["select-booking"];
+        $selectBooking = mysqli_real_escape_string($conn, $_POST["select-booking"]);
         if (validateInputNotNull($selectBooking) == true) {
             // $selectBooking = stripTagsFromInput($selectBooking);
             // Need to check date later
@@ -122,7 +125,8 @@ if (isset($_POST["submit"])) {
     //     array_push($errorMsgArray, "Please select a service");
     // }
     if (!empty($_POST["service"])) {
-        $service = $_POST["service"];
+        $service = mysqli_real_escape_string($conn, $_POST["service"]);
+        $service = (int)$service;
         if (validateServiceSelection($service) == 1) {
             $serviceValid = true;
             $serviceMissing = false;
@@ -140,7 +144,7 @@ if (isset($_POST["submit"])) {
         array_push($errorMsgArray, "Please select a service");
     }
     if (!empty($_POST["email"])) {
-        $email = $_POST["email"];
+        $email = mysqli_real_escape_string($conn, $_POST["email"]);
         if (validateInputNotNull($email) == true) {
             if (validateEmailAddressInputFormat($email) == true) {
                 $email = stripTagsFromInput($email);
@@ -161,7 +165,7 @@ if (isset($_POST["submit"])) {
         array_push($errorMsgArray, "Please enter your Email Address");
     }
     if (!empty($_POST["confirm-email"])) {
-        $confirmEmail = $_POST["confirm-email"];
+        $confirmEmail = mysqli_real_escape_string($conn, $_POST["confirm-email"]);
         if (validateInputNotNull($confirmEmail) == true) {
             if (validateEmailAddressInputFormat($confirmEmail) == true) {
                 $confirmEmail = stripTagsFromInput($confirmEmail);
@@ -223,6 +227,24 @@ if (isset($_POST["submit"])) {
                 echo "</br>";
             }
             echo "</p>";
+
+            // Use service ID to determine service length if found
+            global $serviceArray;
+            $i = $service - 1;
+            $serviceTime = $serviceArray[$i]['servicetime'];
+
+            // Insert booking data into the database
+            // Time start and time end are both the same value for now,
+            // this will need to be rectified later
+            $sql = "INSERT INTO mellowmeout.Bookings (BookingDateTimeStart,BookingDateTimeEnd,BookingFullName,BookingRegisteredEmail,BookingRegisteredPhone) VALUES ('$selectBooking','$selectBooking','$fullName','$email','$phone');";
+
+	        if(mysqli_query($conn, $sql)) {
+                echo "Records inserted successfully";
+            }
+            else {
+                echo "Records could not be inserted.</br>SQL Statement - ". $sql. "</br>SQL Error - ". mysqli_error($conn). "";
+            }
+            mysqli_close($conn);
         }
         else {
             // echo "Email addresses entered do not match</br>";
@@ -263,6 +285,9 @@ var_dump($email);
 echo "</p>";
 echo "Confirm Email <p>";
 var_dump($confirmEmail);
+echo "</p>";
+echo "Service Time <p>";
+var_dump($serviceTime);
 echo "</p>";
 
 }

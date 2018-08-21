@@ -5,6 +5,8 @@ include_once('includes/staff_account_processing.php');
 
 @session_start();
 
+// todo - Implement password encryption and correct password checking
+
 $username=$_POST['username'];
 $pwd=$_POST['pwd'];
 $error_message="";
@@ -23,9 +25,11 @@ else
 	$success = user_login($username,$pwd);
 	if($success==true)
 	{
-		$error_message.='Login successful';
+		// $error_message.='Login successful';
 		$_SESSION['staff_username']=$username;
 		$_SESSION['staff_pwd']=$pwd;
+		header('Location: admin-page.php');
+		exit();
 	}
 	else
 	{

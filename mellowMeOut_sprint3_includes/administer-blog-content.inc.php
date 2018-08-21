@@ -41,16 +41,33 @@ if (isset($_POST["submit"]) {
             $categoryMissing = false;
         }
         else {
-            echo "Category is missing"
+            echo "Category is missing";
             $categoryMissing = true;
         }
-        if ($_SESSION["staff_username"])
-        if ($titleMissing == true || $contentMissing == true || $categoryMissing == true) {
-            echo "Please fill the form and true again"
+        if (isset($_SESSION["staff_username"])) {
+            $staffUsername = mysqli_real_escape_string($_SESSION["staff_username"]);
+            $staffUsernameMissing = false;
         }
-        if ($titleMissing == false && $contentMissing == false && $categoryMissing == false) {
+        else {
+            echo "Session not active";
+            $staffUsernameMissing = true;
+        }
+        if ($titleMissing == true || $contentMissing == true ||
+            $categoryMissing == true || $staffUsernameMissing == true) {
+            echo "Please fill the form and true again";
+        }
+        if ($titleMissing == false && $contentMissing == false &&
+            $categoryMissing == false && $staffUsernameMissing ==false) {
             global $conn;
-            $sql = "INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory,Username)"
+            $sql = "INSERT INTO BlogContent (BlogTitle,BlogContent,BlogCategory,Username) VALUES ('$title', '$content', '$category', '$staffUsername');";
+            if (mysqli_query($conn, $sql)) {
+                echo "<p>Record inserted successfully</p>";
+                mysqli_close($conn);
+            }
+            else {
+                echo "<p>Record could not be inserted</p>";
+                mysqli_close($conn);
+            }
         }
 }
 

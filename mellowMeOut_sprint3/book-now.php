@@ -101,31 +101,11 @@
         </form>
         <div class="Error message">
         <?php
-
         require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-processing.inc.php');
         // Ideally the document root will be set on a single position, and the below require will be used.
         // require($_SERVER['DOCUMENT_ROOT'].'/../mellowMeOut_Sprint3_includes/booking-processing.inc.php');
         bookingProcessing();
-        // if ($formComplete == false) {
-        //     foreach ($errorMsgArray as $errorMsg) {
-        //         echo $errorMsg;
-        //         echo "</br>";
-        //     }
-        //     foreach ($debugMsgArray as $debugMsg) {
-        //         // code...
-        //         echo $debugMsg;
-        //         echo "</br>";
-        //     }
-        // }
-        // else {
-        //     foreach ($debugMsgArray as $debugMsg) {
-        //         echo $debugMsg;
-        //         echo "</br>";
-        //     }
-        //     echo "Apparently a success";
-        // }
         ?>
-        <?php require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-services-selection-test.inc.php'); ?>
         </div>
         </div>
 

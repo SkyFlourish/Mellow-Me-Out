@@ -214,19 +214,19 @@ if (isset($_POST["submit"])) {
         if ($email == $confirmEmail) {
             $formComplete = true;
             array_push($debugMsgArray, "Form apparently complete");
-            echo "<p>";
-            foreach ($errorMsgArray as $errorMsg) {
-                echo $errorMsg;
-                echo "</br>";
-            }
-            echo "</p>";
-            echo "<p>";
-            foreach ($debugMsgArray as $debugMsg) {
-                // code...
-                echo $debugMsg;
-                echo "</br>";
-            }
-            echo "</p>";
+            // echo "<p>";
+            // foreach ($errorMsgArray as $errorMsg) {
+            //     echo $errorMsg;
+            //     echo "</br>";
+            // }
+            // echo "</p>";
+            // echo "<p>";
+            // foreach ($debugMsgArray as $debugMsg) {
+            //     // code...
+            //     echo $debugMsg;
+            //     echo "</br>";
+            // }
+            // echo "</p>";
 
             // Use service ID to determine service length if found
             global $serviceArray;

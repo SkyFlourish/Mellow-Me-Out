@@ -1,3 +1,19 @@
+<?php @session_start();
+	  if(isset($_SESSION['staff_username']) && $_SESSION['staff_username']!="")
+	  {
+	  	$logged_in=true;
+	  }
+	  else
+	  {
+	    $logged_in=false;
+	  }
+
+	  $error_message="";
+	  if(isset($_GET['message']))
+	  {
+	  	$error_message=$_GET['message'];
+	  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,8 +73,13 @@
 
 </div>
 <div class="col-md-8" id="account-style">
+	<?php
+		if($logged_in==false)
+		{
+	?>
     <h1 class="text-center">Staff Sign in</h1>
-    <form action="/action_page.php">
+    <h2 class="text-center"><font color='red'><?php echo $error_message;?></font></h2>
+    <form action="action_page.php" method="post">
         <!-- <div class="form-group"> -->
             <!-- <label for="email">Email address:</label> -->
             <!-- <input type="email" class="form-control" id="email"> -->
@@ -73,8 +94,15 @@
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
-
-
+	<?php
+		}
+		else
+		{
+	?>
+			<h1 class="text-center">You are logged in successfully.</h1>
+	<?php
+		}
+	?>
 </div>
 <div class="col-md-2">
 

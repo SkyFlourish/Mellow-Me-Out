@@ -1,8 +1,8 @@
 <?php
 session_start();
-include_once('includes/input-validation.inc.php');
-include_once('includes/db-connect.php');
-include_once('includes/staff_account_processing.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-validation.inc.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_account_processing.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,8 +48,72 @@ include_once('includes/staff_account_processing.php');
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
 
-<!-- Administrator console would go here for now -->
-this is a test
+        <!-- Administrator console would go here for now -->
+        <!--  -->
+    <div id="manage-center">
+        <div id="manage-left">
+            <table>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=1">Manage bookings</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=2">Manage services</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=3">Manage blogs</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=4">Manage staff</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=5">Delete bookings</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=6">Delete blogs</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=7">Delete services</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=8">Delete staff</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=9">Add blogs</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=10">Add services</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=11">Add staff</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="manage-right">
+            <?php include_once=
+        </div>
+    </div>
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>

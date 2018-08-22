@@ -1,7 +1,7 @@
 <?php
-include_once('includes/input-validation.inc.php');
-include_once('includes/db-connect.php');
-include_once('includes/staff_account_processing.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-validation.inc.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_account_processing.php');
 
 @session_start();
 

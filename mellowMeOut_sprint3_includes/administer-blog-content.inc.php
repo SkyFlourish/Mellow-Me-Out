@@ -6,8 +6,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php'
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-validation.inc.php');
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-cleanup.inc.php');
 
-// Add blog entry
-
 
 // Remove blog entry
 // Requries us to remove rows from all tables referencing the foreign key first
@@ -15,6 +13,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-cleanup.i
 function addBlogEntry() {
 // $title = mysqli_real_escape_string($_POST["title"]);
 // $content = mysqli_real_escape_string($_POST["content"]);
+session_start();
 date_default_timezone_set('Australia/Victoria');
 $date = new DateTime;
 // $image = mysqli_real_escape_string($_POST["image"]);
@@ -23,7 +22,7 @@ $date = new DateTime;
 // Do we need that though?
 
 // Won't run until a submition value is sent
-if (isset($_POST["submit"]) {
+if (isset($_POST["submit"])) {
         if (isset($_POST["title"])) {
             $title = mysqli_real_escape_string($_POST["title"]);
             $titleMissing = true;
@@ -75,10 +74,12 @@ if (isset($_POST["submit"]) {
 
 function addBlogTags($input) {
 // Tags will be
+session_start();
 
 }
 
 function removeBlogEntry($input) {
+session_start();
 $blogID = mysqli_real_escape_string($input);
 // Will error out if input is not an integer
 $blogID = (int)$input;

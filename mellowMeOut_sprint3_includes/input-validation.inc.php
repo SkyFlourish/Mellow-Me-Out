@@ -67,20 +67,45 @@ function validateServiceSelection($input) {
     $serviceNameQ = mysqli_real_escape_string($conn, $serviceArray[$serviceArrayIndex]["servicename"]);
     $servicePriceQ = mysqli_real_escape_string($conn, $serviceArray[$serviceArrayIndex]["serviceprice"]);
     $serviceTimeQ = mysqli_real_escape_string($conn, $serviceArray[$serviceArrayIndex]["servicetime"]);
+    $serviceTimeInt = (int)$serviceTimeQ;
 
-    $sql = "SELECT EXISTS(SELECT ServiceID,ServiceName,ServicePrice,ServiceTime FROM mellowmeout.Services WHERE ServiceID='$serviceIDQ' AND ServiceName='$serviceNameQ' AND ServiceTime='$serviceTimeQ' AND ServicePrice='$servicePriceQ')";
+    // If service time is empty/null, then service time is removed from the query
+    // Should lead to a switch - todo
+    if ($serviceTimeInt == 0) {
+        $sql = "SELECT EXISTS(SELECT ServiceID,ServiceName,ServicePrice FROM mellowmeout.Services WHERE ServiceID='$serviceIDQ' AND ServiceName='$serviceNameQ' AND ServicePrice='$servicePriceQ')";
+        $loop = 1;
+    }
+    else {
+        $sql = "SELECT EXISTS(SELECT ServiceID,ServiceName,ServicePrice,ServiceTime FROM mellowmeout.Services WHERE ServiceID='$serviceIDQ' AND ServiceName='$serviceNameQ' AND ServiceTime='$serviceTimeQ' AND ServicePrice='$servicePriceQ')";
+        $loop = 2;
+    }
+
     $result = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($result);
 
     if ($resultCheck >= 1) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            if ($row["EXISTS(SELECT ServiceID,ServiceName,ServicePrice,ServiceTime FROM mellowmeout.Services WHERE ServiceID='$serviceIDQ' AND ServiceName='$serviceNameQ' AND ServiceTime='$serviceTimeQ' AND ServicePrice='$servicePriceQ')"] == 1) {
-                // $result1 = "success";
-                return true;
+        if ($loop == 1) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                if ($row["EXISTS(SELECT ServiceID,ServiceName,ServicePrice FROM mellowmeout.Services WHERE ServiceID='$serviceIDQ' AND ServiceName='$serviceNameQ' AND ServicePrice='$servicePriceQ')"] == 1) {
+                    // $result1 = "success";
+                    return true;
+                }
+                else {
+                    // $result2 = "failure";
+                    return false;
+                }
             }
-            else {
-                // $result2 = "failure";
-                return false;
+        }
+        else {
+            while ($row = mysqli_fetch_assoc($result)) {
+                if ($row["EXISTS(SELECT ServiceID,ServiceName,ServicePrice,ServiceTime FROM mellowmeout.Services WHERE ServiceID='$serviceIDQ' AND ServiceName='$serviceNameQ' AND ServiceTime='$serviceTimeQ' AND ServicePrice='$servicePriceQ')"] == 1) {
+                    // $result1 = "success";
+                    return true;
+                }
+                else {
+                    // $result2 = "failure";
+                    return false;
+                }
             }
         }
     }

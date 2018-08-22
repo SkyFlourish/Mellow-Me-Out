@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-validation.inc.php');
+// include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-validation.inc.php');
 include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php');
 include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_account_processing.php');
 ?>
@@ -55,6 +55,21 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_acco
             <table>
                 <tr>
                     <td>
+                        <a href="admin-page.php?selection=9">Add blogs</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=10">Add services</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="admin-page.php?selection=11">Add staff</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <a href="admin-page.php?selection=1">Manage bookings</a>
                     </td>
                 </tr>
@@ -93,25 +108,10 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_acco
                         <a href="admin-page.php?selection=8">Delete staff</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=9">Add blogs</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=10">Add services</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=11">Add staff</a>
-                    </td>
-                </tr>
             </table>
         </div>
         <div id="manage-right">
-            <?php include_once=
+            <?php include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/admin-page.inc.php'); ?>
         </div>
     </div>
 

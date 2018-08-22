@@ -2,44 +2,44 @@
 
 // Load functions
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/administer-blog-content.inc.php');
+$administerBlogFunctions = $_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/administer-blog-content.inc.php';
 
-$selection = $_GET["selection"]
+if (isset($_GET["selection"])) {
+    $selection = $_GET["selection"];
+    switch($selection) {
+        case '1':
+            break;
 
-switch ($selection) {
-    case '1':
-    echo "<form action="
-        break;
+        case '2':
+            // code...
+            break;
 
-    case '2':
-        // code...
-        break;
+        case '3':
+            // code...
+            break;
 
-    case '3':
-        // code...
-        break;
+        case '4':
+            // code...
+            break;
 
-    case '4':
-        // code...
-        break;
+        case '5':
+            // code...
+            break;
 
-    case '5':
-        // code...
-        break;
+        case '6':
+            // code...
+            break;
 
-    case '6':
-        // code...
-        break;
+        case '7':
+            // code...
+            break;
 
-    case '7':
-        // code...
-        break;
+        case '8':
+            // code...
+            break;
 
-    case '8':
-        // code...
-        break;
-
-    case '9':
-        echo '<form action="administer-blog-content?action=add" method="POST">
+        case '9':
+            echo '<form action="admin-page.php?action=add" method="POST">
                 <p>
                 <h4>Blog Title:</h4>
                 <textarea placeholder="Title..." name="title" type="text"></textarea>
@@ -54,17 +54,32 @@ switch ($selection) {
                 </p>
                 <button type="submit" name="submitblog" sytle="background-color: green; height: 340px; width: 340px; color: white; ">SUBMIT BLOG
                 </button>
-            </form>';
-        break;
+                </form>';
+            break;
 
-    case '10':
-        break;
+        case '10':
+            break;
 
-    case '11':
+        case '11':
+            // code...
+            break;
+
+        default:
+            // code...
+            break;
+    }
+}
+
+if (isset($_GET["action"])) {
+    $action = $_GET["action"];
+    switch ($action) {
+    case 'addBlog':
         // code...
+        addBlogEntry();
         break;
 
     default:
         // code...
         break;
+    }
 }

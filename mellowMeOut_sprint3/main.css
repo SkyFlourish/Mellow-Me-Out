@@ -2,7 +2,8 @@
 /*====SLIDESHOW===========*/
 #slideshow-bg{
     background-image: url(img/flowers.jpg);
-    background-size:1400px 800px;
+    background-size:100% 800px;
+    background-repeat: no-repeat;
     transition: 0.25s;
     overflow:hidden;
     padding:5% 0;

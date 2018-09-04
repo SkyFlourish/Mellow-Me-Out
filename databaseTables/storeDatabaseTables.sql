@@ -62,11 +62,20 @@ DROP USER 'customer'@'localhost';
 CREATE TABLE Services (
     ServiceID                   INT             NOT NULL    AUTO_INCREMENT,
     ServiceName                 VARCHAR(50)     NOT NULL,
-    ServicePrice                DECIMAL(15,2)   NOT NULL,
+    -- ServicePrice                DECIMAL(15,2)   NOT NULL,
     ServiceType                 INT             NOT NULL,
-    ServiceTime                 INT,
+    -- ServiceTime                 INT,
     ServiceImg                  VARCHAR(100)    NULL,
     PRIMARY KEY (ServiceID)
+);
+
+CREATE TABLE ServicesPricing (
+    ServicePricingID            INT             NOT NULL     AUTO_INCREMENT,
+    ServiceID                   INT             NOT NULL,
+    ServiceTime                 INT,
+    ServicePrice                DECIMAL(15,2)   NOT NULL,
+    PRIMARY KEY (ServicePricingID),
+    FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID)
 );
 -- CREATE TABLE ServicesImgVariant (
 --     ServiceID                   INT             NOT NULL    AUTO_INCREMENT,
@@ -92,14 +101,14 @@ Undefined           = 0
     It can be stored as NULL due to not all services having a time assignment,
     though I do assume that they will eventually have one. */
 
-CREATE TABLE ServiceDescription
-(
-    ServiceDescriptionID        INT             NOT NULL    AUTO_INCREMENT,
-    ServiceID                   INT             NOT NULL,
-    ServiceDescription          TEXT,
-    PRIMARY KEY (ServiceDescriptionID),
-    FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID)
-);
+-- CREATE TABLE ServiceDescription
+-- (
+--     ServiceDescriptionID        INT             NOT NULL    AUTO_INCREMENT,
+--     ServiceID                   INT             NOT NULL,
+--     ServiceDescription          TEXT,
+--     PRIMARY KEY (ServiceDescriptionID),
+--     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID)
+-- );
 /*
     Due to the nature of the services potentially being divied
     between time allocations, we may wither need loops to ensure both entries will

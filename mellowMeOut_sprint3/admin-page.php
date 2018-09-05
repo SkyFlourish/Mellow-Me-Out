@@ -50,67 +50,80 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_acco
 
         <!-- Administrator console would go here for now -->
         <!--  -->
+		<div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky" >
+		  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Add</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+                <span data-feather="plus-circle"></span>
+              </a>
+            </h6>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a href="admin-page.php?selection=9" style="color:#A9A9A9">Add blogs</a>
+              </li>
+              <li class="nav-item">
+                <a href="admin-page.php?selection=10" style="color:#A9A9A9">Add services</a>
+              </li>
+              <li class="nav-item">
+                <a href="admin-page.php?selection=4" style="color:#A9A9A9">Add service price + time</a>
+              </li>
+              <li class="nav-item">
+                <a href="admin-page.php?selection=11" style="color:#A9A9A9">Add staff</a>
+              </li>
+			  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Manage</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+                <span data-feather="plus-circle"></span>
+              </a>
+            </h6>
+              <li class="nav-item">
+                <a href="admin-page.php?selection=1" style="color:#A9A9A9">Manage bookings</a>
+              </li>
+              <li class="nav-item">
+                <a href="admin-page.php?selection=3" style="color:#A9A9A9">Manage blogs</a>
+              </li>
+			  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Delete</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+                <span data-feather="plus-circle"></span>
+              </a>
+            </h6>
+			  <li class="nav-item">
+                <a href="admin-page.php?selection=6" style="color:#A9A9A9">Delete blogs</a>
+              </li>
+			  <li class="nav-item">
+                <a href="admin-page.php?selection=5" style="color:#A9A9A9">Delete bookings</a>
+              </li>
+			  <li class="nav-item">
+                <a href="admin-page.php?selection=7" style="color:#A9A9A9">Delete services</a>
+              </li>
+			  <li class="nav-item">
+                <a href="admin-page.php?selection=8" style="color:#A9A9A9">Delete staff</a>
+              </li>
+			  <li class="nav-item">
+                <a href="admin-page.php?selection=13" style="color:#A9A9A9">Delete service price + time</a>
+              </li>
+			  <p>
+			  </p>
+			  <p>
+			  </p>
+			  <p>
+			  </p>
+			  <p>
+			  </p>
+            </ul>
+
+            
+          </div>
+        </nav>
+			
     <div id="manage-center">
-        <div id="manage-left">
-            <table>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=9">Add blogs</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=10">Add services</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=11">Add staff</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=1">Manage bookings</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=2">Manage services</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=3">Manage blogs</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=4">Manage staff</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=5">Delete bookings</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=6">Delete blogs</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=7">Delete services</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="admin-page.php?selection=8">Delete staff</a>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div id="manage-right">
+        
+		</div>
+        <div id="manage-right" style="padding-left: 25px">
             <?php include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/admin-page.inc.php'); ?>
         </div>
     </div>

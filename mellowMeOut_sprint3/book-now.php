@@ -71,8 +71,9 @@
                 <input type="text" class="form-control" id="phone" maxlength="24" placeholder="Enter phone number" name="phone">
             </div>
             <div class="form-group">
-                 <label for="select-booking">Please select date of booking: </label>
-                <input type="date" class="form-control" id="select-booking" name="select-booking">
+                <label for="select-booking">Please select date of booking: </label>
+                <!-- <input type="date" class="form-control" id="select-booking" name="select-booking" min="2018-09-09" max="2019-09-09"> -->
+                <?php require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-time-selection.inc.php'); ?>
             </div>
             <div class="form-group">
                 <label for="service">Choose your service: </label>

@@ -29,6 +29,27 @@
         $( document ).ready(function() { //run when page loads
             nav_Counter=2;
             
+            //animated scrolling
+            $('#link-1').click(function(){
+                $("html, body").animate({ scrollTop: $(".sub-header").eq(0).offset().top }, 600);
+                
+            });
+            
+            $('#link-2').click(function(){
+                $("html, body").animate({ scrollTop: $(".sub-header").eq(1).offset().top }, 600);
+                
+            });
+            
+            $('#link-3').click(function(){
+                $("html, body").animate({ scrollTop: $(".sub-header").eq(2).offset().top }, 600);
+                
+            });
+             $('#link-4').click(function(){
+                $("html, body").animate({ scrollTop: $("#specialOffers-styling").offset().top }, 600); 
+                
+            });
+            
+            
             //Show and Hide sections
             var i;
             var acc = $(".btn-section");
@@ -39,11 +60,13 @@
                     var index = $(".btn-section").index(this);//get index number on click
                     section.eq(index).stop().slideToggle(250);
                     
-                    //change change text
-                    if ($(this).text() == 'Close') {
-                        $(this).html("Open");
+                    //change change text and icons 
+                    if ($(this).children("span").text() == 'Open') {
+                        $(this).children("span").text("Close");
+                        $(this).children("i").removeClass("fa-plus").addClass("fa-minus");
                     }else{
-                        $(this).html("Close");
+                        $(this).children("span").text("Open");
+                        $(this).children("i").removeClass("fa-minus").addClass("fa-plus");
                     }
                 });
             }
@@ -67,9 +90,18 @@
     <h1>Products<br>
     <small class="text-muted">Mellow Me Out offers many services with a wide variety of massages to eyelash extensions</small>
     </h1>
+    <!-- Jump to section -->
+    <h2 class="text-left">Categories</h2>
+    <ul class="text-left list-unstyled">
+        <li><a href='#' id="link-1">Eyelashes and Eyebrows</a></li>
+        <li><a href='#' id="link-2">Massages</a></li>
+        <li><a href='#' id="link-3">Body Cleansing</a></li>
+        <li><a href='#' id="link-4">Special Offers</a></li>
+    </ul>
+    
     <!--Section Subheader-->
         <div class="sub-header">
-            <h3 class= "text-left">Section - Eyelashes and Eyebrows <button class="btn btn-outline-secondary btn-section" style="float:right;">Close</button></h3>
+            <h3 class= "text-left">Eyelashes and Eyebrows <button class="btn btn-outline-secondary btn-section" style="float:right;"><i class="fas fa-minus"></i> <span>Close</span></button></h3>
         </div>
         <hr>
      <!--Section Subheader END-->
@@ -109,7 +141,7 @@
     </div>
     <!--Section Subheader-->
         <div class="sub-header">
-            <h3 class= "text-left">Section - Massages <button class="btn btn-outline-secondary btn-section" style="float:right;">Close</button></h3>
+            <h3 class= "text-left">Massages <button class="btn btn-outline-secondary btn-section" style="float:right;"><i class="fas fa-minus"></i> <span>Close</span></button></h3>
         </div>
         <hr>
      <!--Section Subheader END-->
@@ -149,7 +181,7 @@
     </div>
     <!--Section Subheader-->
         <div class="sub-header">
-            <h3 class= "text-left">Section - Body Cleansing <button class="btn btn-outline-secondary btn-section" style="float:right;">Close</button></h3>
+            <h3 class= "text-left">Body Cleansing <button class="btn btn-outline-secondary btn-section" style="float:right;"><i class="fas fa-minus"></i> <span>Close</span></button></h3>
         </div>
         <hr>
      <!--Section Subheader END-->

@@ -129,7 +129,6 @@
     
  <!-- ===HOMEPAGE CODE START=== -->    
 <body>
-
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
@@ -177,32 +176,51 @@
     <article id="services">
     <div class="container">
     
+    <div class="container">
+    
     <h1 class="text-center">Our Services
     <small class="text-muted"><br>We offer many more services at our products page</small>
     </h1>
+    </div>
+    <hr>
     <div class="row">
+        <!-- SERVICES 1 -->
         <div class="col-md-4 text-center ">
+        <div class="card shadow">
             <img class="img-fluid img-services" src="img/massage.jpg">
-            <h3>Pampering Massages</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est. </p>
-        </div>
-        <div class="col-md-4 text-center">
-            <img class="img-fluid img-services" src="img/candles.jpg">
-            <h3>Relaxing Spas</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est. </p>
-        </div>
-        <div class="col-md-4 text-center">
-            <div>
-                <img class="img-fluid img-services" src="img/eyelash.jpg">
+            <div class="card-body">
+                <h3 class="card-title">Pampering Massages</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est. </p>
+                
             </div>
-            <h3>Eyelash Extensions</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est.</p>
+        </div>        
+        </div>
+        <!-- SERVICES 2 -->
+        <div class="col-md-4 text-center">
+        <div class="card shadow">
+            <img class="img-fluid img-services" src="img/candles.jpg">
+            <div class="card-body">
+                <h3 class="card-title">Relaxing Spas</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est.</p>
+            </div>
+        </div>  
+        </div>
+        <!-- Services 3 -->
+        <div class="col-md-4 text-center">
+            <div class="card shadow">
+            <img class="img-fluid img-services" src="img/eyelash.jpg">
+            <div class="card-body">
+                <h3 class="card-title">Eyelash Extensions</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia maximus sodales. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus orci tortor, dictum sed neque vitae, tristique finibus orci. Phasellus pellentesque, felis eget aliquam ultrices, tellus arcu efficitur sem, quis dictum metus ipsum vel est.</p>
+            </div>
+        </div>
             
         </div>
+    </div>  
     </div>
-        
-        </div>
+    <!--END OF CONTAINER -->
     </article>
+ <!--END OF Outer CONTAINER -->
     
 
 <!-- end of SERVICES CODE -->

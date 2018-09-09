@@ -56,8 +56,8 @@
     <h1>Gallery<br>
     <small class="text-muted">Here are some photos of our amazing work. You will be as pampered as the people you see here. </small>
     </h1>
-                <!-- Modal popup -->
-    <div class="modal" id="mymodal">
+    <!-- Modal popup -->
+    <div class="modal fade" id="mymodal">
         <div class= "modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

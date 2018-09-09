@@ -66,6 +66,13 @@
     padding:5% 0;
     
 }
+
+#services-title{
+    background-color:#ecf0f1;
+    padding:2% 0;
+    
+}
+
 .img-services{
     max-height:230px;
     background-color:grey;

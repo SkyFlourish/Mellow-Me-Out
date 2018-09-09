@@ -77,7 +77,7 @@
     <div class="row products-section">
         <div class="col-md-4">
             <!-- Service cards -->
-            <div class="card card-style" style="width:100%">
+            <div class="card shadow-sm card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/eyelash2.jpg" alt="Card Image">
                 <div class="card-body">
                     <h4 class="card-title">Eyelash Extensions</h4>
@@ -87,7 +87,7 @@
             </div>
         </div>
         <div class="col-md-4">
-        <div class="card card-style" style="width:100%">
+        <div class="card shadow-sm card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/eyelash.jpg" alt="Card Image">
                 <div class="card-body">
                     <h4 class="card-title">Eyelash Tinting</h4>
@@ -97,7 +97,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card card-style" style="width:100%">
+            <div class="card shadow-sm card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/eyebrow.jpg" alt="Card Image">
                 <div class="card-body">
                     <h4 class="card-title">Eyebrow Tinting</h4>
@@ -116,7 +116,7 @@
     <div class="row products-section">
         <div class="col-md-4">
             <!-- Service cards -->
-            <div class="card card-style" style="width:100%">
+            <div class="card shadow-sm card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/massage.jpg" alt="Card Image">
                 <div class="card-body">
                     <h4 class="card-title">Aromatherapy Massage</h4>
@@ -126,7 +126,7 @@
             </div>
         </div>
         <div class="col-md-4">
-        <div class="card card-style" style="width:100%">
+        <div class="card shadow-sm card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/massage2.jpg" alt="Card Image">
                 <div class="card-body">
                     <h4 class="card-title">Lymphatic massage</h4>
@@ -136,7 +136,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card card-style" style="width:100%">
+            <div class="card shadow-sm card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/spa2.jpg" alt="Card Image">
                 <div class="card-body">
                     <h4 class="card-title">Indian head massage</h4>
@@ -156,7 +156,7 @@
     <div class="row products-section">
         <div class="col-md-4">
             <!-- Service cards -->
-            <div class="card card-style" style="width:100%">
+            <div class="card shadow-sm card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/massage.jpg" alt="Card Image">
                 <div class="card-body">
                     <h4 class="card-title">Body mud wrap</h4>
@@ -166,7 +166,7 @@
             </div>
         </div>
         <div class="col-md-4">
-        <div class="card card-style" style="width:100%">
+        <div class="card shadow-sm card-style" style="width:100%">
                 <img class="card-img-top img-fluid img-style" src="img/oils.jpg" alt="Card Image">
                 <div class="card-body">
                     <h4 class="card-title">Body exfoliate</h4>

@@ -89,5 +89,24 @@
         }
         
         //NOTE: PAGES THAT ARE NOT IN NAV ARE ASSIGNED -1 TO STOP CONSOLE ERRORS
-    });    
+        
+        //Navigation show and hide on Scroll
+        $(function () {
+        var lastScrollTop = 0;
+
+        $(window).scroll(function(event){
+            var current = $(this).scrollTop();
+
+            if (current > lastScrollTop) { // scroll down
+            $('.navbar').slideUp(200);
+      
+            } else { // scroll up
+      
+            $('.navbar').slideDown(200);
+            }
+            
+            lastScrollTop = current;
+        });
+    });
+});    
 </script>

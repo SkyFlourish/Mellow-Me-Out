@@ -132,44 +132,48 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
-  <article id="slideshow-bg">
-    <div class="container">
-  
-        <div class="row">
-        <!-- SLIDESHOW Content Code-->
-        <div class="col-sm-4 text-left" id="slideshow-content">
-             <!-- SLIDESHOW CONTENT-->
-            <div class="jumbotron jumbotron-fluid" id="jumbo-style">
-                <div class="container">
-                <h1>Welcome to Mellow Me Out</h1>
-                <div id="slideshow-content-design">
-                    <h4>Take a journey with us <i class="fas fa-spa"></i></h4>
-                </div>
-                <!-- SLIDESHOW CONTENT- BUTTONS-->
-                <button type="button" id="btn-book"class="btn btn-danger btn-lg"><strong>Book Now</strong></button>
-                <button type="button" id="btn-services" class="btn btn-danger btn-lg"><strong>Pricing</strong></button>
-            
-                </div>
-            </div>
-            <!-- SLIDE CIRCLE SELECTORS -->
-            <div class="slide-circle-container">
-                <div class="slide-circle">
-                </div>
-                <div class="slide-circle">  
-                </div>
-                <div class="slide-circle">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 ">
-     
-        </div>
-        <div class="col-sm-4">
+  <article id="carousel-bg">
+   
+    <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+
+<div class="carousel-caption">
+    <h1>Welcome to Mellow Me Out</h1>
+    <h3>Take a journey with us <i class="fas fa-spa"></i></h3>
+    <button type="button" class="btn btn-lg btn-carousel">Book Now</button>
+    <button type="button" class="btn btn-lg btn-carousel ">Services</button>
+  </div>
+    <!-- Indicators -->
+<ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+ 
+    <div class="carousel-item active">
+      <img class="d-block img-fluid" src="img/faceCream.jpg" alt="Applying cream">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block img-fluid" src="img/spa2.jpg" alt="Store Spa">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block img-fluid" src="img/candles.jpg" alt="Candles">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
         
-        </div>
-    </div>
-    
-    </div>
+   
       </article>
     <!-- END OF SLIDESHOW -->
     <!-- SERVICES CODE -->

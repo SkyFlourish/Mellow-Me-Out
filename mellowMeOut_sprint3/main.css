@@ -1,63 +1,52 @@
-
-/*====SLIDESHOW===========*/
-#slideshow-bg{
-    background-image: url(img/flowers.jpg);
-    background-size:100% 800px;
-    background-repeat: no-repeat;
-    transition: 0.25s;
-    overflow:hidden;
-    padding:5% 0;
+/*carousel */
+#carousel-bg{
+    background-color:#2c3e50;
 }
-
-#slideshow-content{
-    padding:0px;
+/*carousel container size */
+.carousel-item{
+    height: 600px; 
+} 
+/*carousel image height cap */
+.carousel-item img{
+    min-height: 600px;
     
+} 
+/*carousel image dark overlay */
+.carousel-item:after {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.4);
 }
-#jumbo-style{
-    background-color:#d63031;
-    border-radius: 10px;
+/*Chnaging position of content */
+.carousel-caption{
+    transform: translateY(-160px);
+}
+.btn-carousel{
+    background-color:transparent; 
     color:#ecf0f1;
-        
+    border: 1px solid #ecf0f1;
+    transition:0.25s;
+}
+.btn-carousel:hover{
+    background-color:#212529; 
+    color:#ecf0f1;
+    border: 1px solid transparent;
+    transition:0.25s;
 }
 
-#slideshow-content-design{
-    border-left-style: solid;
-    border-left-width: thin;
-    padding-left:4px;
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
 }
 
-#btn-book{
-    box-shadow: 0px 5px 0px 0px #CE3323;
-}
-#btn-services{
-    box-shadow: 0px 5px 0px 0px #CE3323;
-}
-
-/*====SLIDESHOW SELECTORS=======*/
-.slide-circle{
-    background-color:transparent;
-    border-color:#ecf0f1;
-    border-style: solid;
-    border-radius: 50%;
-    border-width: 1px;
-    float:left;
-    margin: 4px;
-    width:20px;
-    height:20px;
-    transition:0.2s;
-    
-}
-.slide-circle:hover{
-    border-color:#2c3e50;
-    cursor: pointer;
-    transition:0.2s;
-    
-}
-.slide-circle-container{
-    position: relative;
-    bottom:7%;
-    left:35%;
-   
+.carousel-indicators li:hover {
+    cursor:pointer;
 }
 
 /*====SERVICES =========*/

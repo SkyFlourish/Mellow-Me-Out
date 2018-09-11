@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-sm navbar-dark navbar-style" style="background-color:#2d3436">
+<nav class="navbar navbar-expand-sm navbar-dark navbar-style shadow fixed-top" style="background-color:#2d3436">
 <div class="container">
      <a class="navbar-brand" href="index.php">
     <img src="img/mellowMeOut_Logo.png" alt="Logo" style="width:240px;">

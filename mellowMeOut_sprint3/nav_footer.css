@@ -4,7 +4,19 @@ nav{
     border-bottom-style: solid;
     border-bottom-color: black;
     border-bottom-width:thin;
+    
 }
+/*fixing the hiding */
+body {
+  padding-top: 60px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+
+
 nav ul li a{
     background-color: none;
     border-radius: 5px;

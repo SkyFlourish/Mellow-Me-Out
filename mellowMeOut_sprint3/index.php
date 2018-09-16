@@ -139,8 +139,8 @@
 <div class="carousel-caption">
     <h1>Welcome to Mellow Me Out</h1>
     <h3>Take a journey with us <i class="fas fa-spa"></i></h3>
-    <button type="button" class="btn btn-lg btn-carousel">Book Now</button>
-    <button type="button" class="btn btn-lg btn-carousel ">Services</button>
+    <a href="book-now.php"><button type="button" class="btn btn-lg btn-carousel">Book Now</button></a>
+    <a href="products.php"><button type="button" class="btn btn-lg btn-carousel ">Services</button></a>
   </div>
     <!-- Indicators -->
 <ul class="carousel-indicators">

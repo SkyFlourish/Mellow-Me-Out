@@ -10,7 +10,19 @@
     overflow:hidden;
  }
 /*CONTACT FORM */
-#booking-style{
+#booking-styleOuter{
+    background:url(img/flowers2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding:30px;
+}
+#booking-styleInner{
+    background-color:#ecf0f1;
+    border-radius: 4px;
+    padding:30px;
+}
+
+#booking-introStyle{
     background-color:#ecf0f1;
     padding:30px;
 }
@@ -27,4 +39,7 @@
 #service{
     padding:5px 60px;
     border-radius: 5px;
+}
+label{
+    font-weight: 600;
 }

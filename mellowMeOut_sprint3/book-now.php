@@ -44,24 +44,27 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
-
-<div class="container-fluid">
-    <!-- Booking Content -->
-    <div class="row" style="padding-left:0px; padding-right:0px;">
-        <div class="col-sm-6" id="booking-content">
-            <!-- BOOKING JUMBO CODE -->
-
-                <h1 class="text-center"></h1>
-                <div class="jumbotron" id="booking-jumbo-style">
-                    <h1>Booking is flexible at Mellow Me Out</h1>
-                    <p>See what dates are booked and cancel a booking on demand.</p>
-                </div>
-
+<article id="booking-introStyle">
+<div class="container" >
+        <!-- BOOKING Intro Code -->
+        <div class="col-md-12" id="">
+            <h1 class="text-center">Book Now<br>
+                <small class="text-muted">Making a online booking is incredibly easy as you only have to fill a few details.  </small>
+                </h1>
         </div>
+</div>
+
+
+</article>
+    
+    
+<article id="booking-styleOuter">
+<div class="container shadow-sm" id="booking-styleInner">
         <!-- BOOKING FORM CODE -->
-        <div class="col-sm-6" id="booking-style">
+    
+        <div class="col-md-12" id="">
             <form action="book-now.php" method="post">
-            <h1 class="text-center">Make a booking</h1>
+            <h4>Booking Form</h4>
             <div class="form-group" >
                 <label for="fullName">Full Name: </label>
                 <input type="text" class="form-control" id="fullName" maxlength="24" placeholder="Enter full name here" name="fullName">
@@ -109,13 +112,12 @@
         ?>
         </div>
         </div>
-
-    </div>
-
-
+</div>
+</article>
+    
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-</div>
+
 
 </body>
 

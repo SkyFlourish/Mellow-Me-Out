@@ -148,6 +148,14 @@ INNER JOIN BlogComments AS bc
     ON b.BlogID = bc.BlogID
 WHERE b.BlogID = 2;
 
+SELECT s.ServiceName,
+  sp.ServicePrice,
+  sp.ServiceTime
+ FROM Services AS s
+ INNER JOIN ServicesPricing AS sp
+    ON s.ServiceID = sp.ServiceID
+WHERE s.ServiceID = 1;
+
 /* Query for grabbing tags for content */
 /* As above */
 SELECT bt.BlogTag

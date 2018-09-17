@@ -33,6 +33,7 @@
                 Commented in specific areas detailing ideas after having some time
                 away from them. As always, if you take issue with anything here
                 I am always willing to rethink the idea.
+    16/08/2018 - Adjusted services tables and moved the description column
 */
 
 DROP TABLE DISCOUNT;
@@ -63,8 +64,9 @@ CREATE TABLE Services (
     ServiceID                   INT             NOT NULL    AUTO_INCREMENT,
     ServiceName                 VARCHAR(50)     NOT NULL,
     -- ServicePrice                DECIMAL(15,2)   NOT NULL,
-    ServiceType                 INT             NOT NULL,
+    ServiceType                 INT             NULL,
     -- ServiceTime                 INT,
+    ServiceDescription          TEXT            NULL,
     ServiceImg                  VARCHAR(100)    NULL,
     PRIMARY KEY (ServiceID)
 );

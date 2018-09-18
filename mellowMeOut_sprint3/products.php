@@ -70,6 +70,18 @@
                     }
                 });
             }
+            //Item count badges
+            var eyelashCount = $('#products-section-1 .card').length;
+            var massageCount = $('#products-section-2 .card').length;
+            var cleansingCount = $('#products-section-3 .card').length;
+            
+            
+            $(document).ready(function() {
+                $('#link-1').siblings('span').html(eyelashCount);
+                $('#link-2').siblings('span').html(massageCount); 
+                $('#link-3').siblings('span').html(cleansingCount); 
+            });
+            
         });
         </script>
     </head>
@@ -93,9 +105,9 @@
     <!-- Jump to section -->
     <h2 class="text-left">Categories</h2>
     <ul class="text-left list-unstyled">
-        <li><a href='#' id="link-1">Eyelashes and Eyebrows</a></li>
-        <li><a href='#' id="link-2">Massages</a></li>
-        <li><a href='#' id="link-3">Body Cleansing</a></li>
+        <li><a href='#' id="link-1">Eyelashes and Eyebrows</a> <span class="badge badge-pill badge-secondary">0</span></li>
+        <li><a href='#' id="link-2">Massages</a> <span class="badge badge-pill badge-secondary">0</span></li>
+        <li><a href='#' id="link-3">Body Cleansing</a> <span class="badge badge-pill badge-secondary">0</span></li>
         <li><a href='#' id="link-4">Special Offers</a></li>
     </ul>
     
@@ -106,7 +118,7 @@
         <hr>
      <!--Section Subheader END-->
     
-    <div class="row products-section">
+    <div id="products-section-1" class="row products-section">
         <div class="col-md-4">
             <!-- Service cards -->
             <div class="card shadow-sm card-style" style="width:100%">
@@ -145,7 +157,7 @@
         </div>
         <hr>
      <!--Section Subheader END-->
-    <div class="row products-section">
+    <div id="products-section-2" class="row products-section">
         <div class="col-md-4">
             <!-- Service cards -->
             <div class="card shadow-sm card-style" style="width:100%">
@@ -185,7 +197,7 @@
         </div>
         <hr>
      <!--Section Subheader END-->
-    <div class="row products-section">
+    <div id="products-section-3" class="row products-section">
         <div class="col-md-4">
             <!-- Service cards -->
             <div class="card shadow-sm card-style" style="width:100%">

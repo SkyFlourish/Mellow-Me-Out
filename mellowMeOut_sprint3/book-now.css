@@ -9,12 +9,31 @@
     margin-left:auto;
     overflow:hidden;
  }
+.icon-book{
+    font-size: 72px;
+}
+#booking-styleInner .form-control{
+    padding-left:40px;
+    
+}
+
+.inputWithIcon {
+    position:relative;
+    
+}
+.inputWithIcon i{
+    position:absolute;
+    bottom:4px;
+    left:0;
+    padding:4px 12px;
+    font-size: 20px;
+    color:grey;
+}
+
+
 /*CONTACT FORM */
 #booking-styleOuter{
-    background:url(img/flowers2.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-    padding:30px;
+    
 }
 #booking-styleInner{
     background-color:#ecf0f1;

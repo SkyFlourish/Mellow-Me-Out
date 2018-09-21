@@ -43,10 +43,13 @@
   width: 15px;
   height: 15px;
   border-radius: 100%;
+   
 }
 
 .carousel-indicators li:hover {
     cursor:pointer;
+    color:#ecf0f1;
+    
 }
 
 /*====SERVICES =========*/

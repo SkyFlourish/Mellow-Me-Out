@@ -47,11 +47,24 @@
 <article id="booking-introStyle">
 <div class="container" >
         <!-- BOOKING Intro Code -->
-        <div class="col-md-12" id="">
+    <div class="row">
+    <div class="col-md-12" id="">
             <h1 class="text-center">Book Now<br>
                 <small class="text-muted">Making a online booking is incredibly easy as you only have to fill a few details.  </small>
                 </h1>
-        </div>
+        <hr>
+    </div>
+    </div>
+    <div class="row">
+     <div class="col-md-2 text-center" id="">
+           <i class="far fa-eye icon-book"></i>
+    </div>
+        <div class="col-md-10" id="">
+            <h2 class="text-left">Why book online?<br>
+                <small class="text-muted">You will be able to see what dates are booked out and be able to see the list of services available. For contact details, <a href="contact-us.php">click here</a>. </small>
+                </h2>
+    </div>
+    </div>  
 </div>
 
 
@@ -65,22 +78,32 @@
         <div class="col-md-12" id="">
             <form action="book-now.php" method="post">
             <h4>Booking Form</h4>
-            <div class="form-group" >
+            <div class="form-group">
                 <label for="fullName">Full Name: </label>
-                <input type="text" class="form-control" id="fullName" maxlength="24" placeholder="Enter full name here" name="fullName">
+                <div class="inputWithIcon">
+                    <input type="text" class="form-control input-icon" id="fullName" maxlength="24" placeholder="Enter full name here" name="fullName">
+                    <i class="far fa-user"></i>
+                </div>
             </div>
             <div class="form-group">
-                <label for="phone">Phone: </label>
-                <input type="text" class="form-control" id="phone" maxlength="24" placeholder="Enter phone number" name="phone">
+                <div class="inputWithIcon">
+                    <label for="phone">Phone: </label>
+                    <input type="text" class="form-control input-icon" id="phone" maxlength="24" placeholder="Enter phone number" name="phone">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
             </div>
             <div class="form-group">
-                <label for="select-booking">Please select date of booking: </label>
-                <!-- <input type="date" class="form-control" id="select-booking" name="select-booking" min="2018-09-09" max="2019-09-09"> -->
-                <?php require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-time-selection.inc.php'); ?>
+                <div class=inputWithIcon>
+                    <label for="select-booking">Please select date of booking: </label>
+                    <!-- <input type="date" class="form-control" id="select-booking" name="select-booking" min="2018-09-09" max="2019-09-09"> -->
+                    <?php require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-time-selection.inc.php'); ?>
+                    <i class="far fa-calendar-alt"></i>
+                </div>
             </div>
             <div class="form-group">
                 <label for="service">Choose your service: </label>
                 <br>
+                <div class="inputWithIcon">
                 <select id="service" name="service">
                 <!-- <select required name="cars" id="service"> -->
                     <option value="" disabled selected hidden>Please choose...</option>
@@ -89,16 +112,25 @@
                     <option value="fiat">Test 3</option>
                     <option value="audi">Audi</option> -->
                     <?php require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-services-selection.inc.php'); ?>
+                   
                 </select>
+                <i class="fas fa-concierge-bell"></i>
+                </div>
             </div>
             <!-- <div> -->
             <div class="form-group" >
-                <label for="email">Confirm your email address: </label>
-                <input type="text" class="form-control" id="email" maxlength="42" placeholder="Enter email here" name="email">
+                <div class="inputWithIcon">
+                    <label for="email">Confirm your email address: </label>
+                    <input type="text" class="form-control" id="email" maxlength="42" placeholder="Enter email here" name="email">
+                    <i class="far fa-envelope"></i>
+                </div>
             </div>
-            <div class="form-group" >
-                <label for="confirm-email">Confirm your email address: </label>
-                <input type="text" class="form-control" id="confirm-email" maxlength="42" placeholder="Enter email here" name="confirm-email">
+            <div class="form-group">
+                <div class="inputWithIcon">
+                    <label for="confirm-email">Confirm your email address: </label>
+                    <input type="text" class="form-control" id="confirm-email" maxlength="42" placeholder="Enter email here" name="confirm-email">
+                    <i class="far fa-envelope"></i>
+                </div>
             </div>
             <!-- </div> -->
             <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>

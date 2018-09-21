@@ -49,7 +49,7 @@
         </div>
       
     </div>
-    <p id="footer-copyright">© 2018 Mellow Me Out <br><a href=https://fontawesome.com target="_blank">Icons by Font Awesome</a></p>
+    <p id="footer-copyright">© 2018 Mellow Me Out <br><a href=https://fontawesome.com/license/free target="_blank">Icons by Font Awesome</a></p>
     
     <br>
     </div>

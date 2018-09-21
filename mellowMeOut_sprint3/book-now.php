@@ -71,11 +71,11 @@
 </article>
     
     
-<article id="booking-styleOuter">
-<div class="container shadow-sm" id="booking-styleInner">
+<article id="booking-content">
+<div class="container " id="">
         <!-- BOOKING FORM CODE -->
-    
-        <div class="col-md-12" id="">
+    <div class="row">
+        <div class="col-md-12 shadow" id="booking-styleInner">
             <form action="book-now.php" method="post">
             <h4>Booking Form</h4>
             <div class="form-group">
@@ -143,7 +143,8 @@
         bookingProcessing();
         ?>
         </div>
-        </div>
+    </div>    
+    </div>
 </div>
 </article>
     

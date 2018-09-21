@@ -10,10 +10,24 @@ nav{
 body {
   padding-top: 60px;
 }
-@media (max-width: 979px) {
+@media (max-width: 768px) {
   body {
-    padding-top: 0px;
+    padding-top: 80px;
   }
+}
+/*Mobile Adaptability*/
+@media (max-width: 768px) {
+  h1 {
+    font-size:32px;
+  }
+    h2 {
+    font-size:28px;
+  }
+    h3 {
+    font-size:24px;
+  }
+    
+    
 }
 
 

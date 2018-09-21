@@ -9,7 +9,9 @@
             <a href=""><i id="social-icon" class="fab fa-facebook"></i></a>
             <a href=""><i id="social-icon" class="fab fa-instagram"></i></a>
             <a href=""><i id="social-icon" class="fab fa-twitter"></i></a>
+            <br> <br>
         </div>
+        
         <!-- HELP LINKS-->
         <div class="col-md-3">
             <h5>Help</h5>
@@ -49,8 +51,11 @@
         </div>
       
     </div>
-    <p id="footer-copyright">© 2018 Mellow Me Out <br><a href=https://fontawesome.com/license/free target="_blank">Icons by Font Awesome</a></p>
-    
+    <div class="row">
+        <div class="col-md-12">
+        <p id="footer-copyright">© 2018 Mellow Me Out <br><a href=https://fontawesome.com/license/free target="_blank">Icons by Font Awesome</a></p>
+            </div>
+    </div>
     <br>
     </div>
 </footer>   

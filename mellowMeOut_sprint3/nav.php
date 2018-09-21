@@ -98,11 +98,11 @@
             var current = $(this).scrollTop();
 
             if (current > lastScrollTop) { // scroll down
-            $('.navbar').slideUp(200);
+            $('.navbar').stop(true,false).fadeOut(200);
       
             } else { // scroll up
       
-            $('.navbar').slideDown(200);
+            $('.navbar').stop(true,false).fadeIn(200);
             }
             
             lastScrollTop = current;

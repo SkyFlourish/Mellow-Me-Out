@@ -38,7 +38,8 @@
 #booking-styleInner{
     background-color:#ecf0f1;
     border-radius: 4px;
-    padding:30px;
+    padding:20px;
+    
 }
 
 #booking-introStyle{
@@ -48,6 +49,7 @@
 #booking-content{
     background-image:url(img/flowers2.jpg);
     background-size: cover;
+    padding:2% 0;
 }
 #booking-jumbo-style{
     padding: 15px 15px;

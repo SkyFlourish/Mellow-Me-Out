@@ -64,8 +64,17 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_acco
               <li class="nav-item">
                 <a href="admin-page.php?selection=9" style="color:#A9A9A9">Add blogs</a>
               </li>
+			  <li class="nav-item">
+                <a href="admin-page.php?selection=15" style="color:#A9A9A9">Add blog category</a>
+              </li>
+			  <li class="nav-item">
+                <a href="admin-page.php?selection=5" style="color:#A9A9A9">Add bookings</a>
+              </li>
               <li class="nav-item">
                 <a href="admin-page.php?selection=10" style="color:#A9A9A9">Add services</a>
+              </li>
+			  <li class="nav-item">
+                <a href="admin-page.php?selection=2" style="color:#A9A9A9">Add service category</a>
               </li>
               <li class="nav-item">
                 <a href="admin-page.php?selection=4" style="color:#A9A9A9">Add service price + time</a>
@@ -74,7 +83,7 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_acco
                 <a href="admin-page.php?selection=11" style="color:#A9A9A9">Add staff</a>
               </li>
 			  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-              <span>Manage</span>
+              <!--<span>Manage</span>
               <a class="d-flex align-items-center text-muted" href="#">
                 <span data-feather="plus-circle"></span>
               </a>
@@ -85,7 +94,7 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_acco
               <li class="nav-item">
                 <a href="admin-page.php?selection=3" style="color:#A9A9A9">Manage blogs</a>
               </li>
-			  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+			  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">-->
               <span>Delete</span>
               <a class="d-flex align-items-center text-muted" href="#">
                 <span data-feather="plus-circle"></span>
@@ -95,10 +104,16 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_acco
                 <a href="admin-page.php?selection=6" style="color:#A9A9A9">Delete blogs</a>
               </li>
 			  <li class="nav-item">
+                <a href="admin-page.php?selection=16" style="color:#A9A9A9">Delete blog category</a>
+              </li>
+			  <li class="nav-item">
                 <a href="admin-page.php?selection=5" style="color:#A9A9A9">Delete bookings</a>
               </li>
 			  <li class="nav-item">
                 <a href="admin-page.php?selection=7" style="color:#A9A9A9">Delete services</a>
+              </li>
+			  <li class="nav-item">
+                <a href="admin-page.php?selection=12" style="color:#A9A9A9">Delete service category</a>
               </li>
 			  <li class="nav-item">
                 <a href="admin-page.php?selection=8" style="color:#A9A9A9">Delete staff</a>

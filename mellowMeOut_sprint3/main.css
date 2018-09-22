@@ -25,6 +25,9 @@
 /*Chnaging position of content */
 .carousel-caption{
     transform: translateY(-160px);
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-delay: 0.15s;
 }
 .btn-carousel{
     background-color:transparent; 
@@ -54,9 +57,24 @@
 
 /*====SERVICES =========*/
 #services{
-    background-color:#ecf0f1;
-    padding:5% 0;
     
+    padding:5% 0;
+     /* The image used */
+    background-image: url("img/dark_flower_small.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+}
+#services-header{
+    padding:1% 0;
+    background-color: #ecf0f1;
 }
 
 #services-title{
@@ -78,11 +96,18 @@
     color:#ecf0f1;
     padding:5% 0;
 }
-/*====Media Queries */
-@media only screen and (max-width: 768px) {
-    .slide-circle-container{
-       
-    }
- 
-}
 
+/*====CONTACT US */
+#contact-us{
+    padding:3% 0;
+     /* The image used */
+    background-image: none;
+
+
+}
+/*ANIMATION*/
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

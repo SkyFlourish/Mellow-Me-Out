@@ -134,7 +134,7 @@
  <!-- End of Nav Code -->
   <article id="carousel-bg">
    
-    <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+    <div id="demo" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
 
 <div class="carousel-caption">
     <h1>Welcome to Mellow Me Out</h1>
@@ -177,16 +177,17 @@
       </article>
     <!-- END OF SLIDESHOW -->
     <!-- SERVICES CODE -->
+    <article id="services-header">
+        <div class="container">
+           <h1 class="text-center">Our Services
+                <small class="text-muted"><br>Below are our featured services and we offer plenty more at our products page. </small>
+            </h1>
+            <hr>
+        </div>
+    </article>
     <article id="services">
     <div class="container">
     
-    <div class="container">
-    
-    <h1 class="text-center">Our Services
-    <small class="text-muted"><br>We offer many more services at our products page</small>
-    </h1>
-    </div>
-    <hr>
     <div class="row">
         <!-- SERVICES 1 -->
         <div class="col-md-4 text-center ">
@@ -252,6 +253,19 @@
         </div>
     </div>
     
+</article>
+<!--contact us section-->
+<article id="contact-us">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center" >
+            <i class="far fa-envelope " style="font-size:48px;"></i>
+            <h1>Have any queries regarding Mellow Me Out? </h1>
+            <br>
+            <button class="btn btn-secondary btn-lg">Contact Us</button>
+        </div>
+    </div>
+    </div>
 </article>
 <!-- END OF ABOUT US-->
 <!-- FOOTER CODE-->

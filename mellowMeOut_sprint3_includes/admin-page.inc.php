@@ -5,6 +5,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/administer-blog
 $administerBlogFunctions = $_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/administer-blog-content.inc.php';
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/administer-services-content.inc.php');
 require ($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/administer-services-price.inc.php');
+require ($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/administer-services-category.inc.php');
+require ($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/administer-blog-category.inc.php');
 require ($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/administer-staff.inc.php');
 //require ($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/administer-booking.inc.php');
 
@@ -16,17 +18,37 @@ if (isset($_GET["selection"])) {
 		
            
 
-        case '2':
-            // code...
+        case '15':
+			echo '<form action="admin-page.php?action=addBlogCategory" method="POST">
+                <p>
+				<div class="col-md-8 order-md-1">
+                <h8>Add a category to Blog</h8>
+                <textarea class="form-control" placeholder="Category Add.." name="category" type="text" rows=1 cols=80></textarea>
+                </p>
+				</div>
+                <button type="submit" class="btn btn-primary" name="submitblogcategory" sytle="background-color: green; height: 340px; width: 340px; color: white; ">ADD CATEGORY
+                </button>
+                </form>';
             break;
-
+		case '2':
+			echo '<form action="admin-page.php?action=addCategory" method="POST">
+                <p>
+				<div class="col-md-8 order-md-1">
+                <h8>Add a category to Services</h8>
+                <textarea class="form-control" placeholder="Category Add.." name="category" type="text" rows=1 cols=80></textarea>
+                </p>
+				</div>
+                <button type="submit" class="btn btn-primary" name="submitcategory" sytle="background-color: green; height: 340px; width: 340px; color: white; ">ADD CATEGORY
+                </button>
+                </form>';
+            break;
         case '3':
             // code...
             break;
 
         case '4':
              echo '<form action="admin-page.php?action=addServicePricing" method="POST">
-				<div class="col-md-8 order-md-1">';
+				<div class="col-md-8 order-md-1"><p></p>';
 			
 				include 'db-connect.php';
 				$result = mysqli_query($conn, "SELECT * FROM services");
@@ -129,27 +151,43 @@ if (isset($_GET["selection"])) {
             break;
 
         case '9':
-            echo '<form action="admin-page.php?action=addBlog" method="POST">
+            echo '<form action="admin-page.php?action=addBlog" method="POST" enctype="multipart/form-data">
                 <p>
                 <div class="col-md-8 order-md-1">
-				<div class="row">
 				<h8>  Title</h8>
-                <textarea class="form-control" placeholder="Title..." name="title" type="text"></textarea>
+                <textarea class="form-control" placeholder="Title..." name="title" type="text" rows=1 cols=80></textarea>
                 <p>
 				</p>
-				</div>
-				<div class="row">
-                <p> </p>
-                <h8>  Blog Category</h8>
-                <textarea class="form-control" placeholder="Category..." name="category" type="text"></textarea>
-                <p></p>
-				</div>
-				<div class="row">
+                <p> </p>';
+                include 'db-connect.php';
+				$result = mysqli_query($conn, "SELECT * FROM blogcategorys");
+				if (mysqli_num_rows($result) > 0) {
+				// output data of each row
+				echo "
+                <h8>Select blog category to add to</h8>
+				<select class='custom-select d-block w-100' name = 'category'>";
+				while($row = mysqli_fetch_assoc($result)) {
+				echo "<option value=" .$row["BlogCategoryID"]. ">". $row["BlogCategory"]. "</option>";
+				}	
+				echo"</select>";
+				}
+				else
+				{
+					echo
+					"<h8>PLEASE ADD A BLOG CATEGORY FIRST BEFORE YOU CONTINUE</h8>
+					<select class='custom-select d-block w-100' name = 'serviceid'>
+					<option disabled>PLEASE ADD A BLOG CATEGORY FIRST</option>
+					</select>
+					";
+				}
+				echo'<p></p><p>
+                Select image to upload:
+				<input type="file" name="fileToUploadBlog" id="fileToUploadBlog">
+				</p>
                 <p>
                 <h8>  Blog Contents</h8>
                 <textarea class="form-control" placeholder="Blog content..." name="content" type="text" rows=10 cols=80></textarea>
                 </p>
-				</div>
 				</div>
 				<p> </p>
                 <button  class="btn btn-primary" type="submit" name="submitblog" >SUBMIT BLOG
@@ -169,11 +207,29 @@ if (isset($_GET["selection"])) {
                 <h8>  Service Price</h8>
                 <textarea class="form-control" placeholder="Service Price..." name="serviceprice" type="text" rows=1 cols=80></textarea>
                 </p>
-				<p>
-                <h8>  Service Type</h8>
-                <textarea class="form-control" placeholder="Service Type..." name="servicetype" type="text" rows=1 cols=80></textarea>
-                </p>
-				<p>
+				<p>';
+				include 'db-connect.php';
+				$result = mysqli_query($conn, "SELECT * FROM servicetypes");
+				if (mysqli_num_rows($result) > 0) {
+				// output data of each row
+				echo "
+                <h8>Select Service category/type to add to</h8>
+				<select class='custom-select d-block w-100' name = 'servicetype'>";
+				while($row = mysqli_fetch_assoc($result)) {
+				echo "<option value=" .$row["ServiceTypeID"]. ">". $row["ServiceType"]. "</option>";
+				}	
+				echo"</select>";
+				}
+				else
+				{
+					echo
+					"<h8>PLEASE ADD A SERVICE TYPE/CATEGORY FIRST BEFORE YOU CONTINUE</h8>
+					<select class='custom-select d-block w-100' name = 'serviceid'>
+					<option disabled>PLEASE ADD A SERVICE TYPE/CATEGORY FIRST</option>
+					</select>
+					";
+				}
+				echo'<p>
                 <h8>  Service Time</h8>
                 <textarea class="form-control" placeholder="Service Time..." name="servicetime" type="text" rows=1 cols=80></textarea>
                 </p>
@@ -213,6 +269,50 @@ if (isset($_GET["selection"])) {
                 </button>
                 </form>';
             break;
+		case '12':
+			//DELETE SERVICE TYPE
+			echo '<form action="admin-page.php?action=removeCategory" method="POST">';
+			
+				include 'db-connect.php';
+				$result = mysqli_query($conn, "SELECT * FROM servicetypes");
+					
+				// output data of each row
+				echo "<p></p><select class='custom-select d-block w-100' name = 'deleteThisCategory'>";
+				if (mysqli_num_rows($result) > 0) {
+					while($row = mysqli_fetch_assoc($result)) {
+				echo "<option value=" .$row["ServiceTypeID"]. ">". $row["ServiceType"]. "</option>";
+				}
+				}				
+				echo '</select>	
+				<p> </p>
+				<button class="btn btn-primary" type="submit" name="removecategory" sytle="background-color: green; height: 340px; width: 340px; color: white; ">REMOVE CATEGORY
+                </button>
+                </form>';
+				
+		
+			break;
+			case '16':
+			//DELETE SERVICE TYPE
+			echo '<form action="admin-page.php?action=removeBlogCategory" method="POST">';
+			
+				include 'db-connect.php';
+				$result = mysqli_query($conn, "SELECT * FROM blogcategorys");
+					
+				// output data of each row
+				echo "<p></p><select class='custom-select d-block w-100' name = 'deleteThisBlogCategory'>";
+				if (mysqli_num_rows($result) > 0) {
+					while($row = mysqli_fetch_assoc($result)) {
+				echo "<option value=" .$row["BlogCategoryID"]. ">". $row["BlogCategory"]. "</option>";
+				}
+				}				
+				echo '</select>	
+				<p> </p>
+				<button class="btn btn-primary" type="submit" name="removeblogcategory" sytle="background-color: green; height: 340px; width: 340px; color: white; ">REMOVE CATEGORY
+                </button>
+                </form>';
+				
+		
+			break;
 		case '13':
             echo '<form action="admin-page.php?action=removeServicePricing" method="POST">';
 			
@@ -266,6 +366,26 @@ if (isset($_GET["action"])) {
 	case 'addStaff':
         // code...
         addStaff();
+        break;
+	case 'addCategory':
+        // code...
+        addCategory();
+        break;
+	case 'removeCategory':
+        // code...
+		if(isset($_POST["deleteThisCategory"])) {
+        removeCategoryEntry($_POST["deleteThisCategory"]);
+		}
+        break;
+	case 'addBlogCategory':
+        // code...
+        addBlogCategory();
+        break;
+	case 'removeBlogCategory':
+        // code...
+		if(isset($_POST["deleteThisBlogCategory"])) {
+        removeBlogCategoryEntry($_POST["deleteThisBlogCategory"]);
+		}
         break;
 	case 'removeBlog':
         // code...

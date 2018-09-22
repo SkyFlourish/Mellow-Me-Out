@@ -24,7 +24,13 @@ $date = new DateTime;
 
 // Won't run until a submition value is sent
 if (isset($_POST["submitblog"])) {
+	
 	include 'db-connect.php';
+	$target_dir = "img/";
+	$target_file = $target_dir . basename($_FILES["fileToUploadBlog"]["name"]);
+	$uploadOk = 1;
+	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+	
         if (isset($_POST["title"])) {
             $title = mysqli_real_escape_string($conn, $_POST["title"]);
             $titleMissing = false;
@@ -33,6 +39,37 @@ if (isset($_POST["submitblog"])) {
             echo "Title is missing";
             $titleMissing = true;
         }
+		if (isset($_POST["fileToUploadBlog"])) {
+		$check = getimagesize($_FILES["fileToUploadBlog"]["tmp_name"]);
+				if($check !== false) {
+					echo "File is an image - " . $check["mime"] . ".";
+						$uploadOk = 1;
+					} else {
+					echo "File is not an image.";
+					$uploadOk = 0;
+					}
+		}
+				// Check if file already exists
+				if (file_exists($target_file)) {
+					echo "Sorry, file already exists.";
+					$blogimgMissing = true;
+					$uploadOk = 0;
+				}
+				// Check if $uploadOk is set to 0 by an error
+				if ($uploadOk == 0) {
+					echo "Sorry, your file was not uploaded.";
+					$blogimgMissing = true;
+					// if everything is ok, try to upload file
+				} else {
+				if (move_uploaded_file($_FILES["fileToUploadBlog"]["tmp_name"], $target_file)) {
+					$serviceimg = basename( $_FILES["fileToUploadBlog"]["name"]);
+					$blogimgMissing = false;
+				} else {
+					echo "Sorry, there was an error uploading your file.";
+					$blogimgMissing = true;
+					}
+				}
+		
         if (isset($_POST["content"])) {
             $content = mysqli_real_escape_string($conn, $_POST["content"]);
             $contentMissing = false;
@@ -58,13 +95,15 @@ if (isset($_POST["submitblog"])) {
             $staffUsernameMissing = true;
         }
         if ($titleMissing == true || $contentMissing == true ||
-            $categoryMissing == true || $staffUsernameMissing == true) {
+            $categoryMissing == true || $staffUsernameMissing == true
+			|| $blogimgMissing == true)			{
             echo "Please fill the form and true again";
         }
         if ($titleMissing == false && $contentMissing == false &&
-            $categoryMissing == false && $staffUsernameMissing ==false) {
+            $categoryMissing == false && $staffUsernameMissing ==false
+			&& $blogimgMissing ==false) {
             global $conn;
-            $sql = "INSERT INTO blogcontent (BlogTitle,BlogContent,BlogCategory,Username) VALUES ('$title', '$content', '$category', '$staffUsername');";
+            $sql = "INSERT INTO blogcontent (BlogTitle,BlogContent,BlogCategory,Username,BlogContentImg) VALUES ('$title', '$content', '$category', '$staffUsername', '$serviceimg');";
             if (mysqli_query($conn, $sql)) {
                 echo "<p>Record inserted successfully</p>";
                 mysqli_close($conn);

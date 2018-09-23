@@ -284,59 +284,96 @@
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
+<article id="bg-contact-header">
+    <div class="container">
+    <h1 class="text-center">Contact Us<br>
+             <!-- CONTACT INFOMATION CODE -->
+            <small class="text-muted">Here at MellowMeOut, your feedback helps improve our services so that everyone is satisfied.</small>
+        </h1>
+        <hr>
+   
+        <!--Contact Cards-->
+        <div class="row">
+             <!--Address-->
+            <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body text-center">
+                    <h4 class="card-title contact-underline"><i class="fas fa-home"></i> Address</h4>
+                    <p class="card-text ">123 dove road Boronia, VIC, AUSTRALIA</p>
+                </div>
+            </div>
+            </div>
+            <!--Phone-->
+            <div class="col-md-4">
+             <div class="card shadow">
+                <div class="card-body text-center ">
+                    <h4 class="card-title contact-underline"><i class="fas fa-mobile-alt"></i> Phone</h4>
+                    <p class="card-text">(03)98278685</p>
+                </div>
+            </div>
+            </div>
+            <!--Email-->
+            <div class="col-md-4">
+             <div class="card shadow">
+                <div class="card-body text-center">
+                    <h4 class="card-title contact-underline"><i class="far fa-envelope"></i> Email</h4>
+                    <p class="card-text">info@mellowmeout.com</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</article>
 <article id="bg-form">
 <div class="container">
     <div class="row" >
-        <div class="col-md-3">
-
-        </div>
-        <div class="col-md-6">
-        <form name="myForm"  method="post" action="form.php" id="contact-style" onsubmit="return validate_form(this)">
-            <h1 class="text-center">Contact Us</h1>
-             <!-- CONTACT INFOMATION CODE -->
-
-            <ul class="list-unstyled">
-                <li> <strong>Address:</strong> 123 dove road Boronia, VIC, AUSTRALIA </li>
-                <li> <strong>Phone:</strong>  (03)98278685 </li>
-                <li> <strong>Email:</strong>  info@mellowmeout.com</li>
-            </ul>
-            <hr>
-            <p>Have some questions not covered by our FAQ? Send it from here and we'll be sure to respond as quickly as we can. Here at MellowMeOut, your feedback helps improve our services so that everyone is satisfied.</p>
+        <div class="col-md-12">
+            <form name="myForm" class="shadow" method="post" action="form.php" id="contact-style" onsubmit="return validate_form(this)">
            <!-- FORM SECTION -->
             <div class="form-group">
-			  <label id="lblFirstName">First Name</label><br />
-			  <i class="fa fa-check" id="success_fname"></i>
+                <h3>Contact Form</h3>
+			  <label id="lblFirstName">First Name</label><br/>
+			  
+			  <input class="form-control" type="text" id="fname" name="fname" placeholder="First name here">
+            <div class="feedback-container">
+            <i class="fa fa-check" id="success_fname"></i>
 			  <i class="fa fa-times" id="error_fname"></i>
 			  <i class="fa fa-exclamation" id="warning_fname"></i>
 			  <span class="span1" id="span1_fname">The first name can only contain alphabets</span>
 			  <span class="span2" id="span2_fname">The first name is mandatory</span>
-			  <input type="text" id="fname" name="fname" placeholder="First name here"><br />
+                </div>
 			</div>
             <div class="form-group" >
 			  <label id="lblLastName">Last Name</label><br />
-			  <i class="fa fa-check" id="success_lname"></i>
+			  <input  class="form-control" type="text" id="lname" name="lname" placeholder="Last name here">
+            <div class="feedback-container">
+                <i class="fa fa-check" id="success_lname"></i>
 			  <i class="fa fa-times" id="error_lname"></i>
 			  <i class="fa fa-exclamation" id="warning_lname"></i>
 			  <span class="span1" id="span1_lname">The last name can only contain alphabets</span>
 			  <span class="span2" id="span2_lname">The last name is mandatory</span>
-			  <input type="text" id="lname" name="lname" placeholder="Last name here"><br />
+                </div>
 			</div>
             <div class="form-group">
 			  <label id="lblEmail">Email</label><br />
-			  <i class="fa fa-check" id="success_mail"></i>
+			  <input class="form-control" type="text" id="mail" name="mail" placeholder="Email here">
+               <div class="feedback-container">
+                <i class="fa fa-check" id="success_mail"></i>
 			  <i class="fa fa-times" id="error_mail"></i>
 			  <i class="fa fa-exclamation" id="warning_mail"></i>
 			  <span class="span1" id="span1_mail">The email is not in the valid format</span>
 			  <span class="span2" id="span2_mail">The email is mandatory</span>
-			  <input type="text" id="mail" name="mail" placeholder="Email here"><br />
+                </div>
 			</div>
             <div class="form-group">
 			  <label id="lblSubject">Subject</label><br />
-			  <i class="fa fa-check" id="success_subject"></i>
+			  <input class="form-control" type="text" id="subject" name="subject" placeholder="Subject here">
+                <div class="feedback-container">
+                <i class="fa fa-check" id="success_subject"></i>
 			  <i class="fa fa-times" id="error_subject"></i>
 			  <i class="fa fa-exclamation" id="warning_subject"></i>
 			  <span class="span2" id="span2_subject">The subject is mandatory</span>
-			  <input type="text" id="subject" name="subject" placeholder="Subject here"><br />
+                </div>
 			</div>
             <div class="form-group">
 			  <label id="lblMessage">Message</label><br />
@@ -351,9 +388,7 @@
 
         </form>
         </div>
-          <div class="col-md-3">
-
-        </div>
+       
     </div>
 </div>
 </article>

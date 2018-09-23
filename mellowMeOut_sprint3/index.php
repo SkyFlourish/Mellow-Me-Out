@@ -262,7 +262,7 @@
             <i class="far fa-envelope " style="font-size:48px;"></i>
             <h1>Have any queries regarding Mellow Me Out? </h1>
             <br>
-            <button class="btn btn-secondary btn-lg">Contact Us</button>
+            <a href="contact-us.php"><button class="btn btn-secondary btn-lg">Contact Us</button></a>
         </div>
     </div>
     </div>

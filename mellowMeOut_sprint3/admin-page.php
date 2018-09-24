@@ -107,7 +107,7 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_acco
                 <a href="admin-page.php?selection=16" style="color:#A9A9A9">Delete blog category</a>
               </li>
 			  <li class="nav-item">
-                <a href="admin-page.php?selection=5" style="color:#A9A9A9">Delete bookings</a>
+                <a href="admin-page.php?selection=17" style="color:#A9A9A9">Delete bookings</a>
               </li>
 			  <li class="nav-item">
                 <a href="admin-page.php?selection=7" style="color:#A9A9A9">Delete services</a>

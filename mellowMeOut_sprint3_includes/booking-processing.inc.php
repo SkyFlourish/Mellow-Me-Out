@@ -42,12 +42,14 @@ $selectBookingMissing = true;
 $serviceMissing = true;
 $emailMissing = true;
 $emailConfirmMissing = true;
+$bookingTimeMissing = true;
 $fullNameValid = false;
 $phoneValid = false;
 $selectBookingValid = false;
 $serviceValid = false;
 $emailValid = false;
 $emailConfirmValid = false;
+$bookingTimeValid = false;
 $errorMsgArray = [];
 // Below variables are to be deleted after function works
 $debugMsgArray = [];
@@ -112,6 +114,21 @@ if (isset($_POST["submit"])) {
         $formComplete = false;
         $selectBookingMissing = true;
         array_push($errorMsgArray, "Please select a booking date");
+    }
+    if (!empty($_POST["add"])) {
+        $bookingTime = mysqli_real_escape_string($conn, $_POST["add"]);
+        if (validateInputNotNull($bookingTime) == true) {
+            $bookingTime = stripTagsFromInput($bookingTime);
+            $bookingTimeValid = true;
+            $bookingTimeMissing = false;
+            // echo "Phone found valid";
+            array_push($debugMsgArray, "Booking time found valid");
+        }
+    }
+    else {
+        $formComplete = false;
+        $bookingTimeMissing = true;
+        array_push($errorMsgArray, "Please select a time");
     }
     // if (!empty($_POST["service"])) {
     //     $service = $_POST["service"];
@@ -191,7 +208,8 @@ if (isset($_POST["submit"])) {
     }
     if ($fullNameMissing == true || $phoneMissing == true ||
         $selectBookingMissing == true || $serviceMissing == true ||
-        $emailMissing == true || $emailConfirmMissing == true) {
+        $emailMissing == true || $emailConfirmMissing == true ||
+        $bookingTimeMissing == true) {
             // echo "You have not filled out the entire form yet</br>";
             // echo "Please provide the required information above";
             $formComplete = false;
@@ -214,7 +232,8 @@ if (isset($_POST["submit"])) {
     // $emailValid == true && $emailConfirmValid == true) {
     if ($fullNameMissing == false && $phoneMissing == false &&
         $selectBookingMissing == false && $serviceMissing == false &&
-        $emailMissing == false && $emailConfirmMissing == false) {
+        $emailMissing == false && $emailConfirmMissing == false &&
+        $bookingTimeMissing == false) {
         if ($email == $confirmEmail) {
             $formComplete = true;
             array_push($debugMsgArray, "Form apparently complete");
@@ -233,15 +252,24 @@ if (isset($_POST["submit"])) {
             echo "</p>";
 
             // Use service ID to determine service length if found
-            $serviceArray;
-            $i = $service - 1;
-            $serviceTime = $serviceArray[$i]['ServiceTime'];
+            // $serviceArray;
+            // $i = $service - 1;
+            // $serviceTime = $serviceArray[$i]['ServiceTime'];
+
+            $sql = "SELECT ServicePricingID, ServicePrice FROM mellowmeout.ServicesPricing WHERE ServicePricingID = '$service'";
+            if ($result = mysqli_query($conn, $sql)) {
+                while ($row = mysqli_fetch_assoc($result)){
+                    $servicePricingID = $row['ServicePricingID'];
+                    $servicePrice = $row['ServicePrice'];
+                }
+            }
 
             // Insert booking data into the database
             // Time start and time end are both the same value for now,
             // this will need to be rectified later
-            $sql = "INSERT INTO mellowmeout.Bookings (BookingDateTimeStart,BookingDateTimeEnd,BookingFullName,BookingRegisteredEmail,BookingRegisteredPhone) VALUES ('$selectBooking','$selectBooking','$fullName','$email','$phone');";
+            // $sql = "INSERT INTO mellowmeout.Bookings (BookingDateTimeStart,BookingDateTimeEnd,BookingFullName,BookingRegisteredEmail,BookingRegisteredPhone) VALUES ('$selectBooking','$selectBooking','$fullName','$email','$phone');";
 
+            $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$serviceTime')";
 	        if(mysqli_query($conn, $sql)) {
                 // A redirect aught to happen here
                 echo "<p>";

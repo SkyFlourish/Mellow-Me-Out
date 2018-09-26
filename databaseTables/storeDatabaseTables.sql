@@ -181,27 +181,19 @@ CREATE TABLE AdminStaff
 --     PRIMARY KEY (Username)
 -- );
 
-CREATE TABLE Bookings
+CREATE TABLE BookingsTemp
 (
     BookingID                   INT             NOT NULL    AUTO_INCREMENT,
-    /* ItemID  INT NOT NULL, */
-    /* will need to be able to implement multiple item ID's, or else
-        people will only be able to order one thing at a time */
-    /*  Question - will we have an appointment system for all our
-        services? Will they fit the time blocks that have been proposed by
-        Lachy? */
-    -- BookingDateTimeStart        DATETIME        NOT NULL,
-    -- BookingDateTimeEnd          DATETIME        NOT NULL,
     BookingRegisteredFullName   VARCHAR(50)     NOT NULL,
     BookingRegisteredPhone      INT             NOT NULL,
     BookingRegisteredEmail      VARCHAR(100)    NOT NULL,
-    BookingDate                 DATE            NOT NULL,
-    BookingDateTimeStart        VARCHAR(50)     NOT NULL
+    BookingDate                 DATETIME        NOT NULL,
+    BookingDateTimeStart        VARCHAR(50)     NOT NULL,
     /* BookingTime                 VARCHAR(50)     NOT NULL, */
     /* BookingServiceLength        INT             NULL, */
     BookingPrice                DECIMAL(15,2)   NOT NULL,
-    PRIMARY KEY (BookingID),
-    FOREIGN KEY (ServicePricingID)
+    PRIMARY KEY (BookingID)
+    -- FOREIGN KEY (ServicesPricingID) REFERENCES ServicesPricing(ServicePricingID)
     /* FOREIGN KEY (ItemID) REFERENCES Items(ItemID) */
 );
 

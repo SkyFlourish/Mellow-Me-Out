@@ -33,4 +33,11 @@ $maxDate = $maxDate->format('Y-m-d');
 // echo "</br>";
 // echo "maximum date";
 // var_dump($maxDate);
+
+  
 echo "<input type='date' class='form-control' name='booking-date' id='booking-date' min='".$minDate."' max='".$maxDate."'></input>";
+?>
+<html>
+  <div id="result"></div>
+  </html>
+

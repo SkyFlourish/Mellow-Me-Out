@@ -51,40 +51,31 @@
             <h1 class="text-center">Book Now<br>
                 <small class="text-muted">Making a online booking is incredibly easy as you only have to fill a few details.  </small>
                 </h1>
-<<<<<<< HEAD
         <hr>
     </div>
-    </div>
+</div>
     <div class="row">
      <div class="col-md-2 text-center" id="">
            <i class="far fa-eye icon-book"></i>
     </div>
-        <div class="col-md-10" id="">
-            <h2 class="text-left">Why book online?<br>
-                <small class="text-muted">You will be able to see what dates are booked out and be able to see the list of services available. For contact details, <a href="contact-us.php">click here</a>. </small>
-                </h2>
+     <div class="col-md-10" id="">
+         <h2 class="text-left">Why book online?<br>
+             <small class="text-muted">You will be able to see what dates are booked out and be able to see the list of services available. For contact details, <a href="contact-us.php">click here</a>. </small>
+          </h2>
     </div>
-    </div>
-=======
-        </div>
->>>>>>> b22a131b3b2c7612d5cfe602a2014fbb24ed1f69
 </div>
 
 
 </article>
-<<<<<<< HEAD
-
 
 <article id="booking-content">
 <div class="container " id="">
-=======
-    
-    
+
+
 <article id="booking-styleOuter">
 <div class="container shadow-sm" id="booking-styleInner">
->>>>>>> b22a131b3b2c7612d5cfe602a2014fbb24ed1f69
         <!-- BOOKING FORM CODE -->
-    
+
         <div class="col-md-12" id="">
             <form action="book-now.php" method="post">
             <h4>Booking Form</h4>
@@ -118,39 +109,24 @@
                 <label for="service">Choose your service: </label>
                 <br>
                 <select id="service" name="service">
-                <!-- <select required name="cars" id="service"> -->
                     <option value="" disabled selected hidden>Please choose...</option>
-                    <!-- <option value="volvo">Test 1</option>
-                    <option value="saab">Test 2</option>
-                    <option value="fiat">Test 3</option>
-                    <option value="audi">Audi</option> -->
                     <?php require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-services-selection.inc.php'); ?>
-<<<<<<< HEAD
-
-=======
->>>>>>> b22a131b3b2c7612d5cfe602a2014fbb24ed1f69
                 </select>
             </div>
-			
-			
-            <!-- <div> -->
+
             <div class="form-group" >
-<<<<<<< HEAD
                 <div class="inputWithIcon">
                     <label for="email">Enter your email address: </label>
                     <input type="text" class="form-control" id="email" maxlength="42" placeholder="Enter email here" name="email">
                     <i class="far fa-envelope"></i>
                 </div>
-=======
-                <label for="email">Confirm your email address: </label>
+                <label for="email">Enter your email address: </label>
                 <input type="text" class="form-control" id="email" maxlength="42" placeholder="Enter email here" name="email">
->>>>>>> b22a131b3b2c7612d5cfe602a2014fbb24ed1f69
             </div>
             <div class="form-group" >
                 <label for="confirm-email">Confirm your email address: </label>
                 <input type="text" class="form-control" id="confirm-email" maxlength="42" placeholder="Enter email here" name="confirm-email">
             </div>
-            <!-- </div> -->
             <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>
         </form>
         <div class="Error message">
@@ -161,12 +137,8 @@
         bookingProcessing();
         ?>
         </div>
-<<<<<<< HEAD
     </div>
     </div>
-=======
-        </div>
->>>>>>> b22a131b3b2c7612d5cfe602a2014fbb24ed1f69
 </div>
 </article>
 

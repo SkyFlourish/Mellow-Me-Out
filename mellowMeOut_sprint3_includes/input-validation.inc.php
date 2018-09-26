@@ -57,18 +57,18 @@ function validateEmailAddressInputFormat($input) {
 
 function validateDateInput($input) {
     // Check if input date falls between our date range
-    $inputDate = $input;
+    $inputDate = DateTime::createFromFormat('Y-m-d', $input);
     $currentDate1 = new DateTime;
     $currentDate2 = new DateTime;
     $minDate = $currentDate1->modify('+1 day');
     $maxDate = $currentDate2->modify('+1 year');
 
-    if ($inputDate >= $minDate && $inputDate <= $maxDate) {
-        return true;
-    }
-    else {
+    // if ($inputDate >= $minDate && $inputDate <= $maxDate) {
+        // return true;
+    // }
+    // else {
         return false;
-    }
+    // }
 }
 
 function validateServiceSelection($input) {

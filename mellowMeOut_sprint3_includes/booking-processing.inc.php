@@ -28,6 +28,7 @@
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php');
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-validation.inc.php');
 require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/input-cleanup.inc.php');
+require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-services-retrieval.inc.php');
 
 function bookingProcessing() {
 
@@ -94,14 +95,17 @@ if (isset($_POST["submit"])) {
         $phoneMissing = true;
         array_push($errorMsgArray, "Please enter your phone number");
     }
-    if (!empty($_POST["select-booking"])) {
-        $selectBooking = mysqli_real_escape_string($conn, $_POST["select-booking"]);
+    if (!empty($_POST["booking-date"])) {
+        $selectBooking = mysqli_real_escape_string($conn, $_POST["booking-date"]);
+        // if (validateInputNotNull($selectBooking) == true && validateDateInput($selectBooking) == true) {
         if (validateInputNotNull($selectBooking) == true) {
-            // $selectBooking = stripTagsFromInput($selectBooking);
-            // Need to check date later
-            $selectBookingValid = true;
-            $selectBookingMissing = false;
-            array_push($debugMsgArray, "Select booking found valid");
+            // if (validateDateInput($selectBooking) == true) {
+                $selectBooking = stripTagsFromInput($selectBooking);
+                // Need to check date later
+                $selectBookingValid = true;
+                $selectBookingMissing = false;
+                array_push($debugMsgArray, "Select booking found valid");
+            // }
         }
     }
     else {
@@ -214,24 +218,24 @@ if (isset($_POST["submit"])) {
         if ($email == $confirmEmail) {
             $formComplete = true;
             array_push($debugMsgArray, "Form apparently complete");
-            // echo "<p>";
-            // foreach ($errorMsgArray as $errorMsg) {
-            //     echo $errorMsg;
-            //     echo "</br>";
-            // }
-            // echo "</p>";
-            // echo "<p>";
-            // foreach ($debugMsgArray as $debugMsg) {
-            //     // code...
-            //     echo $debugMsg;
-            //     echo "</br>";
-            // }
-            // echo "</p>";
+            echo "<p>";
+            foreach ($errorMsgArray as $errorMsg) {
+                echo $errorMsg;
+                echo "</br>";
+            }
+            echo "</p>";
+            echo "<p>";
+            foreach ($debugMsgArray as $debugMsg) {
+                // code...
+                echo $debugMsg;
+                echo "</br>";
+            }
+            echo "</p>";
 
             // Use service ID to determine service length if found
-            global $serviceArray;
+            $serviceArray;
             $i = $service - 1;
-            $serviceTime = $serviceArray[$i]['servicetime'];
+            $serviceTime = $serviceArray[$i]['ServiceTime'];
 
             // Insert booking data into the database
             // Time start and time end are both the same value for now,
@@ -273,26 +277,32 @@ if (isset($_POST["submit"])) {
     }
 }
 
-// echo "debug msg array <p>";
-// var_dump($debugMsgArray);
-// echo "</p>";
-// unset($debugMsgArray);
-// echo "error msg array <p>";
-// var_dump($errorMsgArray);
-// echo "</p>";
-// unset($errorMsgArray);
-// echo "POST array <p>";
-// var_dump($_POST);
-// echo "</p>";
-// echo "Email <p>";
-// var_dump($email);
-// echo "</p>";
-// echo "Confirm Email <p>";
-// var_dump($confirmEmail);
-// echo "</p>";
-// echo "Service Time <p>";
-// var_dump($serviceTime);
-// echo "</p>";
+echo "debug msg array <p>";
+var_dump($debugMsgArray);
+echo "</p>";
+unset($debugMsgArray);
+echo "error msg array <p>";
+var_dump($errorMsgArray);
+echo "</p>";
+unset($errorMsgArray);
+echo "POST array <p>";
+var_dump($_POST);
+echo "</p>";
+echo "Email <p>";
+var_dump($email);
+echo "</p>";
+echo "Confirm Email <p>";
+var_dump($confirmEmail);
+echo "</p>";
+echo "Service <p>";
+var_dump($service);
+echo "</p>";
+echo "service time <p>";
+var_dump($serviceTime);
+echo "</p>";
+echo "service array <p>";
+var_dump($serviceArray);
+echo "</p>";
 
 unset($errorMsgArray);
 unset($debugMsgArray);

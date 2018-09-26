@@ -49,6 +49,7 @@ DROP TABLE BLOGCONTENT;
 DROP TABLE STAFF;
 DROP TABLE BOOKINGS;
 DROP TABLE USERS;
+DROP TABLE SERVICESPRICING;
 DROP TABLE SERVICES;
 DROP TABLE FAQ;
 
@@ -74,7 +75,7 @@ CREATE TABLE Services (
 CREATE TABLE ServicesPricing (
     ServicePricingID            INT             NOT NULL     AUTO_INCREMENT,
     ServiceID                   INT             NOT NULL,
-    ServiceTime                 INT,
+    ServiceTime                 INT             NULL,
     ServicePrice                DECIMAL(15,2)   NOT NULL,
     PRIMARY KEY (ServicePricingID),
     FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID)
@@ -180,6 +181,29 @@ CREATE TABLE AdminStaff
 --     PRIMARY KEY (Username)
 -- );
 
+CREATE TABLE Bookings
+(
+    BookingID                   INT             NOT NULL    AUTO_INCREMENT,
+    /* ItemID  INT NOT NULL, */
+    /* will need to be able to implement multiple item ID's, or else
+        people will only be able to order one thing at a time */
+    /*  Question - will we have an appointment system for all our
+        services? Will they fit the time blocks that have been proposed by
+        Lachy? */
+    -- BookingDateTimeStart        DATETIME        NOT NULL,
+    -- BookingDateTimeEnd          DATETIME        NOT NULL,
+    BookingRegisteredFullName   VARCHAR(50)     NOT NULL,
+    BookingRegisteredPhone      INT             NOT NULL,
+    BookingRegisteredEmail      VARCHAR(100)    NOT NULL,
+    BookingDate                 DATE            NOT NULL,
+    BookingDateTimeStart        VARCHAR(50)     NOT NULL
+    /* BookingTime                 VARCHAR(50)     NOT NULL, */
+    /* BookingServiceLength        INT             NULL, */
+    BookingPrice                DECIMAL(15,2)   NOT NULL,
+    PRIMARY KEY (BookingID),
+    FOREIGN KEY (ServicePricingID)
+    /* FOREIGN KEY (ItemID) REFERENCES Items(ItemID) */
+);
 
 /* Need a one to many relation table in addition */
 CREATE TABLE Bookings

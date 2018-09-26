@@ -14,27 +14,27 @@ function validateInputNotNull($input) {
     }
   }
 
-// function validateUserName($input) {
-//     if(preg_match('/^[a-zA-Z0-9]{5,}$/', $input) && strlen($input)>3 && strlen($input)<20)
-//     {
-// 	     return true;
-// 	}
-// 	else
-// 	{
-// 		return false;
-// 	}
-// }
+function validateUserName($input) {
+    if(preg_match('/^[a-zA-Z0-9]{5,}$/', $input) && strlen($input)>3 && strlen($input)<20)
+    {
+	     return true;
+	}
+	else
+	{
+		return false;
+	}
+}
 //
-// function validatePassword($input) {
-//     if(preg_match('/^[a-zA-Z0-9]{5,}$/', $input) && strlen($input)>3 && strlen($input)<20)
-//     {
-// 	     return true;
-// 	}
-// 	else
-// 	{
-// 		return false;
-// 	}
-// }
+function validatePassword($input) {
+    if(preg_match('/^[a-zA-Z0-9]{5,}$/', $input) && strlen($input)>3 && strlen($input)<20)
+    {
+	     return true;
+	}
+	else
+	{
+		return false;
+	}
+}
 
 function validateEmailAddressInputFormat($input) {
     // Called after determining that the input is not empty.

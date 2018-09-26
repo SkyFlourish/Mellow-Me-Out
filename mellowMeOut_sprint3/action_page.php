@@ -7,17 +7,20 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/staff_acco
 
 // todo - Implement password encryption and correct password checking
 
-$username=$_POST['username'];
-$pwd=$_POST['pwd'];
+$username=mysqli_real_escape_string($conn, $_POST['username']);
+$pwd=mysqli_real_escape_string($conn, $_POST['pwd']);
 $error_message="";
 
-if(validateUserName($username)==false)
+// if(validateUserName($username)==false)
+if(validateInputNotNull($username) == false)
 {
 	$error_message.='Username must be alphabets and numbers only, between 3-20 characters';
+	// $error_message.='Username required';
 }
-else if(validateUserName($pwd)==false)
+else if(validateInputNotNull($pwd) == false)
 {
 	$error_message.='Password must be alphabets and numbers only, between 3-20 characters';
+	// $error_message.='Password required';
 }
 else
 {

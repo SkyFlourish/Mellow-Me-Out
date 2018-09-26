@@ -15,8 +15,8 @@ $currentDateUnmodified = new DateTime;
 $firstDayOfNextMonth = $currentDate->modify('first day of next month');
 // $endDate = date('d/m/Y', strtotime('+1 Year'));
 $interval = DateInterval::createFromDateString('1 months');
+// 11 recurrences because of behaviour explained above
 $recurrences = 11;
-// $recurrences = 12;
 
 // $dateRange = new DatePeriod($currentDate, $interval, $recurrences);
 $dateRange = new DatePeriod($firstDayOfNextMonth, $interval, $recurrences);
@@ -27,6 +27,9 @@ $dateMonthInt = (int)$currentDateUnmodified->format("n");
 $dateYearInt = (int)$currentDateUnmodified->format("y");
 $dateDayOfWeek = $currentDateUnmodified->format("l");
 $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $dateMonthInt, $dateYearInt);
+
+// Initialising arrays for later use
+$dateSelectBoxOptions = array('' => , );
 
 echo "<p>";
 echo "Date:";

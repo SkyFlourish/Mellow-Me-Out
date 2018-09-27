@@ -272,9 +272,12 @@ if (isset($_POST["submit"])) {
             // $sql = "INSERT INTO mellowmeout.Bookings (BookingDateTimeStart,BookingDateTimeEnd,BookingFullName,BookingRegisteredEmail,BookingRegisteredPhone) VALUES ('$selectBooking','$selectBooking','$fullName','$email','$phone');";
 
             // $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$serviceTime')";
-            $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice,BookingTime) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$servicePrice','$serviceTime')";
+            $user_booking = $selectBooking.'-'.$bookingTime;
+            $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice,BookingTime,user_booking) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$servicePrice','$serviceTime','$user_booking')";
+            $sql2 = "INSERT INTO mellowmeout.booking (user_booking) VALUES ('$user_booking')";
+            // $selectBookingDate = DateTime::createFromFormat('Y-m-d', $selectBooking);
             // array_push($errorMsgArray, );
-	        if(mysqli_query($conn, $sql)) {
+	        if(mysqli_query($conn, $sql) && mysqli_query($conn, $sql2)) {
                 // A redirect aught to happen here
                 echo "<p>";
                 // echo "Records inserted successfully";
@@ -339,6 +342,16 @@ if (isset($_POST["submit"])) {
 // echo "</p>";
 // echo "service array <p>";
 // var_dump($serviceArray);
+// echo "</p>";
+// echo "booking time <p>";
+// var_dump($bookingTime);
+// echo "</p>";
+// echo "Booking date <p>";
+// var_dump($selectBooking);
+// echo "</p>";
+// echo "Modified booking date <p>";
+// // var_dump($selectBookingDate);
+// var_dump($user_booking);
 // echo "</p>";
 
 unset($errorMsgArray);

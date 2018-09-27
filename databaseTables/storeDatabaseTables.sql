@@ -189,7 +189,7 @@ CREATE TABLE BookingsTemp
     BookingRegisteredEmail      VARCHAR(100)    NOT NULL,
     BookingDate                 DATETIME        NOT NULL,
     BookingDateTimeStart        VARCHAR(50)     NOT NULL,
-    /* BookingTime                 VARCHAR(50)     NOT NULL, */
+    BookingTime                 INT             NOT NULL,
     /* BookingServiceLength        INT             NULL, */
     BookingPrice                DECIMAL(15,2)   NOT NULL,
     PRIMARY KEY (BookingID)

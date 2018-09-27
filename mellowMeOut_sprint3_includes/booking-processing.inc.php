@@ -219,13 +219,13 @@ if (isset($_POST["submit"])) {
                 echo "</br>";
             }
             echo "</p>";
-            echo "<p>";
-            foreach ($debugMsgArray as $debugMsg) {
-                // code...
-                echo $debugMsg;
-                echo "</br>";
-            }
-            echo "</p>";
+            // echo "<p>";
+            // foreach ($debugMsgArray as $debugMsg) {
+            //     // code...
+            //     echo $debugMsg;
+            //     echo "</br>";
+            // }
+            // echo "</p>";
     }
     // if ($fullNameValid == true && $phoneValid == true &&
     // $selectBookingValid == true && $serviceValid == true &&
@@ -243,24 +243,26 @@ if (isset($_POST["submit"])) {
                 echo "</br>";
             }
             echo "</p>";
-            echo "<p>";
-            foreach ($debugMsgArray as $debugMsg) {
-                // code...
-                echo $debugMsg;
-                echo "</br>";
-            }
-            echo "</p>";
+            // echo "<p>";
+            // foreach ($debugMsgArray as $debugMsg) {
+            //     // code...
+            //     echo $debugMsg;
+            //     echo "</br>";
+            // }
+            // echo "</p>";
 
             // Use service ID to determine service length if found
             // $serviceArray;
             // $i = $service - 1;
             // $serviceTime = $serviceArray[$i]['ServiceTime'];
 
-            $sql = "SELECT ServicePricingID, ServicePrice FROM mellowmeout.ServicesPricing WHERE ServicePricingID = '$service'";
+            $sql = "SELECT ServicePricingID, ServicePrice, ServiceTime FROM mellowmeout.ServicesPricing WHERE ServicePricingID = '$service'";
             if ($result = mysqli_query($conn, $sql)) {
                 while ($row = mysqli_fetch_assoc($result)){
                     $servicePricingID = $row['ServicePricingID'];
                     $servicePrice = $row['ServicePrice'];
+                    $serviceTime = $row['ServiceTime'];
+                    $serviceTime = (int)$serviceTime;
                 }
             }
 
@@ -269,16 +271,23 @@ if (isset($_POST["submit"])) {
             // this will need to be rectified later
             // $sql = "INSERT INTO mellowmeout.Bookings (BookingDateTimeStart,BookingDateTimeEnd,BookingFullName,BookingRegisteredEmail,BookingRegisteredPhone) VALUES ('$selectBooking','$selectBooking','$fullName','$email','$phone');";
 
-            $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$serviceTime')";
+            // $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$serviceTime')";
+            $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice,BookingTime) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$servicePrice','$serviceTime')";
+            // array_push($errorMsgArray, );
 	        if(mysqli_query($conn, $sql)) {
                 // A redirect aught to happen here
                 echo "<p>";
-                echo "Records inserted successfully";
+                // echo "Records inserted successfully";
+                echo "Booking made successfully! Thank you!";
                 echo "</p>";
             }
             else {
                 // echo "Records could not be inserted.</br>SQL Statement - ". $sql. "</br>SQL Error - ". mysqli_error($conn). "";
                 array_push($errorMsgArray, "Booking could not be processed, please refresh and try again");
+                foreach ($errorMsgArray as $errorMsg) {
+                    echo $errorMsg;
+                    echo "</br>";
+                }
             }
             mysqli_close($conn);
         }
@@ -294,43 +303,43 @@ if (isset($_POST["submit"])) {
                 echo "</br>";
             }
             echo "</p>";
-            echo "<p>";
-            foreach ($debugMsgArray as $debugMsg) {
-                // code...
-                echo $debugMsg;
-                echo "</br>";
-            }
-            echo "</p>";
+            // echo "<p>";
+            // foreach ($debugMsgArray as $debugMsg) {
+            //     // code...
+            //     echo $debugMsg;
+            //     echo "</br>";
+            // }
+            // echo "</p>";
         }
     }
 }
 
-echo "debug msg array <p>";
-var_dump($debugMsgArray);
-echo "</p>";
-unset($debugMsgArray);
-echo "error msg array <p>";
-var_dump($errorMsgArray);
-echo "</p>";
-unset($errorMsgArray);
-echo "POST array <p>";
-var_dump($_POST);
-echo "</p>";
-echo "Email <p>";
-var_dump($email);
-echo "</p>";
-echo "Confirm Email <p>";
-var_dump($confirmEmail);
-echo "</p>";
-echo "Service <p>";
-var_dump($service);
-echo "</p>";
-echo "service time <p>";
-var_dump($serviceTime);
-echo "</p>";
-echo "service array <p>";
-var_dump($serviceArray);
-echo "</p>";
+// echo "debug msg array <p>";
+// var_dump($debugMsgArray);
+// echo "</p>";
+// unset($debugMsgArray);
+// echo "error msg array <p>";
+// var_dump($errorMsgArray);
+// echo "</p>";
+// unset($errorMsgArray);
+// echo "POST array <p>";
+// var_dump($_POST);
+// echo "</p>";
+// echo "Email <p>";
+// var_dump($email);
+// echo "</p>";
+// echo "Confirm Email <p>";
+// var_dump($confirmEmail);
+// echo "</p>";
+// echo "Service <p>";
+// var_dump($service);
+// echo "</p>";
+// echo "service time <p>";
+// var_dump($serviceTime);
+// echo "</p>";
+// echo "service array <p>";
+// var_dump($serviceArray);
+// echo "</p>";
 
 unset($errorMsgArray);
 unset($debugMsgArray);

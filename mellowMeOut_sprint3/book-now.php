@@ -80,19 +80,27 @@
             <form id="book-now" name="book-now" action="book-now.php" method="post">
             <h4>Booking Form</h4>
             <div class="form-group" >
+            <div class="inputWithIcon">
                 <label for="fullName">Full Name: </label>
-                <input type="text" class="form-control" id="fullName" maxlength="24" placeholder="Enter full name here" name="fullName" form="book-now">
+                <input type="text" class="form-control input-icon" id="fullName" maxlength="24" placeholder="Enter full name here" name="fullName" form="book-now">
+                <i class="far fa-user"></i>
+            </div>
             </div>
             <div class="form-group">
+            <div class="inputWithIcon">
                 <label for="phone">Phone: </label>
-                <input type="text" class="form-control" id="phone" maxlength="24" placeholder="Enter phone number" name="phone" form="book-now">
+                <input type="text" class="form-control input-icon" id="phone" maxlength="24" placeholder="Enter phone number" name="phone" form="book-now">
+                <i class="fas fa-mobile-alt"></i>
             </div>
             <div class="form-group">
 			<!-- <form method='post' action='booking-time-show.inc.php'> -->
+            <div class="inputWithIcon">
                 <label for="select-booking">Please select date of booking: </label>
                 <!-- <input type="date" class="form-control" id="select-booking" name="select-booking" min="2018-09-09" max="2019-09-09"> -->
                 <?php require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-time-selection.inc.php'); ?>
             <!-- </form> -->
+                <i class="far fa-calendar-alt"></i>
+            </div>
 			</div>
 			<div id="result"></div>
 			<script>
@@ -106,23 +114,29 @@
 			})
 			</script>
             <div class="form-group">
+            <div class="inputWithIcon">
                 <label for="service">Choose your service: </label>
                 <br>
                 <select id="service" name="service">
                     <option value="" disabled selected hidden>Please choose...</option>
                     <?php require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-services-selection.inc.php'); ?>
                 </select>
+                <i class="fas fa-concierge-bell"></i>
+            </div>
             </div>
             <div class="form-group" >
-                <div class="inputWithIcon">
-                    <label for="email">Enter your email address: </label>
-                    <input type="text" class="form-control" id="email" maxlength="42" placeholder="Enter email here" name="email">
-                    <i class="far fa-envelope"></i>
-                </div>
+            <div class="inputWithIcon">
+                <label for="email">Enter your email address: </label>
+                <input type="text" class="form-control" id="email" maxlength="42" placeholder="Enter email here" name="email">
+                <i class="far fa-envelope"></i>
+            </div>
             </div>
             <div class="form-group" >
+            <div class="inputWithIcon">
                 <label for="confirm-email">Confirm your email address: </label>
                 <input type="text" class="form-control" id="confirm-email" maxlength="42" placeholder="Enter email here" name="confirm-email">
+                <i class="far fa-envelope"></i>
+            </div>
             </div>
             <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>
         </form>

@@ -92,6 +92,7 @@
                 <input type="text" class="form-control input-icon" id="phone" maxlength="24" placeholder="Enter phone number" name="phone" form="book-now">
                 <i class="fas fa-mobile-alt"></i>
             </div>
+            </div>
             <div class="form-group">
 			<!-- <form method='post' action='booking-time-show.inc.php'> -->
             <div class="inputWithIcon">
@@ -138,8 +139,11 @@
                 <i class="far fa-envelope"></i>
             </div>
             </div>
+            <div class="form-group" >
             <button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>
+            </div>
         </form>
+        <div class="form-group" >
         <div class="Error message">
         <?php
         require($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/booking-processing.inc.php');
@@ -147,6 +151,7 @@
         // require($_SERVER['DOCUMENT_ROOT'].'/../mellowMeOut_Sprint3_includes/booking-processing.inc.php');
         bookingProcessing();
         ?>
+        </div>
         </div>
     </div>
     </div>

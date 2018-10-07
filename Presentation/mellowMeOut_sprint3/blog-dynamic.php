@@ -8,8 +8,8 @@
         <!--Keywords for search-->
         <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas, Brow Tint, Aromatherapy Massage, Lymphatic massage, Indian head massage, Body Mud wrap, Body exfoliate, Eyelash Tint, Combat Stress, Revitalise ">
         <!--Description of page-->
-        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief."> 
-    
+        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief.">
+
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mobile view-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -31,18 +31,18 @@
             });
         </script>
     </head>
-<!-- Style Sheet for Nav and Footer-->  
+<!-- Style Sheet for Nav and Footer-->
 <style>
     <?php include 'nav_footer.css';?>
 </style>
-    
- <!-- ===CODE START=== -->    
+
+ <!-- ===CODE START=== -->
 <body>
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
 
-   
+
    <!-- Blog Banner -->
 
 <div class="row" id="blog-banner">
@@ -59,7 +59,7 @@
     </div>
     <div class="col-md-3"></div>
 </div>
- 
+
 <article>
     <div class="container">
     <div class="row">
@@ -70,12 +70,12 @@
                  <!-- Catergories section-->
                 <h6>Catergories</h6>
 				<ul class="list-unstyled">
-				<?php 
-				include($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php'); 
+				<?php
+				include($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php');
 				$result = mysqli_query($conn, "SELECT * FROM blogcategorys");
 				if (mysqli_num_rows($result) > 0) {
 				$loc = 1;
-					while($row = mysqli_fetch_assoc($result)) 
+					while($row = mysqli_fetch_assoc($result))
 						{
 							echo'<li><a href="blog-dynamic.php?blogid='.$row["BlogCategoryID"].'">'.$row["BlogCategory"].'</a></li>';
 						}
@@ -84,16 +84,16 @@
                 </div>
             </div>
         </div>
-		
+
          <!-- CONTAINS MAIN CONTENT FOR BLOG POSTS -->
 		 <div class="col-md-10 text-left">
-		<?php 
+		<?php
 		if (isset($_GET["blogid"]))
 		{
 			$id = mysqli_real_escape_string($conn, $_GET["blogid"]);
 			$result = mysqli_query($conn, "SELECT * FROM blogcontent WHERE BlogCategory = $id");
 				if (mysqli_num_rows($result) > 0) {
-					while($row = mysqli_fetch_assoc($result)) 
+					while($row = mysqli_fetch_assoc($result))
 						{
 				echo'<article>
                 <div class="card card-style" style="margin-top:30px; margin-bottom:30px;">
@@ -127,11 +127,11 @@
 						}
 				}
 		}
-		else 
+		else
 		{
 			$result = mysqli_query($conn, "SELECT * FROM blogcontent");
 				if (mysqli_num_rows($result) > 0) {
-					while($row = mysqli_fetch_assoc($result)) 
+					while($row = mysqli_fetch_assoc($result))
 						{
 				echo'<article>
                 <div class="card card-style" style="margin-top:30px; margin-bottom:30px;">
@@ -166,16 +166,15 @@
 				}
 		}
 		?>
-        
 
+
+</div>
+</div>
+</div>
+</article>
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-</div>
-</div>
-</div> 
-</article>
 
 </body>
-    
-</html>
 
+</html>

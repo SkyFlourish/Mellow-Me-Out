@@ -1,0 +1,66 @@
+.row{
+    padding-left:30px;
+    padding-right:30px;
+}
+.container-fluid {
+    padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto;
+    overflow:hidden;
+ }
+.icon-book{
+    font-size: 72px;
+}
+#booking-styleInner .form-control{
+    padding-left:40px;
+    
+}
+
+.inputWithIcon {
+    position:relative;
+    
+}
+.inputWithIcon i{
+    position:absolute;
+    bottom:4px;
+    left:0;
+    padding:4px 12px;
+    font-size: 20px;
+    color:grey;
+}
+
+
+/*CONTACT FORM */
+#booking-styleOuter{
+    
+}
+#booking-styleInner{
+    background-color:#ecf0f1;
+    border-radius: 4px;
+    padding:20px;
+    
+}
+
+#booking-introStyle{
+    background-color:#ecf0f1;
+    padding:30px;
+}
+#booking-content{
+    background-image:url(img/flowers2.jpg);
+    background-size: cover;
+    padding:2% 0;
+}
+#booking-jumbo-style{
+    padding: 15px 15px;
+    margin:50px;
+}
+
+/*FORM INPUT */
+#service{
+    padding:5px 60px;
+    border-radius: 5px;
+}
+label{
+    font-weight: 600;
+}

@@ -1,0 +1,113 @@
+/*carousel */
+#carousel-bg{
+    background-color:#2c3e50;
+}
+/*carousel container size */
+.carousel-item{
+    height: 600px; 
+} 
+/*carousel image height cap */
+.carousel-item img{
+    min-height: 600px;
+    
+} 
+/*carousel image dark overlay */
+.carousel-item:after {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.4);
+}
+/*Chnaging position of content */
+.carousel-caption{
+    transform: translateY(-160px);
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-delay: 0.15s;
+}
+.btn-carousel{
+    background-color:transparent; 
+    color:#ecf0f1;
+    border: 1px solid #ecf0f1;
+    transition:0.25s;
+}
+.btn-carousel:hover{
+    background-color:#212529; 
+    color:#ecf0f1;
+    border: 1px solid transparent;
+    transition:0.25s;
+}
+
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+   
+}
+
+.carousel-indicators li:hover {
+    cursor:pointer;
+    color:#ecf0f1;
+    
+}
+
+/*====SERVICES =========*/
+#services{
+    
+    padding:5% 0;
+     /* The image used */
+    background-image: url("img/dark_flower_small.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+}
+#services-header{
+    padding:1% 0;
+    background-color: #ecf0f1;
+}
+
+#services-title{
+    background-color:#ecf0f1;
+    padding:2% 0;
+    
+}
+
+.img-services{
+    max-height:230px;
+    background-color:grey;
+    width:100%;
+}
+
+
+/*====ABOUT US */
+#about{
+    background-color:#2c3e50;
+    color:#ecf0f1;
+    padding:5% 0;
+}
+
+/*====CONTACT US */
+#contact-us{
+    padding:3% 0;
+     /* The image used */
+    background-image: none;
+
+
+}
+/*ANIMATION*/
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

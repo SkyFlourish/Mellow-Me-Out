@@ -1,0 +1,27 @@
+
+/*Products section Styling */
+.gallery-padding{
+    padding:3% 0;
+    background-color: #ecf0f1;
+}
+
+.img-style{ 
+    height:280px;
+    
+}
+.card-style{
+    margin-bottom:30px;
+    
+}
+
+/*Special Offers Styling */
+#specialOffers-styling{
+    background-color:#34495e;
+    color: #ecf0f1;
+    padding:5% 0;
+}
+.icon-styles{
+    font-size: 80px;
+    padding:5% 0;
+}
+

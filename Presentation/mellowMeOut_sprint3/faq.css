@@ -1,0 +1,27 @@
+
+/*FAQ STYLING */
+.faq-padding{
+    padding:30px;
+    background-color: #ecf0f1;
+}
+/*FAQ ACCORDION */
+.btn-faq{
+    background-color:#bdc3c7;
+    width:100%;
+    text-align:left;
+    margin-bottom: 10px;
+    transition:0.2s;
+    overflow:hidden;
+   
+}
+
+.btn-faq:hover{
+    background-color:#95a5a6;
+    transition:0.2s;
+
+}
+
+.faqBox{
+    padding:10px;
+    display:none;
+}

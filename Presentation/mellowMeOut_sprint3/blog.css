@@ -1,0 +1,21 @@
+
+
+/*Banner Styling */
+#blog-banner{
+    background-image: url(img/bathBrush.jpg);
+    background-size: 100%;
+    background-position: center;
+    padding:60px;
+}
+#jumbo-style{
+    border-radius: 10px;
+    padding:10px;
+}
+/*Blog STYLING */
+.blog-padding{
+    padding:30px;
+    background-color: #ecf0f1;
+}
+.card-style{
+    width:100%;
+}

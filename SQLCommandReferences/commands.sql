@@ -156,6 +156,39 @@ SELECT s.ServiceName,
     ON s.ServiceID = sp.ServiceID
 WHERE s.ServiceID = 1;
 
+SELECT EXISTS (
+SELECT s.ServiceName,
+  sp.ServicePrice,
+  sp.ServiceTime
+ FROM Services AS s
+ INNER JOIN ServicesPricing AS sp
+    ON (s.ServiceID = sp.ServiceID) AND (s.ServiceName = 'Aromatherapy Massage')
+WHERE s.ServiceID = 1
+);
+
+SELECT EXISTS (
+SELECT s.ServiceName,
+  sp.ServicePrice,
+  sp.ServiceTime
+ FROM Services AS s
+ INNER JOIN ServicesPricing AS sp
+    ON (s.ServiceName = 'Aromatherapy Massage')
+);
+
+SELECT EXISTS
+    (SELECT ServiceID,ServiceName,ServicePrice
+     FROM mellowmeout.Services
+     WHERE ServiceID='$serviceIDQ'
+     AND ServiceName='$serviceNameQ'
+     AND ServicePrice='$servicePriceQ')";
+
+SELECT EXISTS
+    (SELECT ServiceID,ServiceName,ServicePrice
+     FROM mellowmeout.Services
+     WHERE ServiceID=$serviceIDQ
+     AND ServiceName=$serviceNameQ
+     AND ServicePrice=$servicePriceQ);
+
 /* Query for grabbing tags for content */
 /* As above */
 SELECT bt.BlogTag

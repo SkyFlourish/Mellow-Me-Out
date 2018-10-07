@@ -192,6 +192,7 @@ CREATE TABLE BookingsTemp
     BookingTime                 INT             NOT NULL,
     /* BookingServiceLength        INT             NULL, */
     BookingPrice                DECIMAL(15,2)   NOT NULL,
+    user_booking                VARCHAR(256)    NOT NULL,
     PRIMARY KEY (BookingID)
     -- FOREIGN KEY (ServicesPricingID) REFERENCES ServicesPricing(ServicePricingID)
     /* FOREIGN KEY (ItemID) REFERENCES Items(ItemID) */

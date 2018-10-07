@@ -8,8 +8,8 @@
         <!--Keywords for search-->
         <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas, Brow Tint, Aromatherapy Massage, Lymphatic massage, Indian head massage, Body Mud wrap, Body exfoliate, Eyelash Tint, Combat Stress, Revitalise ">
         <!--Description of page-->
-        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief."> 
-    
+        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief.">
+
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mobile view-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -31,18 +31,18 @@
             });
         </script>
     </head>
-<!-- Style Sheet for Nav and Footer-->  
+<!-- Style Sheet for Nav and Footer-->
 <style>
     <?php include 'nav_footer.css';?>
 </style>
-    
- <!-- ===CODE START=== -->    
+
+ <!-- ===CODE START=== -->
 <body>
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
  <!-- End of Nav Code -->
 
-   
+
    <!-- Blog Banner -->
 
 <div class="row" id="blog-banner">
@@ -59,7 +59,7 @@
     </div>
     <div class="col-md-3"></div>
 </div>
- 
+
 <article>
     <div class="container">
     <div class="row">
@@ -91,17 +91,16 @@
                 <div class="card card-style" style="margin-top:30px; margin-bottom:30px;">
                     <div class="card-body" >
                          <!-- Post title and sub titles -->
-                        <h3 class="card-title">New massage services available!</h3>
-                        <h6 class="card-subtitle mb-2 text-muted">Date: September 16, 2017</h6>
+                        <h3 class="card-title">Vacation and Holiday Timetable</h3>
+                        <h6 class="card-subtitle mb-2 text-muted">Date: October 7, 2017</h6>
                         <h6 class="card-subtitle mb-2 text-muted">Catergory: Business</h6>
                          <!-- Post image -->
                         <img class="card-img-top" src="img/candles.jpg" alt="Card image cap" style="max-height:500px; margin-bottom:20px;">
                         <!-- Post Body -->
                         <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a lectus vitae lectus vehicula pharetra et sit amet tortor. Praesent dignissim auctor lacus sed dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris massa, accumsan id orci vel, luctus molestie dolor. Integer gravida, eros non elementum fringilla, ligula lorem sollicitudin libero, convallis sollicitudin magna velit eget nibh. Nunc a varius ante, eget varius dui. Donec molestie turpis id massa gravida, sed tristique sem eleifend. Morbi ac mauris nisi. Curabitur eleifend sit amet magna vel molestie. Etiam consequat velit quis nisi vestibulum, lacinia commodo odio tristique. Quisque vestibulum interdum orci, mollis rhoncus est dictum placerat. Curabitur sed fermentum elit. Donec fringilla, ipsum ut congue pulvinar, turpis massa maximus massa, nec accumsan sapien velit vitae augue. Donec condimentum finibus enim sed efficitur. Aliquam ante nulla, dictum et nisl vel, pellentesque blandit lectus. Nullam at tellus dictum, posuere tellus ut, auctor nulla.
+                        Hi everyone, i will be going on vacation next week as such there will be no bookings from the 15th to the 22nd. Sometime during the next week i will be updating our timetable for the up coming holiday season and will make a seperate blog post when i have done so. Some days will be shorter and others will be closed.
                         </p>
-                        <p class="card-text"> Nunc dignissim dui in ornare tempus. In suscipit mauris malesuada nisl interdum condimentum. Aliquam consequat, metus ut facilisis feugiat, quam ante consequat dui, eget dapibus eros tellus suscipit eros. Quisque ut urna magna. In hac habitasse platea dictumst. Pellentesque vitae est aliquet, sollicitudin lectus vitae, pharetra velit. Nunc facilisis bibendum lacus, et imperdiet quam convallis ut. Ut pellentesque pellentesque cursus. Nunc orci est, pretium in efficitur nec, euismod a risus. Ut ullamcorper, tortor sit amet dignissim viverra, ex augue sollicitudin sapien, quis vehicula purus lacus sed sem. In quis nisl elementum magna condimentum consequat. Vestibulum convallis ex ac placerat malesuada.</p>
-                        
+
                         <div class = "comment-box">
                             <hr>
                             <h4>Comments - 0</h4>
@@ -116,8 +115,8 @@
                                 </div>
                                  <button type="button" class="btn btn-primary">Comment</button>
                             </form>
- 
-                               
+
+
 
                         </div>
                     </div>
@@ -135,23 +134,22 @@
                         <img class="card-img-top" src="img/spa.jpg" alt="Card image cap" style="max-height:500px; margin-bottom:20px;">
                         <!-- Post Body -->
                         <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a lectus vitae lectus vehicula pharetra et sit amet tortor. Praesent dignissim auctor lacus sed dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris massa, accumsan id orci vel, luctus molestie dolor. Integer gravida, eros non elementum fringilla, ligula lorem sollicitudin libero, convallis sollicitudin magna velit eget nibh. Nunc a varius ante, eget varius dui. Donec molestie turpis id massa gravida, sed tristique sem eleifend. Morbi ac mauris nisi. Curabitur eleifend sit amet magna vel molestie. Etiam consequat velit quis nisi vestibulum, lacinia commodo odio tristique. Quisque vestibulum interdum orci, mollis rhoncus est dictum placerat. Curabitur sed fermentum elit. Donec fringilla, ipsum ut congue pulvinar, turpis massa maximus massa, nec accumsan sapien velit vitae augue. Donec condimentum finibus enim sed efficitur. Aliquam ante nulla, dictum et nisl vel, pellentesque blandit lectus. Nullam at tellus dictum, posuere tellus ut, auctor nulla.
+                          Hey everybody, recently we just hired two new masseuses, for our establishment and along with them are some brand new massages. The first being shiatsu massages which focus on improving the energy flow, regaining balance and reducing stress and stress-based health issues. We also have messages for those who are atheltic, our sport massages focus on treating, improve flexibility, enhance performance.
                         </p>
-                        <p class="card-text"> Nunc dignissim dui in ornare tempus. In suscipit mauris malesuada nisl interdum condimentum. Aliquam consequat, metus ut facilisis feugiat, quam ante consequat dui, eget dapibus eros tellus suscipit eros. Quisque ut urna magna. In hac habitasse platea dictumst. Pellentesque vitae est aliquet, sollicitudin lectus vitae, pharetra velit. Nunc facilisis bibendum lacus, et imperdiet quam convallis ut. Ut pellentesque pellentesque cursus. Nunc orci est, pretium in efficitur nec, euismod a risus. Ut ullamcorper, tortor sit amet dignissim viverra, ex augue sollicitudin sapien, quis vehicula purus lacus sed sem. In quis nisl elementum magna condimentum consequat. Vestibulum convallis ex ac placerat malesuada.</p>
+                        <p class="card-text">These massages will  be available at the start of next month, at our standard fee. However they will only run on Tuesdays and Fridays for the Shiatsu and Monday to Wednesday for Sports Massages. </p>
                     </div>
                 </div>
             </article>
         </div>
     </div>
-   </div> 
+   </div>
 </article>
 
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-  
+
 
 </body>
-    
-</html>
 
+</html>

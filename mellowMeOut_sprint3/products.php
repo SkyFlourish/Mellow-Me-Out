@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <!--Icon and Title-->
         <link rel="icon" type="image/png" href="img/favicon.png">
-        <title>Products - MellowMeOut</title>
+        <title>Services - MellowMeOut</title>
         <!--Keywords for search-->
         <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas, Brow Tint, Aromatherapy Massage, Lymphatic massage, Indian head massage, Body Mud wrap, Body exfoliate, Eyelash Tint, Combat Stress, Revitalise ">
         <!--Description of page-->
-        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief."> 
-    
+        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief.">
+
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mobile view-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -28,28 +28,28 @@
         <script>
         $( document ).ready(function() { //run when page loads
             nav_Counter=2;
-            
+
             //animated scrolling
             $('#link-1').click(function(){
                 $("html, body").animate({ scrollTop: $(".sub-header").eq(0).offset().top }, 600);
-                
+
             });
-            
+
             $('#link-2').click(function(){
                 $("html, body").animate({ scrollTop: $(".sub-header").eq(1).offset().top }, 600);
-                
+
             });
-            
+
             $('#link-3').click(function(){
                 $("html, body").animate({ scrollTop: $(".sub-header").eq(2).offset().top }, 600);
-                
+
             });
              $('#link-4').click(function(){
-                $("html, body").animate({ scrollTop: $("#specialOffers-styling").offset().top }, 600); 
-                
+                $("html, body").animate({ scrollTop: $("#specialOffers-styling").offset().top }, 600);
+
             });
-            
-            
+
+
             //Show and Hide sections
             var i;
             var acc = $(".btn-section");
@@ -59,8 +59,8 @@
                 acc[i].addEventListener("click", function(){
                     var index = $(".btn-section").index(this);//get index number on click
                     section.eq(index).stop().slideToggle(250);
-                    
-                    //change change text and icons 
+
+                    //change change text and icons
                     if ($(this).children("span").text() == 'Open') {
                         $(this).children("span").text("Close");
                         $(this).children("i").removeClass("fa-plus").addClass("fa-minus");
@@ -74,23 +74,23 @@
             var eyelashCount = $('#products-section-1 .card').length;
             var massageCount = $('#products-section-2 .card').length;
             var cleansingCount = $('#products-section-3 .card').length;
-            
-            
+
+
             $(document).ready(function() {
                 $('#link-1').siblings('span').html(eyelashCount);
-                $('#link-2').siblings('span').html(massageCount); 
-                $('#link-3').siblings('span').html(cleansingCount); 
+                $('#link-2').siblings('span').html(massageCount);
+                $('#link-3').siblings('span').html(cleansingCount);
             });
-            
+
         });
         </script>
     </head>
-<!-- Style Sheet for Nav and Footer-->  
+<!-- Style Sheet for Nav and Footer-->
 <style>
     <?php include 'nav_footer.css';?>
 </style>
-    
- <!-- ===CODE START=== -->    
+
+ <!-- ===CODE START=== -->
 <body>
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
@@ -99,7 +99,7 @@
 <div class="container">
     <!-- SERVICES CONTENT -->
 
-    <h1>Products<br>
+    <h1>Services<br>
     <small class="text-muted">Mellow Me Out offers many services with a wide variety of massages to eyelash extensions</small>
     </h1>
     <!-- Jump to section -->
@@ -110,14 +110,14 @@
         <li><a href='#' id="link-3">Body Cleansing</a> <span class="badge badge-pill badge-secondary">0</span></li>
         <li><a href='#' id="link-4">Special Offers</a></li>
     </ul>
-    
+
     <!--Section Subheader-->
         <div class="sub-header">
             <h3 class= "text-left">Eyelashes and Eyebrows <button class="btn btn-outline-secondary btn-section" style="float:right;"><i class="fas fa-minus"></i> <span>Close</span></button></h3>
         </div>
         <hr>
      <!--Section Subheader END-->
-    
+
     <div id="products-section-1" class="row products-section">
         <div class="col-md-4">
             <!-- Service cards -->
@@ -189,7 +189,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
     <!--Section Subheader-->
         <div class="sub-header">
@@ -220,11 +220,11 @@
             </div>
         </div>
         <div class="col-md-4">
-    
+
         </div>
-        
+
     </div>
-    </div>  
+    </div>
 </article>
 <!--END OF SERVICES-->
 <!--SPECIAL OFFERS CODE-->
@@ -256,9 +256,8 @@
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-  
+
 
 </body>
-    
-</html>
 
+</html>

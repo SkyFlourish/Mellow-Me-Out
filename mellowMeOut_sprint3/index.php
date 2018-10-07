@@ -180,7 +180,7 @@
     <article id="services-header">
         <div class="container">
            <h1 class="text-center">Our Services
-                <small class="text-muted"><br>Below are our featured services and we offer plenty more at our products page. </small>
+                <small class="text-muted"><br>Below are our featured services and we offer plenty more at our Services page. </small>
             </h1>
             <hr>
         </div>

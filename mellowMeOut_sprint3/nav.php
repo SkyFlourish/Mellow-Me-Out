@@ -19,7 +19,7 @@
       <a class="nav-link" id="nav-book" href="book-now.php">Book Now</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="nav-products" href="products.php">Products</a>
+      <a class="nav-link" id="nav-products" href="products.php">Services</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="nav-gallery" href="gallery.php">Gallery</a>
@@ -36,25 +36,25 @@
     $( document ).ready(function() {
         var hamburger_Open = false;
         var lock = false;
-   
+
         //hamburger menu icon change
         $("#nav-toggle").click(function(){
             if(hamburger_Open == false){
                 hamburger_Open = true;
                 lock = true;
-    
+
                 $("#hamburger-icon").removeClass("fa-bars").addClass("fa-times");
-              
+
             }
             else if(hamburger_Open == true ){
                 hamburger_Open = false;
- 
+
                 $("#hamburger-icon").removeClass("fa-times").addClass("fa-bars");
-              
+
             }
-           
+
         });
-        
+
         //CONTROLS WHAT PAGE WE ARE IN
         //Choosing the highlighting of the nav
         if(nav_Counter ==0){
@@ -87,9 +87,9 @@
         else{
             $("#nav-blog").css("border-bottom-style","none");
         }
-        
+
         //NOTE: PAGES THAT ARE NOT IN NAV ARE ASSIGNED -1 TO STOP CONSOLE ERRORS
-        
+
         //Navigation show and hide on Scroll
         $(function () {
         var lastScrollTop = 0;
@@ -99,14 +99,14 @@
 
             if (current > lastScrollTop) { // scroll down
             $('.navbar').stop(true,false).fadeOut(200);
-      
+
             } else { // scroll up
-      
+
             $('.navbar').stop(true,false).fadeIn(200);
             }
-            
+
             lastScrollTop = current;
         });
     });
-});    
+});
 </script>

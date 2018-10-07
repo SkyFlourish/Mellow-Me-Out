@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <!--Icon and Title-->
         <link rel="icon" type="image/png" href="img/favicon.png">
-        <title>Products - MellowMeOut</title>
+        <title>Services - MellowMeOut</title>
         <!--Keywords for search-->
         <meta name="keywords" content="Massage, eyelash extensions, beauty, melbourne, mellowMeOut, spas, Brow Tint, Aromatherapy Massage, Lymphatic massage, Indian head massage, Body Mud wrap, Body exfoliate, Eyelash Tint, Combat Stress, Revitalise ">
         <!--Description of page-->
-        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief."> 
+        <meta name="description" content="Mellow Me Out wants to be your primary choice for all your beauty and relaxation needs. We have truly soothing and calming pampering experiences available for every client. It’s an ideal place to gather with friends, reconnect with loved ones or turn to as your destination for self-renewal and stress relief.">
 		<meta name="viewport" content="width=device-width, initial-scale=1"> <!--Mobile view-->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -24,26 +24,26 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
         <!-- FONT AWESOME ICONS -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-        
+
 		<script>
         $( document ).ready(function() { //run when page loads
             nav_Counter=2;
             var j = 0;
-			<?php include($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php'); 
+			<?php include($_SERVER['DOCUMENT_ROOT'].'/mellowMeOut_Sprint3_includes/db-connect.php');
 			$result = mysqli_query($conn, "SELECT * FROM servicetypes");
 			if (mysqli_num_rows($result) > 0) {
 				while($row = mysqli_fetch_assoc($result)) {
 					echo "j  += 1;";}}?>
             //animated scrolling
-			for (k = 1; k <= 2; k++) { 
+			for (k = 1; k <= 2; k++) {
 			$('#link-' + String(k)).click(function(){
                 $("html, body").animate({ scrollTop: $(".sub-header").eq(k-1).offset().top }, 600);
-                
+
             });
 			}
-             
-            
-            
+
+
+
             //Show and Hide sections
             var i;
             var acc = $(".btn-section");
@@ -53,8 +53,8 @@
                 acc[i].addEventListener("click", function(){
                     var index = $(".btn-section").index(this);//get index number on click
                     section.eq(index).stop().slideToggle(250);
-                    
-                    //change change text and icons 
+
+                    //change change text and icons
                     if ($(this).children("span").text() == 'Open') {
                         $(this).children("span").text("Close");
                         $(this).children("i").removeClass("fa-plus").addClass("fa-minus");
@@ -66,26 +66,26 @@
             }
             //Item count badges
 			var countt = [];
-			for (n = 1; n <= j; n++) { 
+			for (n = 1; n <= j; n++) {
 				countt[n] = $('#products-section-'+ String(n) +' .card').length;
 			}
-            
-            
+
+
             $(document).ready(function() {
-			for (l = 1; l <= j; l++) { 
+			for (l = 1; l <= j; l++) {
 				$('#link-' + String(l)).siblings('span').html(countt[l]);
 			}
             });
-            
+
         });
         </script>
     </head>
-<!-- Style Sheet for Nav and Footer-->  
+<!-- Style Sheet for Nav and Footer-->
 <style>
     <?php include 'nav_footer.css';?>
 </style>
-    
- <!-- ===CODE START=== -->    
+
+ <!-- ===CODE START=== -->
 <body>
  <!-- NAVIGATION BAR CODE -->
 <?php include'nav.php';?>
@@ -94,17 +94,17 @@
 <div class="container">
     <!-- SERVICES CONTENT -->
 
-    <h1>Products<br>
+    <h1>Services<br>
     <small class="text-muted">Mellow Me Out offers many services with a wide variety of massages to eyelash extensions</small>
     </h1>
     <!-- Jump to section -->
     <h2 class="text-left">Categories</h2>
     <ul class="text-left list-unstyled">
-		
+
         <?php $result = mysqli_query($conn, "SELECT * FROM servicetypes");
 			if (mysqli_num_rows($result) > 0) {
 				$m = 1;
-				while($row = mysqli_fetch_assoc($result)) 
+				while($row = mysqli_fetch_assoc($result))
 				{
 					echo'<li><a href="#products-section-'. $m.'" id="link-' . $m. '">' . $row["ServiceType"] . '</a> <span class="badge badge-pill badge-secondary">0</span></li>';
 					$m += 1;
@@ -115,9 +115,9 @@
     <?php $result = mysqli_query($conn, "SELECT * FROM servicetypes");
 			if (mysqli_num_rows($result) > 0) {
 				$loc = 1;
-				while($row = mysqli_fetch_assoc($result)) 
+				while($row = mysqli_fetch_assoc($result))
 				{
-					//foreach row 
+					//foreach row
 					echo'<div class="sub-header">
 						<h3 class= "text-left">'. $row["ServiceType"] . '<button class="btn btn-outline-secondary btn-section" style="float:right;"><i class="fas fa-minus"></i> <span>Close</span></button></h3>
 						</div>
@@ -127,7 +127,7 @@
 					$id = $row["ServiceTypeID"];
 					$resultService = mysqli_query($conn, "SELECT * FROM services WHERE ServiceType = $id");
 					$loc += 1;
-					while($rowInside = mysqli_fetch_assoc($resultService)) 
+					while($rowInside = mysqli_fetch_assoc($resultService))
 					{
 					echo'
             <div class="col-md-4">
@@ -142,14 +142,14 @@
             </div>
         </div>
 		';
-		
+
 					}
 					echo "</div>";
 				}
 				echo "</div>";
 			}?>
-			
-     
+
+
 </article>
 <!--END OF SERVICES-->
 <!--SPECIAL OFFERS CODE-->
@@ -181,9 +181,8 @@
 
 <!-- FOOTER CODE-->
 <?php include 'footer.php';?>
-  
+
 
 </body>
-    
-</html>
 
+</html>

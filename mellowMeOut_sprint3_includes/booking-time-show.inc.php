@@ -24,7 +24,8 @@ if(isset($_GET["booking-date"])){
 				echo "<option value=".$arrayPosition.">" .  $ar[($i-1)] . "</option>";
 			}
 			else {
-				echo "<option disabled>Booked Out" .  $ar[($i-1)] . "</option>";
+				// echo "<option disabled>Booked Out" .  $ar[($i-1)] . "</option>";
+				echo "<option disabled>" .  $ar[($i-1)] . " - Booked Out</option>";
 			}
 		}
 		echo'

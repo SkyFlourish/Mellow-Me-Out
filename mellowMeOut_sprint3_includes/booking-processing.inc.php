@@ -272,12 +272,68 @@ if (isset($_POST["submit"])) {
             // $sql = "INSERT INTO mellowmeout.Bookings (BookingDateTimeStart,BookingDateTimeEnd,BookingFullName,BookingRegisteredEmail,BookingRegisteredPhone) VALUES ('$selectBooking','$selectBooking','$fullName','$email','$phone');";
 
             // $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$serviceTime')";
-            $user_booking = $selectBooking.'-'.$bookingTime;
-            $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice,BookingTime,user_booking) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$servicePrice','$serviceTime','$user_booking')";
-            $sql2 = "INSERT INTO mellowmeout.booking (user_booking) VALUES ('$user_booking')";
+
+            // Prior to adding if/else, uncomment if broken
+            $bookingTimeStart = $bookingTime + 1;
+            $user_bookingSQL1 = $selectBooking.'-'.$bookingTimeStart;
+            $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice,BookingTime,user_booking) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$servicePrice','$serviceTime','$user_bookingSQL1')";
+            // $sql2 = "INSERT INTO mellowmeout.booking (user_booking) VALUES ('$user_booking')";
+
+            if ($serviceTime == 30) {
+                $i = 1;
+                while ($i <= 3) {
+                    $bookingTimeSQL = $bookingTime + $i;
+                    $user_booking = $selectBooking.'-'.$bookingTimeSQL;
+                    $sql2 = "INSERT INTO mellowmeout.booking (user_booking) VALUES ('$user_booking')";
+                    if(mysqli_query($conn, $sql2)) {
+                        $sqlQuery2Success = true;
+                    }
+                    else {
+                        $sqlQuery2Success = false;
+                    }
+                    $i++;
+                }
+            // $user_booking = $selectBooking.'-'.$bookingTime;
+            // $sql = "INSERT INTO mellowmeout.BookingsTemp (BookingRegisteredFullName,BookingRegisteredPhone,BookingRegisteredEmail,BookingDate,BookingDateTimeStart,BookingPrice,BookingTime,user_booking) VALUES ('$fullName','$phone','$email','$selectBooking','$bookingTime','$servicePrice','$serviceTime','$user_booking')";
+            // $sql2 = "INSERT INTO mellowmeout.booking (user_booking) VALUES ('$user_booking')";
+            }
+            else if ($serviceTime == 60) {
+                $i = 1;
+                while ($i <= 5) {
+                    $bookingTimeSQL = $bookingTime + $i;
+                    $user_booking = $selectBooking.'-'.$bookingTimeSQL;
+                    $sql2 = "INSERT INTO mellowmeout.booking (user_booking) VALUES ('$user_booking')";
+                    if(mysqli_query($conn, $sql2)) {
+                        $sqlQuery2Success = true;
+                    }
+                    else {
+                        $sqlQuery2Success = false;
+                    }
+                    $i++;
+                }
+            }
+            else {
+                $i = 1;
+                $bookingTimeSQL = $bookingTime + $i;
+                $user_booking = $selectBooking.'-'.$bookingTimeSQL;
+                if(mysqli_query($conn, $sql2)) {
+                    $sqlQuery2Success = true;
+                }
+                else {
+                    $sqlQuery2Success = false;
+                }
+            }
+
             // $selectBookingDate = DateTime::createFromFormat('Y-m-d', $selectBooking);
             // array_push($errorMsgArray, );
-	        if(mysqli_query($conn, $sql) && mysqli_query($conn, $sql2)) {
+	        // if(mysqli_query($conn, $sql) && mysqli_query($conn, $sql2)) {
+            //     // A redirect aught to happen here
+            //     echo "<p>";
+            //     // echo "Records inserted successfully";
+            //     echo "Booking made successfully! Thank you!";
+            //     echo "</p>";
+            // }
+	        if(mysqli_query($conn, $sql) && $sqlQuery2Success == true) {
                 // A redirect aught to happen here
                 echo "<p>";
                 // echo "Records inserted successfully";
